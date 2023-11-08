@@ -72,4 +72,120 @@
       box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.06);
     }
   }
+
+  .supply-chian {
+    width: 100vw;
+    height: 40.8vw;
+    background-color: #f5f5f7;
+    padding-top: 80px;
+    margin-bottom: 46px;
+  }
+
+  .flex-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .tab-button {
+    width: 100%;
+    height: 3.2vw;
+    
+    .tab-button-item {
+      border: 1px solid #D9D9DD;
+      height: 100%;
+      width: 33.3%;
+      display: inline-block;
+      text-align: center;
+      font-size: 20px;
+      padding: 0 auto;
+      line-height: 3.2vw;
+    }
+
+    .tab-button-item:first-child {
+      border-right: none;
+    }
+
+    .tab-button-item:last-child {
+      border-left: none;
+    }
+
+    .tab-button-item:hover {
+      border-top: 4px solid #F96F25;
+      color: #F96F25;
+      box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+  }
+
+  .item-content {
+    margin-top: 20px;
+    margin-bottom: 85px;
+    padding: 20px;
+    width: 100%;
+    height: 23.6vw;
+    position: relative;
+
+    .link {
+      position: absolute;
+      bottom: 29px;
+      right: 11px;
+      font-weight: 500;
+      color: #F96F25;
+      font-size: 14px;
+    }
+
+    .item-content-title {
+      height: 25%;
+      border-bottom: 1px solid #CCCCCC;;
+    }
+
+    .content-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #303258;
+      margin-bottom: 10px;
+    }
+
+    .item-content-title :last-child {
+      font-weight: 400;
+      font-size: 16px;
+      color: #303258;
+    }
+
+    .item-content-ability {
+      padding-top: 32px;
+      font-size: 20px;
+
+      .content-ability {
+        margin-top: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .customer-section {
+    width: 100vw;
+    height: 20.2vw;
+    background-color: #f5f5f7;
+    padding-top: 4vw;
+
+    .cusomer-logo {
+      display: flex;
+      justify-content: space-between;
+      height: 6.56vw;
+      width: 62.5vw;
+      margin: 0 auto;
+    
+      .logo-box {
+        background-color: white;
+      }
+    }
+  }
 }
+
+
+
+
+
