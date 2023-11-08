@@ -6,9 +6,10 @@ import Link from "next/link";
 const SwiperHeader = ({ imgUrl }: any) => {
   return (
     <div className={styles.swiperHeader}>
-      <div className={styles.logo}>
-        <Image src={logo} alt="logo" style={{ width: 126, height: 30 }} />
-      </div>
+      <Image src={imgUrl} alt="homeImg" className={styles.homeImg} />
+
+      <Image src={logo} alt="logo" className={styles["shuopan-logo"]} />
+
       <div className={styles.navgator}>
         <Link href="/home-page">EIMOS</Link>
         <Link href="/info-center">信息中心</Link>
@@ -18,7 +19,6 @@ const SwiperHeader = ({ imgUrl }: any) => {
       <div className={styles.obtain}>
         <a>获取演示</a>
       </div>
-      <Image src={imgUrl} alt="homeImg" className={styles.homeImg} />
     </div>
   );
 };

@@ -47,16 +47,16 @@ const Home = () => {
   return (
     <div className={styles.main}>
       {/* swiper */}
-      <SwiperHeader imgUrl={homeImg} />
+      {/* <SwiperHeader imgUrl={homeImg} /> */}
 
       {/* navgator */}
-      <div className={homeStyle["navgatore-tab"]}>
-        <div className={homeStyle["tab-item"]}>
-          <span>EIMOS</span>
-          <span>业务应用解决方案</span>
-          <span>EIMOS平台</span>
-          <span>价值闭环</span>
-          <span>我们的客户</span>
+      <div className={homeStyle["header-link"]}>
+        <div className={homeStyle["link-item"]}>
+          <a>EIMOS</a>
+          <a>业务应用解决方案</a>
+          <a>EIMOS平台</a>
+          <a>价值闭环</a>
+          <a>我们的客户</a>
         </div>
       </div>
 
@@ -72,20 +72,22 @@ const Home = () => {
           alt="architectureImg"
           className={homeStyle["structure-img"]}
         />
+      </div>
 
-        {/* 智能业务解析 */}
-        <div className={homeStyle["analytics-wrapper"]}>
-          <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
-          <Image
-            src={analyticsImg}
-            alt="analyticsImg"
-            className={homeStyle["analytics-img"]}
-          />
-          <div className={homeStyle["description"]}>
-            聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
-          </div>
+      {/* 智能业务解析 */}
+      <div className={homeStyle["analytics-wrapper"]}>
+        <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
+        <Image
+          src={analyticsImg}
+          alt="analyticsImg"
+          className={homeStyle["analytics-img"]}
+        />
+        <div className={homeStyle["description"]}>
+          聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
         </div>
+      </div>
 
+      <div className={homeStyle["wrapper-center"]}>
         {/* 线索到回款 */}
         <TabHeader h1="线索到回款" h2="Lead to Cash" />
         <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} />
@@ -102,14 +104,13 @@ const Home = () => {
             );
           })}
         </div>
+      </div>
 
-        {/* 集成供应链 */}
-        <div className={homeStyle["supply-chian"]}>
+      {/* 集成供应链 */}
+      <div className={homeStyle["supply-chian"]}>
+        <div className={homeStyle["wrapper-center"]}>
           <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
-          <div
-            className={homeStyle["flex-content"]}
-            style={{ width: "77vw", margin: "0 auto" }}
-          >
+          <div className={homeStyle["flex-content"]}>
             {chainList.map((imgUrl: any, index: number) => {
               const des = descriptionList[index];
               return (
@@ -118,7 +119,9 @@ const Home = () => {
             })}
           </div>
         </div>
+      </div>
 
+      <div className={homeStyle["wrapper-center"]}>
         {/* 应用及解决方案 */}
         <TabHeader h1="应用及解决方案" />
         <div className={homeStyle["tab-button"]}>
@@ -156,32 +159,32 @@ const Home = () => {
           </div>
           <a className={homeStyle["link"]}>获取演示</a>
         </div>
+      </div>
 
-        {/* 我们的客户 */}
-        <div className={homeStyle["customer-section"]}>
-          <TabHeader h1="我们的客户" />
-          <div className={homeStyle["cusomer-logo"]}>
-            <div className={homeStyle["logo-box"]}>
-              <Image
-                src={qreLogo}
-                alt="qre"
-                style={{ width: "100%", height: "100%" }}
-              />
-            </div>
-            <div className={homeStyle["logo-box"]}>
-              <Image
-                src={supconLogo}
-                alt="supcon"
-                style={{ width: "100%", height: "100%" }}
-              />
-            </div>
-            <div className={homeStyle["logo-box"]}>
-              <Image
-                src={sanfengLogo}
-                alt="sanfeng"
-                style={{ width: "100%", height: "100%" }}
-              />
-            </div>
+      {/* 我们的客户 */}
+      <div className={homeStyle["customer-section"]}>
+        <TabHeader h1="我们的客户" />
+        <div className={homeStyle["cusomer-logo"]}>
+          <div className={homeStyle["logo-box"]}>
+            <Image
+              src={qreLogo}
+              alt="qre"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </div>
+          <div className={homeStyle["logo-box"]}>
+            <Image
+              src={supconLogo}
+              alt="supcon"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </div>
+          <div className={homeStyle["logo-box"]}>
+            <Image
+              src={sanfengLogo}
+              alt="sanfeng"
+              style={{ width: "100%", height: "100%" }}
+            />
           </div>
         </div>
       </div>

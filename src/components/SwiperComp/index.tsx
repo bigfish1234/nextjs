@@ -5,11 +5,7 @@ const SwiperComp = ({ description, imgUrl }: any) => {
   return (
     <div className={styles["wrapper"]}>
       <div className={styles["swiper-wrapper"]}>
-        <Image
-          src={imgUrl}
-          alt="img"
-          style={{ width: "100%", height: "100%" }}
-        />
+        <Image src={imgUrl} alt="img" className={styles["swiper-img"]} />
       </div>
       <div className={styles.description}>{description}</div>
     </div>
