@@ -1,0 +1,20 @@
+.wrapper {
+  box-shadow: 0 2px 16px 0 #E1E1E1;
+  margin-bottom: 60px;
+
+  .swiper-wrapper {
+    width: 37.5vw;
+    height: 18.2vw;
+  }
+
+  .description {
+    height: 5.2vw;
+    width: 37.5vw;
+    font-size: 14px;
+    color: #6E708A;
+    line-height: 1.4vw;
+    padding: 1vw 2.5vw 0; 
+  }
+}
+
+

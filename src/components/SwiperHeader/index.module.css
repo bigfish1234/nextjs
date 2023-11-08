@@ -1,0 +1,39 @@
+.swiperHeader {
+  position: relative;
+  width: 100vw;
+
+  .homeImg {
+    width: 100vw;
+    height: 29vw;
+  }
+}
+
+.logo {
+  position: absolute;
+  top:20px;
+  left: 80px;
+}
+
+.navgator {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  width: 370px;
+  height: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.obtain {
+  width: 192px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  color: white;
+  background-color: #f96f25;
+  position: absolute;
+  left: 220px;
+  top: 349px;
+}
