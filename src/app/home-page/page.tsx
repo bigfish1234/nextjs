@@ -21,6 +21,7 @@ import sanfengLogo from "@/images/sanfeng@2x.png";
 import supconLogo from "@/images/supcon@2x.png";
 import qreLogo from "@/images/qre@2x.png";
 import FooterComp from "@/components/FooterComp";
+import LayoutComp from "@/components/LayoutComp";
 
 const Home = () => {
   const imgList = [img360, intelligenceImg, contractImg, npiImg, cpqImg];
@@ -47,150 +48,152 @@ const Home = () => {
   return (
     <div className={styles.main}>
       {/* swiper */}
-      {/* <SwiperHeader imgUrl={homeImg} /> */}
-
-      {/* navgator */}
-      <div className={homeStyle["header-link"]}>
-        <div className={homeStyle["link-item"]}>
-          <a>EIMOS</a>
-          <a>业务应用解决方案</a>
-          <a>EIMOS平台</a>
-          <a>价值闭环</a>
-          <a>我们的客户</a>
+      <LayoutComp imgUrl={homeImg}>
+        {/* navgator */}
+        <div className={homeStyle["header-link"]}>
+          <div className={homeStyle["link-item"]}>
+            <a>EIMOS</a>
+            <a>业务应用解决方案</a>
+            <a>EIMOS平台</a>
+            <a>价值闭环</a>
+            <a>我们的客户</a>
+          </div>
         </div>
-      </div>
 
-      {/* content */}
-      <div className={homeStyle["wrapper-center"]}>
-        {/* 架构图 */}
-        <TabHeader
-          h1="EIMOS 应用功能全视图"
-          h2=" 构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
-        />
-        <Image
-          src={architectureImg}
-          alt="architectureImg"
-          className={homeStyle["structure-img"]}
-        />
-      </div>
-
-      {/* 智能业务解析 */}
-      <div className={homeStyle["analytics-wrapper"]}>
-        <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
-        <Image
-          src={analyticsImg}
-          alt="analyticsImg"
-          className={homeStyle["analytics-img"]}
-        />
-        <div className={homeStyle["description"]}>
-          聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
-        </div>
-      </div>
-
-      <div className={homeStyle["wrapper-center"]}>
-        {/* 线索到回款 */}
-        <TabHeader h1="线索到回款" h2="Lead to Cash" />
-        <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} />
-
-        <div className={homeStyle["flex-content"]}>
-          {imgList.map((imgUrl: any, index: number) => {
-            const description = titleList[index];
-            return (
-              <SwiperComp
-                description={description}
-                imgUrl={imgUrl}
-                key={imgUrl}
-              />
-            );
-          })}
-        </div>
-      </div>
-
-      {/* 集成供应链 */}
-      <div className={homeStyle["supply-chian"]}>
+        {/* content */}
         <div className={homeStyle["wrapper-center"]}>
-          <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
+          {/* 架构图 */}
+          <TabHeader
+            h1="EIMOS 应用功能全视图"
+            h2=" 构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
+          />
+          <Image
+            src={architectureImg}
+            alt="architectureImg"
+            className={homeStyle["structure-img"]}
+          />
+        </div>
+
+        {/* 智能业务解析 */}
+        <div className={homeStyle["analytics-wrapper"]}>
+          <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
+          <Image
+            src={analyticsImg}
+            alt="analyticsImg"
+            className={homeStyle["analytics-img"]}
+          />
+          <div className={homeStyle["description"]}>
+            聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
+          </div>
+        </div>
+
+        <div className={homeStyle["wrapper-center"]}>
+          {/* 线索到回款 */}
+          <TabHeader h1="线索到回款" h2="Lead to Cash" />
+          <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} />
+
           <div className={homeStyle["flex-content"]}>
-            {chainList.map((imgUrl: any, index: number) => {
-              const des = descriptionList[index];
+            {imgList.map((imgUrl: any, index: number) => {
+              const description = titleList[index];
               return (
-                <SwiperComp description={des} imgUrl={imgUrl} key={imgUrl} />
+                <SwiperComp
+                  description={description}
+                  imgUrl={imgUrl}
+                  key={imgUrl}
+                />
               );
             })}
           </div>
         </div>
-      </div>
 
-      <div className={homeStyle["wrapper-center"]}>
-        {/* 应用及解决方案 */}
-        <TabHeader h1="应用及解决方案" />
-        <div className={homeStyle["tab-button"]}>
-          <div className={homeStyle["tab-button-item"]}>智能业务解析(IBA)</div>
-          <div className={homeStyle["tab-button-item"]}>线索到回款(LTC)</div>
-          <div className={homeStyle["tab-button-item"]}>集成供应链(ISC)</div>
-        </div>
-
-        {/* 内容 */}
-        <div className={homeStyle["item-content"]}>
-          <div className={homeStyle["item-content-title"]}>
-            <p className={homeStyle["content-title"]}>智能业务解析</p>
-            <p>Intelligent Business Analytics</p>
-          </div>
-          <div className={homeStyle["item-content-ability"]}>
-            <p className={homeStyle["content-title"]}>核心能力</p>
-            <div className={homeStyle["content-ability"]}>
-              {abilityList.map((item: string) => {
+        {/* 集成供应链 */}
+        <div className={homeStyle["supply-chian"]}>
+          <div className={homeStyle["wrapper-center"]}>
+            <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
+            <div className={homeStyle["flex-content"]}>
+              {chainList.map((imgUrl: any, index: number) => {
+                const des = descriptionList[index];
                 return (
-                  <div key={item} style={{ display: "flex", marginBottom: 16 }}>
-                    <div style={{ width: 16, marginRight: 8 }}>
-                      <Image
-                        src={getIcon}
-                        alt="get"
-                        width={16}
-                        height={16}
-                        style={{ marginRight: 8, display: "inline-block" }}
-                      />
-                    </div>
-                    <div style={{ flex: 1 }}>{item}</div>
-                  </div>
+                  <SwiperComp description={des} imgUrl={imgUrl} key={imgUrl} />
                 );
               })}
             </div>
           </div>
-          <a className={homeStyle["link"]}>获取演示</a>
         </div>
-      </div>
 
-      {/* 我们的客户 */}
-      <div className={homeStyle["customer-section"]}>
-        <TabHeader h1="我们的客户" />
-        <div className={homeStyle["cusomer-logo"]}>
-          <div className={homeStyle["logo-box"]}>
-            <Image
-              src={qreLogo}
-              alt="qre"
-              style={{ width: "100%", height: "100%" }}
-            />
+        <div className={homeStyle["wrapper-center"]}>
+          {/* 应用及解决方案 */}
+          <TabHeader h1="应用及解决方案" />
+          <div className={homeStyle["tab-button"]}>
+            <div className={homeStyle["tab-button-item"]}>
+              智能业务解析(IBA)
+            </div>
+            <div className={homeStyle["tab-button-item"]}>线索到回款(LTC)</div>
+            <div className={homeStyle["tab-button-item"]}>集成供应链(ISC)</div>
           </div>
-          <div className={homeStyle["logo-box"]}>
-            <Image
-              src={supconLogo}
-              alt="supcon"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </div>
-          <div className={homeStyle["logo-box"]}>
-            <Image
-              src={sanfengLogo}
-              alt="sanfeng"
-              style={{ width: "100%", height: "100%" }}
-            />
+
+          {/* 内容 */}
+          <div className={homeStyle["item-content"]}>
+            <div className={homeStyle["item-content-title"]}>
+              <p className={homeStyle["content-title"]}>智能业务解析</p>
+              <p>Intelligent Business Analytics</p>
+            </div>
+            <div className={homeStyle["item-content-ability"]}>
+              <p className={homeStyle["content-title"]}>核心能力</p>
+              <div className={homeStyle["content-ability"]}>
+                {abilityList.map((item: string) => {
+                  return (
+                    <div
+                      key={item}
+                      style={{ display: "flex", marginBottom: 16 }}
+                    >
+                      <div style={{ width: 16, marginRight: 8 }}>
+                        <Image
+                          src={getIcon}
+                          alt="get"
+                          width={16}
+                          height={16}
+                          style={{ marginRight: 8, display: "inline-block" }}
+                        />
+                      </div>
+                      <div style={{ flex: 1 }}>{item}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <a className={homeStyle["link"]}>获取演示</a>
           </div>
         </div>
-      </div>
 
-      {/* footer */}
-      <FooterComp />
+        {/* 我们的客户 */}
+        <div className={homeStyle["customer-section"]}>
+          <TabHeader h1="我们的客户" />
+          <div className={homeStyle["cusomer-logo"]}>
+            <div className={homeStyle["logo-box"]}>
+              <Image
+                src={qreLogo}
+                alt="qre"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
+            <div className={homeStyle["logo-box"]}>
+              <Image
+                src={supconLogo}
+                alt="supcon"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
+            <div className={homeStyle["logo-box"]}>
+              <Image
+                src={sanfengLogo}
+                alt="sanfeng"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
+          </div>
+        </div>
+      </LayoutComp>
     </div>
   );
 };

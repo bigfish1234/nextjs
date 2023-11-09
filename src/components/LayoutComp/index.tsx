@@ -1,11 +1,11 @@
 import FooterComp from "../FooterComp";
 import SwiperHeader from "../SwiperHeader";
-import joinImg from "@/images/infomation/info-center.png";
+// import joinImg from "@/images/infomation/info-center.png";
 
 const LayoutComp = ({ imgUrl, children }: any) => {
   return (
     <div>
-      <SwiperHeader imgUrl={joinImg} />
+      <SwiperHeader imgUrl={imgUrl} />
       <slot>{children}</slot>
       <FooterComp />
     </div>

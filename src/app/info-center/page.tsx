@@ -1,6 +1,7 @@
 import InfomationBar from "@/components/InfomationBar";
 import infoStyle from "./index.module.css";
 import LayoutComp from "@/components/LayoutComp";
+import infoCenterImg from "@/images/infomation/info-center.png";
 
 const Home = () => {
   const infoList = [
@@ -34,11 +35,14 @@ const Home = () => {
     },
   ];
   return (
-    <div className={infoStyle["info-center-wrapper"]}>
-      {infoList.map((item: any) => {
-        return <InfomationBar key={item.title} content={item} />;
-      })}
-    </div>
+    <LayoutComp imgUrl={infoCenterImg}>
+      <div className={infoStyle["info-center-wrapper"]}>
+        {infoList.map((item: any) => {
+          return <InfomationBar key={item.title} content={item} />;
+        })}
+      </div>
+      <div className={infoStyle["pagination"]}></div>
+    </LayoutComp>
   );
 };
 

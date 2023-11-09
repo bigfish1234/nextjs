@@ -1,0 +1,25 @@
+.wrapper {
+  padding-top: 80px;
+  width: 100%;
+}
+
+.job-wrapper {
+  background-color: #f5f5f7;
+  height: auto;
+}
+
+.wrapper span {
+  height: 46px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #F96F25;
+  line-height: 46px;
+  display: block;
+}
+
+.detail {
+  margin-bottom: 50px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 25px;
+}

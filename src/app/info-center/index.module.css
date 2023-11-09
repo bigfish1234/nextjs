@@ -5,3 +5,8 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.pagination {
+  height: 135px;
+  width: 100%;
+}

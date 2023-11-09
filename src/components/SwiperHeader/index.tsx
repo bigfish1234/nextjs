@@ -13,12 +13,12 @@ const SwiperHeader = ({ imgUrl }: any) => {
       <div className={styles.navgator}>
         <Link href="/home-page">EIMOS</Link>
         <Link href="/info-center">信息中心</Link>
-        <Link href="/about-me">关于我们</Link>
+        <Link href="/about-us">关于我们</Link>
         <Link href="/join-us">加入我们</Link>
       </div>
-      <div className={styles.obtain}>
+      {/* <div className={styles.obtain}>
         <a>获取演示</a>
-      </div>
+      </div> */}
     </div>
   );
 };
