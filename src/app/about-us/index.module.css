@@ -1,10 +1,3 @@
-.about-us-wrapper {
-  width: 1480px;
-  height: 890px;
-  margin: 0 auto;
-  padding-top: 80px;
-}
-
 .founder {
   width: 100%;
   height: 623px;
@@ -29,4 +22,10 @@
 .partner {
   height: 520px;
   padding-top: 54px;
+}
+
+@media screen and (max-width: 1440px) {
+  .founder {
+    height: 505px;
+  }
 }

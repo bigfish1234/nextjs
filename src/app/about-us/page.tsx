@@ -11,7 +11,10 @@ const AboutUs = () => {
   return (
     <>
       <LayoutComp imgUrl={spznImg}>
-        <div className={styles["about-us-wrapper"]}>
+        <div
+          className="wrapper-center"
+          style={{ paddingTop: 60, paddingBottom: 38 }}
+        >
           <TabHeader h1="将经营管理理念与模型抽象落地的架构团队" />
           <Image src={founderImg} alt="like" className={styles["founder"]} />
         </div>

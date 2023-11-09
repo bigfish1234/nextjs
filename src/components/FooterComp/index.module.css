@@ -5,23 +5,11 @@
   padding: 30px 0;
 }
 
-.footer-main-services {
-  width: 1480px;
-  height: 208px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-}
-
 .shuopan-main-service {
   width: 25%;
   border-right: 1px solid #323232;
   padding-left: 29px;
   padding-top: 16px;
-}
-
-.footer-main-services :last-child {
-  border-right: none;
 }
 
 .shuopan-main-service div {
@@ -67,5 +55,31 @@
   width: 18px;
   height: 20px;
   display: inline-block;
-  
 }
+
+@media screen and (max-width:1440px) {
+  .shuopan-main-service {
+    padding-top: 5px;
+  }
+
+  .footer-wrapper {
+    height: 219px;
+    padding: 20px 0;
+  }
+
+  .shuopan-main-service span {
+    font-size: 14px;
+  }
+
+  .shuopan-main-service a {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .copyright-info {
+    margin-top: 0;
+    font-size: 12px;
+  }
+}
+
+

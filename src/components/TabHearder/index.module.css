@@ -20,3 +20,23 @@
   background-color: #F96F25;
   margin: 26px 0;
 }
+
+@media screen and (max-width: 1440px) {
+  .firstTitle {
+    font-size: 26px;
+    height: 30px;
+  }
+
+  .secondTitle {
+    font-size: 16px;
+    height: 16px;
+    margin-top: 13px;
+  }
+
+    .divider {
+      width: 26px;
+      height: 3px;
+      background-color: #F96F25;
+      margin: 26px 0;
+    }
+}

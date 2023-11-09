@@ -9,7 +9,7 @@ import productLogo from "@/images/product.png";
 const FooterComp = () => {
   return (
     <div className={styles["footer-wrapper"]}>
-      <div className={styles["footer-main-services"]}>
+      <div className="wrapper-center" style={{ flexDirection: "row" }}>
         <div className={styles["shuopan-main-service"]}>
           <div>
             <div className={styles["logo"]}>
@@ -67,7 +67,10 @@ const FooterComp = () => {
           <a href="">邮箱：</a>
           <a href="">获取演示</a>
         </div>
-        <div className={styles["shuopan-main-service"]}>
+        <div
+          className={styles["shuopan-main-service"]}
+          style={{ borderRight: "none" }}
+        >
           <div>
             <div className={styles["logo"]}>
               <Image
@@ -101,10 +104,10 @@ const FooterComp = () => {
         <div
           style={{
             display: "inline",
-            fontSize: 14,
             color: "#656565",
             paddingLeft: 8,
           }}
+          className=""
         >
           版权所有 2021-2023 杭州硕磐智能科技有限公司 浙ICP备23400000203号-1
         </div>

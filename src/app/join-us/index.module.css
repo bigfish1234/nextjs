@@ -12,6 +12,7 @@
   height: 46px;
   font-size: 24px;
   font-weight: 600;
+  font-family: PingFangSC-Semibold, PingFang SC;
   color: #F96F25;
   line-height: 46px;
   display: block;
@@ -22,4 +23,5 @@
   margin-top: 10px;
   font-size: 14px;
   line-height: 25px;
+  color: #303258;
 }

@@ -61,7 +61,7 @@ const Home = () => {
         </div>
 
         {/* content */}
-        <div className={homeStyle["wrapper-center"]}>
+        <div className="wrapper-center">
           {/* 架构图 */}
           <TabHeader
             h1="EIMOS 应用功能全视图"
@@ -87,12 +87,19 @@ const Home = () => {
           </div>
         </div>
 
-        <div className={homeStyle["wrapper-center"]}>
+        <div className="wrapper-center">
           {/* 线索到回款 */}
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
           <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} />
 
-          <div className={homeStyle["flex-content"]}>
+          <div
+            style={{
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
+            className="wrapper-center"
+          >
             {imgList.map((imgUrl: any, index: number) => {
               const description = titleList[index];
               return (
@@ -108,9 +115,16 @@ const Home = () => {
 
         {/* 集成供应链 */}
         <div className={homeStyle["supply-chian"]}>
-          <div className={homeStyle["wrapper-center"]}>
+          <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
-            <div className={homeStyle["flex-content"]}>
+            <div
+              className="wrapper-center"
+              style={{
+                flexDirection: "row",
+                flexWrap: "wrap",
+                justifyContent: "space-between",
+              }}
+            >
               {chainList.map((imgUrl: any, index: number) => {
                 const des = descriptionList[index];
                 return (
@@ -121,7 +135,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className={homeStyle["wrapper-center"]}>
+        <div className="wrapper-center">
           {/* 应用及解决方案 */}
           <TabHeader h1="应用及解决方案" />
           <div className={homeStyle["tab-button"]}>

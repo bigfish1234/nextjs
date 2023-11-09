@@ -88,17 +88,9 @@ body {
 
 body {
   font-family: PingFangSC-Regular, PingFang SC !important;
-  /* font-weight: 500; */
   color: #303258;
   font-size: 14px;
   height: 100vh;
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 }
 
 a {
@@ -109,4 +101,13 @@ a {
 .wrapper-center {
   width: 1480px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width:1440px) {
+  .wrapper-center {
+    width: 1200px;
+  }
 }

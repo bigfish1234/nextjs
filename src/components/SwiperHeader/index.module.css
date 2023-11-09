@@ -41,6 +41,8 @@
 }
 
 /* 小屏情况下 */
-@media screen and (max-width:1480px) {
-  
+@media screen and (max-width:1440px) {
+  .swiperHeader {
+    height: 288px;
+  }
 }
