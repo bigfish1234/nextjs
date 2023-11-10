@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "../page.module.css";
 import TabHeader from "@/components/TabHearder";
-import SwiperHeader from "@/components/SwiperHeader";
 import homeStyle from "./index.module.css";
 import homeImg from "@/images/home-img2.png";
 import architectureImg from "@/images/architecture-img.png";
@@ -16,15 +15,27 @@ import cpqImg from "@/images/cpq@2x.png";
 import ipsImg from "@/images/ips@2x.png";
 import ipsXiaosImg from "@/images/ips-xiaos@2x.png";
 import getIcon from "@/images/gou@2x.png";
-
 import sanfengLogo from "@/images/sanfeng@2x.png";
 import supconLogo from "@/images/supcon@2x.png";
 import qreLogo from "@/images/qre@2x.png";
-import FooterComp from "@/components/FooterComp";
 import LayoutComp from "@/components/LayoutComp";
+import { Imgs } from "@/images/mobileImg";
+import { isMobileDevice } from "@/utils/isMobile";
 
 const Home = () => {
+  const isMobile = isMobileDevice();
+
+  // pc端的图片
   const imgList = [img360, intelligenceImg, contractImg, npiImg, cpqImg];
+  // 移动端的图片
+  const imgList_Mobile = [
+    Imgs.order,
+    Imgs.platform,
+    Imgs.manage,
+    Imgs.npi,
+    Imgs.cpq,
+  ];
+
   const titleList = [
     "场景化的客户，线索和商机管理，实现产品、渠道、客户之间自动查找与匹配；精准投入销售资源，提升从线索到合同转化率",
     "订单履行全流程可视，履行进度可预测，异常可管理，一张视图实现三流合一，信息高效互通与共享",
@@ -33,7 +44,11 @@ const Home = () => {
     "管理从需求结构化-配置推荐-项目成本概算-项目报价的关键流程，加速产品配置输出，提高商机转化，提高项目盈利测算能力和签约质量",
   ];
 
+  // PC端
   const chainList = [ipsImg, ipsXiaosImg];
+  // 移动端
+  const chainList_Mobile = [Imgs.ipsprediction, Imgs.ipsplan];
+
   const descriptionList = [
     "一站式智能销售预测。丰富的销售预测模版，可适配企业多场景全渠道的机会点、项目、框架合同、要货计划的预测管理",
     "基于价值导向的产品结构化和归一化AI算法。面向客户需求，取得成本和效率的相对平衡，实现公司价值的最大化 ",
@@ -46,18 +61,28 @@ const Home = () => {
     "搜索式指标自动计算功能",
   ];
   return (
-    <div className={styles.main}>
+    <div>
       {/* swiper */}
-      <LayoutComp imgUrl={homeImg}>
+      <LayoutComp imgUrl={!isMobile ? Imgs.home : homeImg}>
         {/* navgator */}
         <div className={homeStyle["header-link"]}>
           <div className={homeStyle["link-item"]}>
             <a>EIMOS</a>
             <a>业务应用解决方案</a>
             <a>EIMOS平台</a>
-            <a>价值闭环</a>
-            <a>我们的客户</a>
+            {/* <a>价值闭环</a>
+            <a>我们的客户</a> */}
           </div>
+          {/* 移动端的箭头 */}
+          {!isMobile && (
+            <div className={homeStyle["link-arrow"]}>
+              <Image
+                src={Imgs.arrow}
+                alt="arrow"
+                style={{ width: 28, height: 28, margin: "0 auto" }}
+              />
+            </div>
+          )}
         </div>
 
         {/* content */}
@@ -65,51 +90,60 @@ const Home = () => {
           {/* 架构图 */}
           <TabHeader
             h1="EIMOS 应用功能全视图"
-            h2=" 构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
+            h2={
+              isMobile &&
+              "构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
+            }
           />
-          <Image
+          {/* <Image
             src={architectureImg}
             alt="architectureImg"
             className={homeStyle["structure-img"]}
-          />
+          /> */}
         </div>
 
         {/* 智能业务解析 */}
         <div className={homeStyle["analytics-wrapper"]}>
           <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
-          <Image
-            src={analyticsImg}
-            alt="analyticsImg"
-            className={homeStyle["analytics-img"]}
-          />
-          <div className={homeStyle["description"]}>
-            聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
-          </div>
+          {!isMobile ? (
+            <div className="wrapper-center">
+              <SwiperComp
+                description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
+                imgUrl={Imgs.analysis}
+              />
+            </div>
+          ) : (
+            <>
+              <Image
+                src={analyticsImg}
+                alt="analyticsImg"
+                className={homeStyle["analytics-img"]}
+              />
+              <div className={homeStyle["description"]}>
+                聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
+              </div>
+            </>
+          )}
         </div>
 
         <div className="wrapper-center">
           {/* 线索到回款 */}
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
-          <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} />
+          {/* <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} /> */}
 
-          <div
-            style={{
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-            }}
-            className="wrapper-center"
-          >
-            {imgList.map((imgUrl: any, index: number) => {
-              const description = titleList[index];
-              return (
-                <SwiperComp
-                  description={description}
-                  imgUrl={imgUrl}
-                  key={imgUrl}
-                />
-              );
-            })}
+          <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
+            {(!isMobile ? imgList_Mobile : imgList).map(
+              (imgUrl: any, index: number) => {
+                const description = titleList[index];
+                return (
+                  <SwiperComp
+                    description={description}
+                    imgUrl={imgUrl}
+                    key={imgUrl}
+                  />
+                );
+              }
+            )}
           </div>
         </div>
 
@@ -117,20 +151,19 @@ const Home = () => {
         <div className={homeStyle["supply-chian"]}>
           <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
-            <div
-              className="wrapper-center"
-              style={{
-                flexDirection: "row",
-                flexWrap: "wrap",
-                justifyContent: "space-between",
-              }}
-            >
-              {chainList.map((imgUrl: any, index: number) => {
-                const des = descriptionList[index];
-                return (
-                  <SwiperComp description={des} imgUrl={imgUrl} key={imgUrl} />
-                );
-              })}
+            <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
+              {(!isMobile ? chainList_Mobile : chainList).map(
+                (imgUrl: any, index: number) => {
+                  const des = descriptionList[index];
+                  return (
+                    <SwiperComp
+                      description={des}
+                      imgUrl={imgUrl}
+                      key={imgUrl}
+                    />
+                  );
+                }
+              )}
             </div>
           </div>
         </div>

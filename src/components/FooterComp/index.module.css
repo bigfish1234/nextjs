@@ -57,6 +57,28 @@
   display: inline-block;
 }
 
+.mobile-footer {
+  padding: 30px 0;
+}
+
+.contact-us {
+  width: 100%;
+  height: 36px;
+  color: #FFFFFF;
+  background-color: #ea6016;
+  text-align: center;
+  line-height: 36px;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.copyright {
+  color: #999999;
+  font-size: 12px;
+  height: 44px;
+  line-height: 20px;
+}
+
 @media screen and (max-width:1440px) {
   .shuopan-main-service {
     padding-top: 5px;

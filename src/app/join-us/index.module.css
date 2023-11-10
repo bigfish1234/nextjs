@@ -25,3 +25,15 @@
   line-height: 25px;
   color: #303258;
 }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100vw;
+    background-color: #fff;
+    padding-top: 36px;
+  }
+
+  .detail {
+    margin-bottom: 25px;
+  }
+}

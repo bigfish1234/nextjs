@@ -40,9 +40,33 @@
   top: 349px;
 }
 
+.expand-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  z-index: 999;
+  /* transform: rotate(90deg); */
+}
+
 /* 小屏情况下 */
 @media screen and (max-width:1440px) {
   .swiperHeader {
     height: 288px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiperHeader {
+    height: 206px;
+  }
+
+  .shuopan-logo {
+    top: 10px;
+    left: 50%;
+    height: 24px;
+    width: 100px;
+    transform: translateX(-50px);
   }
 }

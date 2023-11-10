@@ -3,12 +3,14 @@ import joinImg from "./imgs/joinus.png";
 import joinStyle from "./index.module.css";
 import TabHeader from "@/components/TabHearder";
 import SearchComp from "./components/SearchComp";
+import { isMobile } from "react-device-detect";
+import { Imgs } from "@/images/mobileImg";
 
 const JoinUs = () => {
   return (
-    <LayoutComp imgUrl={joinImg}>
+    <LayoutComp imgUrl={!isMobile ? Imgs.join : joinImg} isJoin={true}>
       <div className={`${joinStyle["wrapper"]} ${joinStyle["job-wrapper"]}`}>
-        <TabHeader h1="招聘职位" />
+        {isMobile && <TabHeader h1="招聘职位" />}
         <div className="wrapper-center">{/* <SearchComp /> */}</div>
       </div>
       <div className={joinStyle["wrapper"]}>

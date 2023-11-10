@@ -35,4 +35,22 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 343px;
+    height: 238px;
+    margin-bottom: 16px;
+  }
+
+  .swiper-wrapper {
+    height: 164px;
+  }
+
+  .description {
+    font-size: 12px;
+    padding: 5px 15px 0;
+    line-height: 20px;
+  }
+}
+
 

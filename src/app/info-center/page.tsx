@@ -2,6 +2,8 @@ import InfomationBar from "@/components/InfomationBar";
 import infoStyle from "./index.module.css";
 import LayoutComp from "@/components/LayoutComp";
 import infoCenterImg from "@/images/infomation/info-center.png";
+import { isMobile } from "react-device-detect";
+import { Imgs } from "@/images/mobileImg";
 
 const Home = () => {
   const infoList = [
@@ -35,13 +37,13 @@ const Home = () => {
     },
   ];
   return (
-    <LayoutComp imgUrl={infoCenterImg}>
-      <div className="wrapper-center">
+    <LayoutComp imgUrl={isMobile ? infoCenterImg : Imgs.infoCenter}>
+      <div className={isMobile ? "wrapper-center" : ""}>
         {infoList.map((item: any) => {
           return <InfomationBar key={item.title} content={item} />;
         })}
       </div>
-      <div className={infoStyle["pagination"]}></div>
+      {isMobile && <div className={infoStyle["pagination"]}></div>}
     </LayoutComp>
   );
 };

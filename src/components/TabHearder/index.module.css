@@ -5,13 +5,15 @@
 }
 .firstTitle {
   font-size: 40px ;
-  height: 46px;
+  min-height: 46px;
+  text-align: center;
 }
 
 .secondTitle {
   font-size: 18px;
-  height: 28px;
+  min-height: 28px;
   margin-top: 15px;
+  text-align: center;
 }
 
 .divider {
@@ -38,5 +40,25 @@
       height: 3px;
       background-color: #F96F25;
       margin: 26px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .firstTitle {
+    font-size: 20px;
+    height: 20px;
+  }
+
+  .secondTitle {
+    font-size: 14px;
+    height: 14px;
+    margin-top: 10px;
+  }
+
+    .divider {
+      width: 36px;
+      height: 2px;
+      background-color: #F96F25;
+      margin: 10px 0;
     }
 }
