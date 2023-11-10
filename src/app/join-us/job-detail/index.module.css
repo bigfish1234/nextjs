@@ -1,0 +1,35 @@
+.job {
+  padding: 35px 0;
+  border-bottom: 5px solid #f5f5f7;
+}
+
+.job p {
+  color: #F96F25;
+}
+
+.job p:first-child {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.job p:last-child  {
+  color: #9b9b9b;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.title {
+  height: 46px;
+  color: #F96F25;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 46px;
+  margin-top: 16px;
+}
+
+.job-detail {
+  border-bottom: 1px solid #f5f5f7;
+  padding: 20px 0;
+  line-height: 25px;
+}

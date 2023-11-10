@@ -12,21 +12,10 @@ const LayoutComp = ({ imgUrl, isJoin, children }: any) => {
       {/* 轮播图 */}
       <SwiperHeader imgUrl={imgUrl} isJoin={isJoin} />
       <slot>{children}</slot>
+
       {/* footer */}
-      {/* {!isMobile ? (
-        <div className={`${"wrapper-center"} ${styles["mobile-footer"]}`}>
-          <div className={styles["contact-us"]}>联系我们</div>
-          <div className={styles["copyright"]}>
-            <Image src={emblemImg} alt="emblem" width={14} height={14} />
-            <span style={{ padding: 5 }}>
-              版权所有 2021-2023 杭州硕磐智能科技有限公司 浙ICP备23400000203号-1
-            </span>
-          </div>
-        </div>
-      ) : (
-        <FooterComp />
-      )} */}
       <FooterComp />
+
       {/* 咨询 */}
       <Image
         src={guidenceImg}
