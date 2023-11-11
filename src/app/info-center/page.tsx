@@ -37,7 +37,7 @@ const Home = () => {
     },
   ];
   return (
-    <LayoutComp imgUrl={isMobile ? infoCenterImg : Imgs.infoCenter}>
+    <LayoutComp imgUrl={!isMobile ? infoCenterImg : Imgs.infoCenter}>
       <div className={isMobile ? "wrapper-center" : ""}>
         {infoList.map((item: any) => {
           return <InfomationBar key={item.title} content={item} />;

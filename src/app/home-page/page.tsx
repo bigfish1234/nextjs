@@ -20,7 +20,7 @@ import supconLogo from "@/images/supcon@2x.png";
 import qreLogo from "@/images/qre@2x.png";
 import LayoutComp from "@/components/LayoutComp";
 import { Imgs } from "@/images/mobileImg";
-import { isMobileDevice } from "@/utils/isMobile";
+import { isMobileDevice } from "@/utils/isMobileDevice";
 
 const Home = () => {
   const isMobile = isMobileDevice();
@@ -63,18 +63,18 @@ const Home = () => {
   return (
     <div>
       {/* swiper */}
-      <LayoutComp imgUrl={!isMobile ? Imgs.home : homeImg}>
+      <LayoutComp imgUrl={isMobile ? Imgs.home : homeImg}>
         {/* navgator */}
         <div className={homeStyle["header-link"]}>
           <div className={homeStyle["link-item"]}>
             <a>EIMOS</a>
             <a>业务应用解决方案</a>
             <a>EIMOS平台</a>
-            {/* <a>价值闭环</a>
-            <a>我们的客户</a> */}
+            <a>价值闭环</a>
+            <a>我们的客户</a>
           </div>
           {/* 移动端的箭头 */}
-          {!isMobile && (
+          {isMobile && (
             <div className={homeStyle["link-arrow"]}>
               <Image
                 src={Imgs.arrow}
@@ -91,21 +91,21 @@ const Home = () => {
           <TabHeader
             h1="EIMOS 应用功能全视图"
             h2={
-              isMobile &&
+              !isMobile &&
               "构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
             }
           />
-          {/* <Image
+          <Image
             src={architectureImg}
             alt="architectureImg"
             className={homeStyle["structure-img"]}
-          /> */}
+          />
         </div>
 
         {/* 智能业务解析 */}
         <div className={homeStyle["analytics-wrapper"]}>
           <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
-          {!isMobile ? (
+          {isMobile ? (
             <div className="wrapper-center">
               <SwiperComp
                 description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
@@ -132,7 +132,7 @@ const Home = () => {
           {/* <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} /> */}
 
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
-            {(!isMobile ? imgList_Mobile : imgList).map(
+            {(isMobile ? imgList_Mobile : imgList).map(
               (imgUrl: any, index: number) => {
                 const description = titleList[index];
                 return (
@@ -152,7 +152,7 @@ const Home = () => {
           <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
             <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
-              {(!isMobile ? chainList_Mobile : chainList).map(
+              {(isMobile ? chainList_Mobile : chainList).map(
                 (imgUrl: any, index: number) => {
                   const des = descriptionList[index];
                   return (

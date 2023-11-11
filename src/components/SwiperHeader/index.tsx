@@ -1,17 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./index.module.css";
 import logo from "@/images/logo.png";
 import Link from "next/link";
 import { isMobile } from "react-device-detect";
 import { Imgs } from "@/images/mobileImg";
+import useHomeEvent from "@/app/home-page/useHomeEvent";
+// import { isMobileDevice } from "@/utils/isMobileDevice";
 
 const SwiperHeader = ({ imgUrl, isJoin }: any) => {
+  const { handleClick } = useHomeEvent();
+  // const isMobile = isMobileDevice();
+
   return (
     <div className={styles.swiperHeader}>
       <Image src={imgUrl} alt="homeImg" className={styles.homeImg} />
-      <Image src={logo} alt="logo" className={styles["shuopan-logo"]} />
+      <Image
+        src={logo}
+        alt="logo"
+        className={styles["shuopan-logo"]}
+        onClick={() => {
+          window.location.href = "/home-page";
+          // console.log(isMobile);
+        }}
+      />
 
-      {!isMobile ? (
+      {isMobile ? (
         <Image
           src={Imgs.expand}
           alt="expand"
