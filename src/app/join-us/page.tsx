@@ -7,8 +7,15 @@ import { isMobile } from "react-device-detect";
 import { Imgs } from "@/images/mobileImg";
 
 const JoinUs = () => {
+  const joinSlideList = {
+    pc: [joinImg],
+    mb: [Imgs.join],
+  };
   return (
-    <LayoutComp imgUrl={!isMobile ? Imgs.join : joinImg} isJoin={true}>
+    <LayoutComp
+      slideList={isMobile ? joinSlideList.mb : joinSlideList.pc}
+      page="join"
+    >
       <div className={`${joinStyle["wrapper"]} ${joinStyle["job-wrapper"]}`}>
         {isMobile && <TabHeader h1="招聘职位" />}
         <div className="wrapper-center">{/* <SearchComp /> */}</div>

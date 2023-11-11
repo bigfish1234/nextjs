@@ -3,6 +3,7 @@ import styles from "../page.module.css";
 import TabHeader from "@/components/TabHearder";
 import homeStyle from "./index.module.css";
 import homeImg from "@/images/home-img2.png";
+import infoCenter from "@/images/info-center.png";
 import architectureImg from "@/images/architecture-img.png";
 import ltcImg from "@/images/ltc.png";
 import analyticsImg from "@/images/analytics.png";
@@ -25,16 +26,29 @@ import { isMobileDevice } from "@/utils/isMobileDevice";
 const Home = () => {
   const isMobile = isMobileDevice();
 
-  // pc端的图片
-  const imgList = [img360, intelligenceImg, contractImg, npiImg, cpqImg];
-  // 移动端的图片
-  const imgList_Mobile = [
-    Imgs.order,
-    Imgs.platform,
-    Imgs.manage,
-    Imgs.npi,
-    Imgs.cpq,
-  ];
+  // 页面顶部的轮播图组件
+  const homeSlideList = {
+    pc: [homeImg, infoCenter],
+    mb: [Imgs.home],
+  };
+
+  // 线索到回款的轮播图
+  const slideListOfCash = {
+    pc: [
+      [img360, intelligenceImg, cpqImg],
+      [contractImg, npiImg],
+      [intelligenceImg, cpqImg],
+      [intelligenceImg, cpqImg],
+      [intelligenceImg, cpqImg],
+    ],
+    mb: [
+      [Imgs.npi, Imgs.analysis, Imgs.manage],
+      [Imgs.npi, Imgs.analysis],
+      [Imgs.npi, Imgs.analysis, Imgs.manage],
+      [Imgs.npi, Imgs.manage],
+      [Imgs.analysis, Imgs.manage],
+    ],
+  };
 
   const titleList = [
     "场景化的客户，线索和商机管理，实现产品、渠道、客户之间自动查找与匹配；精准投入销售资源，提升从线索到合同转化率",
@@ -44,10 +58,16 @@ const Home = () => {
     "管理从需求结构化-配置推荐-项目成本概算-项目报价的关键流程，加速产品配置输出，提高商机转化，提高项目盈利测算能力和签约质量",
   ];
 
-  // PC端
-  const chainList = [ipsImg, ipsXiaosImg];
-  // 移动端
-  const chainList_Mobile = [Imgs.ipsprediction, Imgs.ipsplan];
+  const slideListOfChain = {
+    pc: [
+      [ipsImg, ipsXiaosImg],
+      [ipsImg, ipsXiaosImg],
+    ],
+    mb: [
+      [Imgs.ipsplan, Imgs.ipsprediction],
+      [Imgs.ipsplan, Imgs.ipsprediction],
+    ],
+  };
 
   const descriptionList = [
     "一站式智能销售预测。丰富的销售预测模版，可适配企业多场景全渠道的机会点、项目、框架合同、要货计划的预测管理",
@@ -63,7 +83,10 @@ const Home = () => {
   return (
     <div>
       {/* swiper */}
-      <LayoutComp imgUrl={isMobile ? Imgs.home : homeImg}>
+      <LayoutComp
+        slideList={isMobile ? homeSlideList.mb : homeSlideList.pc}
+        page="home"
+      >
         {/* navgator */}
         <div className={homeStyle["header-link"]}>
           <div className={homeStyle["link-item"]}>
@@ -129,17 +152,17 @@ const Home = () => {
         <div className="wrapper-center">
           {/* 线索到回款 */}
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
-          {/* <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} /> */}
+          <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} />
 
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
-            {(isMobile ? imgList_Mobile : imgList).map(
-              (imgUrl: any, index: number) => {
+            {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
+              (list: any[], index: number) => {
                 const description = titleList[index];
                 return (
                   <SwiperComp
                     description={description}
-                    imgUrl={imgUrl}
-                    key={imgUrl}
+                    slideList={list}
+                    key={index}
                   />
                 );
               }
@@ -152,14 +175,14 @@ const Home = () => {
           <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
             <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
-              {(isMobile ? chainList_Mobile : chainList).map(
-                (imgUrl: any, index: number) => {
+              {(isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
+                (list: any[], index: number) => {
                   const des = descriptionList[index];
                   return (
                     <SwiperComp
                       description={des}
-                      imgUrl={imgUrl}
-                      key={imgUrl}
+                      slideList={list}
+                      key={index}
                     />
                   );
                 }

@@ -1,11 +1,11 @@
-import Image from "next/image";
+import SwiperSlideComp from "../SwiperSlideComp";
 import styles from "./index.module.css";
 
-const SwiperComp = ({ description, imgUrl }: any) => {
+const SwiperComp = ({ description, slideList }: any) => {
   return (
     <div className={styles["wrapper"]}>
       <div className={styles["swiper-wrapper"]}>
-        <Image src={imgUrl} alt="img" className={styles["swiper-img"]} />
+        <SwiperSlideComp slideList={slideList} />
       </div>
       <div className={styles.description}>{description}</div>
     </div>

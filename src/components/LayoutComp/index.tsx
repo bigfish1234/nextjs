@@ -6,11 +6,11 @@ import styles from "./index.module.css";
 import { isMobile } from "react-device-detect";
 import Link from "next/link";
 
-const LayoutComp = ({ imgUrl, isJoin, children }: any) => {
+const LayoutComp = ({ page, slideList, children }: any) => {
   return (
     <div>
       {/* 轮播图 */}
-      <SwiperHeader imgUrl={imgUrl} isJoin={isJoin} />
+      <SwiperHeader slideList={slideList} page={page} />
       <slot>{children}</slot>
 
       {/* footer */}

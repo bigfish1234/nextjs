@@ -10,10 +10,17 @@ import { isMobile } from "react-device-detect";
 import { Imgs } from "@/images/mobileImg";
 
 const AboutUs = () => {
+  const aboutSlideList = {
+    pc: [spznImg],
+    mb: [Imgs.spzn],
+  };
   return (
     <>
-      <LayoutComp imgUrl={!isMobile ? Imgs.spzn : spznImg}>
-        {!isMobile && (
+      <LayoutComp
+        slideList={isMobile ? aboutSlideList.mb : aboutSlideList.pc}
+        page="about"
+      >
+        {isMobile && (
           <div className={styles["spzn-introduce"]}>
             致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
             <span className={styles["background-word"]}>数字化</span>

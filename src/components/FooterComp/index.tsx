@@ -11,7 +11,7 @@ import emblemImg from "@/images/guoh@2x.png";
 const FooterComp = () => {
   return (
     <>
-      {isMobile ? (
+      {!isMobile ? (
         <div className={styles["footer-wrapper"]}>
           <div className="wrapper-center" style={{ flexDirection: "row" }}>
             <div className={styles["shuopan-main-service"]}>

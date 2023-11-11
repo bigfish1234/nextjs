@@ -36,14 +36,21 @@ const Home = () => {
       imgUrl: "",
     },
   ];
+  const infoSlideList = {
+    pc: [infoCenterImg],
+    mb: [Imgs.infoCenter],
+  };
   return (
-    <LayoutComp imgUrl={!isMobile ? infoCenterImg : Imgs.infoCenter}>
-      <div className={isMobile ? "wrapper-center" : ""}>
+    <LayoutComp
+      slideList={isMobile ? infoSlideList.mb : infoSlideList.pc}
+      page="info"
+    >
+      <div className={isMobile ? "" : "wrapper-center"}>
         {infoList.map((item: any) => {
           return <InfomationBar key={item.title} content={item} />;
         })}
       </div>
-      {isMobile && <div className={infoStyle["pagination"]}></div>}
+      {!isMobile && <div className={infoStyle["pagination"]}></div>}
     </LayoutComp>
   );
 };
