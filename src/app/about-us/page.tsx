@@ -1,3 +1,4 @@
+"use client";
 import TabHeader from "@/components/TabHearder";
 import styles from "./index.module.css";
 import Image from "next/image";
@@ -6,16 +7,17 @@ import KapComp from "./components/KapComp";
 import PartnerComp from "./components/PartnerComp";
 import LayoutComp from "@/components/LayoutComp";
 import spznImg from "./imgs/spzn.png";
-import { isMobile } from "react-device-detect";
 import { Imgs } from "@/images/mobileImg";
+import { isMobileDevice } from "@/utils/isMobileDevice";
 
 const AboutUs = () => {
+  const isMobile = isMobileDevice();
   const aboutSlideList = {
     pc: [spznImg],
     mb: [Imgs.spzn],
   };
   return (
-    <>
+    <main>
       <LayoutComp
         slideList={isMobile ? aboutSlideList.mb : aboutSlideList.pc}
         page="about"
@@ -45,7 +47,7 @@ const AboutUs = () => {
           {/* <PartnerComp /> */}
         </div>
       </LayoutComp>
-    </>
+    </main>
   );
 };
 

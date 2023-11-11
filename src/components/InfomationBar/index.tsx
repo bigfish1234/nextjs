@@ -1,17 +1,16 @@
 import styles from "./index.module.css";
 import Image from "next/image";
 import img from "@/images/contract.png";
-import { isMobile } from "react-device-detect";
 import timeIcon from "@/images/infomation/time-icon.png";
 import { Imgs } from "@/images/mobileImg";
 
-const InfomationBar = ({ content }: any) => {
+const InfomationBar = ({ content, isMobile }: any) => {
   const { time, title, description, imgUrl = img } = content;
   const [year, month, day] = time.split("-");
 
   return (
     <div className={styles["info-bar-wrapper"]}>
-      {isMobile ? (
+      {!isMobile ? (
         <>
           <div className={styles["time-line"]}>
             <span style={{ fontSize: 32, fontWeight: 700 }}>{day} </span>

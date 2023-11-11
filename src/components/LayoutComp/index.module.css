@@ -8,6 +8,7 @@
   cursor: pointer;
   bottom: 250px;
   right: 20px;
+  z-index: 999;
 }
 
 .mobile-sidebar {
@@ -19,6 +20,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
 }
 
 .mobile-sidebar-content {

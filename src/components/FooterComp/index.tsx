@@ -119,7 +119,14 @@ const FooterComp = () => {
         </div>
       ) : (
         <div className={`${"wrapper-center"} ${styles["mobile-footer"]}`}>
-          <div className={styles["contact-us"]}>联系我们</div>
+          <div
+            className={styles["contact-us"]}
+            onClick={() => {
+              window.location.href = "/contact-me";
+            }}
+          >
+            联系我们
+          </div>
           <div className={styles["copyright"]}>
             <Image src={emblemImg} alt="emblem" width={14} height={14} />
             <span style={{ padding: 5 }}>

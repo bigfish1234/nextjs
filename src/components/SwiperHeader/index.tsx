@@ -7,16 +7,18 @@ import Link from "next/link";
 import { isMobile } from "react-device-detect";
 import { Imgs } from "@/images/mobileImg";
 import useHomeEvent from "@/app/home-page/useHomeEvent";
-// import SwiperSlideComp from "../SwiperSlideComp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-// import { isMobileDevice } from "@/utils/isMobileDevice";
+import { useState } from "react";
+import { isMobileDevice } from "@/utils/isMobileDevice";
 
-const SwiperHeader = ({ slideList, page }: any) => {
+const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
   const { handleClick } = useHomeEvent();
-  // const isMobile = isMobileDevice();
+  const [path, setPath] = useState("home-page");
+
+  const isMobile = isMobileDevice();
 
   return (
     <div className={styles.swiperHeader}>
@@ -50,8 +52,8 @@ const SwiperHeader = ({ slideList, page }: any) => {
         alt="logo"
         className={styles["shuopan-logo"]}
         onClick={() => {
+          // router.push("/home-page");
           window.location.href = "/home-page";
-          // console.log(isMobile);
         }}
       />
 
@@ -60,16 +62,52 @@ const SwiperHeader = ({ slideList, page }: any) => {
           src={Imgs.expand}
           alt="expand"
           className={styles["expand-icon"]}
+          onClick={() => setIsExpand(!isExpand)}
         />
       ) : (
         <div
           className={styles.navgator}
           style={{ color: page == "join" ? "#fff" : "black" }}
         >
-          <Link href="/home-page">EIMOS</Link>
-          <Link href="/info-center">信息中心</Link>
-          <Link href="/about-us">关于我们</Link>
-          <Link href="/join-us">加入我们</Link>
+          <Link
+            prefetch
+            href="/home-page"
+            style={{ color: path == "home-page" ? "#F96F25" : "black" }}
+            onClick={() => {
+              // router.push("/home-page");
+              // window.location.href = "/home-page";
+              setPath("home-page");
+            }}
+          >
+            EIMOS
+          </Link>
+          <Link
+            prefetch
+            href="/info-center"
+            style={{ color: path == "info-center" ? "#F96F25" : "black" }}
+            onClick={() => {
+              // window.location.href = "/info-center";
+              setPath("info-center");
+            }}
+          >
+            信息中心
+          </Link>
+          <Link
+            prefetch
+            href="/about-us"
+            style={{ color: path == "about-us" ? "#F96F25" : "black" }}
+            onClick={() => setPath("about-us")}
+          >
+            关于我们
+          </Link>
+          <Link
+            prefetch
+            href="/join-us"
+            style={{ color: path == "join-us" ? "#F96F25" : "inherit" }}
+            onClick={() => setPath("join-us")}
+          >
+            加入我们
+          </Link>
         </div>
       )}
 

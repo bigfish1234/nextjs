@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import styles from "../page.module.css";
 import TabHeader from "@/components/TabHearder";
@@ -80,8 +82,36 @@ const Home = () => {
     "基于规则数据业务异常主动预警",
     "搜索式指标自动计算功能",
   ];
+
+  // 点击则页面滚动至指定位置
+  const handleClick = (type: number) => {
+    const id =
+      type == 1
+        ? "eimos"
+        : type == 2
+        ? "plan"
+        : type == 3
+        ? ""
+        : type == 4
+        ? ""
+        : "customer";
+    const dom = document.getElementById(id);
+    dom && dom.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  const onMouseEnter = () => {
+    console.log(11);
+    const imgDom = document.getElementById("architectureImg");
+    if (imgDom) imgDom.style.boxShadow = "0px 5px 12px 0px rgba(0,0,0,0.06)";
+  };
+
+  const onMouseLeave = () => {
+    const imgDom = document.getElementById("architectureImg");
+    if (imgDom) imgDom.style.boxShadow = "";
+  };
+
   return (
-    <div>
+    <main>
       {/* swiper */}
       <LayoutComp
         slideList={isMobile ? homeSlideList.mb : homeSlideList.pc}
@@ -90,11 +120,11 @@ const Home = () => {
         {/* navgator */}
         <div className={homeStyle["header-link"]}>
           <div className={homeStyle["link-item"]}>
-            <a>EIMOS</a>
-            <a>业务应用解决方案</a>
-            <a>EIMOS平台</a>
-            <a>价值闭环</a>
-            <a>我们的客户</a>
+            <span onClick={() => handleClick(1)}>EIMOS</span>
+            <span onClick={() => handleClick(2)}>业务应用解决方案</span>
+            <span onClick={() => handleClick(3)}>EIMOS平台</span>
+            <span onClick={() => handleClick(4)}>价值闭环</span>
+            <span onClick={() => handleClick(5)}>我们的客户</span>
           </div>
           {/* 移动端的箭头 */}
           {isMobile && (
@@ -109,7 +139,7 @@ const Home = () => {
         </div>
 
         {/* content */}
-        <div className="wrapper-center">
+        <div className="wrapper-center" id="eimos">
           {/* 架构图 */}
           <TabHeader
             h1="EIMOS 应用功能全视图"
@@ -121,7 +151,10 @@ const Home = () => {
           <Image
             src={architectureImg}
             alt="architectureImg"
+            id="architectureImg"
             className={homeStyle["structure-img"]}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
           />
         </div>
 
@@ -162,6 +195,7 @@ const Home = () => {
                   <SwiperComp
                     description={description}
                     slideList={list}
+                    index={index + 1}
                     key={index}
                   />
                 );
@@ -191,7 +225,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="wrapper-center">
+        <div className="wrapper-center" id="plan">
           {/* 应用及解决方案 */}
           <TabHeader h1="应用及解决方案" />
           <div className={homeStyle["tab-button"]}>
@@ -237,7 +271,7 @@ const Home = () => {
         </div>
 
         {/* 我们的客户 */}
-        <div className={homeStyle["customer-section"]}>
+        <div className={homeStyle["customer-section"]} id="customer">
           <TabHeader h1="我们的客户" />
           <div className={homeStyle["cusomer-logo"]}>
             <div className={homeStyle["logo-box"]}>
@@ -264,7 +298,7 @@ const Home = () => {
           </div>
         </div>
       </LayoutComp>
-    </div>
+    </main>
   );
 };
 
