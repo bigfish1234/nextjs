@@ -1,24 +1,22 @@
 "use client";
 
+import { useState } from "react";
+import { isMobileDevice } from "@/utils/isMobileDevice";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./index.module.css";
 import logo from "@/images/logo.png";
-import Link from "next/link";
-import { isMobile } from "react-device-detect";
 import { Imgs } from "@/images/mobileImg";
-import useHomeEvent from "@/app/home-page/useHomeEvent";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useState } from "react";
-import { isMobileDevice } from "@/utils/isMobileDevice";
+import { store } from "@/store";
 
 const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
-  const { handleClick } = useHomeEvent();
-  const [path, setPath] = useState("home-page");
-
   const isMobile = isMobileDevice();
+  const [path, setPath] = useState("home-page");
+  const state = store();
 
   return (
     <div className={styles.swiperHeader}>
@@ -27,7 +25,7 @@ const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
         modules={[A11y, Autoplay, Pagination]}
         spaceBetween={0}
         slidesPerView={1}
-        loop
+        loop={slideList.length > 1}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -38,6 +36,7 @@ const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
           return (
             <SwiperSlide key={index} className={styles["swiper-content"]}>
               <Image
+                priority={true}
                 src={imgUrl}
                 alt="img"
                 className={styles["swiper-content"]}
@@ -61,8 +60,16 @@ const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
         <Image
           src={Imgs.expand}
           alt="expand"
+          id="expand"
           className={styles["expand-icon"]}
-          onClick={() => setIsExpand(!isExpand)}
+          onClick={() => {
+            setIsExpand(!isExpand);
+            const dom = document.getElementById("expand");
+            if (dom) {
+              isExpand && (dom.style.rotate = "0deg");
+              !isExpand && (dom.style.rotate = "90deg");
+            }
+          }}
         />
       ) : (
         <div
@@ -72,39 +79,53 @@ const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
           <Link
             prefetch
             href="/home-page"
-            style={{ color: path == "home-page" ? "#F96F25" : "black" }}
-            onClick={() => {
-              // router.push("/home-page");
-              // window.location.href = "/home-page";
-              setPath("home-page");
+            style={{
+              color:
+                state.page == "eimos"
+                  ? "#F96F25"
+                  : state.page == "join"
+                  ? "white"
+                  : "black",
             }}
+            onClick={() => state.onPageChange("eimos")}
           >
             EIMOS
           </Link>
           <Link
             prefetch
             href="/info-center"
-            style={{ color: path == "info-center" ? "#F96F25" : "black" }}
-            onClick={() => {
-              // window.location.href = "/info-center";
-              setPath("info-center");
+            style={{
+              color:
+                state.page == "info"
+                  ? "#F96F25"
+                  : state.page == "join"
+                  ? "white"
+                  : "black",
             }}
+            onClick={() => state.onPageChange("info")}
           >
             信息中心
           </Link>
           <Link
             prefetch
             href="/about-us"
-            style={{ color: path == "about-us" ? "#F96F25" : "black" }}
-            onClick={() => setPath("about-us")}
+            style={{
+              color:
+                state.page == "about"
+                  ? "#F96F25"
+                  : state.page == "join"
+                  ? "white"
+                  : "black",
+            }}
+            onClick={() => state.onPageChange("about")}
           >
             关于我们
           </Link>
           <Link
             prefetch
             href="/join-us"
-            style={{ color: path == "join-us" ? "#F96F25" : "inherit" }}
-            onClick={() => setPath("join-us")}
+            style={{ color: state.page == "join" ? "#F96F25" : "black" }}
+            onClick={() => state.onPageChange("join")}
           >
             加入我们
           </Link>

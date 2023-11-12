@@ -24,9 +24,11 @@ import qreLogo from "@/images/qre@2x.png";
 import LayoutComp from "@/components/LayoutComp";
 import { Imgs } from "@/images/mobileImg";
 import { isMobileDevice } from "@/utils/isMobileDevice";
+import { store } from "@/store";
 
 const Home = () => {
   const isMobile = isMobileDevice();
+  const state = store();
 
   // 页面顶部的轮播图组件
   const homeSlideList = {
@@ -77,10 +79,14 @@ const Home = () => {
   ];
 
   const abilityList = [
-    "聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理",
-    "多场景应用：日报、周报、月度经营分析",
-    "基于规则数据业务异常主动预警",
-    "搜索式指标自动计算功能",
+    [
+      "聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理",
+      "多场景应用：日报、周报、月度经营分析",
+      "基于规则数据业务异常主动预警",
+      "搜索式指标自动计算功能",
+    ],
+    ["1", "2"],
+    ["1", "2", "3"],
   ];
 
   // 点击则页面滚动至指定位置
@@ -229,23 +235,70 @@ const Home = () => {
           {/* 应用及解决方案 */}
           <TabHeader h1="应用及解决方案" />
           <div className={homeStyle["tab-button"]}>
-            <div className={homeStyle["tab-button-item"]}>
+            <div
+              className={homeStyle["tab-button-item"]}
+              onClick={() => state.onPlanChange("IBA")}
+              style={
+                state.plan == "IBA"
+                  ? { color: "#F96F25", borderTop: "4px solid #F96F25" }
+                  : { color: "black" }
+              }
+            >
               智能业务解析(IBA)
             </div>
-            <div className={homeStyle["tab-button-item"]}>线索到回款(LTC)</div>
-            <div className={homeStyle["tab-button-item"]}>集成供应链(ISC)</div>
+            <div
+              className={homeStyle["tab-button-item"]}
+              onClick={() => state.onPlanChange("LTC")}
+              style={
+                state.plan == "LTC"
+                  ? { color: "#F96F25", borderTop: "4px solid #F96F25" }
+                  : { color: "black" }
+              }
+            >
+              线索到回款(LTC)
+            </div>
+            <div
+              className={homeStyle["tab-button-item"]}
+              onClick={() => state.onPlanChange("ISC")}
+              style={
+                state.plan == "ISC"
+                  ? { color: "#F96F25", borderTop: "4px solid #F96F25" }
+                  : { color: "black" }
+              }
+            >
+              集成供应链(ISC)
+            </div>
           </div>
 
           {/* 内容 */}
           <div className={homeStyle["item-content"]}>
             <div className={homeStyle["item-content-title"]}>
-              <p className={homeStyle["content-title"]}>智能业务解析</p>
-              <p>Intelligent Business Analytics</p>
+              {state.plan == "IBA" ? (
+                <>
+                  <p className={homeStyle["content-title"]}>智能业务解析</p>
+                  <p>Intelligent Business Analytics</p>
+                </>
+              ) : state.plan == "LTC" ? (
+                <>
+                  <p className={homeStyle["content-title"]}>线索到回款</p>
+                  <p>Lead to Cash</p>
+                </>
+              ) : (
+                <>
+                  <p className={homeStyle["content-title"]}>集成供应链</p>
+                  <p>Integrated Supply Chain</p>
+                </>
+              )}
             </div>
             <div className={homeStyle["item-content-ability"]}>
               <p className={homeStyle["content-title"]}>核心能力</p>
               <div className={homeStyle["content-ability"]}>
-                {abilityList.map((item: string) => {
+                {(state.plan == "IBA"
+                  ? abilityList[0]
+                  : state.plan == "LTC"
+                  ? abilityList[1]
+                  : abilityList[2]
+                ).map((item: string) => {
                   return (
                     <div
                       key={item}
