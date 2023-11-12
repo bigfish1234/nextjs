@@ -5,10 +5,23 @@ import aboutLogo from "@/images/about.png";
 import contactLogo from "@/images/contact.png";
 import sourceLogo from "@/images/source.png";
 import productLogo from "@/images/product.png";
-import { isMobile } from "react-device-detect";
 import emblemImg from "@/images/guoh@2x.png";
+import Link from "next/link";
+import { store } from "@/store";
+import { isMobileDevice } from "@/utils/isMobileDevice";
 
-const FooterComp = () => {
+const FooterComp = ({ pageScroll }: any) => {
+  const isMobile = isMobileDevice();
+  const state = store();
+
+  const onLinkClick = (id: string) => {
+    if (state.page !== "eimos") {
+      window.location.href = "/home-page";
+      state.onPageChange("eimos");
+    } else {
+      pageScroll(id);
+    }
+  };
   return (
     <>
       {!isMobile ? (
@@ -29,11 +42,10 @@ const FooterComp = () => {
                 </div>
                 <span>产品</span>
               </div>
-              <a href="">智能业务解析(IBA)</a>
-              <a href="">线索到回款(LTC)</a>
-              <a href="">集成计划管理(ISMP)</a>
-              <a href="">新产品导入(NPI)</a>
-              <a href="">数据资产管理平台</a>
+              <a onClick={() => onLinkClick("IBA")}>智能业务解析(IBA)</a>
+              <a onClick={() => onLinkClick("LTC")}>线索到回款(LTC)</a>
+              <a onClick={() => onLinkClick("ISMP")}>集成计划管理(ISMP)</a>
+              <a onClick={() => onLinkClick("plan")}>新产品导入(NPI)</a>
             </div>
             <div className={styles["shuopan-main-service"]}>
               <div>
@@ -50,7 +62,12 @@ const FooterComp = () => {
                 </div>
                 <span>资源中心</span>
               </div>
-              <a href="">信息发布</a>
+              <Link
+                href="/info-center"
+                onClick={() => state.onPageChange("info")}
+              >
+                信息发布
+              </Link>
             </div>
             <div className={styles["shuopan-main-service"]}>
               <div>
@@ -67,8 +84,8 @@ const FooterComp = () => {
                 </div>
                 <span>联系我们</span>
               </div>
-              <a href="">电话：</a>
-              <a href="">邮箱：</a>
+              <a>电话：0571-83580606</a>
+              <a>邮箱：zhaopin@boulderaitech.com</a>
               <a href="">获取演示</a>
             </div>
             <div
@@ -89,8 +106,15 @@ const FooterComp = () => {
                 </div>
                 <span>关于我们</span>
               </div>
-              <a href="">公司介绍</a>
-              <a href="">加入我们</a>
+              <Link
+                href="/about-us"
+                onClick={() => state.onPageChange("about")}
+              >
+                公司介绍
+              </Link>
+              <Link href="/join-us" onClick={() => state.onPageChange("join")}>
+                加入我们
+              </Link>
             </div>
           </div>
           <div className={styles["copyright-info"]}>

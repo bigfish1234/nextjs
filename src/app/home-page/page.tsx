@@ -25,6 +25,7 @@ import LayoutComp from "@/components/LayoutComp";
 import { Imgs } from "@/images/mobileImg";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 import { store } from "@/store";
+import { ABILITY_LIST, DESCRIPTION_LIST, TITLE_LIST } from "./effects/const";
 
 const Home = () => {
   const isMobile = isMobileDevice();
@@ -54,14 +55,6 @@ const Home = () => {
     ],
   };
 
-  const titleList = [
-    "场景化的客户，线索和商机管理，实现产品、渠道、客户之间自动查找与匹配；精准投入销售资源，提升从线索到合同转化率",
-    "订单履行全流程可视，履行进度可预测，异常可管理，一张视图实现三流合一，信息高效互通与共享",
-    "通过对不同销售场景下合同数据要素的解构，场景化知识图谱的构建，依据明确的业务规则，管好合同的生成和履行",
-    "多维模型实现对客户需求快速排序；产品相似相近特征搜索，提高产品配置效率",
-    "管理从需求结构化-配置推荐-项目成本概算-项目报价的关键流程，加速产品配置输出，提高商机转化，提高项目盈利测算能力和签约质量",
-  ];
-
   const slideListOfChain = {
     pc: [
       [ipsImg, ipsXiaosImg],
@@ -73,40 +66,15 @@ const Home = () => {
     ],
   };
 
-  const descriptionList = [
-    "一站式智能销售预测。丰富的销售预测模版，可适配企业多场景全渠道的机会点、项目、框架合同、要货计划的预测管理",
-    "基于价值导向的产品结构化和归一化AI算法。面向客户需求，取得成本和效率的相对平衡，实现公司价值的最大化 ",
-  ];
-
-  const abilityList = [
-    [
-      "聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理",
-      "多场景应用：日报、周报、月度经营分析",
-      "基于规则数据业务异常主动预警",
-      "搜索式指标自动计算功能",
-    ],
-    ["1", "2"],
-    ["1", "2", "3"],
-  ];
-
   // 点击则页面滚动至指定位置
-  const handleClick = (type: number) => {
-    const id =
-      type == 1
-        ? "eimos"
-        : type == 2
-        ? "plan"
-        : type == 3
-        ? ""
-        : type == 4
-        ? ""
-        : "customer";
-    const dom = document.getElementById(id);
-    dom && dom.scrollIntoView({ behavior: "smooth", block: "center" });
+  const handleClick = (type: string) => {
+    const dom = document.getElementById(type);
+    if (dom) {
+      dom.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   };
 
   const onMouseEnter = () => {
-    console.log(11);
     const imgDom = document.getElementById("architectureImg");
     if (imgDom) imgDom.style.boxShadow = "0px 5px 12px 0px rgba(0,0,0,0.06)";
   };
@@ -116,21 +84,71 @@ const Home = () => {
     if (imgDom) imgDom.style.boxShadow = "";
   };
 
+  const handleMouseEnter = (type: string, val: number) => {
+    state.onLinkChange(type);
+    const hoverDom = document.getElementById(type);
+    if (hoverDom) {
+      if (val == 0) {
+        hoverDom.style.color = "#F96F25";
+        hoverDom.style.borderBottom = "#F96F25 3px solid";
+      } else {
+        hoverDom.style.color = "black";
+        hoverDom.style.borderBottom = "";
+      }
+    }
+  };
+
   return (
     <main>
       {/* swiper */}
       <LayoutComp
         slideList={isMobile ? homeSlideList.mb : homeSlideList.pc}
         page="home"
+        pageScroll={handleClick}
       >
         {/* navgator */}
         <div className={homeStyle["header-link"]}>
           <div className={homeStyle["link-item"]}>
-            <span onClick={() => handleClick(1)}>EIMOS</span>
-            <span onClick={() => handleClick(2)}>业务应用解决方案</span>
-            <span onClick={() => handleClick(3)}>EIMOS平台</span>
-            <span onClick={() => handleClick(4)}>价值闭环</span>
-            <span onClick={() => handleClick(5)}>我们的客户</span>
+            <span
+              id="ei"
+              onMouseEnter={() => handleMouseEnter("ei", 0)}
+              onMouseLeave={() => handleMouseEnter("ei", 1)}
+              onClick={() => handleClick("eimos")}
+            >
+              EIMOS
+            </span>
+            <span
+              id="application"
+              onMouseEnter={() => handleMouseEnter("application", 0)}
+              onMouseLeave={() => handleMouseEnter("application", 1)}
+              onClick={() => handleClick("IBA")}
+            >
+              智能业务解析
+            </span>
+            <span
+              id="platform"
+              onMouseEnter={() => handleMouseEnter("platform", 0)}
+              onMouseLeave={() => handleMouseEnter("platform", 1)}
+              onClick={() => handleClick("LTC")}
+            >
+              线索到回款
+            </span>
+            <span
+              id="value"
+              onMouseEnter={() => handleMouseEnter("value", 0)}
+              onMouseLeave={() => handleMouseEnter("value", 1)}
+              onClick={() => handleClick("plan")}
+            >
+              集成供应链
+            </span>
+            <span
+              id="cus"
+              onMouseEnter={() => handleMouseEnter("cus", 0)}
+              onMouseLeave={() => handleMouseEnter("cus", 1)}
+              onClick={() => handleClick("customer")}
+            >
+              我们的客户
+            </span>
           </div>
           {/* 移动端的箭头 */}
           {isMobile && (
@@ -165,7 +183,7 @@ const Home = () => {
         </div>
 
         {/* 智能业务解析 */}
-        <div className={homeStyle["analytics-wrapper"]}>
+        <div className={homeStyle["analytics-wrapper"]} id="IBA">
           <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
           {isMobile ? (
             <div className="wrapper-center">
@@ -188,7 +206,7 @@ const Home = () => {
           )}
         </div>
 
-        <div className="wrapper-center">
+        <div className="wrapper-center" id="LTC">
           {/* 线索到回款 */}
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
           <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} />
@@ -196,7 +214,7 @@ const Home = () => {
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
             {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
-                const description = titleList[index];
+                const description = TITLE_LIST[index];
                 return (
                   <SwiperComp
                     description={description}
@@ -211,13 +229,13 @@ const Home = () => {
         </div>
 
         {/* 集成供应链 */}
-        <div className={homeStyle["supply-chian"]}>
+        <div className={homeStyle["supply-chian"]} id="ISMP">
           <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
             <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
               {(isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
                 (list: any[], index: number) => {
-                  const des = descriptionList[index];
+                  const des = DESCRIPTION_LIST[index];
                   return (
                     <SwiperComp
                       description={des}
@@ -236,35 +254,32 @@ const Home = () => {
           <TabHeader h1="应用及解决方案" />
           <div className={homeStyle["tab-button"]}>
             <div
-              className={homeStyle["tab-button-item"]}
-              onClick={() => state.onPlanChange("IBA")}
-              style={
+              className={
                 state.plan == "IBA"
-                  ? { color: "#F96F25", borderTop: "4px solid #F96F25" }
-                  : { color: "black" }
+                  ? `${homeStyle["tab-button-item"]} ${homeStyle["link-hover"]}`
+                  : homeStyle["tab-button-item"]
               }
+              onClick={() => state.onPlanChange("IBA")}
             >
               智能业务解析(IBA)
             </div>
             <div
-              className={homeStyle["tab-button-item"]}
-              onClick={() => state.onPlanChange("LTC")}
-              style={
+              className={
                 state.plan == "LTC"
-                  ? { color: "#F96F25", borderTop: "4px solid #F96F25" }
-                  : { color: "black" }
+                  ? `${homeStyle["tab-button-item"]} ${homeStyle["link-hover"]}`
+                  : homeStyle["tab-button-item"]
               }
+              onClick={() => state.onPlanChange("LTC")}
             >
               线索到回款(LTC)
             </div>
             <div
-              className={homeStyle["tab-button-item"]}
-              onClick={() => state.onPlanChange("ISC")}
-              style={
+              className={
                 state.plan == "ISC"
-                  ? { color: "#F96F25", borderTop: "4px solid #F96F25" }
-                  : { color: "black" }
+                  ? `${homeStyle["tab-button-item"]} ${homeStyle["link-hover"]}`
+                  : homeStyle["tab-button-item"]
               }
+              onClick={() => state.onPlanChange("ISC")}
             >
               集成供应链(ISC)
             </div>
@@ -294,10 +309,10 @@ const Home = () => {
               <p className={homeStyle["content-title"]}>核心能力</p>
               <div className={homeStyle["content-ability"]}>
                 {(state.plan == "IBA"
-                  ? abilityList[0]
+                  ? ABILITY_LIST[0]
                   : state.plan == "LTC"
-                  ? abilityList[1]
-                  : abilityList[2]
+                  ? ABILITY_LIST[1]
+                  : ABILITY_LIST[2]
                 ).map((item: string) => {
                   return (
                     <div
@@ -319,7 +334,9 @@ const Home = () => {
                 })}
               </div>
             </div>
-            <a className={homeStyle["link"]}>获取演示</a>
+            <a className={homeStyle["link"]} onClick={() => handleClick("IBA")}>
+              获取演示
+            </a>
           </div>
         </div>
 

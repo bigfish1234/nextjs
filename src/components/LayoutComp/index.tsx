@@ -9,8 +9,9 @@ import { isMobile } from "react-device-detect";
 import Link from "next/link";
 import { useState } from "react";
 import { store } from "@/store";
+import { Imgs } from "@/images/mobileImg";
 
-const LayoutComp = ({ page, slideList, children }: any) => {
+const LayoutComp = ({ page, slideList, children, pageScroll }: any) => {
   const [isExpand, setIsExpand] = useState(false);
   const state = store();
 
@@ -30,16 +31,22 @@ const LayoutComp = ({ page, slideList, children }: any) => {
       <slot>{children}</slot>
 
       {/* footer */}
-      <FooterComp />
+      <FooterComp pageScroll={pageScroll} />
 
       {/* 咨询 */}
       <Image
         src={guidenceImg}
         alt="gudience"
-        width={38}
-        height={38}
         className={styles["guide-service"]}
       />
+
+      {/* <Image
+        src={Imgs.arrow}
+        alt="backtop"
+        width={25}
+        height={25}
+        className={styles["back-top-btn"]}
+      /> */}
 
       {/* 侧边栏 */}
       {isMobile && isExpand && (
