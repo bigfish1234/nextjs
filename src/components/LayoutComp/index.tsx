@@ -9,18 +9,24 @@ import { isMobile } from "react-device-detect";
 import Link from "next/link";
 import { useState } from "react";
 import { store } from "@/store";
-import { Imgs } from "@/images/mobileImg";
+import closeIcon from "@/images/eimos/close.png";
+import ServiceForm from "../ServiceForm";
 
 const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
   const [isExpand, setIsExpand] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const state = store();
 
   const handleClick = (type: string) => {
     state.onPageChange(type);
   };
 
+  const clickToGuidence = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       {/* 轮播图 */}
       <SwiperHeader
         slideList={slideList}
@@ -38,7 +44,24 @@ const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
         src={guidenceImg}
         alt="gudience"
         className={styles["guide-service"]}
+        onClick={clickToGuidence}
       />
+
+      {isOpen ? (
+        <div className={styles["service-form"]}>
+          <div style={{ position: "relative" }}>
+            <Image
+              src={closeIcon}
+              alt="close"
+              width={16}
+              height={16}
+              style={{ position: "absolute", right: 0, cursor: "pointer" }}
+              onClick={() => setIsOpen(false)}
+            />
+          </div>
+          <ServiceForm />
+        </div>
+      ) : null}
 
       {/* <Image
         src={Imgs.arrow}

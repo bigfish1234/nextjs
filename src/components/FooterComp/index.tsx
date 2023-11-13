@@ -86,7 +86,7 @@ const FooterComp = ({ pageScroll }: any) => {
               </div>
               <a>电话：0571-83580606</a>
               <a>邮箱：zhaopin@boulderaitech.com</a>
-              <a href="">获取演示</a>
+              <a onClick={() => onLinkClick("IBA")}>获取演示</a>
             </div>
             <div
               className={styles["shuopan-main-service"]}

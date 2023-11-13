@@ -4,6 +4,7 @@ class globalStore extends Store.BaseStore<globalStore> {
   public page = "eimos";
   public plan = "IBA";
   public link = "ei";
+  public isOpen = false;
 
   public onPageChange(type: string) {
     this.set((state) => {
@@ -20,6 +21,11 @@ class globalStore extends Store.BaseStore<globalStore> {
   public onLinkChange(type: string) {
     this.set((state) => {
       state.link = type;
+    });
+  }
+  public handleOpenChange(value: boolean) {
+    this.set((state) => {
+      state.isOpen = value;
     });
   }
 }
