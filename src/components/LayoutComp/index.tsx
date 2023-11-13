@@ -11,7 +11,7 @@ import { useState } from "react";
 import { store } from "@/store";
 import { Imgs } from "@/images/mobileImg";
 
-const LayoutComp = ({ page, slideList, children, pageScroll }: any) => {
+const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
   const [isExpand, setIsExpand] = useState(false);
   const state = store();
 
@@ -28,7 +28,7 @@ const LayoutComp = ({ page, slideList, children, pageScroll }: any) => {
         setIsExpand={setIsExpand}
         isExpand={isExpand}
       />
-      <slot>{children}</slot>
+      {children}
 
       {/* footer */}
       <FooterComp pageScroll={pageScroll} />

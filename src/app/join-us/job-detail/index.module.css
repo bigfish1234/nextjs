@@ -1,35 +1,71 @@
 .job {
-  padding: 35px 0;
+  padding: 50px 0;
   border-bottom: 5px solid #f5f5f7;
-}
-
-.job p {
   color: #F96F25;
+  position: relative;
+  border-bottom: 2px solid #E6E6E6;
 }
 
-.job p:first-child {
-  font-size: 24px;
+.job-position {
   font-weight: 600;
-  line-height: 33px;
+  font-size: 46px;
+  line-height: 65px;
 }
 
-.job p:last-child  {
-  color: #9b9b9b;
-  line-height: 25px;
+.job-position_mobile :first-child {
+  font-size: 18px;
+}
+
+.job-position_mobile :last-child {
   font-size: 14px;
+  color: #a1a1a1;
+  line-height: 25px;
+}
+
+.job-position_pc {
+  line-height: 50px;
+  font-size: 36px;
+  margin-top: 26px;
+}
+
+.apply-btn {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 200px;
+  height: 55px;
+  background-color: #F96F25;
+  color: #fff;
+  text-align: center;
+  line-height: 55px;
+  margin-top: 5px;
 }
 
 .title {
   height: 46px;
   color: #F96F25;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 46px;
-  margin-top: 16px;
+  margin-top: 42px;
 }
 
 .job-detail {
-  border-bottom: 1px solid #f5f5f7;
   padding: 20px 0;
-  line-height: 25px;
+  line-height: 32px;
+}
+
+@media screen and (max-width:768px) {
+  .job {
+    padding: 25px 0;
+  }
+
+  .job-position {
+    font-size: 24px;
+  }
+
+  .title  {
+    margin-top: 20px;
+
+  }
 }

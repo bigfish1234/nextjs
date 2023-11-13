@@ -6,6 +6,7 @@ import TabHeader from "@/components/TabHearder";
 import SearchComp from "./components/SearchComp";
 import { Imgs } from "@/images/mobileImg";
 import { isMobileDevice } from "@/utils/isMobileDevice";
+import PositionDetail from "./components/PositionDetail";
 
 const JoinUs = () => {
   const isMobile = isMobileDevice();
@@ -13,6 +14,8 @@ const JoinUs = () => {
     pc: [joinImg],
     mb: [Imgs.join],
   };
+
+  const posList = [1, 2, 3, 4];
   return (
     <main>
       <LayoutComp
@@ -20,13 +23,34 @@ const JoinUs = () => {
         page="join"
       >
         <div className={`${joinStyle["wrapper"]} ${joinStyle["job-wrapper"]}`}>
-          {isMobile && <TabHeader h1="招聘职位" />}
-          <div className="wrapper-center">{/* <SearchComp /> */}</div>
+          {!isMobile && <TabHeader h1="招聘职位" />}
+          <div className="wrapper-center">
+            <SearchComp isMobile={isMobile} />
+            {!isMobile && (
+              <p>
+                共{" "}
+                <span
+                  style={{
+                    color: "#F96F25",
+                    display: "inline-block",
+                    paddingBottom: 10,
+                    fontSize: 14,
+                  }}
+                >
+                  {posList.length}
+                </span>{" "}
+                条记录
+              </p>
+            )}
+            {posList.map((item: any, index: number) => {
+              return <PositionDetail key={index} isMobile={isMobile} />;
+            })}
+          </div>
         </div>
         <div className={joinStyle["wrapper"]}>
           <TabHeader h1="招聘简章" />
           <div className="wrapper-center">
-            <span>公司简介</span>
+            <span className={joinStyle["detail-title"]}>公司简介</span>
             <div className={joinStyle["detail"]}>
               <p>
                 杭州硕磐智能科技致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业的数字化转型；并通过打造智能化产业互联网，为政府数字化运营和企业数字化管理提供数据平台和解决方案的新型高科技企业。
@@ -43,7 +67,7 @@ const JoinUs = () => {
                 并且，公司开始快速发展，已吸引了众多尖端人才的加入，包括多名留美和985名校博士，硕士以上学历占比超过50%，本科以上学历占100%。公司以人才为本，重视人才，并大力度激励人才和奖励贡献，现诚邀各方英才加入。
               </p>
             </div>
-            <span>公司福利</span>
+            <span className={joinStyle["detail-title"]}>公司福利</span>
             <div className={joinStyle["detail"]}>
               <p>
                 1)
@@ -55,7 +79,7 @@ const JoinUs = () => {
               </p>
               <p>3) 高于行业平均水平的薪资福利，股票期权等等。</p>
             </div>
-            <span>期待这样的你</span>
+            <span className={joinStyle["detail-title"]}>期待这样的你</span>
             <div className={joinStyle["detail"]}>
               <p>
                 1)
@@ -63,7 +87,6 @@ const JoinUs = () => {
                 等等；
               </p>
               <p>
-                {" "}
                 2)
                 视成长与进步为快乐之源——我们期望（也会帮助）你成为一个“工程师+科学家”，不仅在你喜欢的领域有所建树，更能成为全能型选手；
               </p>
