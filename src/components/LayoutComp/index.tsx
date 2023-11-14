@@ -15,6 +15,7 @@ import ServiceForm from "../ServiceForm";
 const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
   const [isExpand, setIsExpand] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
   const state = store();
 
   const handleClick = (type: string) => {
@@ -26,7 +27,7 @@ const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", minHeight: "100vh" }}>
       {/* 轮播图 */}
       <SwiperHeader
         slideList={slideList}
@@ -34,15 +35,17 @@ const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
         setIsExpand={setIsExpand}
         isExpand={isExpand}
       />
+
       {children}
 
       {/* footer */}
-      <FooterComp pageScroll={pageScroll} />
+      <FooterComp pageScroll={pageScroll} setIsOpen={setIsOpen} />
 
       {/* 咨询 */}
       <Image
         src={guidenceImg}
         alt="gudience"
+        style={{ display: isMobile ? "none" : "block" }}
         className={styles["guide-service"]}
         onClick={clickToGuidence}
       />
@@ -62,14 +65,6 @@ const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
           <ServiceForm />
         </div>
       ) : null}
-
-      {/* <Image
-        src={Imgs.arrow}
-        alt="backtop"
-        width={25}
-        height={25}
-        className={styles["back-top-btn"]}
-      /> */}
 
       {/* 侧边栏 */}
       {isMobile && isExpand && (

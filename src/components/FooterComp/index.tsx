@@ -10,7 +10,7 @@ import Link from "next/link";
 import { store } from "@/store";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 
-const FooterComp = ({ pageScroll }: any) => {
+const FooterComp = ({ pageScroll, setIsOpen }: any) => {
   const isMobile = isMobileDevice();
   const state = store();
 
@@ -23,7 +23,7 @@ const FooterComp = ({ pageScroll }: any) => {
     }
   };
   return (
-    <>
+    <div>
       {!isMobile ? (
         <div className={styles["footer-wrapper"]}>
           <div className="wrapper-center" style={{ flexDirection: "row" }}>
@@ -44,8 +44,7 @@ const FooterComp = ({ pageScroll }: any) => {
               </div>
               <a onClick={() => onLinkClick("IBA")}>智能业务解析(IBA)</a>
               <a onClick={() => onLinkClick("LTC")}>线索到回款(LTC)</a>
-              <a onClick={() => onLinkClick("ISMP")}>集成计划管理(ISMP)</a>
-              <a onClick={() => onLinkClick("plan")}>新产品导入(NPI)</a>
+              <a onClick={() => onLinkClick("ISC")}>集成供应链(ISC)</a>
             </div>
             <div className={styles["shuopan-main-service"]}>
               <div>
@@ -85,8 +84,8 @@ const FooterComp = ({ pageScroll }: any) => {
                 <span>联系我们</span>
               </div>
               <a>电话：0571-83580606</a>
-              <a>邮箱：zhaopin@boulderaitech.com</a>
-              <a onClick={() => onLinkClick("IBA")}>获取演示</a>
+              <a>邮箱：info@boulderaitech.com</a>
+              <a onClick={() => setIsOpen(true)}>获取演示</a>
             </div>
             <div
               className={styles["shuopan-main-service"]}
@@ -159,7 +158,7 @@ const FooterComp = ({ pageScroll }: any) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 export default FooterComp;

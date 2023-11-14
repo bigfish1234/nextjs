@@ -5,7 +5,8 @@
 }
 .firstTitle {
   font-size: 40px ;
-  min-height: 46px;
+  min-height: 24px;
+  max-height: 46px;
   text-align: center;
 }
 
@@ -19,6 +20,7 @@
 .divider {
   width: 40px;
   height: 4px;
+  border-radius: 2px;
   background-color: #F96F25;
   margin: 26px 0;
 }
@@ -55,10 +57,10 @@
     margin-top: 10px;
   }
 
-    .divider {
-      width: 36px;
-      height: 2px;
-      background-color: #F96F25;
-      margin: 10px 0;
-    }
+  .divider {
+    width: 36px;
+    height: 4px;
+    background-color: #F96F25;
+    margin: 10px 0;
+  }
 }

@@ -17,7 +17,6 @@ import SwiperComp from "@/components/SwiperComp";
 import cpqImg from "@/images/cpq@2x.png";
 import ipsImg from "@/images/ips@2x.png";
 import ipsXiaosImg from "@/images/ips-xiaos@2x.png";
-import getIcon from "@/images/gou@2x.png";
 import sanfengLogo from "@/images/sanfeng@2x.png";
 import supconLogo from "@/images/supcon@2x.png";
 import qreLogo from "@/images/qre@2x.png";
@@ -25,10 +24,17 @@ import LayoutComp from "@/components/LayoutComp";
 import { Imgs } from "@/images/mobileImg";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 import { store } from "@/store";
-import { ABILITY_LIST, DESCRIPTION_LIST, TITLE_LIST } from "./effects/const";
+import {
+  APPLICATION_LIST,
+  DESCRIPTION_LIST,
+  TITLE_LIST,
+} from "./effects/const";
+// import { useState } from "react";
+import ApplicationItem from "./components";
 
 const Home = () => {
   const isMobile = isMobileDevice();
+  // const [isOpen, setIsOpen] = useState(false);
   const state = store();
 
   // 页面顶部的轮播图组件
@@ -66,25 +72,26 @@ const Home = () => {
     ],
   };
 
-  // 点击则页面滚动至指定位置
-  const handleClick = (type: string) => {
+  // 锚点页面滑动
+  const anchorClick = (type: string) => {
     const dom = document.getElementById(type);
     if (dom) {
       dom.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
-  const onMouseEnter = () => {
+  // 图片hover显示阴影
+  const hoverShowShadow = () => {
     const imgDom = document.getElementById("architectureImg");
     if (imgDom) imgDom.style.boxShadow = "0px 5px 12px 0px rgba(0,0,0,0.06)";
   };
-
-  const onMouseLeave = () => {
+  const leaveHideShadow = () => {
     const imgDom = document.getElementById("architectureImg");
     if (imgDom) imgDom.style.boxShadow = "";
   };
 
-  const handleMouseEnter = (type: string, val: number) => {
+  // hover navigator 样式变化
+  const hoverStyleChange = (type: string, val: number) => {
     state.onLinkChange(type);
     const hoverDom = document.getElementById(type);
     if (hoverDom) {
@@ -98,68 +105,86 @@ const Home = () => {
     }
   };
 
+  // 移动端点击按钮
+  const onArrowClick = () => {
+    const dom = document.getElementById("cus");
+  };
+
   return (
     <main>
       {/* swiper */}
       <LayoutComp
         slideList={isMobile ? homeSlideList.mb : homeSlideList.pc}
         page="home"
-        pageScroll={handleClick}
+        pageScroll={anchorClick}
+        // isOpen={isOpen}
+        // setIsOpen={setIsOpen}
       >
         {/* navgator */}
         <div className={homeStyle["header-link"]}>
-          <div className={homeStyle["link-item"]}>
+          <div
+            id="link-item"
+            className={
+              isMobile
+                ? `${homeStyle["link-item"]} ${homeStyle["link-item-box"]}`
+                : homeStyle["link-item"]
+            }
+          >
             <span
               id="ei"
-              onMouseEnter={() => handleMouseEnter("ei", 0)}
-              onMouseLeave={() => handleMouseEnter("ei", 1)}
-              onClick={() => handleClick("eimos")}
+              onMouseEnter={() => hoverStyleChange("ei", 0)}
+              onMouseLeave={() => hoverStyleChange("ei", 1)}
+              onClick={() => anchorClick("eimos")}
             >
               EIMOS
             </span>
             <span
               id="application"
-              onMouseEnter={() => handleMouseEnter("application", 0)}
-              onMouseLeave={() => handleMouseEnter("application", 1)}
-              onClick={() => handleClick("IBA")}
+              onMouseEnter={() => hoverStyleChange("application", 0)}
+              onMouseLeave={() => hoverStyleChange("application", 1)}
+              onClick={() => anchorClick("IBA")}
             >
               智能业务解析
             </span>
             <span
               id="platform"
-              onMouseEnter={() => handleMouseEnter("platform", 0)}
-              onMouseLeave={() => handleMouseEnter("platform", 1)}
-              onClick={() => handleClick("LTC")}
+              onMouseEnter={() => hoverStyleChange("platform", 0)}
+              onMouseLeave={() => hoverStyleChange("platform", 1)}
+              onClick={() => anchorClick("LTC")}
             >
               线索到回款
             </span>
             <span
               id="value"
-              onMouseEnter={() => handleMouseEnter("value", 0)}
-              onMouseLeave={() => handleMouseEnter("value", 1)}
-              onClick={() => handleClick("plan")}
+              onMouseEnter={() => hoverStyleChange("value", 0)}
+              onMouseLeave={() => hoverStyleChange("value", 1)}
+              onClick={() => anchorClick("ISC")}
             >
               集成供应链
             </span>
             <span
               id="cus"
-              onMouseEnter={() => handleMouseEnter("cus", 0)}
-              onMouseLeave={() => handleMouseEnter("cus", 1)}
-              onClick={() => handleClick("customer")}
+              onMouseEnter={() => hoverStyleChange("cus", 0)}
+              onMouseLeave={() => hoverStyleChange("cus", 1)}
+              onClick={() => anchorClick("customer")}
             >
               我们的客户
             </span>
           </div>
-          {/* 移动端的箭头 */}
-          {isMobile && (
-            <div className={homeStyle["link-arrow"]}>
-              <Image
-                src={Imgs.arrow}
-                alt="arrow"
-                style={{ width: 28, height: 28, margin: "0 auto" }}
-              />
-            </div>
-          )}
+
+          <div className={homeStyle["link-arrow"]}>
+            <Image
+              src={Imgs.arrow}
+              alt="arrow"
+              style={{
+                width: 28,
+                height: 28,
+                margin: "0 auto",
+                display: isMobile ? "block" : "none",
+              }}
+              onClick={onArrowClick}
+            />
+          </div>
         </div>
 
         {/* content */}
@@ -172,14 +197,16 @@ const Home = () => {
               "构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
             }
           />
-          <Image
-            src={architectureImg}
-            alt="architectureImg"
-            id="architectureImg"
-            className={homeStyle["structure-img"]}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          />
+          <div className="img-wrapper">
+            <Image
+              src={architectureImg}
+              alt="architectureImg"
+              id="architectureImg"
+              className={homeStyle["structure-img"]}
+              onMouseEnter={hoverShowShadow}
+              onMouseLeave={leaveHideShadow}
+            />
+          </div>
         </div>
 
         {/* 智能业务解析 */}
@@ -188,8 +215,10 @@ const Home = () => {
           {isMobile ? (
             <div className="wrapper-center">
               <SwiperComp
+                slideList={
+                  isMobile ? slideListOfChain.mb[0] : slideListOfChain.pc[0]
+                }
                 description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
-                imgUrl={Imgs.analysis}
               />
             </div>
           ) : (
@@ -209,7 +238,13 @@ const Home = () => {
         <div className="wrapper-center" id="LTC">
           {/* 线索到回款 */}
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
-          <Image src={ltcImg} alt="ltcImg" className={homeStyle["ltc-img"]} />
+          <div className="img-wrapper">
+            <Image
+              src={isMobile ? Imgs.ltc : ltcImg}
+              alt="ltcImg"
+              className={homeStyle["ltc-img"]}
+            />
+          </div>
 
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
             {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
@@ -229,7 +264,7 @@ const Home = () => {
         </div>
 
         {/* 集成供应链 */}
-        <div className={homeStyle["supply-chian"]} id="ISMP">
+        <div className={homeStyle["supply-chian"]} id="ISC">
           <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
             <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
@@ -249,7 +284,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="wrapper-center" id="plan">
+        <div className="wrapper-center" id="plan" style={{ padding: "0 15px" }}>
           {/* 应用及解决方案 */}
           <TabHeader h1="应用及解决方案" />
           <div className={homeStyle["tab-button"]}>
@@ -287,56 +322,27 @@ const Home = () => {
 
           {/* 内容 */}
           <div className={homeStyle["item-content"]}>
-            <div className={homeStyle["item-content-title"]}>
-              {state.plan == "IBA" ? (
-                <>
-                  <p className={homeStyle["content-title"]}>智能业务解析</p>
-                  <p>Intelligent Business Analytics</p>
-                </>
-              ) : state.plan == "LTC" ? (
-                <>
-                  <p className={homeStyle["content-title"]}>线索到回款</p>
-                  <p>Lead to Cash</p>
-                </>
-              ) : (
-                <>
-                  <p className={homeStyle["content-title"]}>集成供应链</p>
-                  <p>Integrated Supply Chain</p>
-                </>
-              )}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+              }}
+            >
+              {APPLICATION_LIST[state.plan].map((item: any, index: number) => {
+                return (
+                  <ApplicationItem
+                    key={item.name}
+                    item={item}
+                    index={index}
+                    count={APPLICATION_LIST[state.plan].length}
+                    isMobile={isMobile}
+                  />
+                );
+              })}
             </div>
-            <div className={homeStyle["item-content-ability"]}>
-              <p className={homeStyle["content-title"]}>核心能力</p>
-              <div className={homeStyle["content-ability"]}>
-                {(state.plan == "IBA"
-                  ? ABILITY_LIST[0]
-                  : state.plan == "LTC"
-                  ? ABILITY_LIST[1]
-                  : ABILITY_LIST[2]
-                ).map((item: string) => {
-                  return (
-                    <div
-                      key={item}
-                      style={{ display: "flex", marginBottom: 16 }}
-                    >
-                      <div style={{ width: 16, marginRight: 8 }}>
-                        <Image
-                          src={getIcon}
-                          alt="get"
-                          width={16}
-                          height={16}
-                          style={{ marginRight: 8, display: "inline-block" }}
-                        />
-                      </div>
-                      <div style={{ flex: 1 }}>{item}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            <a className={homeStyle["link"]} onClick={() => handleClick("IBA")}>
-              获取演示
-            </a>
+
+            <a className={homeStyle["link"]}>获取演示</a>
           </div>
         </div>
 

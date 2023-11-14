@@ -22,12 +22,17 @@ a {
   cursor: pointer;
 }
 
+
 .wrapper-center {
   width: 1480px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.img-wrapper {
+  margin: 0 auto 20px;
 }
 
 @media screen and (max-width:1440px) {
@@ -42,7 +47,11 @@ a {
   }
   
   .wrapper-center {
-    width: 345px;
+    width: 100%;
   }
   
+  .img-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+  }
 }

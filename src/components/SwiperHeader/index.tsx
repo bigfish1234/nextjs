@@ -61,12 +61,14 @@ const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
             alt="expand"
             id="expand"
             className={styles["expand-icon"]}
+            style={{ position: isExpand ? "fixed" : "absolute" }}
             onClick={() => {
               setIsExpand(!isExpand);
               const dom = document.getElementById("expand");
               if (dom) {
-                isExpand && (dom.style.rotate = "0deg");
-                !isExpand && (dom.style.rotate = "90deg");
+                isExpand
+                  ? (dom.style.rotate = "0deg")
+                  : (dom.style.rotate = "90deg");
               }
             }}
           />

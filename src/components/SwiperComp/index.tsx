@@ -5,13 +5,10 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import getIcon from "@/images/gou@2x.png";
-
 import "swiper/css";
 import { useState } from "react";
-import { isMobileDevice } from "@/utils/isMobileDevice";
 
 const SwiperComp = ({ description, slideList, index }: any) => {
-  const flag = isMobileDevice();
   const slideItemRender = (slideList || []).map((imgUrl: any, ind: number) => (
     <Image
       src={imgUrl}

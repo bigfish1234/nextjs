@@ -21,3 +21,71 @@ export const ABILITY_LIST = [
   ["1", "2"],
   ["1", "2", "3"],
 ];
+
+export const APPLICATION_LIST: any = {
+  IBA: [
+    {
+      name: "智能业务解析",
+      nameEn: "Intelligent Business Analytics",
+      des: [
+        "聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理",
+        "多场景应用：日报、周报、月度经营分析",
+        "基于规则数据业务异常主动预警",
+        "搜索式指标自动计算功能",
+      ],
+    },
+  ],
+  LTC: [
+    {
+      name: "订单 360",
+      nameEn: "Full Visibility and Control of Contract Execution",
+      des: [
+        "场景化的客户，线索和商机管理，实现产品、渠道、客户之间自动查找与匹配；精准投入销售资源，提升从线索到合同转化率",
+      ],
+    },
+    {
+      name: "智能销售管理平台",
+      nameEn: "Intelligent Sales Management",
+      des: [
+        "订单履行全流程可视，履行进度可预测，异常可管理，一张视图实现三流合一，信息高效互通与共享",
+      ],
+    },
+    {
+      name: "智能合同管理",
+      nameEn: "Intelligent Contract Management",
+      des: [
+        "通过对不同销售场景下合同数据要素的解构，场景化知识图谱的构建，依据明确的业务规则，管好合同的生成和履行",
+      ],
+    },
+    {
+      name: "新产品导入(NPI)",
+      nameEn: "NPI - New Product Insertion",
+      des: [
+        "多维模型实现对客户需求快速排序；产品相似相近特征搜索，提高产品配置效率",
+      ],
+    },
+    {
+      name: "产品配置报价(CPQ)",
+      nameEn: "CPQ - Product configuration quotation",
+      des: [
+        "管理从需求结构化-配置推荐-项目成本概算-项目报价的关键流程，加速产品配置输出，提高商机转化，提高项目盈利测算能力和签约质量",
+      ],
+    },
+  ],
+  ISC: [
+    {
+      name: "IPS-销售预测",
+      nameEn: "Sales Forecast",
+      des: [
+        "一站式智能销售预测。丰富的销售预测模版，可适配企业多场景全渠道的机会点、项目、框架合同、要货计划的预测管理",
+      ],
+    },
+    {
+      name: "IPS-销售与运作计划",
+      nameEn: "Sales & Operations Planning",
+      des: [
+        "基于价值导向的产品结构化和归一化AI算法。面向客户需求，取得成本和效率的相对平衡，实现公司价值的最大化 ",
+      ],
+    },
+  ],
+};

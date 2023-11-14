@@ -3,6 +3,7 @@ import TabHeader from "@/components/TabHearder";
 import styles from "./index.module.css";
 import Image from "next/image";
 import founderImg from "./imgs/founder.png";
+import ttWisdom from "./imgs/ttwisdom.png";
 import KapComp from "./components/KapComp";
 import PartnerComp from "./components/PartnerComp";
 import LayoutComp from "@/components/LayoutComp";
@@ -36,15 +37,17 @@ const AboutUs = () => {
         )}
         <div className={`${"wrapper-center"} ${styles["about-us-wrapper"]}`}>
           <TabHeader h1="将经营管理理念与模型抽象落地的架构团队" />
-          <Image src={founderImg} alt="like" className={styles["founder"]} />
+          <div className="img-wrapper">
+            <Image src={founderImg} alt="like" className={styles["founder"]} />
+          </div>
         </div>
         <div className={styles["history"]}>
           <TabHeader h1="发展历程" />
-          {/* <KapComp /> */}
+          <KapComp />
         </div>
-        <div className={styles["partner"]}>
+        <div className={styles["partner-wrapper"]}>
           <TabHeader h1="合作伙伴" />
-          {/* <PartnerComp /> */}
+          <PartnerComp imgUrl={ttWisdom} isMobile={isMobile} />
         </div>
       </LayoutComp>
     </main>

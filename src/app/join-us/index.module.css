@@ -85,9 +85,9 @@
 
 @media screen and (max-width: 768px) {
   .wrapper {
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
-    padding-top: 36px;
+    padding: 20px 15px;
   }
 
   .detail {
@@ -96,8 +96,9 @@
 
   .position-detail-wrapper {
     height: 300px;
-    padding: 24px 0;
+    padding: 20px 0;
     box-shadow: none;
+    margin-bottom: 0;
     border-bottom: 5px solid #F5F5F7;
   }
 
@@ -107,7 +108,7 @@
   }
 
   .search-wrapper {
-    z-index: 999;
-    margin-top: -58px;
+    z-index: 99;
+    margin-top: -40px;
   }
 }
