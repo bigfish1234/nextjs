@@ -50,18 +50,31 @@ const KapComp = () => {
                   <p className={styles["title"]}>{bottom.title}</p>
                 </div>
               </div>
-              <Image src={backgroundImg} alt="dev" width={250} height={500} />
+              <Image
+                src={backgroundImg}
+                alt="dev"
+                className={styles["kap-img"]}
+                // style={{ width: "100%", height: "100%" }}
+              />
             </div>
           );
         })}
       </div>
       {!isMobile && (
         <>
-          <div className={styles["arrow-icon"]} style={{ left: -80 }}>
-            <Image src={leftIcon} alt="left" width={60} height={60} />
+          <div className={styles["arrow-icon"]} style={{ left: -70 }}>
+            <Image
+              src={leftIcon}
+              alt="left"
+              className={styles["arrow-icon-img"]}
+            />
           </div>
-          <div className={styles["arrow-icon"]} style={{ right: -80 }}>
-            <Image src={rightIcon} alt="left" width={60} height={60} />
+          <div className={styles["arrow-icon"]} style={{ right: -70 }}>
+            <Image
+              src={rightIcon}
+              alt="left"
+              className={styles["arrow-icon-img"]}
+            />
           </div>
         </>
       )}

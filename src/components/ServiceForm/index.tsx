@@ -9,8 +9,8 @@ const ServiceForm = () => {
   };
 
   return (
-    <>
-      <div style={{ margin: "24px 0", fontSize: 20 }}>咨询服务</div>
+    <div className={styles["form-wrapper"]}>
+      <div style={{ marginBottom: 24, fontSize: 20 }}>咨询服务</div>
       <Form
         size="middle"
         form={form}
@@ -35,13 +35,13 @@ const ServiceForm = () => {
           />
         </Form.Item>
         <Form.Item label="需求描述" name="des" rules={[{ required: true }]}>
-          <Input.TextArea rows={6} placeholder="请输入需求描述" />
+          <Input.TextArea rows={4} placeholder="请输入需求描述" />
         </Form.Item>
       </Form>
       <div className={styles["submit-btn"]} onClick={submit}>
         提交
       </div>
-    </>
+    </div>
   );
 };
 

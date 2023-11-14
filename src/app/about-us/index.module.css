@@ -64,6 +64,11 @@
   top: 0;
 }
 
+.kap-img {
+  width: 250px;
+  height: 500px;
+}
+
 .history-content div {
   height: 50%;
 }
@@ -90,6 +95,11 @@
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);  
 }
 
+.arrow-icon-img {
+  width: 60px;
+  height: 60px;
+}
+
 .partner-wrapper {
   padding: 50px;
 }
@@ -113,6 +123,43 @@
 @media screen and (max-width: 1440px) {
   .founder {
     height: 505px;
+    width: 1200px;
+  }
+
+  .develop-history-wrapper {
+    width: 1000px;
+  }
+  
+  .history-content {
+    width: 175px;
+    height: 350px;
+  }
+
+  .kap-img {
+    width: 175px;
+    height: 350px;
+  }
+
+  .history-content .time {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .history-content .title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .arrow-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    transform: translateY(-38px);
+  }
+
+  .arrow-icon-img {
+    width: 46px;
+    height: 46px;
   }
 }
 

@@ -117,8 +117,6 @@ const Home = () => {
         slideList={isMobile ? homeSlideList.mb : homeSlideList.pc}
         page="home"
         pageScroll={anchorClick}
-        // isOpen={isOpen}
-        // setIsOpen={setIsOpen}
       >
         {/* navgator */}
         <div className={homeStyle["header-link"]}>

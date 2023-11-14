@@ -27,7 +27,14 @@ const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
   };
 
   return (
-    <div style={{ position: "relative", minHeight: "100vh" }}>
+    <div
+      className={styles["layout-wrapper"]}
+      // style={{
+      //   position: "relative",
+      //   minHeight: "100vh",
+      //   minWidth: isMobile ? "100%" : 1200,
+      // }}
+    >
       {/* 轮播图 */}
       <SwiperHeader
         slideList={slideList}
