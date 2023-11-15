@@ -8,6 +8,7 @@ import { Imgs } from "@/images/mobileImg";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 import PositionDetail from "./components/PositionDetail";
 import { useState } from "react";
+import { ConfigProvider, Pagination } from "antd";
 
 const JoinUs = () => {
   const isMobile = isMobileDevice();
@@ -63,11 +64,12 @@ const JoinUs = () => {
     },
   ];
 
-  const [jobList, setJobList] = useState([...jobListAll]);
+  const [jobList, setJobList] = useState([...jobListAll].slice(0, 3));
   const [status, setStatus] = useState<any>({
     type: undefined,
     pos: undefined,
   });
+  const [total, setTotal] = useState(jobListAll.length);
 
   const handleChange = (value: any) => {
     const { type, pos } = value;
@@ -87,6 +89,7 @@ const JoinUs = () => {
       }
     });
     setJobList(filterData);
+    setTotal(filterData.length);
   };
   return (
     <main>
@@ -114,7 +117,7 @@ const JoinUs = () => {
                     fontSize: 14,
                   }}
                 >
-                  {jobList.length}
+                  {total}
                 </span>{" "}
                 条记录
               </p>
@@ -128,6 +131,17 @@ const JoinUs = () => {
                 />
               );
             })}
+          </div>
+
+          <div className={joinStyle["pagination-wrapper"]}>
+            <Pagination
+              defaultCurrent={1}
+              pageSize={3}
+              total={total}
+              onChange={(value: number) => {
+                setJobList([...jobListAll].slice(3 * (value - 1), 3 * value));
+              }}
+            />
           </div>
         </div>
         <div className={joinStyle["wrapper"]}>
