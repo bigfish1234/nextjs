@@ -7,8 +7,12 @@ import SearchComp from "./components/SearchComp";
 import { Imgs } from "@/images/mobileImg";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 import PositionDetail from "./components/PositionDetail";
-import { useState } from "react";
-import { ConfigProvider, Pagination } from "antd";
+import { useEffect, useState } from "react";
+import { ConfigProvider, Pagination, message } from "antd";
+import { getJobs } from "@/utils/api";
+import type { IStatus } from "./type";
+
+
 
 const JoinUs = () => {
   const isMobile = isMobileDevice();
@@ -65,31 +69,52 @@ const JoinUs = () => {
   ];
 
   const [jobList, setJobList] = useState([...jobListAll].slice(0, 3));
-  const [status, setStatus] = useState<any>({
-    type: undefined,
-    pos: undefined,
+  const [status, setStatus] = useState<IStatus>({
+    type: '',
+    pos: '',
   });
   const [total, setTotal] = useState(jobListAll.length);
 
-  const handleChange = (value: any) => {
-    const { type, pos } = value;
-    const filterData = [...jobListAll].filter((item: any) => {
-      if (type !== undefined) {
-        if (pos !== undefined) {
-          return item.type == type && item.id == pos;
-        } else {
-          return item.type == type;
-        }
-      } else {
-        if (pos !== undefined) {
-          return item.id == pos;
-        } else {
-          return true;
-        }
+  useEffect(() => {
+    
+    const initData = async ()=>{
+      // 传入职位和状态  初始化的时候为空
+      try {
+        const res = await getJobs({type: status.type, pos: status.pos});
+        setJobList([...res]);
+      } catch (error) {
+        message.error('获取职位失败');
+        console.log('error', error);
       }
-    });
-    setJobList(filterData);
-    setTotal(filterData.length);
+      
+    }
+
+    initData();
+ 
+  }, [status])
+  
+
+
+  const handleChange = (value: IStatus) => {
+    setStatus({type: value.type,pos: value.pos});
+    // const { type, pos } = value;
+    // const filterData = [...jobListAll].filter((item: any) => {
+    //   if (type !== undefined) {
+    //     if (pos !== undefined) {
+    //       return item.type == type && item.id == pos;
+    //     } else {
+    //       return item.type == type;
+    //     }
+    //   } else {
+    //     if (pos !== undefined) {
+    //       return item.id == pos;
+    //     } else {
+    //       return true;
+    //     }
+    //   }
+    // });
+    // setJobList(filterData);
+    // setTotal(filterData.length);
   };
   return (
     <main>
