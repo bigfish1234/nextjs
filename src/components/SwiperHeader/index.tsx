@@ -1,24 +1,17 @@
-"use client";
-
-import { useState } from "react";
-import { isMobileDevice } from "@/utils/isMobileDevice";
-import Link from "next/link";
 import Image from "next/image";
 import styles from "./index.module.css";
 import logo from "@/images/logo.png";
-import { Imgs } from "@/images/mobileImg";
+import NavgatorComp from "./effects/NavgatorComp";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { store } from "@/store";
 
-const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
-  const isMobile = isMobileDevice();
-  const state = store();
-
+const SwiperHeader = ({ slideList, page }: any) => {
   return (
     <div className={styles.swiperHeader}>
+      {/* 轮播图 */}
       <Swiper
         className={styles["swiper-content"]}
         modules={[A11y, Autoplay, Pagination]}
@@ -32,111 +25,31 @@ const SwiperHeader = ({ slideList, page, setIsExpand, isExpand }: any) => {
         pagination={{ clickable: true }}
       >
         {(slideList || []).map((imgUrl: any, index: number) => {
-          return (
-            <SwiperSlide key={index} className={styles["swiper-content"]}>
+          const renderSlide = () => {
+            return (
               <Image
                 priority={true}
                 src={imgUrl}
                 alt="img"
                 className={styles["swiper-content"]}
               />
+            );
+          };
+          return (
+            <SwiperSlide key={index} className={styles["swiper-content"]}>
+              {renderSlide()}
             </SwiperSlide>
           );
         })}
       </Swiper>
 
+      {/* logo */}
       <div className={styles["header"]}>
-        <Image
-          src={logo}
-          alt="logo"
-          className={styles["shuopan-logo"]}
-          onClick={() => {
-            window.location.href = "/home-page";
-          }}
-        />
-
-        {isMobile ? (
-          <Image
-            src={Imgs.expand}
-            alt="expand"
-            id="expand"
-            className={styles["expand-icon"]}
-            style={{ position: isExpand ? "fixed" : "absolute" }}
-            onClick={() => {
-              setIsExpand(!isExpand);
-              const dom = document.getElementById("expand");
-              if (dom) {
-                isExpand
-                  ? (dom.style.rotate = "0deg")
-                  : (dom.style.rotate = "90deg");
-              }
-            }}
-          />
-        ) : (
-          <div
-            className={styles.navgator}
-            style={{ color: page == "join" ? "#fff" : "black" }}
-          >
-            <Link
-              prefetch
-              href="/home-page"
-              style={{
-                color:
-                  state.page == "eimos"
-                    ? "#F96F25"
-                    : state.page == "join"
-                    ? "white"
-                    : "black",
-              }}
-              onClick={() => state.onPageChange("eimos")}
-            >
-              EIMOS
-            </Link>
-            <Link
-              prefetch
-              href="/info-center"
-              style={{
-                color:
-                  state.page == "info"
-                    ? "#F96F25"
-                    : state.page == "join"
-                    ? "white"
-                    : "black",
-              }}
-              onClick={() => state.onPageChange("info")}
-            >
-              信息中心
-            </Link>
-            <Link
-              prefetch
-              href="/about-us"
-              style={{
-                color:
-                  state.page == "about"
-                    ? "#F96F25"
-                    : state.page == "join"
-                    ? "white"
-                    : "black",
-              }}
-              onClick={() => state.onPageChange("about")}
-            >
-              关于我们
-            </Link>
-            <Link
-              prefetch
-              href="/join-us"
-              style={{ color: state.page == "join" ? "#F96F25" : "black" }}
-              onClick={() => state.onPageChange("join")}
-            >
-              加入我们
-            </Link>
-          </div>
-        )}
+        <Image src={logo} alt="logo" className={styles["shuopan-logo"]} />
       </div>
 
-      {/* <div className={styles.obtain}>
-        <a>获取演示</a>
-      </div> */}
+      {/* 展开按钮和banner的导航栏 */}
+      <NavgatorComp page={page} />
     </div>
   );
 };

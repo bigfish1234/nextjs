@@ -2,7 +2,7 @@
 import InfomationBar from "@/components/InfomationBar";
 import infoStyle from "./index.module.css";
 import LayoutComp from "@/components/LayoutComp";
-import infoCenterImg from "@/images/infomation/info-center.png";
+import infoCenterImg from "@/images/header/xinxzx.png";
 import { Imgs } from "@/images/mobileImg";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 

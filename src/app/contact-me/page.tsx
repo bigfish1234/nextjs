@@ -1,4 +1,3 @@
-"use client";
 import NavBarLayout from "@/components/NavBarLayout";
 import ServiceForm from "@/components/ServiceForm";
 

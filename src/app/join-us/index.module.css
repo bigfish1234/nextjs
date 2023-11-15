@@ -79,7 +79,7 @@
 }
 
 .deatil-content {
-  height: 175px;
+  min-height: 100px;
   overflow: hidden;
 }
 

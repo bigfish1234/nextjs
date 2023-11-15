@@ -5,7 +5,7 @@ const ServiceForm = () => {
   const [form] = Form.useForm();
 
   const submit = () => {
-    console.log(form.getFieldsValue());
+    // console.log(form.getFieldsValue());
   };
 
   return (

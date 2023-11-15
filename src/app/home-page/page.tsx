@@ -1,11 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import styles from "../page.module.css";
 import TabHeader from "@/components/TabHearder";
 import homeStyle from "./index.module.css";
-import homeImg from "@/images/home-img2.png";
-import infoCenter from "@/images/info-center.png";
+import homeImg from "@/images/header/banner.png";
 import architectureImg from "@/images/architecture-img.png";
 import ltcImg from "@/images/ltc.png";
 import analyticsImg from "@/images/analytics.png";
@@ -29,7 +27,6 @@ import {
   DESCRIPTION_LIST,
   TITLE_LIST,
 } from "./effects/const";
-// import { useState } from "react";
 import ApplicationItem from "./components";
 
 const Home = () => {
@@ -39,7 +36,7 @@ const Home = () => {
 
   // 页面顶部的轮播图组件
   const homeSlideList = {
-    pc: [homeImg, infoCenter],
+    pc: [homeImg],
     mb: [Imgs.home],
   };
 
@@ -190,10 +187,7 @@ const Home = () => {
           {/* 架构图 */}
           <TabHeader
             h1="EIMOS 应用功能全视图"
-            h2={
-              !isMobile &&
-              "构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
-            }
+            h2="构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
           />
           <div className="img-wrapper">
             <Image

@@ -10,7 +10,7 @@ import Link from "next/link";
 import { store } from "@/store";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 
-const FooterComp = ({ pageScroll, setIsOpen }: any) => {
+const FooterComp = ({ pageScroll }: any) => {
   const isMobile = isMobileDevice();
   const state = store();
 
@@ -85,7 +85,7 @@ const FooterComp = ({ pageScroll, setIsOpen }: any) => {
               </div>
               <a>电话：0571-83580606</a>
               <a>邮箱：info@boulderaitech.com</a>
-              <a onClick={() => setIsOpen(true)}>获取演示</a>
+              <a onClick={() => state.handleOpenChange(true)}>获取演示</a>
             </div>
             <div
               className={styles["shuopan-main-service"]}

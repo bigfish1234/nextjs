@@ -16,29 +16,6 @@
   z-index: 999;
 }
 
-.mobile-sidebar {
-  width: 120px;
-  height: 100vh;
-  box-shadow: 8px 4px 10px 0px rgba(213, 213, 213, 0.5);
-  background-color: #FFFFFF;
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-}
-
-.mobile-sidebar-content {
-  margin-top: 75px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 16px;
-  font-family: 'PingFangSC-Semibold, PingFang SC';
-}
-
 .service-form {
   width: 500px;
   box-shadow: 0px 16px 40px 0px rgba(48, 50, 88, 0.1);

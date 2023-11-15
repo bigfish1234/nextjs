@@ -7,7 +7,7 @@ import ttWisdom from "./imgs/ttwisdom.png";
 import KapComp from "./components/KapComp";
 import PartnerComp from "./components/PartnerComp";
 import LayoutComp from "@/components/LayoutComp";
-import spznImg from "./imgs/spzn.png";
+import spznImg from "@/images/header/shuopzn.png";
 import { Imgs } from "@/images/mobileImg";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 
@@ -17,6 +17,7 @@ const AboutUs = () => {
     pc: [spznImg],
     mb: [Imgs.spzn],
   };
+
   return (
     <main>
       <LayoutComp

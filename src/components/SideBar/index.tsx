@@ -1,37 +1,22 @@
 "use client";
 
-import { store } from "@/store";
-import styles from "./index.module.css";
-import { Imgs } from "@/images/mobileImg";
-import Image from "next/image";
 import Link from "next/link";
+import styles from "./index.module.css";
+import { store } from "@/store";
+import { isMobileDevice } from "@/utils/isMobileDevice";
 
-const NavBar = ({ children }: any) => {
+const SideBar = () => {
   const state = store();
+  const isMobile = isMobileDevice();
+
   const handleClick = (type: string) => {
     state.onPageChange(type);
+    state.handleExpandChange(false);
   };
+
   return (
-    <div className={styles["wrapper"]}>
-      <div className={styles["wrapper-header"]}>
-        <Image
-          src={Imgs.expand}
-          alt="expand"
-          id="expand"
-          className={styles["expand"]}
-          onClick={() => {
-            state.handleExpandChange(!state.isExpand);
-            const dom = document.getElementById("expand");
-            if (dom) {
-              state.isExpand && (dom.style.rotate = "0deg");
-              !state.isExpand && (dom.style.rotate = "90deg");
-            }
-          }}
-        />
-        <Image src={Imgs.logo} alt="logo" className={styles["logo"]} />
-      </div>
-      <div className="wrapper-center">{children}</div>
-      {state.isExpand && (
+    <>
+      {isMobile && state.isExpand && (
         <div className={styles["mobile-sidebar"]}>
           <div className={styles["mobile-sidebar-content"]}>
             <Link
@@ -65,8 +50,8 @@ const NavBar = ({ children }: any) => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
-export default NavBar;
+export default SideBar;
