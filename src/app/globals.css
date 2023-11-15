@@ -33,6 +33,7 @@ a {
 
 .img-wrapper {
   margin: 0 auto 20px;
+  position: relative;
 }
 
 @media screen and (max-width:1440px) {

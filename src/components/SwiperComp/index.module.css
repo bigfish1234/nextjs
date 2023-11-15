@@ -2,7 +2,6 @@
   box-shadow: 0 2px 16px 0 #E1E1E1;
   margin-bottom: 60px;
   width: 720px;
-  height: 450px;
 }
 
 .swiper-wrapper {
@@ -12,12 +11,12 @@
 
 .description {
   width: 100%;
-  height: 80px;
+  height: 100px;
   font-size: 15px;
   line-height: 24px;
   color: #6E708A;
-  padding: 20px 48px 0;
   background-color: #fff;
+  padding: 20px;
 }
 
 .swiper-content {
@@ -58,7 +57,6 @@
 @media screen and (max-width: 1440px) {
   .wrapper {
     width: 580px;
-    height: 360px;
   }
 
   .swiper-wrapper {
@@ -68,19 +66,19 @@
 
 @media screen and (max-width: 768px) {
   .wrapper {
-    width: 343px;
-    height: 238px;
-    margin-bottom: 25px;
+    width: 91.5vw;
+    margin: 25px auto;
+    background-color: #f5f5f7;
   }
 
   .swiper-wrapper {
-    height: 164px;
+    height: 43.7vw;
   }
 
   .description {
     font-size: 12px;
-    padding: 5px 15px 0;
     line-height: 20px;
+    height: 21.3vw;
   }
 }
 

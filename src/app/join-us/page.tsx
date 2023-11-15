@@ -133,16 +133,18 @@ const JoinUs = () => {
             })}
           </div>
 
-          <div className={joinStyle["pagination-wrapper"]}>
-            <Pagination
-              defaultCurrent={1}
-              pageSize={3}
-              total={total}
-              onChange={(value: number) => {
-                setJobList([...jobListAll].slice(3 * (value - 1), 3 * value));
-              }}
-            />
-          </div>
+          {!isMobile && (
+            <div className={joinStyle["pagination-wrapper"]}>
+              <Pagination
+                defaultCurrent={1}
+                pageSize={3}
+                total={total}
+                onChange={(value: number) => {
+                  setJobList([...jobListAll].slice(3 * (value - 1), 3 * value));
+                }}
+              />
+            </div>
+          )}
         </div>
         <div className={joinStyle["wrapper"]}>
           <TabHeader h1="招聘简章" />

@@ -1,3 +1,4 @@
+"use client";
 import styles from "./index.module.css";
 import { Form, Input, Select } from "antd";
 

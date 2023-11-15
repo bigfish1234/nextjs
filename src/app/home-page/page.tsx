@@ -27,11 +27,11 @@ import {
   DESCRIPTION_LIST,
   TITLE_LIST,
 } from "./effects/const";
-import ApplicationItem from "./components";
+import ApplicationItem from "./components/ApplicationItem";
+import LtcImgWrapper from "./components/LtcImgWrapper";
 
-const Home = () => {
+const Page = () => {
   const isMobile = isMobileDevice();
-  // const [isOpen, setIsOpen] = useState(false);
   const state = store();
 
   // 页面顶部的轮播图组件
@@ -42,17 +42,11 @@ const Home = () => {
 
   // 线索到回款的轮播图
   const slideListOfCash = {
-    pc: [
-      [img360, intelligenceImg, cpqImg],
-      [contractImg, npiImg],
-      [intelligenceImg, cpqImg],
-      [intelligenceImg, cpqImg],
-      [intelligenceImg, cpqImg],
-    ],
+    pc: [[img360], [intelligenceImg], [contractImg], [npiImg], [cpqImg]],
     mb: [
-      [Imgs.npi, Imgs.analysis, Imgs.manage],
-      [Imgs.npi, Imgs.analysis],
-      [Imgs.npi, Imgs.analysis, Imgs.manage],
+      [Imgs.order],
+      [Imgs.platform],
+      [Imgs.cpq],
       [Imgs.npi, Imgs.manage],
       [Imgs.analysis, Imgs.manage],
     ],
@@ -73,7 +67,7 @@ const Home = () => {
   const anchorClick = (type: string) => {
     const dom = document.getElementById(type);
     if (dom) {
-      dom.scrollIntoView({ behavior: "smooth", block: "center" });
+      dom.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -87,25 +81,41 @@ const Home = () => {
     if (imgDom) imgDom.style.boxShadow = "";
   };
 
-  // hover navigator 样式变化
-  const hoverStyleChange = (type: string, val: number) => {
-    state.onLinkChange(type);
-    const hoverDom = document.getElementById(type);
-    if (hoverDom) {
-      if (val == 0) {
-        hoverDom.style.color = "#F96F25";
-        hoverDom.style.borderBottom = "#F96F25 3px solid";
-      } else {
-        hoverDom.style.color = "black";
-        hoverDom.style.borderBottom = "";
-      }
-    }
-  };
-
   // 移动端点击按钮
   const onArrowClick = () => {
     const dom = document.getElementById("cus");
   };
+
+  const navList = [
+    {
+      id: "eimos",
+      title: "EIMOS",
+    },
+    {
+      id: "IBA",
+      title: "智能业务解析",
+    },
+    {
+      id: "LTC",
+      title: "线索到回款",
+    },
+    {
+      id: "ISC",
+      title: "集成供应链",
+    },
+    {
+      id: "plan",
+      title: "应用及解决方案",
+    },
+    {
+      id: "pt",
+      title: "EIMOS平台",
+    },
+    {
+      id: "cus",
+      title: "我们的客户",
+    },
+  ];
 
   return (
     <main>
@@ -125,46 +135,17 @@ const Home = () => {
                 : homeStyle["link-item"]
             }
           >
-            <span
-              id="ei"
-              onMouseEnter={() => hoverStyleChange("ei", 0)}
-              onMouseLeave={() => hoverStyleChange("ei", 1)}
-              onClick={() => anchorClick("eimos")}
-            >
-              EIMOS
-            </span>
-            <span
-              id="application"
-              onMouseEnter={() => hoverStyleChange("application", 0)}
-              onMouseLeave={() => hoverStyleChange("application", 1)}
-              onClick={() => anchorClick("IBA")}
-            >
-              智能业务解析
-            </span>
-            <span
-              id="platform"
-              onMouseEnter={() => hoverStyleChange("platform", 0)}
-              onMouseLeave={() => hoverStyleChange("platform", 1)}
-              onClick={() => anchorClick("LTC")}
-            >
-              线索到回款
-            </span>
-            <span
-              id="value"
-              onMouseEnter={() => hoverStyleChange("value", 0)}
-              onMouseLeave={() => hoverStyleChange("value", 1)}
-              onClick={() => anchorClick("ISC")}
-            >
-              集成供应链
-            </span>
-            <span
-              id="cus"
-              onMouseEnter={() => hoverStyleChange("cus", 0)}
-              onMouseLeave={() => hoverStyleChange("cus", 1)}
-              onClick={() => anchorClick("customer")}
-            >
-              我们的客户
-            </span>
+            {navList.map((item: { id: string; title: string }) => {
+              return (
+                <span
+                  className={homeStyle["hover-style"]}
+                  key={item.id}
+                  onClick={() => anchorClick(item.id)}
+                >
+                  {item.title}
+                </span>
+              );
+            })}
           </div>
 
           <div className={homeStyle["link-arrow"]}>
@@ -187,7 +168,10 @@ const Home = () => {
           {/* 架构图 */}
           <TabHeader
             h1="EIMOS 应用功能全视图"
-            h2="构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
+            h2={
+              !isMobile &&
+              "构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
+            }
           />
           <div className="img-wrapper">
             <Image
@@ -215,11 +199,14 @@ const Home = () => {
             </div>
           ) : (
             <>
-              <Image
-                src={analyticsImg}
-                alt="analyticsImg"
-                className={homeStyle["analytics-img"]}
-              />
+              <div className={homeStyle["analytics-img-wrapper"]}>
+                <Image
+                  src={analyticsImg}
+                  alt="analyticsImg"
+                  className={homeStyle["analytics-img"]}
+                />
+              </div>
+
               <div className={homeStyle["description"]}>
                 聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
               </div>
@@ -227,27 +214,23 @@ const Home = () => {
           )}
         </div>
 
+        {/* 线索到回款 */}
         <div className="wrapper-center" id="LTC">
-          {/* 线索到回款 */}
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
-          <div className="img-wrapper">
-            <Image
-              src={isMobile ? Imgs.ltc : ltcImg}
-              alt="ltcImg"
-              className={homeStyle["ltc-img"]}
-            />
-          </div>
+          <LtcImgWrapper isMobile={isMobile} anchorClick={anchorClick} />
 
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
             {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
                 const description = TITLE_LIST[index];
+                const id = ["order", "ISMP", "ICM", "NPI"][index];
                 return (
                   <SwiperComp
                     description={description}
                     slideList={list}
                     index={index + 1}
                     key={index}
+                    id={id}
                   />
                 );
               }
@@ -339,7 +322,7 @@ const Home = () => {
         </div>
 
         {/* 我们的客户 */}
-        <div className={homeStyle["customer-section"]} id="customer">
+        <div className={homeStyle["customer-section"]} id="cus">
           <TabHeader h1="我们的客户" />
           <div className={homeStyle["cusomer-logo"]}>
             <div className={homeStyle["logo-box"]}>
@@ -370,4 +353,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;

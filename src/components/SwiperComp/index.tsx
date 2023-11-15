@@ -6,7 +6,7 @@ import getIcon from "@/images/gou@2x.png";
 import "swiper/css";
 import { useState } from "react";
 
-const SwiperComp = ({ description, slideList, index }: any) => {
+const SwiperComp = ({ description, slideList, index, id }: any) => {
   const slideItemRender = (slideList || []).map((imgUrl: any, ind: number) => (
     <Image
       src={imgUrl}
@@ -52,7 +52,7 @@ const SwiperComp = ({ description, slideList, index }: any) => {
       id="wrapper"
       onMouseLeave={() => onMouseLeave(index)}
     >
-      <div className={styles["swiper-wrapper"]} id="swiper">
+      <div className={styles["swiper-wrapper"]} id={id}>
         <Swiper
           className={styles["swiper-content"]}
           modules={[A11y, Autoplay]}

@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import PageTitle from "./effects/PageTitle";
 
 const SwiperHeader = ({ slideList, page }: any) => {
   return (
@@ -50,6 +51,8 @@ const SwiperHeader = ({ slideList, page }: any) => {
 
       {/* 展开按钮和banner的导航栏 */}
       <NavgatorComp page={page} />
+
+      <PageTitle page={page} />
     </div>
   );
 };
