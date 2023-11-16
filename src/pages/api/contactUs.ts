@@ -8,7 +8,6 @@ export default function handler(
   const body = req?.body;
   // todo 拿到body 数据，存到数据库
   const result  = {status: true, id: '1111'}; // 处理结果
-  console.log('test----->, body, ----->', body);
 
   // 操作完数据库，返回请求
   if(!result.status){

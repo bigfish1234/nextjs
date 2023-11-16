@@ -5,7 +5,6 @@ export const getJobs = async (params: any) => {
       ...params,
     },
   });
-  console.log('test----->, res, ----->', res);
   if(res.status!==200){
     return Promise.reject();
   }
