@@ -5,7 +5,6 @@ import TabHeader from "@/components/TabHearder";
 import homeStyle from "./index.module.css";
 import homeImg from "@/images/header/banner.png";
 import architectureImg from "@/images/architecture-img.png";
-import ltcImg from "@/images/ltc.png";
 import analyticsImg from "@/images/analytics.png";
 import img360 from "@/images/dingd360@2x.png";
 import contractImg from "@/images/zhinhtgl@2x.png";
@@ -26,12 +25,19 @@ import {
   APPLICATION_LIST,
   DESCRIPTION_LIST,
   TITLE_LIST,
+  capabilityList,
+  navList,
 } from "./effects/const";
 import ApplicationItem from "./components/ApplicationItem";
 import LtcImgWrapper from "./components/LtcImgWrapper";
+import HoverComp from "@/components/HoverComp";
+import { useState } from "react";
+import DetailComp from "./components/DetailComp";
 
 const Page = () => {
   const isMobile = isMobileDevice();
+  const [isShow, setIsShow] = useState(false);
+  const [isHover, setIsHover] = useState(false);
   const state = store();
 
   // 页面顶部的轮播图组件
@@ -86,36 +92,29 @@ const Page = () => {
     const dom = document.getElementById("cus");
   };
 
-  const navList = [
-    {
-      id: "eimos",
-      title: "EIMOS",
-    },
-    {
-      id: "IBA",
-      title: "智能业务解析",
-    },
-    {
-      id: "LTC",
-      title: "线索到回款",
-    },
-    {
-      id: "ISC",
-      title: "集成供应链",
-    },
-    {
-      id: "plan",
-      title: "应用及解决方案",
-    },
-    {
-      id: "pt",
-      title: "EIMOS平台",
-    },
-    {
-      id: "cus",
-      title: "我们的客户",
-    },
-  ];
+  const renderTLC = () => {
+    if (isShow) {
+      return (
+        <HoverComp
+          capabilityList={capabilityList}
+          position="IBA"
+          onClick={() => state.handleOpenChange(true)}
+        />
+      );
+    } else {
+      if (isHover) {
+        return <DetailComp position="IBA" />;
+      } else {
+        return (
+          <Image
+            src={analyticsImg}
+            alt="analyticsImg"
+            className={homeStyle["analytics-img"]}
+          />
+        );
+      }
+    }
+  };
 
   return (
     <main>
@@ -135,7 +134,7 @@ const Page = () => {
                 : homeStyle["link-item"]
             }
           >
-            {navList.map((item: { id: string; title: string }) => {
+            {(navList || []).map((item: { id: string; title: string }) => {
               return (
                 <span
                   className={homeStyle["hover-style"]}
@@ -195,22 +194,29 @@ const Page = () => {
                   isMobile ? slideListOfChain.mb[0] : slideListOfChain.pc[0]
                 }
                 description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
+                disable={true}
               />
             </div>
           ) : (
-            <>
-              <div className={homeStyle["analytics-img-wrapper"]}>
-                <Image
-                  src={analyticsImg}
-                  alt="analyticsImg"
-                  className={homeStyle["analytics-img"]}
-                />
+            <div
+              onMouseLeave={() => {
+                setIsShow(false);
+                setIsHover(false);
+              }}
+            >
+              <div
+                className={homeStyle["analytics-img-wrapper"]}
+                onMouseOver={() => setIsHover(true)}
+              >
+                {renderTLC()}
               </div>
-
-              <div className={homeStyle["description"]}>
+              <div
+                className={homeStyle["description"]}
+                onMouseEnter={() => setIsShow(true)}
+              >
                 聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
               </div>
-            </>
+            </div>
           )}
         </div>
 
@@ -228,9 +234,10 @@ const Page = () => {
                   <SwiperComp
                     description={description}
                     slideList={list}
-                    index={index + 1}
+                    index={index}
                     key={index}
                     id={id}
+                    isMobile={isMobile}
                   />
                 );
               }
@@ -251,6 +258,8 @@ const Page = () => {
                       description={des}
                       slideList={list}
                       key={index}
+                      index={index}
+                      disable={true}
                     />
                   );
                 }
