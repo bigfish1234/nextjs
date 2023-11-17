@@ -7,7 +7,7 @@
 }
 
 .link-item {
-  width: 1200px;
+  width: 1000px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -241,7 +241,7 @@
 
   .link-item-box {
     white-space: nowrap;
-    overflow: hidden;
+    overflow: scroll;
   }
 
   .link-item-box span{
@@ -297,7 +297,7 @@
   }
 
   .tab-button-item {
-    font-size: 14px;
+    font-size: 13px;
     box-shadow: none;
     border: 0;
   }

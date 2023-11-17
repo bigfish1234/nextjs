@@ -3,18 +3,9 @@
 import Image from "next/image";
 import TabHeader from "@/components/TabHearder";
 import homeStyle from "./index.module.css";
-import homeImg from "@/images/header/banner.png";
-import spznImg from "@/images/header/shuopzn.png";
 import architectureImg from "@/images/architecture-img.png";
 import analyticsImg from "@/images/analytics.png";
-import img360 from "@/images/dingd360@2x.png";
-import contractImg from "@/images/zhinhtgl@2x.png";
-import npiImg from "@/images/npi@2x.png";
-import intelligenceImg from "@/images/zhinxspt@2x.png";
 import SwiperComp from "@/components/SwiperComp";
-import cpqImg from "@/images/cpq@2x.png";
-import ipsImg from "@/images/ips@2x.png";
-import ipsXiaosImg from "@/images/ips-xiaos@2x.png";
 import sanfengLogo from "@/images/sanfeng@2x.png";
 import supconLogo from "@/images/supcon@2x.png";
 import qreLogo from "@/images/qre@2x.png";
@@ -26,86 +17,27 @@ import {
   APPLICATION_LIST,
   DESCRIPTION_LIST,
   TITLE_LIST,
-  capabilityList,
   navList,
 } from "./effects/const";
 import ApplicationItem from "./components/ApplicationItem";
 import LtcImgWrapper from "./components/LtcImgWrapper";
-import { useState } from "react";
 import DetailComp from "./components/DetailComp";
+import useHomeEvent from "./effects/useHomeEvent";
 
 const Page = () => {
   const isMobile = isMobileDevice();
-  const [isShow, setIsShow] = useState(false);
   const state = store();
-
-  // 页面顶部的轮播图组件
-  const homeSlideList = {
-    pc: [homeImg, spznImg],
-    mb: [Imgs.home],
-  };
-
-  // 线索到回款的轮播图
-  const slideListOfCash = {
-    pc: [[img360], [intelligenceImg], [contractImg], [npiImg], [cpqImg]],
-    mb: [
-      [Imgs.order],
-      [Imgs.platform],
-      [Imgs.cpq],
-      [Imgs.npi, Imgs.manage],
-      [Imgs.analysis, Imgs.manage],
-    ],
-  };
-
-  const slideListOfChain = {
-    pc: [
-      [ipsImg, ipsXiaosImg],
-      [ipsImg, ipsXiaosImg],
-    ],
-    mb: [
-      [Imgs.ipsplan, Imgs.ipsprediction],
-      [Imgs.ipsplan, Imgs.ipsprediction],
-    ],
-  };
-
-  // 锚点页面滑动
-  const anchorClick = (type: string) => {
-    const dom = document.getElementById(type);
-    if (dom) {
-      dom.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
-  // 图片hover显示阴影
-  const hoverShowShadow = () => {
-    const imgDom = document.getElementById("architectureImg");
-    if (imgDom) imgDom.style.boxShadow = "0px 5px 12px 0px rgba(0,0,0,0.06)";
-  };
-  const leaveHideShadow = () => {
-    const imgDom = document.getElementById("architectureImg");
-    if (imgDom) imgDom.style.boxShadow = "";
-  };
-
-  // 移动端点击按钮
-  const onArrowClick = () => {
-    const dom = document.getElementById("cus");
-  };
-
-  const handleIBAEvent = (type: number) => {
-    const dom = document.getElementById("analytics-wrapper");
-    if (!type) {
-      setIsShow(true);
-      if (dom) {
-        dom.style.backgroundImage = "radial-gradient(circle, white, #60a9f5)";
-      }
-    } else {
-      setIsShow(false);
-      if (dom) {
-        dom.style.backgroundImage = "";
-        dom.style.backgroundColor = "#EBF2FA";
-      }
-    }
-  };
+  const {
+    isShow,
+    homeSlideList,
+    slideListOfCash,
+    slideListOfChain,
+    anchorClick,
+    hoverShowShadow,
+    leaveHideShadow,
+    onArrowClick,
+    handleIBAEvent,
+  } = useHomeEvent();
 
   return (
     <main>
