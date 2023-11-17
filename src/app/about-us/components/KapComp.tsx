@@ -31,11 +31,54 @@ const KapComp = () => {
       { time: "2022.9", title: "广州xx项目正式上线" },
       { time: "2023.1", title: "广州xx项目正式上线" },
     ],
+    [
+      { time: "2022.9", title: "广州xx项目正式上线" },
+      { time: "2023.1", title: "广州xx项目正式上线" },
+    ],
+    [
+      { time: "2022.9", title: "广州xx项目正式上线" },
+      { time: "2023.1", title: "广州xx项目正式上线" },
+    ],
+    [
+      { time: "2022.9", title: "广州xx项目正式上线" },
+      { time: "2023.1", title: "..." },
+    ],
   ];
+
+  const sliding = (type: string) => {
+    const dom = document.getElementById("slide");
+    const flag = window.matchMedia(
+      "only screen and (max-width: 1440px)"
+    ).matches;
+
+    const len = flag ? 350 : 500;
+    if (dom) {
+      if (type == "left") {
+        dom.scrollBy({
+          left: -len,
+          behavior: "smooth",
+        });
+      } else {
+        dom.scrollBy({
+          left: len,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
+  const btnOverEvent = (type: string, value: number) => {
+    const btnDom = document.getElementById(type);
+    if (btnDom) {
+      !value
+        ? (btnDom.style.boxShadow = "0px 3px 8px 0px rgba(0, 0, 0, 0.12)")
+        : (btnDom.style.boxShadow = "");
+    }
+  };
 
   return (
     <div className={styles["develop-history-wrapper"]}>
-      <div className={styles["develop-history"]}>
+      <div className={styles["develop-history"]} id="slide">
         {developList.map((item: any, index: number) => {
           const [top, bottom] = item;
           return (
@@ -54,7 +97,6 @@ const KapComp = () => {
                 src={backgroundImg}
                 alt="dev"
                 className={styles["kap-img"]}
-                // style={{ width: "100%", height: "100%" }}
               />
             </div>
           );
@@ -62,14 +104,28 @@ const KapComp = () => {
       </div>
       {!isMobile && (
         <>
-          <div className={styles["arrow-icon"]} style={{ left: -70 }}>
+          <div
+            className={styles["arrow-icon"]}
+            style={{ left: -70 }}
+            id="leftBtn"
+            onMouseEnter={() => btnOverEvent("leftBtn", 0)}
+            onMouseLeave={() => btnOverEvent("leftBtn", 1)}
+            onClick={() => sliding("left")}
+          >
             <Image
               src={leftIcon}
               alt="left"
               className={styles["arrow-icon-img"]}
             />
           </div>
-          <div className={styles["arrow-icon"]} style={{ right: -70 }}>
+          <div
+            className={styles["arrow-icon"]}
+            style={{ right: -70 }}
+            onClick={() => sliding("right")}
+            onMouseEnter={() => btnOverEvent("rightBtn", 0)}
+            onMouseLeave={() => btnOverEvent("rightBtn", 1)}
+            id="rightBtn"
+          >
             <Image
               src={rightIcon}
               alt="left"

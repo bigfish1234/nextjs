@@ -38,21 +38,21 @@
 
 .develop-history-wrapper {
   position: relative;
-  width: 1350px;
+  width: 1250px;
   margin: 0 auto;
+  
 }
 
 .develop-history {
   width: 100%;
-  overflow-x: scroll;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+  overflow-x: scroll;
 }
 
 .history-content-wrapper {
   position: relative;
-  margin-right: 25px;
 }
 
 .history-content {
@@ -91,7 +91,7 @@
   transform: translateY(-40px);
   background-color: #fff;
   cursor: pointer;
-  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);  
+  /* box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);   */
 }
 
 .arrow-icon-img {
@@ -126,7 +126,7 @@
   }
 
   .develop-history-wrapper {
-    width: 1000px;
+    width: 875px;
   }
   
   .history-content {

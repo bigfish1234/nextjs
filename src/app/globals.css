@@ -27,6 +27,11 @@ a {
   --background-color: #EBF2FA;
 }
 
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  display: none;
+}
+
 .wrapper-center {
   width: 1480px;
   margin: 0 auto;
