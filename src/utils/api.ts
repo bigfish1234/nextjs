@@ -1,11 +1,13 @@
 import axios from "axios";
-export const getJobs = async (params: any) => {
-  const res =  await axios.get("/api/joinUs", {
+import { IStatus } from "@/app/join-us/type";
+
+export const getJobs = async (params: IStatus) => {
+  const res = await axios.get("/api/joinUs", {
     params: {
       ...params,
     },
   });
-  if(res.status!==200){
+  if (res.status !== 200) {
     return Promise.reject();
   }
   return res?.data;

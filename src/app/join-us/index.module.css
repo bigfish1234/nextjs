@@ -20,7 +20,6 @@
 }
 
 .detail-title {
-  height: 46px;
   font-size: 24px;
   font-weight: 600;
   font-family: 'PingFangSC-Semibold, PingFang SC';
@@ -88,11 +87,7 @@
   -webkit-box-orient: vertical;
 }
 
-.pagination-wrapper {
-  height: 100px;
-  padding-top: 30px;
-  margin: 0 auto;
-}
+
 
 @media screen and (max-width: 768px) {
   .wrapper {
@@ -110,7 +105,7 @@
     padding: 20px 0;
     box-shadow: none;
     margin-bottom: 0;
-    border-bottom: 5px solid #F5F5F7;
+    /* border-bottom: 5px solid #F5F5F7; */
   }
 
   .detail-title {

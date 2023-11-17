@@ -43,7 +43,13 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
               <Form.Item noStyle name="searchContent">
                 <Input.Search
                   style={{ width: "100%" }}
-                  placeholder="搜索职位"
+                  placeholder="请输入关键词"
+                  onChange={(e) => {
+                    setStatus({
+                      ...status,
+                      keyword: e.target.value,
+                    });
+                  }}
                 />
               </Form.Item>
             </Row>
@@ -54,7 +60,7 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                     allowClear
                     options={typeList}
                     style={{ width: "100%" }}
-                    placeholder="请输入招聘类型"
+                    placeholder="请选择"
                     onClear={() =>
                       handleChange({
                         pos: undefined,
@@ -78,7 +84,7 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                     allowClear
                     options={posList}
                     style={{ width: "100%" }}
-                    placeholder="请输入招聘职位"
+                    placeholder="请选择"
                     onClear={() =>
                       handleChange({
                         pos: undefined,
@@ -108,7 +114,7 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                   allowClear
                   options={typeList}
                   style={{ width: "100%" }}
-                  placeholder="请输入招聘类型"
+                  placeholder="请选择"
                   onClear={() =>
                     handleChange({
                       pos: undefined,
@@ -132,7 +138,7 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                   allowClear
                   options={posList}
                   style={{ width: "100%" }}
-                  placeholder="请输入招聘职位"
+                  placeholder="请选择"
                   onClear={() =>
                     handleChange({
                       pos: undefined,
@@ -154,7 +160,13 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
               <Form.Item noStyle name="searchContent">
                 <Input.Search
                   style={{ width: "100%" }}
-                  placeholder="请输入搜索关键词"
+                  placeholder="请输入关键词"
+                  onChange={(e) => {
+                    setStatus({
+                      ...status,
+                      keyword: e.target.value,
+                    });
+                  }}
                 />
               </Form.Item>
             </Col>

@@ -1,0 +1,184 @@
+{
+  "list": [
+    {
+      "id": 9910,
+      "num": 101,
+      "jobName": "软件开发-后台开发方向",
+      "positionFamily": 2,
+      "type": 1,
+      "bgs": "CDG CSIG IEG PCG TEG WXG S2 S3 ",
+      "workCities": "深圳总部 北京 天津 上海 成都 杭州 广州 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9911,
+      "num": 102,
+      "jobName": "软件开发-PC客户端开发方向",
+      "positionFamily": 2,
+      "type": 1,
+      "bgs": "CSIG IEG PCG WXG ",
+      "workCities": "深圳总部 上海 北京 广州 成都 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9912,
+      "num": 103,
+      "jobName": "软件开发-移动客户端开发方向",
+      "positionFamily": 2,
+      "type": 1,
+      "bgs": "CDG CSIG IEG PCG WXG ",
+      "workCities": "深圳总部 北京 成都 广州 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9913,
+      "num": 104,
+      "jobName": "软件开发-测试开发方向",
+      "positionFamily": 2,
+      "type": 1,
+      "bgs": "CDG CSIG IEG TEG WXG ",
+      "workCities": "深圳总部 上海 广州 北京 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9914,
+      "num": 105,
+      "jobName": "软件开发-运营开发方向",
+      "positionFamily": 2,
+      "type": 1,
+      "bgs": "CDG CSIG IEG TEG WXG ",
+      "workCities": "深圳总部 上海 北京 广州 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9915,
+      "num": 106,
+      "jobName": "软件开发-前端开发方向",
+      "positionFamily": 2,
+      "type": 1,
+      "bgs": "CDG CSIG IEG PCG TEG WXG ",
+      "workCities": "深圳总部 北京 成都 上海 广州 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9916,
+      "num": 107,
+      "jobName": "软件开发-游戏客户端开发方向",
+      "positionFamily": 2,
+      "type": 1,
+      "bgs": "IEG PCG ",
+      "workCities": "深圳总部 上海 成都 杭州 中国香港 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9917,
+      "num": 109,
+      "jobName": "视觉设计",
+      "positionFamily": 4,
+      "type": 1,
+      "bgs": "CDG CSIG IEG PCG ",
+      "workCities": "北京 深圳总部 上海 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9918,
+      "num": 111,
+      "jobName": "UI开发",
+      "positionFamily": 4,
+      "type": 1,
+      "bgs": "PCG ",
+      "workCities": "深圳总部 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    },
+    {
+      "id": 9919,
+      "num": 112,
+      "jobName": "安全技术",
+      "positionFamily": 2,
+      "type": 1,
+      "bgs": "CDG CSIG IEG PCG TEG WXG ",
+      "workCities": "深圳总部 上海 北京 广州 ",
+      "positionUrl": null,
+      "positionSource": "oa",
+      "projectName": "应届生",
+      "recruitLabelName": "应届生",
+      "abilities": [
+        "负责公司产品的开发，持续提升用户体验，优化页面交互操作流程；",
+        "前端框架、组件库搭建，并持续对项目进行插件化和组件化改进；",
+        "协同研究前端组件的开发工作，并能够独立完成前端组件开发；"
+      ]
+    }
+  ]
+}
