@@ -21,7 +21,7 @@
   width: 40px;
   height: 4px;
   border-radius: 2px;
-  background-color: #F96F25;
+  background-color: var(--active-font-color);
   margin: 26px 0;
 }
 
@@ -40,7 +40,7 @@
     .divider {
       width: 26px;
       height: 3px;
-      background-color: #F96F25;
+      background-color: var(--active-font-color);
       margin: 26px 0;
     }
 }
@@ -60,7 +60,7 @@
   .divider {
     width: 36px;
     height: 4px;
-    background-color: #F96F25;
+    background-color: var(--active-font-color);
     margin: 10px 0;
   }
 }

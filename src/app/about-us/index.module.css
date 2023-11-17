@@ -9,11 +9,10 @@
 
 .background-word {
   color: #fff;
-  display: inline-block;
   height: 24px;
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  background-color: #f96f25;
+  background-color: var(--active-font-color);
   padding: 0 8px;
 }
 

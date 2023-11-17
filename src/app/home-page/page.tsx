@@ -4,6 +4,7 @@ import Image from "next/image";
 import TabHeader from "@/components/TabHearder";
 import homeStyle from "./index.module.css";
 import homeImg from "@/images/header/banner.png";
+import spznImg from "@/images/header/shuopzn.png";
 import architectureImg from "@/images/architecture-img.png";
 import analyticsImg from "@/images/analytics.png";
 import img360 from "@/images/dingd360@2x.png";
@@ -30,19 +31,17 @@ import {
 } from "./effects/const";
 import ApplicationItem from "./components/ApplicationItem";
 import LtcImgWrapper from "./components/LtcImgWrapper";
-import HoverComp from "@/components/HoverComp";
 import { useState } from "react";
 import DetailComp from "./components/DetailComp";
 
 const Page = () => {
   const isMobile = isMobileDevice();
   const [isShow, setIsShow] = useState(false);
-  const [isHover, setIsHover] = useState(false);
   const state = store();
 
   // 页面顶部的轮播图组件
   const homeSlideList = {
-    pc: [homeImg],
+    pc: [homeImg, spznImg],
     mb: [Imgs.home],
   };
 
@@ -92,26 +91,18 @@ const Page = () => {
     const dom = document.getElementById("cus");
   };
 
-  const renderTLC = () => {
-    if (isShow) {
-      return (
-        <HoverComp
-          capabilityList={capabilityList}
-          position="IBA"
-          onClick={() => state.handleOpenChange(true)}
-        />
-      );
+  const handleIBAEvent = (type: number) => {
+    const dom = document.getElementById("analytics-wrapper");
+    if (!type) {
+      setIsShow(true);
+      if (dom) {
+        dom.style.backgroundImage = "radial-gradient(circle, white, #60a9f5)";
+      }
     } else {
-      if (isHover) {
-        return <DetailComp position="IBA" />;
-      } else {
-        return (
-          <Image
-            src={analyticsImg}
-            alt="analyticsImg"
-            className={homeStyle["analytics-img"]}
-          />
-        );
+      setIsShow(false);
+      if (dom) {
+        dom.style.backgroundImage = "";
+        dom.style.backgroundColor = "#EBF2FA";
       }
     }
   };
@@ -199,21 +190,25 @@ const Page = () => {
             </div>
           ) : (
             <div
-              onMouseLeave={() => {
-                setIsShow(false);
-                setIsHover(false);
-              }}
+              onMouseEnter={() => handleIBAEvent(0)}
+              onMouseLeave={() => handleIBAEvent(1)}
             >
               <div
                 className={homeStyle["analytics-img-wrapper"]}
-                onMouseOver={() => setIsHover(true)}
+                id="analytics-wrapper"
               >
-                {renderTLC()}
+                {/* <DetailComp position="IBA" /> */}
+                {isShow ? (
+                  <DetailComp position="IBA" />
+                ) : (
+                  <Image
+                    src={analyticsImg}
+                    alt="analyticsImg"
+                    className={homeStyle["analytics-img"]}
+                  />
+                )}
               </div>
-              <div
-                className={homeStyle["description"]}
-                onMouseEnter={() => setIsShow(true)}
-              >
+              <div className={homeStyle["description"]}>
                 聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
               </div>
             </div>

@@ -44,7 +44,7 @@
 
 .info-content a {
   font-size: 14px;
-  color: #F96F25;
+  color: var(--active-font-color);
   margin-top: 15px;
 }
 
@@ -73,7 +73,7 @@
 
 .info-centent-mobile a {
   font-size: 14px;
-  color: #F96F25;
+  color: var(--active-font-color);
 }
 
 @media screen and (max-width: 768px) {

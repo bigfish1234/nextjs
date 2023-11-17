@@ -6,6 +6,7 @@ class globalStore extends Store.BaseStore<globalStore> {
   public link = "ei";
   public isExpand = false;
   public isOpen = false;
+  public nav = "eimos";
 
   public onPageChange(type: string) {
     this.set((state) => {

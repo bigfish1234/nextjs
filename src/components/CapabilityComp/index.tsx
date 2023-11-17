@@ -20,16 +20,17 @@ const CapabilityComp = ({ list, title }: any) => {
             <span
               style={{
                 paddingLeft: 5,
+                fontWeight: 600,
                 visibility: title ? "visible" : "hidden",
               }}
             >
-              {title}
+              {title}：
             </span>
             <span
               style={{
-                paddingLeft: 25,
+                paddingLeft: title ? 25 : 5,
                 lineHeight: "28px",
-                display: "inline-block",
+                display: title ? "block" : "inline",
                 visibility: detail ? "visible" : "hidden",
               }}
             >

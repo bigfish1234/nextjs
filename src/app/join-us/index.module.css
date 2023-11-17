@@ -13,7 +13,7 @@
   font-size: 24px;
   font-weight: 600;
   font-family: 'PingFangSC-Semibold, PingFang SC';
-  color: #F96F25;
+  color: var(--active-font-color);
   line-height: 46px;
   display: block;
   margin-bottom: 20px;
@@ -24,7 +24,7 @@
   font-size: 24px;
   font-weight: 600;
   font-family: 'PingFangSC-Semibold, PingFang SC';
-  color: #F96F25;
+  color: var(--active-font-color);
   line-height: 46px;
   display: block;
   margin-bottom: 20px;
@@ -48,7 +48,7 @@
 
 .position-detail-wrapper span:first-child {
   font-weight: 600;
-  color: #F96F25;
+  color: var(--active-font-color);
   line-height: 38px;
   font-size: 20px;
 }
@@ -63,10 +63,10 @@
   right: 18px;
   width: 120px;
   height: 40px;
-  border: 1px solid #F96F25;
+  border: 1px solid var(--active-font-color);
   text-align: center;
   line-height: 40px;
-  color: #F96F25;
+  color: var(--active-font-color);
   cursor: pointer;
 }
 
@@ -74,7 +74,7 @@
   position: absolute;
   left: 0;
   bottom: 25px;
-  color: #F96F25;
+  color: var(--active-font-color);
   font-weight: 500;
 }
 

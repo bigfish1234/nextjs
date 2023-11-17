@@ -3,7 +3,7 @@
   width: 100%;
   text-align: center;
   line-height: 40px;
-  background-color: #f96f25;
+  background-color: var(--active-font-color);
   color: #fff;
   margin-bottom: 20px;
 }

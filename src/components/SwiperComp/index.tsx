@@ -28,7 +28,11 @@ const SwiperComp = ({
   const onMouseEnter = (index: number) => {
     if (disable !== true && !isMobile)
       setContent([
-        <HoverComp capabilityList={capabilityList_LTC[index]} position="LTC" />,
+        <HoverComp
+          key={index}
+          capabilityList={capabilityList_LTC[index]}
+          position="LTC"
+        />,
       ]);
   };
   const onMouseLeave = () => setContent(slideItemRender);
