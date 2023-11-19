@@ -1,14 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import guidenceImg from "@/images/eimos/guidance.png";
 import styles from "../index.module.css";
-import { isMobile } from "react-device-detect";
-import closeIcon from "@/images/eimos/close.png";
 import { store } from "@/store";
-import ServiceForm from "@/components/ServiceForm";
+import { ServiceForm } from "@/components";
+import { isMobileDevice } from "@/utils/isMobileDevice";
+
+import guidenceImg from "/public/advice-icon.png";
+import closeIcon from "/public/close-icon.png";
 
 const ServiceBtn = () => {
+  const isMobile = isMobileDevice();
   const state = store();
   const clickToGuidence = () => {
     state.handleOpenChange(!state.isOpen);

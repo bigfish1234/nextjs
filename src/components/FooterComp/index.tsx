@@ -1,14 +1,15 @@
 import Image from "next/image";
-import styles from "./index.module.css";
-import emblemLogo from "@/images/guoh@2x.png";
-import aboutLogo from "@/images/about.png";
-import contactLogo from "@/images/contact.png";
-import sourceLogo from "@/images/source.png";
-import productLogo from "@/images/product.png";
-import emblemImg from "@/images/guoh@2x.png";
 import Link from "next/link";
+import styles from "./index.module.css";
 import { store } from "@/store";
 import { isMobileDevice } from "@/utils/isMobileDevice";
+
+import emblemLogo from "/public/national-emblem.png";
+import aboutLogo from "/public/about.png";
+import contactLogo from "/public/phone.png";
+import sourceLogo from "/public/about.png";
+import productLogo from "/public/product.png";
+// import emblemImg from "/public/get-icon.png";
 
 const FooterComp = ({ pageScroll }: any) => {
   const isMobile = isMobileDevice();
@@ -151,7 +152,7 @@ const FooterComp = ({ pageScroll }: any) => {
             联系我们
           </div>
           <div className={styles["copyright"]}>
-            <Image src={emblemImg} alt="emblem" width={14} height={14} />
+            <Image src={emblemLogo} alt="emblem" width={14} height={14} />
             <span style={{ padding: 5 }}>
               版权所有 2021-2023 杭州硕磐智能科技有限公司 浙ICP备23400000203号-1
             </span>

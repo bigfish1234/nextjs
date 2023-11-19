@@ -1,18 +1,16 @@
 import Image from "next/image";
 import styles from "./index.module.css";
-import logo from "@/images/logo.png";
 import NavgatorComp from "./effects/NavgatorComp";
+import PageTitle from "./effects/PageTitle";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import PageTitle from "./effects/PageTitle";
 
 const SwiperHeader = ({ slideList, page }: any) => {
   return (
     <div className={styles.swiperHeader}>
-      {/* 轮播图 */}
       <Swiper
         className={styles["swiper-content"]}
         modules={[A11y, Autoplay, Pagination]}
@@ -43,15 +41,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
           );
         })}
       </Swiper>
-
-      {/* logo */}
-      <div className={styles["header"]}>
-        <Image src={logo} alt="logo" className={styles["shuopan-logo"]} />
-      </div>
-
-      {/* 展开按钮和banner的导航栏 */}
       <NavgatorComp page={page} />
-
       <PageTitle page={page} />
     </div>
   );

@@ -1,80 +1,14 @@
-import styles from "../index.module.css";
-import backgroundImg from "../imgs/kap.png";
 import Image from "next/image";
-import leftIcon from "../imgs/left.png";
-import rightIcon from "../imgs/right.png";
-import { isMobile } from "react-device-detect";
+import styles from "../index.module.css";
+import useAboutEvent from "../effects/useAboutEvent";
+import { developList } from "../effects/const";
+
+import backgroundImg from "/public/pc/about/kap.png";
+import leftIcon from "/public/left-icon.png";
+import rightIcon from "/public/right-click.png";
 
 const KapComp = () => {
-  const developList = [
-    [
-      { time: "2021.1", title: "正式运营" },
-      { time: "2021.4", title: "业务架构设计" },
-    ],
-    [
-      { time: "2021.9", title: "产品开发" },
-      { time: "2022.1", title: "EIMOS 1.0版本发布" },
-    ],
-    [
-      { time: "2022.1", title: "xx工业互联网项目中标" },
-      { time: "2022.2", title: "广州xx项目启动" },
-    ],
-    [
-      { time: "2022.3", title: "杭州xx V1.0版本正式上线" },
-      { time: "2022.6", title: "金华xx项目启动" },
-    ],
-    [
-      { time: "2022.9", title: "广州xx项目正式上线" },
-      { time: "2023.1", title: "广州xx项目正式上线" },
-    ],
-    [
-      { time: "2022.9", title: "广州xx项目正式上线" },
-      { time: "2023.1", title: "广州xx项目正式上线" },
-    ],
-    [
-      { time: "2022.9", title: "广州xx项目正式上线" },
-      { time: "2023.1", title: "广州xx项目正式上线" },
-    ],
-    [
-      { time: "2022.9", title: "广州xx项目正式上线" },
-      { time: "2023.1", title: "广州xx项目正式上线" },
-    ],
-    [
-      { time: "2022.9", title: "广州xx项目正式上线" },
-      { time: "2023.1", title: "..." },
-    ],
-  ];
-
-  const sliding = (type: string) => {
-    const dom = document.getElementById("slide");
-    const flag = window.matchMedia(
-      "only screen and (max-width: 1440px)"
-    ).matches;
-
-    const len = flag ? 350 : 500;
-    if (dom) {
-      if (type == "left") {
-        dom.scrollBy({
-          left: -len,
-          behavior: "smooth",
-        });
-      } else {
-        dom.scrollBy({
-          left: len,
-          behavior: "smooth",
-        });
-      }
-    }
-  };
-
-  const btnOverEvent = (type: string, value: number) => {
-    const btnDom = document.getElementById(type);
-    if (btnDom) {
-      !value
-        ? (btnDom.style.boxShadow = "0px 3px 8px 0px rgba(0, 0, 0, 0.12)")
-        : (btnDom.style.boxShadow = "");
-    }
-  };
+  const { isMobile, sliding, btnOverEvent } = useAboutEvent();
 
   return (
     <div className={styles["develop-history-wrapper"]}>

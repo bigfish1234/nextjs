@@ -1,41 +1,15 @@
 "use client";
-import FooterComp from "@/components/FooterComp";
-import NavBarLayout from "@/components/NavBarLayout";
-import styles from "./index.module.css";
-import LayoutComp from "@/components/LayoutComp";
+
 import { isMobileDevice } from "@/utils/isMobileDevice";
-import Image from "next/image";
-import { Imgs } from "@/images/mobileImg";
-import { useState } from "react";
+import styles from "./index.module.css";
+import { FooterComp } from "@/components";
+import NavgatorComp from "@/components/SwiperHeader/effects/NavgatorComp";
 
 const JobDetail = () => {
   const isMobile = isMobileDevice();
-  const [isExpand, setIsExpand] = useState(false);
   return (
     <div>
-      {/* {isMobile ? (
-        <>
-          <div className={styles["wrapper-header"]}>
-            <Image
-              src={Imgs.expand}
-              alt="expand"
-              id="expand"
-              className={styles["expand"]}
-              onClick={() => {
-                setIsExpand(!isExpand);
-                const dom = document.getElementById("expand");
-                if (dom) {
-                  isExpand && (dom.style.rotate = "0deg");
-                  !isExpand && (dom.style.rotate = "90deg");
-                }
-              }}
-            />
-            <Image src={Imgs.logo} alt="logo" className={styles["logo"]} />
-          </div>
-        </>
-      ) : (
-        <></>
-      )} */}
+      <NavgatorComp page="detail" />
       <div
         className={
           isMobile ? styles["job-detail-wrapper_mb"] : "wrapper-center"
@@ -120,6 +94,7 @@ const JobDetail = () => {
           <p>公司地址：杭州市萧山区永辉路548号17楼</p>
         </div>
       </div>
+
       <FooterComp />
     </div>
   );

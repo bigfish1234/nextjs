@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import styles from "./index.module.css";
-import ltcImg from "@/images/ltc.png";
-import { Imgs } from "@/images/mobileImg";
+import ltcImg from "/public/pc/home/ltc.png";
+import ltcImg_mb from "/public/mobile/home/ltc.png";
 
 const LtcImgWrapper = ({ isMobile, anchorClick }: any) => {
   const btnStyleChange = (type: string, value: number) => {
@@ -18,7 +18,7 @@ const LtcImgWrapper = ({ isMobile, anchorClick }: any) => {
   return (
     <div className="img-wrapper">
       <Image
-        src={isMobile ? Imgs.ltc : ltcImg}
+        src={isMobile ? ltcImg_mb : ltcImg}
         alt="ltcImg"
         className={styles["ltc-img"]}
       />

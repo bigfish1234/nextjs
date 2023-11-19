@@ -68,12 +68,18 @@
 }
 
 .page-title .first-title{
-  font-size: 50px;
+  font-size: 46px;
   padding: 20px 0;
 }
 
 .page-title .second-title {
-  font-size: 40px;
+  font-size: 46px;
+}
+
+.active-title {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--active-font-color);
 }
 
 .spzn-introduce {
@@ -94,6 +100,23 @@
   margin: 4px auto;
 }
 
+.first-title_mb {
+  font-size: 26px !important;
+  font-weight: 600;
+}
+
+.detail-header {
+  background-color: #fff;
+  height: 64px;
+  box-shadow: 0px 4px 16px 0px rgba(190, 190, 190, 0.5);
+}
+
+.detail-header_mb {
+  height: 44px;
+  background-color: #fff;
+  box-shadow: 0px 2px 12px 0px rgba(208, 208, 208, 0.5);
+}
+
 /* 小屏情况下 */
 @media screen and (max-width:1440px) {
   .swiperHeader {
@@ -111,7 +134,11 @@
   }
 
   .page-title .second-title {
-    font-size: 26px;
+    font-size: 36px;
+  }
+
+  .active-title {
+    font-size: 42px;
   }
 }
 
@@ -128,18 +155,22 @@
     width: 100px;
     transform: translateX(-50px);
   }
-  
+
   .page-title {
-    left: 24px;
-    top: 54px;
+    left: 20px;
+    top: 70px;
+    width: 100%;
   }
 
   .page-title .first-title {
     padding: 10px 0;
-    font-size: 26px;
+    font-size: 16px;
   }
 
   .page-title .second-title {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .active-title {
+    font-size: 24px;
   }
 }

@@ -1,28 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import TabHeader from "@/components/TabHearder";
 import homeStyle from "./index.module.css";
-import architectureImg from "@/images/architecture-img.png";
-import analyticsImg from "@/images/analytics.png";
-import SwiperComp from "@/components/SwiperComp";
-import sanfengLogo from "@/images/sanfeng@2x.png";
-import supconLogo from "@/images/supcon@2x.png";
-import qreLogo from "@/images/qre@2x.png";
-import LayoutComp from "@/components/LayoutComp";
-import { Imgs } from "@/images/mobileImg";
+import { LayoutComp, SwiperComp, TabHeader } from "@/components";
+import { ApplicationItem, DetailComp, LtcImgWrapper } from "./components";
 import { isMobileDevice } from "@/utils/isMobileDevice";
+import useHomeEvent from "./effects/useHomeEvent";
 import { store } from "@/store";
+
+import eimos_img from "/public/pc/home/eimos.png";
+import IBA_img from "/public/pc/home/IBA.png";
+import sanfun_logo from "/public/pc/home/sf.png";
+import supcon_logo from "/public/pc/home/zk.png";
+import qre_logo from "/public/pc/home/qre.png";
+import arrow from "/public/arrow.png";
+
 import {
   APPLICATION_LIST,
   DESCRIPTION_LIST,
   TITLE_LIST,
   navList,
 } from "./effects/const";
-import ApplicationItem from "./components/ApplicationItem";
-import LtcImgWrapper from "./components/LtcImgWrapper";
-import DetailComp from "./components/DetailComp";
-import useHomeEvent from "./effects/useHomeEvent";
 
 const Page = () => {
   const isMobile = isMobileDevice();
@@ -72,7 +70,7 @@ const Page = () => {
 
           <div className={homeStyle["link-arrow"]}>
             <Image
-              src={Imgs.arrow}
+              src={arrow}
               alt="arrow"
               style={{
                 width: 28,
@@ -97,9 +95,9 @@ const Page = () => {
           />
           <div className="img-wrapper">
             <Image
-              src={architectureImg}
-              alt="architectureImg"
-              id="architectureImg"
+              src={eimos_img}
+              alt="eimos_img"
+              id="eimos_img"
               className={homeStyle["structure-img"]}
               onMouseEnter={hoverShowShadow}
               onMouseLeave={leaveHideShadow}
@@ -134,8 +132,8 @@ const Page = () => {
                   <DetailComp position="IBA" />
                 ) : (
                   <Image
-                    src={analyticsImg}
-                    alt="analyticsImg"
+                    src={IBA_img}
+                    alt="IBA_img"
                     className={homeStyle["analytics-img"]}
                   />
                 )}
@@ -253,7 +251,12 @@ const Page = () => {
               })}
             </div>
 
-            <a className={homeStyle["link"]}>获取演示</a>
+            <a
+              className={homeStyle["link"]}
+              onClick={() => state.handleOpenChange(true)}
+            >
+              获取演示
+            </a>
           </div>
         </div>
 
@@ -263,21 +266,21 @@ const Page = () => {
           <div className={homeStyle["cusomer-logo"]}>
             <div className={homeStyle["logo-box"]}>
               <Image
-                src={qreLogo}
+                src={qre_logo}
                 alt="qre"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
             <div className={homeStyle["logo-box"]}>
               <Image
-                src={supconLogo}
+                src={supcon_logo}
                 alt="supcon"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
             <div className={homeStyle["logo-box"]}>
               <Image
-                src={sanfengLogo}
+                src={sanfun_logo}
                 alt="sanfeng"
                 style={{ width: "100%", height: "100%" }}
               />

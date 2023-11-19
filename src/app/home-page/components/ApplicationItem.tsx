@@ -1,6 +1,6 @@
-import getIcon from "@/images/gou@2x.png";
 import Image from "next/image";
 import styles from "./index.module.css";
+import getIcon from "/public/get-icon.png";
 
 const ApplicationItem = ({ index, count, item, isMobile }: any) => {
   const { name, nameEn, des } = item || {};
@@ -21,8 +21,8 @@ const ApplicationItem = ({ index, count, item, isMobile }: any) => {
               <Image
                 src={getIcon}
                 alt="get"
-                width={16}
-                height={16}
+                width={20}
+                height={20}
                 style={{ marginRight: 8, display: "inline-block" }}
               />
             </div>

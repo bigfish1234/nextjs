@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/bundle";
 import { IMG_DETAIL_LIST } from "../effects/const";
-import CapabilityComp from "@/components/CapabilityComp";
+import { CapabilityComp } from "@/components";
 
 const DetailComp = ({ position }: any) => {
   const content = IMG_DETAIL_LIST[position];

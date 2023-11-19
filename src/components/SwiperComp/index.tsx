@@ -1,11 +1,12 @@
-import styles from "./index.module.css";
+"use client";
+import { useState } from "react";
 import Image from "next/image";
+import styles from "./index.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
-import { useState } from "react";
-import HoverComp from "../HoverComp";
 import { capabilityList_LTC } from "@/app/home-page/effects/const";
+import { HoverComp } from "..";
 
 const SwiperComp = ({
   description,
