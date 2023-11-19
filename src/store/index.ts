@@ -37,5 +37,11 @@ class globalStore extends Store.BaseStore<globalStore> {
       state.isOpen = value;
     });
   }
+
+  public handleNavChange(value: string) {
+    this.set((state) => {
+      state.nav = value;
+    });
+  }
 }
 export const store = Store.create(globalStore);

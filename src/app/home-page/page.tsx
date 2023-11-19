@@ -251,7 +251,12 @@ const Page = () => {
               })}
             </div>
 
-            <a className={homeStyle["link"]}>获取演示</a>
+            <a
+              className={homeStyle["link"]}
+              onClick={() => state.handleOpenChange(true)}
+            >
+              获取演示
+            </a>
           </div>
         </div>
 

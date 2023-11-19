@@ -5,7 +5,7 @@ const PositionDetail = ({ isMobile, jobDetail, count, index }: any) => {
   const state = store();
   const checkDetail = () => {
     window.location.href = "/join-us/job-detail";
-    state.onPageChange("job-detail");
+    state.onPageChange("detail");
   };
   return (
     <div

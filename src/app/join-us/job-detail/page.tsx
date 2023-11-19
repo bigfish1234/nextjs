@@ -3,11 +3,13 @@
 import { isMobileDevice } from "@/utils/isMobileDevice";
 import styles from "./index.module.css";
 import { FooterComp } from "@/components";
+import NavgatorComp from "@/components/SwiperHeader/effects/NavgatorComp";
 
 const JobDetail = () => {
   const isMobile = isMobileDevice();
   return (
     <div>
+      <NavgatorComp page="detail" />
       <div
         className={
           isMobile ? styles["job-detail-wrapper_mb"] : "wrapper-center"
@@ -92,6 +94,7 @@ const JobDetail = () => {
           <p>公司地址：杭州市萧山区永辉路548号17楼</p>
         </div>
       </div>
+
       <FooterComp />
     </div>
   );

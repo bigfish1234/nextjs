@@ -20,9 +20,11 @@ import ips_02 from "/public/pc/home/ips_02.png";
 
 import ips_m_01 from "/public/mobile/home/ips_01.png";
 import ips_m_02 from "/public/mobile/home/ips_02.png";
+import { store } from "@/store";
 
 const useHomeEvent = () => {
   const [isShow, setIsShow] = useState(false);
+  const state = store();
 
   // banner
   const homeSlideList = {
@@ -44,6 +46,7 @@ const useHomeEvent = () => {
 
   // 锚点页面滑动
   const anchorClick = (type: string) => {
+    state.handleNavChange(type);
     const dom = document.getElementById(type);
     if (dom) {
       dom.scrollIntoView({ behavior: "smooth", block: "start" });

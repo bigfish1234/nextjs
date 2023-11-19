@@ -10,6 +10,7 @@ import SideBar from "./SideBar";
 import SwiperComp from "./SwiperComp";
 import SwiperHeader from "./SwiperHeader";
 import TabHeader from "./TabHearder";
+import PageNavigator from "./PageNavigator";
 
 export {
   CapabilityComp,
@@ -24,4 +25,5 @@ export {
   SwiperComp,
   SwiperHeader,
   TabHeader,
+  PageNavigator,
 };

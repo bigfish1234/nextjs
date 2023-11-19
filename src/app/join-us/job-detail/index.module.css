@@ -71,6 +71,7 @@
   text-align: center;
   line-height: 55px;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .title {
@@ -89,7 +90,8 @@
 
 @media screen and (max-width:768px) {
   .job {
-    padding: 25px 0;
+    padding: 0;
+    padding-bottom: 25px;
   }
 
   .job-position {
