@@ -1,12 +1,14 @@
-"use client";
+// "use client";
 
-import { store } from "@/store";
-import styles from "./index.module.css";
-import { Imgs } from "@/images/mobileImg";
 import Image from "next/image";
 import Link from "next/link";
+import { store } from "@/store";
+import styles from "./index.module.css";
 
-const NavBar = ({ children }: any) => {
+import expand_icon from "/public/expand-icon.png";
+import logo from "/public/logo.png";
+
+const NavBarLayout = ({ children }: any) => {
   const state = store();
   const handleClick = (type: string) => {
     state.onPageChange(type);
@@ -15,7 +17,7 @@ const NavBar = ({ children }: any) => {
     <div className={styles["wrapper"]}>
       <div className={styles["wrapper-header"]}>
         <Image
-          src={Imgs.expand}
+          src={expand_icon}
           alt="expand"
           id="expand"
           className={styles["expand"]}
@@ -28,7 +30,7 @@ const NavBar = ({ children }: any) => {
             }
           }}
         />
-        <Image src={Imgs.logo} alt="logo" className={styles["logo"]} />
+        <Image src={logo} alt="logo" className={styles["logo"]} />
       </div>
       <div className="wrapper-center">{children}</div>
       {state.isExpand && (
@@ -69,4 +71,4 @@ const NavBar = ({ children }: any) => {
   );
 };
 
-export default NavBar;
+export default NavBarLayout;

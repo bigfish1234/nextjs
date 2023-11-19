@@ -1,13 +1,13 @@
 import Image from "next/image";
 import styles from "./index.module.css";
-import logo from "@/images/logo.png";
+import logo from "/public/logo.png";
 import NavgatorComp from "./effects/NavgatorComp";
+import PageTitle from "./effects/PageTitle";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import PageTitle from "./effects/PageTitle";
 
 const SwiperHeader = ({ slideList, page }: any) => {
   return (

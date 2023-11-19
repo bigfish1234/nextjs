@@ -1,22 +1,16 @@
 "use client";
-import TabHeader from "@/components/TabHearder";
-import styles from "./index.module.css";
+
 import Image from "next/image";
-import founderImg from "./imgs/founder.png";
-import ttWisdom from "./imgs/ttwisdom.png";
-import KapComp from "./components/KapComp";
-import PartnerComp from "./components/PartnerComp";
-import LayoutComp from "@/components/LayoutComp";
-import spznImg from "@/images/header/shuopzn.png";
-import { Imgs } from "@/images/mobileImg";
-import { isMobileDevice } from "@/utils/isMobileDevice";
+import styles from "./index.module.css";
+import { LayoutComp, TabHeader } from "@/components";
+import { KapComp, PartnerComp } from "./components";
+import useAboutEvent from "./effects/useAboutEvent";
+
+import founderImg from "/public/pc/about/like.png";
+import ttWisdom from "/public/ttwisdom.png";
 
 const AboutUs = () => {
-  const isMobile = isMobileDevice();
-  const aboutSlideList = {
-    pc: [spznImg],
-    mb: [Imgs.spzn],
-  };
+  const { isMobile, aboutSlideList } = useAboutEvent();
 
   return (
     <main>

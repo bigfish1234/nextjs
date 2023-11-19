@@ -1,8 +1,6 @@
-import FooterComp from "../FooterComp";
-import SwiperHeader from "../SwiperHeader";
 import styles from "./index.module.css";
-import SideBar from "../SideBar";
 import ServiceBtn from "./effects/ServiceBtn";
+import { FooterComp, SideBar, SwiperHeader } from "..";
 
 const LayoutComp = ({ page, slideList = [], children, pageScroll }: any) => {
   return (

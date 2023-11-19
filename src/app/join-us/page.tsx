@@ -1,55 +1,32 @@
 "use client";
-import LayoutComp from "@/components/LayoutComp";
-import joinImg from "@/images/header/jiarwm.png";
+
+import { useEffect } from "react";
 import joinStyle from "./index.module.css";
-import TabHeader from "@/components/TabHearder";
-import SearchComp from "./components/SearchComp";
-import { Imgs } from "@/images/mobileImg";
-import { isMobileDevice } from "@/utils/isMobileDevice";
-import PositionDetail from "./components/PositionDetail";
-import { useEffect, useState } from "react";
-import { Pagination, message } from "antd";
-import { getJobs } from "@/utils/api";
-import type { IStatus, JobListType } from "./type";
-import PaginationComp from "@/components/PaginationComp";
+import { LayoutComp, PaginationComp, TabHeader } from "@/components";
+import { PositionDetail, SearchComp } from "./components";
+import useJoinEvent from "./effects/useJoinEvent";
 
 const JoinUs = () => {
-  const pageSize = 5;
-  const isMobile = isMobileDevice();
-  const joinSlideList = {
-    pc: [joinImg],
-    mb: [Imgs.join],
-  };
-  const [pageCurrent, setPageCurrent] = useState<number>(1);
-  const [jobListAll, setJobListAll] = useState<JobListType[]>([]);
-  const [jobList, setJobList] = useState<JobListType[]>([]);
-  const [total, setTotal] = useState<number>(0);
-  const [status, setStatus] = useState<IStatus>({
-    type: undefined,
-    pos: undefined,
-    keyword: "",
-  });
-
-  const initData = async (params: IStatus) => {
-    // 传入职位和状态  初始化的时候为空
-    try {
-      const res = await getJobs(params);
-      setJobListAll(res.list);
-      setTotal(res.list.length);
-      setJobList([...res.list].slice(0, pageSize));
-    } catch (error) {
-      message.error("获取职位失败");
-      console.log("error", error);
-    }
-  };
+  const {
+    pageSize,
+    isMobile,
+    joinSlideList,
+    pageCurrent,
+    setPageCurrent,
+    jobListAll,
+    jobList,
+    setJobList,
+    total,
+    status,
+    setStatus,
+    initData,
+    handleChange,
+  } = useJoinEvent();
 
   useEffect(() => {
     initData(status);
   }, [status]);
 
-  const handleChange = async (value: IStatus) => {
-    setStatus(value);
-  };
   return (
     <main>
       <LayoutComp

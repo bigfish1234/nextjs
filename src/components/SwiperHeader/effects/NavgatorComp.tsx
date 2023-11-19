@@ -1,9 +1,9 @@
 "use client";
-import { isMobileDevice } from "@/utils/isMobileDevice";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../index.module.css";
-import { Imgs } from "@/images/mobileImg";
+import { isMobileDevice } from "@/utils/isMobileDevice";
+import expand_icon from "/public/expand-icon.png";
 import { store } from "@/store";
 
 const NavgatorComp = ({ page }: any) => {
@@ -18,7 +18,7 @@ const NavgatorComp = ({ page }: any) => {
     <>
       {isMobile ? (
         <Image
-          src={Imgs.expand}
+          src={expand_icon}
           alt="expand"
           id="expand"
           className={styles["expand-icon"]}

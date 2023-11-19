@@ -1,5 +1,5 @@
+import { CapabilityComp } from "..";
 import styles from "./index.module.css";
-import CapabilityComp from "../CapabilityComp";
 import { store } from "@/store";
 
 const HoverComp = ({ capabilityList, position, onClick }: any) => {

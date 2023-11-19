@@ -1,6 +1,6 @@
-import styles from "./index.module.css";
 import Image from "next/image";
-import getIcon from "@/images/gou@2x.png";
+import styles from "./index.module.css";
+import getIcon from "/public/get-icon.png";
 
 const CapabilityComp = ({ list, title }: any) => {
   return (

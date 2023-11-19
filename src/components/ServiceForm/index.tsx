@@ -1,7 +1,9 @@
-"use client";
+// "use client";
+
 import styles from "./index.module.css";
 import { Form, Input, Select, message } from "antd";
 import { contactUs } from "@/utils/api";
+
 const ServiceForm = () => {
   const [form] = Form.useForm();
 
@@ -11,10 +13,8 @@ const ServiceForm = () => {
       const data = form.getFieldsValue();
       await contactUs(data);
     } catch (error) {
-      message.info('请填写完整');
+      message.info("请填写完整");
     }
-
-    
   };
 
   return (
@@ -26,16 +26,34 @@ const ServiceForm = () => {
         layout="vertical"
         className={styles["service-form"]}
       >
-        <Form.Item label="姓名" name="name" rules={[{ required: true, message: '请输入名字' }]}>
+        <Form.Item
+          label="姓名"
+          name="name"
+          rules={[{ required: true, message: "请输入名字" }]}
+        >
           <Input placeholder="请输入姓名" />
         </Form.Item>
-        <Form.Item label="邮箱" name="email" rules={[{ required: true, message: '请输入正确的邮箱', type:'email'  }]}>
+        <Form.Item
+          label="邮箱"
+          name="email"
+          rules={[
+            { required: true, message: "请输入正确的邮箱", type: "email" },
+          ]}
+        >
           <Input placeholder="请输入邮箱地址" />
         </Form.Item>
-        <Form.Item label="单位名称" name="company" rules={[{ required: true, message: '请输入单位名称' }]}>
+        <Form.Item
+          label="单位名称"
+          name="company"
+          rules={[{ required: true, message: "请输入单位名称" }]}
+        >
           <Input placeholder="请输入单位名称" />
         </Form.Item>
-        <Form.Item label="联系电话" name="phone" rules={[{ required: true, message: '请输入正确联系电话' }]}>
+        <Form.Item
+          label="联系电话"
+          name="phone"
+          rules={[{ required: true, message: "请输入正确联系电话" }]}
+        >
           <Input
             placeholder="请输入电话号码"
             addonBefore={
@@ -43,7 +61,7 @@ const ServiceForm = () => {
             }
           />
         </Form.Item>
-        <Form.Item label="需求描述" name="des" >
+        <Form.Item label="需求描述" name="des">
           <Input.TextArea rows={4} placeholder="请输入需求描述" />
         </Form.Item>
       </Form>

@@ -1,4 +1,4 @@
-import detail_img from "@/images/detail_img.png";
+import detail_img from "/public/pc/home/IBA_data01.png";
 
 export const TITLE_LIST = [
   "场景化的客户，线索和商机管理，实现产品、渠道、客户之间自动查找与匹配；精准投入销售资源，提升从线索到合同转化率",

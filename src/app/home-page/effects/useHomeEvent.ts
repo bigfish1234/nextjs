@@ -1,25 +1,25 @@
 import { useState } from "react";
 
-import home_banner from "../../../../public/pc/home/home-banner.png";
-import home_banner_m from "../../../../public/mobile/home/home-banner.png";
+import home_banner from "/public/pc/home/home-banner.png";
+import home_banner_m from "/public/mobile/home/home-banner.png";
 
-import order from "../../../../public/pc/home/order.png";
-import platform from "../../../../public/pc/home/platform.png";
-import manage from "../../../../public/pc/home/manage.png";
-import npi from "../../../../public/pc/home/npi.png";
-import cpq from "../../../../public/pc/home/cpq.png";
+import order from "/public/pc/home/order.png";
+import platform from "/public/pc/home/platform.png";
+import manage from "/public/pc/home/manage.png";
+import npi from "/public/pc/home/npi.png";
+import cpq from "/public/pc/home/cpq.png";
 
-import order_m from "../../../../public/mobile/home/order.png";
-import platform_m from "../../../../public/mobile/home/platform.png";
-import manage_m from "../../../../public/mobile/home/manage.png";
-import npi_m from "../../../../public/mobile/home/npi.png";
-import cpq_m from "../../../../public/mobile/home/cpq.png";
+import order_m from "/public/mobile/home/order.png";
+import platform_m from "/public/mobile/home/platform.png";
+import manage_m from "/public/mobile/home/manage.png";
+import npi_m from "/public/mobile/home/npi.png";
+import cpq_m from "/public/mobile/home/cpq.png";
 
-import ips_01 from "../../../../public/pc/home/ips_01.png";
-import ips_02 from "../../../../public/pc/home/ips_02.png";
+import ips_01 from "/public/pc/home/ips_01.png";
+import ips_02 from "/public/pc/home/ips_02.png";
 
-import ips_m_01 from "../../../../public/mobile/home/ips_01.png";
-import ips_m_02 from "../../../../public/mobile/home/ips_02.png";
+import ips_m_01 from "/public/mobile/home/ips_01.png";
+import ips_m_02 from "/public/mobile/home/ips_02.png";
 
 const useHomeEvent = () => {
   const [isShow, setIsShow] = useState(false);

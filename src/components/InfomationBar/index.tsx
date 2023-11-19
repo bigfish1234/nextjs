@@ -1,8 +1,9 @@
-import styles from "./index.module.css";
 import Image from "next/image";
-import img from "@/images/contract.png";
-import timeIcon from "@/images/infomation/time-icon.png";
-import { Imgs } from "@/images/mobileImg";
+import styles from "./index.module.css";
+
+import img from "/public/pc/home/manage.png";
+import timeIcon from "/public/time-icon.png";
+import arrow from "/public/arrow.png";
 
 const InfomationBar = ({ content, isMobile }: any) => {
   const { time, title, description, imgUrl = img } = content;
@@ -56,7 +57,7 @@ const InfomationBar = ({ content, isMobile }: any) => {
             <a>
               查看详情
               <Image
-                src={Imgs.arrow}
+                src={arrow}
                 alt="arrow"
                 width={20}
                 height={18}

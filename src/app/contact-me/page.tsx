@@ -1,5 +1,5 @@
-import NavBarLayout from "@/components/NavBarLayout";
-import ServiceForm from "@/components/ServiceForm";
+"use client";
+import { NavBarLayout, ServiceForm } from "@/components";
 
 const ContactMe = () => {
   return (
