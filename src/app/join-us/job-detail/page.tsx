@@ -2,11 +2,18 @@
 
 import { isMobileDevice } from "@/utils/isMobileDevice";
 import styles from "./index.module.css";
+import { Upload } from "../components";
 import { FooterComp } from "@/components";
 import NavgatorComp from "@/components/SwiperHeader/effects/NavgatorComp";
+import { useState } from "react";
 
 const JobDetail = () => {
   const isMobile = isMobileDevice();
+  const [isApply, setIsApply] = useState(false);
+
+  const applyJob = () => {
+    setIsApply(true);
+  };
   return (
     <div>
       <NavgatorComp page="detail" />
@@ -30,7 +37,11 @@ const JobDetail = () => {
               </span>
             </div>
           )}
-          {!isMobile && <div className={styles["apply-btn"]}>申请职位</div>}
+          {!isMobile && (
+            <div className={styles["apply-btn"]} onClick={applyJob}>
+              申请职位
+            </div>
+          )}
         </div>
         <div className={styles["title"]}>岗位职责</div>
         <div className={styles["job-detail"]}>
@@ -94,7 +105,7 @@ const JobDetail = () => {
           <p>公司地址：杭州市萧山区永辉路548号17楼</p>
         </div>
       </div>
-
+      {isApply && <Upload open={isApply} setIsApply={setIsApply} />}
       <FooterComp />
     </div>
   );

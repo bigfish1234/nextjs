@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import connectToDatabase from "../pages/mongdb";
+// 调用函数以连接到数据库
+connectToDatabase();
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

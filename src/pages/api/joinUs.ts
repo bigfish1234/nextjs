@@ -1,7 +1,10 @@
 import { NextApiResponse, NextApiRequest } from "next";
 import joblist from "./joblist.json";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const querys = req?.query;
   // todo 拿到type 和 pos去数据库匹配
   const result = { status: true, id: "1111" }; // 处理结果
