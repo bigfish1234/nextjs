@@ -1,10 +1,7 @@
-import { isMobileDevice } from "@/utils/isMobileDevice";
-
 import spzn_banner from "/public/pc/about/about-banner.png";
 import spzn_banner_mb from "/public/mobile/about/sp.png";
 
 const useAboutEvent = () => {
-  const isMobile = isMobileDevice();
   const aboutSlideList = {
     pc: [spzn_banner],
     mb: [spzn_banner_mb],
@@ -40,7 +37,7 @@ const useAboutEvent = () => {
         : (btnDom.style.boxShadow = "");
     }
   };
-  return { isMobile, aboutSlideList, sliding, btnOverEvent };
+  return { aboutSlideList, sliding, btnOverEvent };
 };
 
 export default useAboutEvent;

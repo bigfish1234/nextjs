@@ -4,13 +4,11 @@ import Image from "next/image";
 import styles from "../index.module.css";
 import { store } from "@/store";
 import { ServiceForm } from "@/components";
-import { isMobileDevice } from "@/utils/isMobileDevice";
 
 import guidenceImg from "/public/advice-icon.png";
 import closeIcon from "/public/close-icon.png";
 
 const ServiceBtn = () => {
-  const isMobile = isMobileDevice();
   const state = store();
   const clickToGuidence = () => {
     state.handleOpenChange(!state.isOpen);
@@ -20,7 +18,7 @@ const ServiceBtn = () => {
       <Image
         src={guidenceImg}
         alt="gudience"
-        style={{ display: isMobile ? "none" : "block" }}
+        style={{ display: state.isMobile ? "none" : "block" }}
         className={styles["guide-service"]}
         onClick={clickToGuidence}
       />

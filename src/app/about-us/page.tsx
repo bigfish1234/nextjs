@@ -8,17 +8,19 @@ import useAboutEvent from "./effects/useAboutEvent";
 
 import founderImg from "/public/pc/about/like.png";
 import ttWisdom from "/public/ttwisdom.png";
+import { store } from "@/store";
 
 const AboutUs = () => {
-  const { isMobile, aboutSlideList } = useAboutEvent();
+  const { aboutSlideList } = useAboutEvent();
+  const state = store();
 
   return (
     <main>
       <LayoutComp
-        slideList={isMobile ? aboutSlideList.mb : aboutSlideList.pc}
+        slideList={state.isMobile ? aboutSlideList.mb : aboutSlideList.pc}
         page="about"
       >
-        {isMobile && (
+        {state.isMobile && (
           <div className={styles["spzn-introduce"]}>
             致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
             <span className={styles["background-word"]}>数字化</span>
@@ -33,7 +35,12 @@ const AboutUs = () => {
         <div className={`${"wrapper-center"} ${styles["about-us-wrapper"]}`}>
           <TabHeader h1="将经营管理理念与模型抽象落地的架构团队" />
           <div className="img-wrapper">
-            <Image src={founderImg} alt="like" className={styles["founder"]} />
+            <Image
+              src={founderImg}
+              alt="like"
+              loading="lazy"
+              className={styles["founder"]}
+            />
           </div>
         </div>
         <div className={styles["history"]}>
@@ -42,7 +49,7 @@ const AboutUs = () => {
         </div>
         <div className={styles["partner-wrapper"]}>
           <TabHeader h1="合作伙伴" />
-          <PartnerComp imgUrl={ttWisdom} isMobile={isMobile} />
+          <PartnerComp imgUrl={ttWisdom} isMobile={state.isMobile} />
         </div>
       </LayoutComp>
     </main>

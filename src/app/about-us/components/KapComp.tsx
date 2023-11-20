@@ -6,9 +6,11 @@ import { developList } from "../effects/const";
 import backgroundImg from "/public/pc/about/kap.png";
 import leftIcon from "/public/left-icon.png";
 import rightIcon from "/public/right-click.png";
+import { store } from "@/store";
 
 const KapComp = () => {
-  const { isMobile, sliding, btnOverEvent } = useAboutEvent();
+  const { sliding, btnOverEvent } = useAboutEvent();
+  const state = store();
 
   return (
     <div className={styles["develop-history-wrapper"]}>
@@ -30,13 +32,14 @@ const KapComp = () => {
               <Image
                 src={backgroundImg}
                 alt="dev"
+                loading="lazy"
                 className={styles["kap-img"]}
               />
             </div>
           );
         })}
       </div>
-      {!isMobile && (
+      {!state.isMobile && (
         <>
           <div
             className={styles["arrow-icon"]}

@@ -1,11 +1,12 @@
 import { store } from "@/store";
 import styles from "../index.module.css";
+import { useRouter } from "next/navigation";
 
 const PositionDetail = ({ isMobile, jobDetail, count, index }: any) => {
   const state = store();
+  const router = useRouter();
   const checkDetail = () => {
-    window.location.href = "/join-us/job-detail";
-    state.onPageChange("detail");
+    router.push("/join-us/job-detail");
   };
   return (
     <div

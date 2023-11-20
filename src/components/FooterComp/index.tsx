@@ -2,30 +2,31 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
 import { store } from "@/store";
-import { isMobileDevice } from "@/utils/isMobileDevice";
+// import { isMobileDevice } from "@/utils/isMobileDevice";
 
 import emblemLogo from "/public/national-emblem.png";
 import aboutLogo from "/public/about.png";
 import contactLogo from "/public/phone.png";
 import sourceLogo from "/public/about.png";
 import productLogo from "/public/product.png";
-// import emblemImg from "/public/get-icon.png";
+import { usePathname, useRouter } from "next/navigation";
 
 const FooterComp = ({ pageScroll }: any) => {
-  const isMobile = isMobileDevice();
+  // const isMobile = isMobileDevice();
   const state = store();
+  const path = usePathname();
+  const router = useRouter();
 
   const onLinkClick = (id: string) => {
-    if (state.page !== "eimos") {
-      window.location.href = "/home-page";
-      state.onPageChange("eimos");
+    if (path !== "/home-page") {
+      router.push("/home-page");
     } else {
       pageScroll(id);
     }
   };
   return (
     <div>
-      {!isMobile ? (
+      {!state.isMobile ? (
         <div className={styles["footer-wrapper"]}>
           <div className="wrapper-center" style={{ flexDirection: "row" }}>
             <div className={styles["shuopan-main-service"]}>
@@ -62,12 +63,7 @@ const FooterComp = ({ pageScroll }: any) => {
                 </div>
                 <span>资源中心</span>
               </div>
-              <Link
-                href="/info-center"
-                onClick={() => state.onPageChange("info")}
-              >
-                信息发布
-              </Link>
+              <Link href="/info-center">信息发布</Link>
             </div>
             <div className={styles["shuopan-main-service"]}>
               <div>
@@ -106,15 +102,8 @@ const FooterComp = ({ pageScroll }: any) => {
                 </div>
                 <span>关于我们</span>
               </div>
-              <Link
-                href="/about-us"
-                onClick={() => state.onPageChange("about")}
-              >
-                公司介绍
-              </Link>
-              <Link href="/join-us" onClick={() => state.onPageChange("join")}>
-                加入我们
-              </Link>
+              <Link href="/about-us">公司介绍</Link>
+              <Link href="/join-us">加入我们</Link>
             </div>
           </div>
           <div className={styles["copyright-info"]}>
@@ -146,7 +135,7 @@ const FooterComp = ({ pageScroll }: any) => {
           <div
             className={styles["contact-us"]}
             onClick={() => {
-              window.location.href = "/contact-me";
+              router.push("/contact-me");
             }}
           >
             联系我们

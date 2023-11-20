@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { message } from "antd";
-import { isMobileDevice } from "@/utils/isMobileDevice";
 import { IStatus, JobListType } from "../type";
 import { getJobs } from "@/utils/api";
 
@@ -9,7 +8,6 @@ import join_banner_mb from "/public/mobile/join/join-banner.png";
 
 const useJoinEvent = () => {
   const pageSize = 5;
-  const isMobile = isMobileDevice();
   const joinSlideList = {
     pc: [join_banner],
     mb: [join_banner_mb],
@@ -42,7 +40,6 @@ const useJoinEvent = () => {
   };
   return {
     pageSize,
-    isMobile,
     joinSlideList,
     pageCurrent,
     setPageCurrent,

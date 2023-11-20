@@ -88,6 +88,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+  color: #303258;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 }

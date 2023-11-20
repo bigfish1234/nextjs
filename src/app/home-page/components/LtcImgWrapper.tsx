@@ -20,6 +20,7 @@ const LtcImgWrapper = ({ isMobile, anchorClick }: any) => {
       <Image
         src={isMobile ? ltcImg_mb : ltcImg}
         alt="ltcImg"
+        loading="lazy"
         className={styles["ltc-img"]}
       />
       {!isMobile && (

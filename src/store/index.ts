@@ -2,19 +2,12 @@ import { isMobileDevice } from "@/utils/isMobileDevice";
 import Store from "zustand-store";
 
 class globalStore extends Store.BaseStore<globalStore> {
-  public page = "eimos";
   public plan = "IBA";
   public link = "ei";
   public isExpand = false;
   public isOpen = false;
   public nav = "eimos";
   public isMobile = isMobileDevice();
-
-  public onPageChange(type: string) {
-    this.set((state) => {
-      state.page = type;
-    });
-  }
 
   public onPlanChange(type: string) {
     this.set((state) => {

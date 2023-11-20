@@ -5,11 +5,11 @@ import joinStyle from "./index.module.css";
 import { LayoutComp, PaginationComp, TabHeader } from "@/components";
 import { PositionDetail, SearchComp } from "./components";
 import useJoinEvent from "./effects/useJoinEvent";
+import { store } from "@/store";
 
 const JoinUs = () => {
   const {
     pageSize,
-    isMobile,
     joinSlideList,
     pageCurrent,
     setPageCurrent,
@@ -22,6 +22,7 @@ const JoinUs = () => {
     initData,
     handleChange,
   } = useJoinEvent();
+  const state = store();
 
   useEffect(() => {
     initData(status);
@@ -30,22 +31,22 @@ const JoinUs = () => {
   return (
     <main>
       <LayoutComp
-        slideList={isMobile ? joinSlideList.mb : joinSlideList.pc}
+        slideList={state.isMobile ? joinSlideList.mb : joinSlideList.pc}
         page="join"
       >
         <div
           className={`${joinStyle["wrapper"]} ${joinStyle["job-wrapper"]}`}
           id="pos"
         >
-          {!isMobile && <TabHeader h1="招聘职位" />}
+          {!state.isMobile && <TabHeader h1="招聘职位" />}
           <div className="wrapper-center">
             <SearchComp
-              isMobile={isMobile}
+              isMobile={state.isMobile}
               handleChange={handleChange}
               status={status}
               setStatus={setStatus}
             />
-            {!isMobile && (
+            {!state.isMobile && (
               <p>
                 共{" "}
                 <span
@@ -67,7 +68,7 @@ const JoinUs = () => {
                   count={jobList.length}
                   key={index}
                   index={index}
-                  isMobile={isMobile}
+                  isMobile={state.isMobile}
                   jobDetail={item}
                 />
               );
