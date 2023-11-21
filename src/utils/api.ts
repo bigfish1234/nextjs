@@ -42,3 +42,8 @@ export const getPositionList = async () => {
   }
   return Promise.resolve(res.data);
 };
+
+// 发送邮箱
+export const handleSendEmail = async (data: any) => {
+  await axios.post("/api/sendEmail", { ...data });
+};
