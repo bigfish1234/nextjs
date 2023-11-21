@@ -4,7 +4,6 @@ import Image from "next/image";
 import homeStyle from "./index.module.css";
 import { LayoutComp, SwiperComp, TabHeader } from "@/components";
 import { ApplicationItem, DetailComp, LtcImgWrapper } from "./components";
-import { isMobileDevice } from "@/utils/isMobileDevice";
 import useHomeEvent from "./effects/useHomeEvent";
 import { store } from "@/store";
 
@@ -23,7 +22,6 @@ import {
 } from "./effects/const";
 
 const Page = () => {
-  const isMobile = isMobileDevice();
   const state = store();
   const {
     isShow,
@@ -41,7 +39,7 @@ const Page = () => {
     <main>
       {/* swiper */}
       <LayoutComp
-        slideList={isMobile ? homeSlideList.mb : homeSlideList.pc}
+        slideList={state.isMobile ? homeSlideList.mb : homeSlideList.pc}
         page="home"
         pageScroll={anchorClick}
       >
@@ -50,7 +48,7 @@ const Page = () => {
           <div
             id="link-item"
             className={
-              isMobile
+              state.isMobile
                 ? `${homeStyle["link-item"]} ${homeStyle["link-item-box"]}`
                 : homeStyle["link-item"]
             }
@@ -72,11 +70,12 @@ const Page = () => {
             <Image
               src={arrow}
               alt="arrow"
+              loading="lazy"
               style={{
                 width: 28,
                 height: 28,
                 margin: "0 auto",
-                display: isMobile ? "block" : "none",
+                display: state.isMobile ? "block" : "none",
               }}
               onClick={onArrowClick}
             />
@@ -89,7 +88,7 @@ const Page = () => {
           <TabHeader
             h1="EIMOS 应用功能全视图"
             h2={
-              !isMobile &&
+              !state.isMobile &&
               "构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
             }
           />
@@ -108,11 +107,13 @@ const Page = () => {
         {/* 智能业务解析 */}
         <div className={homeStyle["analytics-wrapper"]} id="IBA">
           <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
-          {isMobile ? (
+          {state.isMobile ? (
             <div className="wrapper-center">
               <SwiperComp
                 slideList={
-                  isMobile ? slideListOfChain.mb[0] : slideListOfChain.pc[0]
+                  state.isMobile
+                    ? slideListOfChain.mb[0]
+                    : slideListOfChain.pc[0]
                 }
                 description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
                 disable={true}
@@ -133,6 +134,7 @@ const Page = () => {
                 ) : (
                   <Image
                     src={IBA_img}
+                    loading="lazy"
                     alt="IBA_img"
                     className={homeStyle["analytics-img"]}
                   />
@@ -148,10 +150,10 @@ const Page = () => {
         {/* 线索到回款 */}
         <div className="wrapper-center" id="LTC">
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
-          <LtcImgWrapper isMobile={isMobile} anchorClick={anchorClick} />
+          <LtcImgWrapper isMobile={state.isMobile} anchorClick={anchorClick} />
 
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
-            {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
+            {(state.isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
                 const description = TITLE_LIST[index];
                 const id = ["order", "ISMP", "ICM", "NPI"][index];
@@ -162,7 +164,7 @@ const Page = () => {
                     index={index}
                     key={index}
                     id={id}
-                    isMobile={isMobile}
+                    isMobile={state.isMobile}
                   />
                 );
               }
@@ -175,7 +177,7 @@ const Page = () => {
           <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
             <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
-              {(isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
+              {(state.isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
                 (list: any[], index: number) => {
                   const des = DESCRIPTION_LIST[index];
                   return (
@@ -245,7 +247,7 @@ const Page = () => {
                     item={item}
                     index={index}
                     count={APPLICATION_LIST[state.plan].length}
-                    isMobile={isMobile}
+                    isMobile={state.isMobile}
                   />
                 );
               })}
@@ -268,6 +270,7 @@ const Page = () => {
               <Image
                 src={qre_logo}
                 alt="qre"
+                loading="lazy"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
@@ -275,6 +278,7 @@ const Page = () => {
               <Image
                 src={supcon_logo}
                 alt="supcon"
+                loading="lazy"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
@@ -282,6 +286,7 @@ const Page = () => {
               <Image
                 src={sanfun_logo}
                 alt="sanfeng"
+                loading="lazy"
                 style={{ width: "100%", height: "100%" }}
               />
             </div>

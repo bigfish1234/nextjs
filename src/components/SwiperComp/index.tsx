@@ -20,7 +20,9 @@ const SwiperComp = ({
     <Image
       src={imgUrl}
       alt="img"
+      loading="lazy"
       key={ind}
+      quality={100}
       style={{ width: "100%", height: "100%" }}
     />
   ));

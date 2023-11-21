@@ -1,23 +1,30 @@
 "use client";
 
-import { isMobileDevice } from "@/utils/isMobileDevice";
 import styles from "./index.module.css";
+import { Upload } from "../components";
 import { FooterComp } from "@/components";
 import NavgatorComp from "@/components/SwiperHeader/effects/NavgatorComp";
+import { useState } from "react";
+import { store } from "@/store";
 
 const JobDetail = () => {
-  const isMobile = isMobileDevice();
+  const [isApply, setIsApply] = useState(false);
+  const state = store();
+
+  const applyJob = () => {
+    setIsApply(true);
+  };
   return (
     <div>
       <NavgatorComp page="detail" />
       <div
         className={
-          isMobile ? styles["job-detail-wrapper_mb"] : "wrapper-center"
+          state.isMobile ? styles["job-detail-wrapper_mb"] : "wrapper-center"
         }
       >
         <div className={styles["job"]}>
           <p className={styles["job-position"]}>SAAS产品总监(1名)</p>
-          {isMobile ? (
+          {state.isMobile ? (
             <div className={styles["job-position_mobile"]}>
               <p>薪资: 70K-100K/月</p>
               <p>(其它福利：五险一金+双休+餐补+交通补贴等)</p>
@@ -30,7 +37,11 @@ const JobDetail = () => {
               </span>
             </div>
           )}
-          {!isMobile && <div className={styles["apply-btn"]}>申请职位</div>}
+          {!state.isMobile && (
+            <div className={styles["apply-btn"]} onClick={applyJob}>
+              申请职位
+            </div>
+          )}
         </div>
         <div className={styles["title"]}>岗位职责</div>
         <div className={styles["job-detail"]}>
@@ -94,7 +105,7 @@ const JobDetail = () => {
           <p>公司地址：杭州市萧山区永辉路548号17楼</p>
         </div>
       </div>
-
+      {isApply && <Upload open={isApply} setIsApply={setIsApply} />}
       <FooterComp />
     </div>
   );

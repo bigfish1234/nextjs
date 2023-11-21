@@ -1,9 +1,9 @@
 export interface IStatus {
   /** 招聘类型 */
-  type: string | undefined;
+  type?: number;
   /** 招聘的职位 */
-  pos: string | undefined;
-  keyword: string;
+  pos?: number;
+  keyword?: string;
 }
 
 export interface JobListType {

@@ -1,12 +1,13 @@
 import { store } from "@/store";
 import Link from "next/link";
 import styles from "../index.module.css";
+import { usePathname } from "next/navigation";
 
 const NavComp = ({ page }: any) => {
   const state = store();
+  const path = usePathname() as string;
 
-  const handleClick = (type: string) => {
-    state.onPageChange(type);
+  const handleClick = () => {
     state.handleOpenChange(false);
   };
 
@@ -20,13 +21,13 @@ const NavComp = ({ page }: any) => {
         href="/home-page"
         style={{
           color:
-            state.page == "eimos"
+            path == "/home-page"
               ? "#F96F25"
-              : state.page == "join"
+              : path == "/join-us"
               ? "white"
               : "black",
         }}
-        onClick={() => handleClick("eimos")}
+        onClick={handleClick}
       >
         EIMOS
       </Link>
@@ -35,13 +36,13 @@ const NavComp = ({ page }: any) => {
         href="/info-center"
         style={{
           color:
-            state.page == "info"
+            path == "/info-center"
               ? "#F96F25"
-              : state.page == "join"
+              : path == "/join-us"
               ? "white"
               : "black",
         }}
-        onClick={() => handleClick("info")}
+        onClick={handleClick}
       >
         信息中心
       </Link>
@@ -50,13 +51,13 @@ const NavComp = ({ page }: any) => {
         href="/about-us"
         style={{
           color:
-            state.page == "about"
+            path == "/about-us"
               ? "#F96F25"
-              : state.page == "join"
+              : path == "/join-us"
               ? "white"
               : "black",
         }}
-        onClick={() => handleClick("about")}
+        onClick={handleClick}
       >
         关于我们
       </Link>
@@ -64,9 +65,11 @@ const NavComp = ({ page }: any) => {
         prefetch
         href="/join-us"
         style={{
-          color: ["join", "detail"].includes(state.page) ? "#F96F25" : "black",
+          color: ["/join-us", "/join-us/job-detail"].includes(path)
+            ? "#F96F25"
+            : "black",
         }}
-        onClick={() => handleClick("join")}
+        onClick={handleClick}
       >
         加入我们
       </Link>

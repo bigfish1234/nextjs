@@ -1,13 +1,14 @@
 "use client";
-import { isMobileDevice } from "@/utils/isMobileDevice";
 import styles from "../index.module.css";
 import { store } from "@/store";
+import { usePathname, useRouter } from "next/navigation";
 
 const PageTitle = ({ page }: any) => {
-  const isMobile = isMobileDevice();
   const state = store();
+  const path = usePathname() as string;
+  const router = useRouter();
 
-  const firstTitleStyle = isMobile
+  const firstTitleStyle = state.isMobile
     ? `${styles["first-title"]} ${styles["first-title_mb"]}`
     : styles["first-title"];
   return (
@@ -22,7 +23,7 @@ const PageTitle = ({ page }: any) => {
       ) : page == "about" ? (
         <>
           <p className={firstTitleStyle}>硕磐智能</p>
-          {!isMobile && (
+          {!state.isMobile && (
             <div className={styles["spzn-introduce"]}>
               致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
               <span className={styles["background-word"]}>数字化</span>
@@ -53,11 +54,17 @@ const PageTitle = ({ page }: any) => {
       <div
         className="guide-btn"
         style={{
-          width: isMobile ? 120 : 190,
-          marginTop: 20,
-          display: state.page == "eimos" ? "block" : "none",
+          width: state.isMobile ? 120 : 190,
+          marginTop: 15,
+          display: path == "/home-page" ? "block" : "none",
         }}
-        onClick={() => state.handleOpenChange(true)}
+        onClick={() => {
+          if (!state.isMobile) {
+            state.handleOpenChange(true);
+          } else {
+            router.push("/contact-me");
+          }
+        }}
       >
         获取演示
       </div>

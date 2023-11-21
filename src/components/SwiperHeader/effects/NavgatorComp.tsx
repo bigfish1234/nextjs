@@ -1,23 +1,30 @@
 "use client";
 import Image from "next/image";
 import styles from "../index.module.css";
-import { isMobileDevice } from "@/utils/isMobileDevice";
 import expand_icon from "/public/expand-icon.png";
 import logo from "/public/logo.png";
 import { store } from "@/store";
 import NavComp from "./NavComp";
 import { PageNavigator } from "@/components";
+import { useRouter } from "next/navigation";
 
 const NavgatorComp = ({ page }: any) => {
-  const isMobile = isMobileDevice();
   const state = store();
+  const router = useRouter();
+
+  const goHomePage = () => router.push("/home-page");
 
   return (
     <div>
-      {isMobile ? (
+      {state.isMobile ? (
         <div className={page === "detail" ? styles["detail-header_mb"] : ""}>
           <div className={styles["header"]}>
-            <Image src={logo} alt="logo" className={styles["shuopan-logo"]} />
+            <Image
+              src={logo}
+              alt="logo"
+              className={styles["shuopan-logo"]}
+              onClick={goHomePage}
+            />
           </div>
           <Image
             src={expand_icon}
@@ -39,7 +46,12 @@ const NavgatorComp = ({ page }: any) => {
       ) : (
         <div className={page === "detail" ? styles["detail-header"] : ""}>
           <div className={styles["header"]}>
-            <Image src={logo} alt="logo" className={styles["shuopan-logo"]} />
+            <Image
+              src={logo}
+              alt="logo"
+              className={styles["shuopan-logo"]}
+              onClick={goHomePage}
+            />
           </div>
           <NavComp />
         </div>

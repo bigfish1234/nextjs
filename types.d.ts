@@ -143,3 +143,5 @@ declare module "*.js" {
   const m: any;
   export default m;
 }
+
+// declare module "nodemailer";

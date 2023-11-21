@@ -21,6 +21,7 @@ const ApplicationItem = ({ index, count, item, isMobile }: any) => {
               <Image
                 src={getIcon}
                 alt="get"
+                loading="lazy"
                 width={20}
                 height={20}
                 style={{ marginRight: 8, display: "inline-block" }}

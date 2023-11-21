@@ -5,47 +5,48 @@ import joinStyle from "./index.module.css";
 import { LayoutComp, PaginationComp, TabHeader } from "@/components";
 import { PositionDetail, SearchComp } from "./components";
 import useJoinEvent from "./effects/useJoinEvent";
+import { store } from "@/store";
 
 const JoinUs = () => {
   const {
     pageSize,
-    isMobile,
     joinSlideList,
     pageCurrent,
     setPageCurrent,
-    jobListAll,
-    jobList,
-    setJobList,
-    total,
     status,
     setStatus,
-    initData,
     handleChange,
   } = useJoinEvent();
+  const state = store();
 
   useEffect(() => {
-    initData(status);
+    state.getPosList();
+    state.getTypeList();
+  }, []);
+
+  useEffect(() => {
+    state.initData(status);
   }, [status]);
 
   return (
     <main>
       <LayoutComp
-        slideList={isMobile ? joinSlideList.mb : joinSlideList.pc}
+        slideList={state.isMobile ? joinSlideList.mb : joinSlideList.pc}
         page="join"
       >
         <div
           className={`${joinStyle["wrapper"]} ${joinStyle["job-wrapper"]}`}
           id="pos"
         >
-          {!isMobile && <TabHeader h1="招聘职位" />}
+          {!state.isMobile && <TabHeader h1="招聘职位" />}
           <div className="wrapper-center">
             <SearchComp
-              isMobile={isMobile}
+              isMobile={state.isMobile}
               handleChange={handleChange}
               status={status}
               setStatus={setStatus}
             />
-            {!isMobile && (
+            {!state.isMobile && (
               <p>
                 共{" "}
                 <span
@@ -56,18 +57,18 @@ const JoinUs = () => {
                     fontSize: 14,
                   }}
                 >
-                  {total}
+                  {state.total}
                 </span>{" "}
                 条记录
               </p>
             )}
-            {jobList.map((item: any, index: number) => {
+            {state.jobList.map((item: any, index: number) => {
               return (
                 <PositionDetail
-                  count={jobList.length}
+                  count={state.jobList.length}
                   key={index}
                   index={index}
-                  isMobile={isMobile}
+                  isMobile={state.isMobile}
                   jobDetail={item}
                 />
               );
@@ -78,12 +79,10 @@ const JoinUs = () => {
         <PaginationComp
           current={pageCurrent}
           size={pageSize}
-          total={total}
+          total={state.total}
           onChange={(value: number) => {
             setPageCurrent(value);
-            setJobList(
-              jobListAll.slice(pageSize * (value - 1), pageSize * value)
-            );
+            state.handleChangePageIndex(value);
             const dom = document.getElementById("pos");
             dom && dom.scrollIntoView({ behavior: "smooth", block: "start" });
           }}

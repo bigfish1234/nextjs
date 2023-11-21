@@ -2,10 +2,10 @@
 
 import { InfomationBar, LayoutComp, PaginationComp } from "@/components";
 import useInfoEvent from "./effects/useInfoEvent";
+import { store } from "@/store";
 
 const Home = () => {
   const {
-    isMobile,
     pageSize,
     pageCurrent,
     setPageCurrent,
@@ -16,25 +16,26 @@ const Home = () => {
     infoSlideList,
     infoListAll,
   } = useInfoEvent();
+  const state = store();
 
   return (
     <main>
       <LayoutComp
-        slideList={isMobile ? infoSlideList.mb : infoSlideList.pc}
+        slideList={state.isMobile ? infoSlideList.mb : infoSlideList.pc}
         page="info"
       >
-        <div className={isMobile ? "" : "wrapper-center"} id="top">
+        <div className={state.isMobile ? "" : "wrapper-center"} id="top">
           {infoList.map((item: any) => {
             return (
               <InfomationBar
                 key={item.title}
                 content={item}
-                isMobile={isMobile}
+                isMobile={state.isMobile}
               />
             );
           })}
         </div>
-        {!isMobile && (
+        {!state.isMobile && (
           <PaginationComp
             page="info"
             current={pageCurrent}

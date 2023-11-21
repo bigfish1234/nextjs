@@ -69,6 +69,11 @@
   cursor: pointer;
 }
 
+.check-detail-btn:hover {
+  background-color: var(--active-font-color);
+  color: #fff;
+}
+
 .check-detail-btn-mb {
   position: absolute;
   left: 0;
@@ -83,11 +88,37 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+  color: #303258;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 }
 
+.upload-modal {
+  width: 100%;
+  text-align: center;
+}
 
+.upload-modal p {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: .8;
+}
+
+.upload-btn-wrapper {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.upload-btn {
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 768px) {
   .wrapper {
