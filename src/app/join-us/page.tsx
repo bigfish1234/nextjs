@@ -13,19 +13,19 @@ const JoinUs = () => {
     joinSlideList,
     pageCurrent,
     setPageCurrent,
-    jobListAll,
-    jobList,
-    setJobList,
-    total,
     status,
     setStatus,
-    initData,
     handleChange,
   } = useJoinEvent();
   const state = store();
 
   useEffect(() => {
-    initData(status);
+    state.getPosList();
+    state.getTypeList();
+  }, []);
+
+  useEffect(() => {
+    state.initData(status);
   }, [status]);
 
   return (
@@ -57,15 +57,15 @@ const JoinUs = () => {
                     fontSize: 14,
                   }}
                 >
-                  {total}
+                  {state.total}
                 </span>{" "}
                 条记录
               </p>
             )}
-            {jobList.map((item: any, index: number) => {
+            {state.jobList.map((item: any, index: number) => {
               return (
                 <PositionDetail
-                  count={jobList.length}
+                  count={state.jobList.length}
                   key={index}
                   index={index}
                   isMobile={state.isMobile}
@@ -79,12 +79,10 @@ const JoinUs = () => {
         <PaginationComp
           current={pageCurrent}
           size={pageSize}
-          total={total}
+          total={state.total}
           onChange={(value: number) => {
             setPageCurrent(value);
-            setJobList(
-              jobListAll.slice(pageSize * (value - 1), pageSize * value)
-            );
+            state.handleChangePageIndex(value);
             const dom = document.getElementById("pos");
             dom && dom.scrollIntoView({ behavior: "smooth", block: "start" });
           }}

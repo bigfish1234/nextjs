@@ -1,38 +1,35 @@
 "use client";
 import { Form, Row, Col, Select, Input } from "antd";
 import styles from "../index.module.css";
+import { store } from "@/store";
 
-const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
+const SearchComp = ({
+  isMobile,
+  handleChange,
+  status,
+  setStatus,
+}: // typeOption,
+// posOption,
+any) => {
   const [form] = Form.useForm();
-  const typeList = [
-    {
-      label: "校园招聘",
-      value: 1,
-    },
-    {
-      label: "社会招聘",
-      value: 0,
-    },
-  ];
+  const state = store();
 
-  const posList = [
-    {
-      label: "SAAS产品总监",
-      value: 0,
-    },
-    {
-      label: "数据治理产品经理",
-      value: 1,
-    },
-    {
-      label: "安全总监",
-      value: 2,
-    },
-    {
-      label: "前端工程师",
-      value: 3,
-    },
-  ];
+  const handleClearType = () => {
+    const temp = { ...status, type: -1 };
+    setStatus(temp);
+  };
+
+  const handleClearPos = () => {
+    const temp = { ...status, pos: -1 };
+    setStatus(temp);
+  };
+
+  const handleSearch = (value: string) => {
+    setStatus({
+      ...status,
+      keyword: value,
+    });
+  };
 
   return (
     <div className={styles["search-wrapper"]}>
@@ -44,12 +41,7 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                 <Input.Search
                   style={{ width: "100%" }}
                   placeholder="请输入关键词"
-                  onChange={(e) => {
-                    setStatus({
-                      ...status,
-                      keyword: e.target.value,
-                    });
-                  }}
+                  onSearch={handleSearch}
                 />
               </Form.Item>
             </Row>
@@ -58,22 +50,12 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                 <Form.Item noStyle name="type">
                   <Select
                     allowClear
-                    options={typeList}
+                    options={state.typeList}
                     style={{ width: "100%" }}
                     placeholder="请选择"
-                    onClear={() =>
-                      handleChange({
-                        pos: undefined,
-                        type: undefined,
-                      })
-                    }
+                    onClear={handleClearType}
                     onChange={(value: number) => {
-                      const params = {
-                        ...status,
-                        type: value,
-                      };
-                      setStatus(params);
-                      handleChange(params);
+                      setStatus({ ...status, type: value });
                     }}
                   />
                 </Form.Item>
@@ -82,21 +64,12 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                 <Form.Item noStyle name="position">
                   <Select
                     allowClear
-                    options={posList}
+                    options={state.posList}
                     style={{ width: "100%" }}
                     placeholder="请选择"
-                    onClear={() =>
-                      handleChange({
-                        pos: undefined,
-                        type: undefined,
-                      })
-                    }
+                    onClear={handleClearPos}
                     onChange={(value: number) => {
                       setStatus({
-                        ...status,
-                        pos: value,
-                      });
-                      handleChange({
                         ...status,
                         pos: value,
                       });
@@ -112,22 +85,15 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
               <Form.Item label="招聘类型" name="type">
                 <Select
                   allowClear
-                  options={typeList}
+                  options={state.typeList}
                   style={{ width: "100%" }}
                   placeholder="请选择"
-                  onClear={() =>
-                    handleChange({
-                      pos: undefined,
-                      type: undefined,
-                    })
-                  }
+                  onClear={handleClearType}
                   onChange={(value: number) => {
-                    const params = {
+                    setStatus({
                       ...status,
                       type: value,
-                    };
-                    setStatus(params);
-                    handleChange(params);
+                    });
                   }}
                 />
               </Form.Item>
@@ -136,22 +102,15 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
               <Form.Item label="招聘职位" name="position">
                 <Select
                   allowClear
-                  options={posList}
+                  options={state.posList}
                   style={{ width: "100%" }}
                   placeholder="请选择"
-                  onClear={() =>
-                    handleChange({
-                      pos: undefined,
-                      type: undefined,
-                    })
-                  }
+                  onClear={handleClearPos}
                   onChange={(value: number) => {
-                    const params = {
+                    setStatus({
                       ...status,
                       pos: value,
-                    };
-                    setStatus(params);
-                    handleChange(params);
+                    });
                   }}
                 />
               </Form.Item>
@@ -161,12 +120,7 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                 <Input.Search
                   style={{ width: "100%" }}
                   placeholder="请输入关键词"
-                  onChange={(e) => {
-                    setStatus({
-                      ...status,
-                      keyword: e.target.value,
-                    });
-                  }}
+                  onSearch={handleSearch}
                 />
               </Form.Item>
             </Col>

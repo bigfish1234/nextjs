@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import connectToDatabase from "../pages/mongdb";
+import connectToDatabase from "../pages/db";
 // 调用函数以连接到数据库
 // connectToDatabase();
 
