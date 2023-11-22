@@ -1,4 +1,9 @@
-import { getJobType, getJobs, getPositionList } from "@/utils/api";
+import {
+  getJobDetail,
+  getJobType,
+  getJobs,
+  getPositionList,
+} from "@/utils/api";
 import { isMobileDevice } from "@/utils/isMobileDevice";
 import Store from "zustand-store";
 
@@ -12,8 +17,9 @@ class globalStore extends Store.BaseStore<globalStore> {
   public typeList = [];
   public posList = [];
   public jobList: any = [];
-  public jobListAll = [];
+  public jobListAll: any = [];
   public total = 0;
+  public jobDetail: any = {};
 
   // 初始化数据
   public initData = async (params: any) => {
@@ -45,6 +51,14 @@ class globalStore extends Store.BaseStore<globalStore> {
         value: item.jobid,
         label: item.jobName,
       }));
+    });
+  };
+
+  // 获取职位详情
+  public queryJobDetail = async (id: number) => {
+    const res = await getJobDetail(id);
+    this.set((state) => {
+      state.jobDetail = res.data;
     });
   };
 

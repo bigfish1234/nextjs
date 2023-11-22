@@ -26,17 +26,7 @@ export default async function handler(
         (keyword ? ` WHERE jobName LIKE '%${keyword}%'` : "");
     }
 
-    const jobList = await new Promise((resolve, reject) => {
-      db.query(sql, (err: any, results: any) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(results);
-        }
-      });
-    });
-
-    const abilitiesList = await new Promise((resolve, reject) => {
+    const jobList: any = await new Promise((resolve, reject) => {
       db.query(sql, (err: any, results: any) => {
         if (err) {
           reject(err);

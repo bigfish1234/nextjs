@@ -1,12 +1,10 @@
-import { store } from "@/store";
 import styles from "../index.module.css";
 import { useRouter } from "next/navigation";
 
 const PositionDetail = ({ isMobile, jobDetail, count, index }: any) => {
-  const state = store();
   const router = useRouter();
-  const checkDetail = () => {
-    router.push("/join-us/job-detail");
+  const checkDetail = (id: number) => {
+    router.push(`/join-us/job-detail?id=${id}`);
   };
   return (
     <div
@@ -15,17 +13,16 @@ const PositionDetail = ({ isMobile, jobDetail, count, index }: any) => {
     >
       <span
         className={styles["detail-title"]}
-      >{`${jobDetail.jobName} ( ${jobDetail.num}名 ) - ${jobDetail.category}`}</span>
-      <div className={styles["deatil-content"]}>
-        {/* {jobDetail.abilities.map((item: string, index: number) => (
-          <p key={index}>{`${index + 1}. ${item}`}</p>
-        ))} */}
-      </div>
+      >{`${jobDetail.jobName} (${jobDetail.num}名)`}</span>
+      <div
+        className={styles["deatil-content"]}
+        dangerouslySetInnerHTML={{ __html: jobDetail.intro }}
+      ></div>
       <div
         className={
           isMobile ? styles["check-detail-btn-mb"] : styles["check-detail-btn"]
         }
-        onClick={checkDetail}
+        onClick={() => checkDetail(jobDetail.jobid)}
       >
         查看详情
       </div>

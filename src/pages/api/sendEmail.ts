@@ -27,11 +27,11 @@ export default async function handler(
         <h1>你好，您的邮件已收到！</h1>
         <hr/>
         <p>
-          <b>姓名：${name}</b><br/>
-          <b>邮箱：${email}</b><br/>
-          <b>单位名称：${company}</b><br/>
-          <b>联系电话：${phone}</b><br/>
-          <b>需求描述：${detail}</b><br/>
+          <b>姓名：</b>${name}<br/>
+          <b>邮箱：</b>${email}<br/>
+          <b>单位名称：</b>${company}<br/>
+          <b>联系电话：</b>${phone}<br/>
+          <b>需求描述：</b>${detail}<br/>
          </p>
       `,
     };
@@ -42,7 +42,6 @@ export default async function handler(
         return console.log("发送失败:", error);
       }
       transporter.close();
-      console.log("发送成功:", info.response);
     });
 
     res.statusCode = 200;

@@ -13,6 +13,14 @@ export const getJobs = async (params: IStatus) => {
   return Promise.resolve(res.data);
 };
 
+export const getJobDetail = async (id: number) => {
+  const res = await axios.post("/api/getJobDetail", { id });
+  if (res.status !== 200) {
+    return Promise.reject();
+  }
+  return Promise.resolve(res.data);
+};
+
 // 提交咨询表单
 export const contactUs = (params: any) => {
   return axios
