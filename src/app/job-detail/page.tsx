@@ -1,14 +1,16 @@
 "use client";
 
 import styles from "./index.module.css";
-import { Upload } from "../components";
 import { FooterComp } from "@/components";
 import NavgatorComp from "@/components/SwiperHeader/effects/NavgatorComp";
 import { useEffect, useState } from "react";
 import { store } from "@/store";
+import Upload from "./components/fileUpload";
+import { UploadFile } from "antd";
 
 const JobDetail = () => {
   const [isApply, setIsApply] = useState(false);
+  const [fileList, setfileList] = useState<any>(null);
   const state = store();
 
   const applyJob = () => {
@@ -22,7 +24,7 @@ const JobDetail = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <NavgatorComp page="detail" />
       <div
         className={
@@ -77,7 +79,14 @@ const JobDetail = () => {
           <p>公司地址：杭州市萧山区永辉路548号17楼</p>
         </div>
       </div>
-      {isApply && <Upload open={isApply} setIsApply={setIsApply} />}
+      {isApply && (
+        <Upload
+          open={isApply}
+          setIsApply={setIsApply}
+          fileList={fileList}
+          setfileList={setfileList}
+        />
+      )}
       <FooterComp />
     </div>
   );

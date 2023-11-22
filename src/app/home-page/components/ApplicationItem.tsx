@@ -28,7 +28,7 @@ const ApplicationItem = ({ index, count, item, isMobile }: any) => {
               />
             </div>
             <div
-              style={{ lineHeight: "26px", width: isMobile ? "100%" : "80%" }}
+              style={{ lineHeight: "22px", width: isMobile ? "100%" : "80%" }}
             >
               {item}
             </div>

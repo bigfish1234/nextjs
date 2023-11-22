@@ -19,40 +19,38 @@ const Home = () => {
   const state = store();
 
   return (
-    <main>
-      <LayoutComp
-        slideList={state.isMobile ? infoSlideList.mb : infoSlideList.pc}
-        page="info"
-      >
-        <div className={state.isMobile ? "" : "wrapper-center"} id="top">
-          {infoList.map((item: any) => {
-            return (
-              <InfomationBar
-                key={item.title}
-                content={item}
-                isMobile={state.isMobile}
-              />
+    <LayoutComp
+      slideList={state.isMobile ? infoSlideList.mb : infoSlideList.pc}
+      page="info"
+    >
+      <div className={state.isMobile ? "" : "wrapper-center"} id="top">
+        {infoList.map((item: any) => {
+          return (
+            <InfomationBar
+              key={item.title}
+              content={item}
+              isMobile={state.isMobile}
+            />
+          );
+        })}
+      </div>
+      {!state.isMobile && (
+        <PaginationComp
+          page="info"
+          current={pageCurrent}
+          size={pageSize}
+          total={total}
+          onChange={(value: number) => {
+            setPageCurrent(value);
+            setInfoList(
+              [...infoListAll].slice(pageSize * (value - 1), pageSize * value)
             );
-          })}
-        </div>
-        {!state.isMobile && (
-          <PaginationComp
-            page="info"
-            current={pageCurrent}
-            size={pageSize}
-            total={total}
-            onChange={(value: number) => {
-              setPageCurrent(value);
-              setInfoList(
-                [...infoListAll].slice(pageSize * (value - 1), pageSize * value)
-              );
-              const dom = document.getElementById("top");
-              dom && dom.scrollIntoView({ behavior: "smooth", block: "start" });
-            }}
-          />
-        )}
-      </LayoutComp>
-    </main>
+            const dom = document.getElementById("top");
+            dom && dom.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+        />
+      )}
+    </LayoutComp>
   );
 };
 

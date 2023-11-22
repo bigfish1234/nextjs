@@ -15,8 +15,7 @@ const DetailComp = ({ position }: any) => {
       <div className={styles["img-detail-wrapper"]}>
         <Image
           src={imgUrl}
-          loading="lazy"
-          alt="img"
+          alt="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
           className={styles["detail-img"]}
         />
         <div className={styles["detail-wrapper"]}>

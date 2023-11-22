@@ -37,8 +37,7 @@ const AboutUs = () => {
           <div className="img-wrapper">
             <Image
               src={founderImg}
-              alt="like"
-              loading="lazy"
+              alt="将经营管理理念与模型抽象落地的架构团队"
               className={styles["founder"]}
             />
           </div>

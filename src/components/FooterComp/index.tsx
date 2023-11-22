@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
 import { store } from "@/store";
-// import { isMobileDevice } from "@/utils/isMobileDevice";
 
 import emblemLogo from "/public/national-emblem.png";
 import aboutLogo from "/public/about.png";
@@ -12,7 +11,6 @@ import productLogo from "/public/product.png";
 import { usePathname, useRouter } from "next/navigation";
 
 const FooterComp = ({ pageScroll }: any) => {
-  // const isMobile = isMobileDevice();
   const state = store();
   const path = usePathname();
   const router = useRouter();
@@ -34,7 +32,7 @@ const FooterComp = ({ pageScroll }: any) => {
                 <div className={styles["logo"]}>
                   <Image
                     src={productLogo}
-                    alt="product"
+                    alt="应用及解决方案，智能业务解析(IBA)，线索到回款(LTC)，集成供应链(ISC)"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -53,7 +51,7 @@ const FooterComp = ({ pageScroll }: any) => {
                 <div className={styles["logo"]}>
                   <Image
                     src={sourceLogo}
-                    alt="source"
+                    alt="资源中心"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -70,7 +68,7 @@ const FooterComp = ({ pageScroll }: any) => {
                 <div className={styles["logo"]}>
                   <Image
                     src={contactLogo}
-                    alt="phone"
+                    alt="联系我们"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -92,7 +90,7 @@ const FooterComp = ({ pageScroll }: any) => {
                 <div className={styles["logo"]}>
                   <Image
                     src={aboutLogo}
-                    alt="about"
+                    alt="关于我们"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -110,7 +108,7 @@ const FooterComp = ({ pageScroll }: any) => {
             <div>
               <Image
                 src={emblemLogo}
-                alt="emblem"
+                alt="版权所有 2021-2023 杭州硕磐智能科技有限公司 浙ICP备23400000203号-1"
                 style={{
                   width: "100%",
                   height: "100%",

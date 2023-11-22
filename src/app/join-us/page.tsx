@@ -91,7 +91,7 @@ const JoinUs = () => {
         <div className={joinStyle["wrapper"]}>
           <TabHeader h1="招聘简章" />
           <div className="wrapper-center">
-            <span className={joinStyle["detail-title"]}>公司简介</span>
+            <h2 className={joinStyle["detail-title"]}>公司简介</h2>
             <div className={joinStyle["detail"]}>
               <p>
                 杭州硕磐智能科技致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业的数字化转型；并通过打造智能化产业互联网，为政府数字化运营和企业数字化管理提供数据平台和解决方案的新型高科技企业。
@@ -108,7 +108,7 @@ const JoinUs = () => {
                 并且，公司开始快速发展，已吸引了众多尖端人才的加入，包括多名留美和985名校博士，硕士以上学历占比超过50%，本科以上学历占100%。公司以人才为本，重视人才，并大力度激励人才和奖励贡献，现诚邀各方英才加入。
               </p>
             </div>
-            <span className={joinStyle["detail-title"]}>公司福利</span>
+            <h2 className={joinStyle["detail-title"]}>公司福利</h2>
             <div className={joinStyle["detail"]}>
               <p>
                 1)
@@ -120,7 +120,7 @@ const JoinUs = () => {
               </p>
               <p>3) 高于行业平均水平的薪资福利，股票期权等等。</p>
             </div>
-            <span className={joinStyle["detail-title"]}>期待这样的你</span>
+            <h2 className={joinStyle["detail-title"]}>期待这样的你</h2>
             <div className={joinStyle["detail"]}>
               <p>
                 1)

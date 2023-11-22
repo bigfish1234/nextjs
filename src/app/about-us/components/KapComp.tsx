@@ -31,7 +31,7 @@ const KapComp = () => {
               </div>
               <Image
                 src={backgroundImg}
-                alt="dev"
+                alt="硕磐智能发展历程"
                 loading="lazy"
                 className={styles["kap-img"]}
               />
@@ -51,7 +51,7 @@ const KapComp = () => {
           >
             <Image
               src={leftIcon}
-              alt="left"
+              alt="left-icon"
               className={styles["arrow-icon-img"]}
             />
           </div>
@@ -65,7 +65,7 @@ const KapComp = () => {
           >
             <Image
               src={rightIcon}
-              alt="left"
+              alt="right-icon"
               className={styles["arrow-icon-img"]}
             />
           </div>

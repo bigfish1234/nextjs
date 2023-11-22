@@ -6,15 +6,15 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const body = req?.body;
-  const { name, email, company, phone, detail } = body;
+  const { name, email, company, phone, detail, createtime } = body;
 
   try {
     await new Promise((resolved, reject) => {
       // 插入数据
       db.query(
         {
-          sql: `INSERT INTO spzn.CONSULTATION_INFO (name,email,company,phone,detail) VALUES (?,?,?,?,?);`,
-          values: [name, email, company, phone, detail],
+          sql: `INSERT INTO spzn.CONSULTATION_INFO (name,email,company,phone,detail,createtime) VALUES (?,?,?,?,?,?);`,
+          values: [name, email, company, phone, detail, createtime],
         },
         (err: any, result: any) => {
           if (err) {

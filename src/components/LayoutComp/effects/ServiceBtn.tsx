@@ -17,7 +17,7 @@ const ServiceBtn = () => {
     <>
       <Image
         src={guidenceImg}
-        alt="gudience"
+        alt="立即咨询"
         style={{ display: state.isMobile ? "none" : "block" }}
         className={styles["guide-service"]}
         onClick={clickToGuidence}
@@ -25,13 +25,25 @@ const ServiceBtn = () => {
 
       {state.isOpen ? (
         <div className={styles["service-form"]}>
-          <div style={{ position: "relative" }}>
+          <div
+            style={{
+              width: "100%",
+              height: 46,
+              position: "sticky",
+              top: 0,
+              backgroundColor: "#fff",
+              zIndex: 99,
+              padding: 15,
+              borderBottom: "1px solid #f5f5f5",
+            }}
+          >
+            <span style={{ fontSize: 20 }}>咨询服务</span>
             <Image
               src={closeIcon}
               alt="close"
               width={16}
               height={16}
-              style={{ position: "absolute", right: 0, cursor: "pointer" }}
+              style={{ position: "absolute", right: 15, cursor: "pointer" }}
               onClick={() => state.handleOpenChange(false)}
             />
           </div>

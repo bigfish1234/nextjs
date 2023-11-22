@@ -15,7 +15,7 @@
 }
 
 .info-content {
-  flex: 0 0 50%;
+  flex: 0 0 60%;
   min-width: 0;
   min-height: 0;
   display: flex;
@@ -23,11 +23,10 @@
   padding-right: 30px;
 }
 
-.info-content div {
+.info-content h2 {
   font-size: 24px;
   height: auto;
   line-height: 45px;
-  font-weight: 500;
   margin-bottom: 20px;
 }
 

@@ -4,12 +4,18 @@ import { useRouter } from "next/navigation";
 const PositionDetail = ({ isMobile, jobDetail, count, index }: any) => {
   const router = useRouter();
   const checkDetail = (id: number) => {
-    router.push(`/join-us/job-detail?id=${id}`);
+    router.push(`/job-detail?id=${id}`);
   };
   return (
     <div
       className={styles["position-detail-wrapper"]}
-      style={{ borderBottom: count == index + 1 ? 0 : "5px solid #F5F5F7" }}
+      style={
+        isMobile
+          ? {
+              borderBottom: count == index + 1 ? 0 : "5px solid #F5F5F7",
+            }
+          : {}
+      }
     >
       <span
         className={styles["detail-title"]}
