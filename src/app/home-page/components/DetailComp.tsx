@@ -13,12 +13,7 @@ const DetailComp = ({ position }: any) => {
     const { imgUrl, title, des, other } = item;
     return (
       <div className={styles["img-detail-wrapper"]}>
-        <Image
-          src={imgUrl}
-          loading="lazy"
-          alt="img"
-          className={styles["detail-img"]}
-        />
+        <Image src={imgUrl} alt="img" className={styles["detail-img"]} />
         <div className={styles["detail-wrapper"]}>
           {other && <div className={styles["other"]}>{other}</div>}
           <CapabilityComp list={des} title={title} />

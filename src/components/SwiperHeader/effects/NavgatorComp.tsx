@@ -15,7 +15,11 @@ const NavgatorComp = ({ page }: any) => {
   const goHomePage = () => router.push("/home-page");
 
   return (
-    <div>
+    <div
+      style={
+        page === "detail" ? { position: "sticky", top: 0, zIndex: 99 } : {}
+      }
+    >
       {state.isMobile ? (
         <div className={page === "detail" ? styles["detail-header_mb"] : ""}>
           <div className={styles["header"]}>

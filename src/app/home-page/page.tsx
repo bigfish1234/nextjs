@@ -8,11 +8,12 @@ import useHomeEvent from "./effects/useHomeEvent";
 import { store } from "@/store";
 
 import eimos_img from "/public/pc/home/eimos.png";
-import IBA_img from "/public/pc/home/IBA.png";
 import sanfun_logo from "/public/pc/home/sf.png";
 import supcon_logo from "/public/pc/home/zk.png";
 import qre_logo from "/public/pc/home/qre.png";
 import arrow from "/public/arrow.png";
+import eimos_platform from "/public/pc/home/eimos-platform.png";
+import eimos_platform_mb from "/public/mobile/home/eimos-platform.png";
 
 import {
   APPLICATION_LIST,
@@ -26,6 +27,7 @@ const Page = () => {
   const {
     isShow,
     homeSlideList,
+    slideListOfIBA,
     slideListOfCash,
     slideListOfChain,
     anchorClick,
@@ -65,7 +67,6 @@ const Page = () => {
               );
             })}
           </div>
-
           <div className={homeStyle["link-arrow"]}>
             <Image
               src={arrow}
@@ -82,9 +83,8 @@ const Page = () => {
           </div>
         </div>
 
-        {/* content */}
+        {/* 架构图 */}
         <div className="wrapper-center" id="eimos">
-          {/* 架构图 */}
           <TabHeader
             h1="EIMOS 应用功能全视图"
             h2={
@@ -107,51 +107,20 @@ const Page = () => {
         {/* 智能业务解析 */}
         <div className={homeStyle["analytics-wrapper"]} id="IBA">
           <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
-          {state.isMobile ? (
-            <div className="wrapper-center">
-              <SwiperComp
-                slideList={
-                  state.isMobile
-                    ? slideListOfChain.mb[0]
-                    : slideListOfChain.pc[0]
-                }
-                description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
-                disable={true}
-              />
-            </div>
-          ) : (
-            <div
-              onMouseEnter={() => handleIBAEvent(0)}
-              onMouseLeave={() => handleIBAEvent(1)}
-            >
-              <div
-                className={homeStyle["analytics-img-wrapper"]}
-                id="analytics-wrapper"
-              >
-                {/* <DetailComp position="IBA" /> */}
-                {isShow ? (
-                  <DetailComp position="IBA" />
-                ) : (
-                  <Image
-                    src={IBA_img}
-                    loading="lazy"
-                    alt="IBA_img"
-                    className={homeStyle["analytics-img"]}
-                  />
-                )}
-              </div>
-              <div className={homeStyle["description"]}>
-                聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理
-              </div>
-            </div>
-          )}
+          <SwiperComp
+            slideList={state.isMobile ? slideListOfIBA.mb : slideListOfIBA.pc}
+            description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
+            disable={true}
+            item="IBA"
+            handleIBAEvent={handleIBAEvent}
+            isShow={isShow}
+          />
         </div>
 
         {/* 线索到回款 */}
         <div className="wrapper-center" id="LTC">
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
           <LtcImgWrapper isMobile={state.isMobile} anchorClick={anchorClick} />
-
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
             {(state.isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
@@ -195,8 +164,8 @@ const Page = () => {
           </div>
         </div>
 
+        {/* 应用及解决方案 */}
         <div className="wrapper-center" id="plan" style={{ padding: "0 15px" }}>
-          {/* 应用及解决方案 */}
           <TabHeader h1="应用及解决方案" />
           <div className={homeStyle["tab-button"]}>
             <div
@@ -230,8 +199,6 @@ const Page = () => {
               集成供应链(ISC)
             </div>
           </div>
-
-          {/* 内容 */}
           <div className={homeStyle["item-content"]}>
             <div
               style={{
@@ -259,6 +226,21 @@ const Page = () => {
             >
               获取演示
             </a>
+          </div>
+        </div>
+
+        {/* EIMOS平台 */}
+        <div
+          className={homeStyle["eimos-platform-section"]}
+          id="eimos-platform"
+        >
+          <TabHeader h1="EIMOS平台" h2="EIMOS Platform as a Service" />
+          <div className="img-wrapper">
+            <Image
+              src={state.isMobile ? eimos_platform_mb : eimos_platform}
+              alt="eimos_platform"
+              className={homeStyle["eimos-platform-img"]}
+            />
           </div>
         </div>
 

@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 
 import expand_icon from "/public/expand-icon.png";
 import logo from "/public/logo.png";
-import { PageNavigator } from "..";
+import { PageNavigator, ServiceForm } from "..";
 
 const NavBarLayout = ({ children }: any) => {
   const state = store();
@@ -28,7 +28,9 @@ const NavBarLayout = ({ children }: any) => {
         />
         <Image src={logo} alt="logo" className={styles["logo"]} />
       </div>
-      <div className="wrapper-center">{children}</div>
+      <div className="wrapper-center">
+        <ServiceForm />
+      </div>
       {state.isExpand && <PageNavigator />}
     </div>
   );

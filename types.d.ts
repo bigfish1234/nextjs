@@ -144,4 +144,5 @@ declare module "*.js" {
   export default m;
 }
 
-// declare module "nodemailer";
+declare module "multer";
+declare module "next-connect";

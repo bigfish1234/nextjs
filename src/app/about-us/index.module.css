@@ -17,7 +17,7 @@
 }
 
 .about-us-wrapper {
-  padding-top: 60px;
+  padding-top: var(--header-margin-bottom-pc);
   padding-bottom: 38px;
 }
 
@@ -33,7 +33,7 @@
 .history {
   width: 100%;
   background-color: #f5f5f7;
-  padding: 54px 0 100px;
+  padding: var(--header-margin-bottom-pc) 0;
 }
 
 .develop-history-wrapper {
@@ -109,7 +109,7 @@
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.06);
   border: 1px solid #D9D9DD;
   margin: 0 auto;
-  padding: 50px;
+  padding: var(--header-margin-bottom-pc);
 }
 
 .partner-img {

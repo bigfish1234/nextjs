@@ -55,3 +55,10 @@ export const getPositionList = async () => {
 export const handleSendEmail = async (data: any) => {
   await axios.post("/api/sendEmail", { ...data });
 };
+
+// 上传文件
+export const onUpload = async (data: any) => {
+  await axios.post("/api/upload", {
+    file: data,
+  });
+};

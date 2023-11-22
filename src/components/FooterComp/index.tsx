@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
 import { store } from "@/store";
-// import { isMobileDevice } from "@/utils/isMobileDevice";
 
 import emblemLogo from "/public/national-emblem.png";
 import aboutLogo from "/public/about.png";
@@ -12,7 +11,6 @@ import productLogo from "/public/product.png";
 import { usePathname, useRouter } from "next/navigation";
 
 const FooterComp = ({ pageScroll }: any) => {
-  // const isMobile = isMobileDevice();
   const state = store();
   const path = usePathname();
   const router = useRouter();

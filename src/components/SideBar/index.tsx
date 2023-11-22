@@ -45,7 +45,7 @@ const SideBar = () => {
               href="/join-us"
               onClick={handleClick}
               style={{
-                color: ["/join-us", "/join-us/job-detail"].includes(path)
+                color: ["/join-us", "/job-detail"].includes(path)
                   ? "#F96F25"
                   : "black",
               }}

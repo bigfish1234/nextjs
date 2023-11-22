@@ -30,9 +30,16 @@ a {
   cursor: pointer;
 }
 
+
+
 :root {
+  /* 主题色 */
   --active-font-color: #F96F25;
+  /* 背景色 */
   --background-color: #EBF2FA;
+  /* 模块之间上下间距 */
+  --header-margin-bottom: 30px;
+  --header-margin-bottom-pc: 60px;
 }
 
 
@@ -55,7 +62,7 @@ div {
 }
 
 .img-wrapper {
-  margin: 0 auto 20px;
+  margin: 0 auto var(--header-margin-bottom);
   position: relative;
 }
 
