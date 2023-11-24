@@ -111,6 +111,14 @@
   font-weight: 600;
 }
 
+.detail-navigator {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 90;
+}
+
 .detail-header {
   background-color: #fff;
   height: 64px;

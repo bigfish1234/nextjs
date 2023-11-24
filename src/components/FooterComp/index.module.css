@@ -73,27 +73,7 @@
   font-size: 12px;
   height: 44px;
   line-height: 20px;
-}
-
-@media screen and (max-width:1440px) {
-  /* .footer-wrapper {
-    height: 219px;
-    padding-top: 20px;
-  }
-
-  .shuopan-main-service span {
-    font-size: 14px;
-  }
-
-  .shuopan-main-service a {
-    line-height: 16px;
-  }
-
-  .copyright-info {
-    margin-top: 0;
-    font-size: 14px;
-    margin-top: 15px;
-  } */
+  text-align: center;
 }
 
 

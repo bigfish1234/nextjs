@@ -10,6 +10,13 @@
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.06);
 }
 
+.wrapper-IBA:hover {
+  background: linear-gradient(to right, #5aa7f6, #fff,#5aa7f6);
+  .swiper-content {
+    opacity: 0;
+  }
+}
+
 .img-wrapper-LTC {
   width: 100%;
   height: 100%;
@@ -20,11 +27,44 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  background-color:#5aa7f6;
+  opacity: 0;
+  visibility: 0;
+}
+.enter { 
+  opacity: 0.9;
+  visibility: 1;
+  width: 100%;
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+.exit {
+  opacity: 0; 
+  visibility: 0;
+  width: 0;
+  animation: slide-out 1s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .img-wrapper-IBA {
@@ -66,6 +106,7 @@
 .swiper-content {
   width: 100%;
   height: 100%;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1440px) {

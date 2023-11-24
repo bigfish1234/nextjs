@@ -2,15 +2,9 @@
 import { Form, Row, Col, Select, Input } from "antd";
 import styles from "../index.module.css";
 import { store } from "@/store";
+import { useDebounceFn } from "ahooks";
 
-const SearchComp = ({
-  isMobile,
-  handleChange,
-  status,
-  setStatus,
-}: // typeOption,
-// posOption,
-any) => {
+const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
   const [form] = Form.useForm();
   const state = store();
 
@@ -24,12 +18,17 @@ any) => {
     setStatus(temp);
   };
 
-  const handleSearch = (value: string) => {
-    setStatus({
-      ...status,
-      keyword: value,
-    });
-  };
+  const handleSearch = useDebounceFn(
+    (value: string) => {
+      setStatus({
+        ...status,
+        keyword: value,
+      });
+    },
+    {
+      wait: 500,
+    }
+  );
 
   return (
     <div className={styles["search-wrapper"]}>
@@ -41,7 +40,7 @@ any) => {
                 <Input.Search
                   style={{ width: "100%" }}
                   placeholder="请输入关键词"
-                  onSearch={handleSearch}
+                  onChange={(e) => handleSearch.run(e.target.value)}
                 />
               </Form.Item>
             </Row>
@@ -120,7 +119,7 @@ any) => {
                 <Input.Search
                   style={{ width: "100%" }}
                   placeholder="请输入关键词"
-                  onSearch={handleSearch}
+                  onChange={(e) => handleSearch.run(e.target.value)}
                 />
               </Form.Item>
             </Col>

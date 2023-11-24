@@ -29,6 +29,7 @@ import { useDebounceFn } from "ahooks";
 
 const useHomeEvent = () => {
   const [isShow, setIsShow] = useState(false);
+  const [isHovered, setIsHovered] = useState("");
   const state = store();
 
   // banner
@@ -55,9 +56,10 @@ const useHomeEvent = () => {
   };
 
   // 锚点页面滑动
-  const anchorClick = (type: string) => {
+  const anchorClick = (type: string, e: any) => {
     state.handleNavChange(type);
     const dom = document.getElementById(type);
+
     if (dom) {
       dom.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -119,6 +121,8 @@ const useHomeEvent = () => {
     leaveHideShadow,
     onArrowClick,
     handleIBAEvent,
+    isHovered,
+    setIsHovered,
   };
 };
 

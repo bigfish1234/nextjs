@@ -21,51 +21,27 @@ const SwiperComp = ({
   handleIBAEvent,
   isShow,
 }: any) => {
-  // const [isDisplay, setIsDisplay] = useState(false);
-  const slideItemRender = (slideList || []).map((imgUrl: any, ind: number) => (
-    <>
-      <Image
-        src={imgUrl}
-        alt={description}
-        key={ind}
-        quality={100}
-        className={styles[`img-wrapper-${item}`]}
-      />
-      {/* {isDisplay && (
-        <div className={styles.mask} id="mask">
-          <HoverComp
-            key={index}
-            capabilityList={capabilityList_LTC[index]}
-            position="LTC"
-          />
-        </div>
-      )} */}
-    </>
-  ));
-  const [content, setContent] = useState(slideItemRender);
+  const [isMaskShow, setIsMaskShow] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<any>();
 
   const onMouseEnter = useDebounceFn(
     (index: number) => {
-      if (disable !== true && !isMobile)
-        setContent([
-          <>
-            <div className={styles.mask} id="mask">
-              <HoverComp
-                key={index}
-                capabilityList={capabilityList_LTC[index]}
-                position="LTC"
-              />
-            </div>
-          </>,
-        ]);
+      setIsMaskShow(true);
+      setActiveIndex(index);
     },
     {
       wait: 300,
     }
   );
-  const onMouseLeave = useDebounceFn(() => setContent(slideItemRender), {
-    wait: 300,
-  });
+  const onMouseLeave = useDebounceFn(
+    () => {
+      setIsMaskShow(false);
+      setActiveIndex("");
+    },
+    {
+      wait: 300,
+    }
+  );
 
   return (
     <div
@@ -84,28 +60,49 @@ const SwiperComp = ({
         {isShow ? (
           <DetailComp position="IBA" />
         ) : (
-          <Swiper
-            className={styles["swiper-content"]}
-            modules={[A11y, Autoplay]}
-            spaceBetween={0}
-            slidesPerView={1}
-            loop={content.length > 1}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-          >
-            {(content || []).map((item: any, index: number) => {
-              return (
-                <SwiperSlide
-                  key={index}
-                  style={{ width: "100%", height: "100%" }}
-                >
-                  {item}
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+          <>
+            <Swiper
+              className={styles["swiper-content"]}
+              modules={[A11y, Autoplay]}
+              spaceBetween={0}
+              slidesPerView={1}
+              loop={slideList.length > 1}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+            >
+              {(slideList || []).map((imgUrl: any, ind: number) => {
+                return (
+                  <SwiperSlide
+                    key={index}
+                    style={{ width: "100%", height: "100%" }}
+                  >
+                    <Image
+                      src={imgUrl}
+                      alt={description}
+                      key={ind}
+                      quality={100}
+                      className={styles[`img-wrapper-${item}`]}
+                    />
+                    <div
+                      id="mask"
+                      className={
+                        isMaskShow && !isMobile && !disable
+                          ? `${styles.mask} ${styles.enter}`
+                          : styles.mask
+                      }
+                    >
+                      <HoverComp
+                        capabilityList={capabilityList_LTC[activeIndex]}
+                        position="LTC"
+                      />
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </>
         )}
       </div>
       <div

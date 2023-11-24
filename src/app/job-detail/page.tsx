@@ -1,12 +1,11 @@
 "use client";
 
 import styles from "./index.module.css";
-import { FooterComp } from "@/components";
+import { FooterComp, LayoutWrapper } from "@/components";
 import NavgatorComp from "@/components/SwiperHeader/effects/NavgatorComp";
 import { useEffect, useState } from "react";
 import { store } from "@/store";
 import Upload from "./components/fileUpload";
-import { UploadFile } from "antd";
 
 const JobDetail = () => {
   const [isApply, setIsApply] = useState(false);
@@ -24,7 +23,7 @@ const JobDetail = () => {
   }, []);
 
   return (
-    <div style={{ position: "relative" }}>
+    <LayoutWrapper>
       <NavgatorComp page="detail" />
       <div
         className={
@@ -32,19 +31,21 @@ const JobDetail = () => {
         }
       >
         <div className={styles["job"]}>
-          <p className={styles["job-position"]}>
-            {state.jobDetail.jobName}({state.jobDetail.num}名)
-          </p>
+          <p className={styles["job-position"]}>{state.jobDetail.jobName}</p>
           {state.isMobile ? (
             <div className={styles["job-position_mobile"]}>
-              <p>薪资: {state.jobDetail.salary}/月</p>
-              <p>(其它福利：五险一金+双休+餐补+交通补贴等)</p>
+              <p>
+                薪资: {state.jobDetail.salary}/月*{state.jobDetail.all}薪
+              </p>
+              <p>(其它福利：{state.jobDetail.welfare})</p>
             </div>
           ) : (
             <div className={styles["job-position_pc"]}>
-              <span>薪资: {state.jobDetail.salary}/月</span>
+              <span>
+                薪资: {state.jobDetail.salary}/月*{state.jobDetail.all}薪
+              </span>
               <span style={{ fontSize: 22, paddingLeft: 20 }}>
-                (其它福利：五险一金+双休+餐补+交通补贴等)
+                (其它福利：{state.jobDetail.welfare})
               </span>
             </div>
           )}
@@ -88,7 +89,7 @@ const JobDetail = () => {
         />
       )}
       <FooterComp />
-    </div>
+    </LayoutWrapper>
   );
 };
 

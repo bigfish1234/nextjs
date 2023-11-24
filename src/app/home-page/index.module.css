@@ -187,6 +187,7 @@
   border-bottom: 4px solid var(--active-font-color);
 }
 
+
 @media screen and (max-width: 1440px) {
   .structure-img {
     width: 1000px;

@@ -17,9 +17,7 @@ const PositionDetail = ({ isMobile, jobDetail, count, index }: any) => {
           : {}
       }
     >
-      <span
-        className={styles["detail-title"]}
-      >{`${jobDetail.jobName} (${jobDetail.num}名)`}</span>
+      <span className={styles["detail-title"]}>{`${jobDetail.jobName}`}</span>
       <div
         className={styles["deatil-content"]}
         dangerouslySetInnerHTML={{ __html: jobDetail.intro }}

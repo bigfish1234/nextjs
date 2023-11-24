@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import homeStyle from "./index.module.css";
 import { LayoutComp, SwiperComp, TabHeader } from "@/components";
-import { ApplicationItem, DetailComp, LtcImgWrapper } from "./components";
+import { ApplicationItem, LtcImgWrapper } from "./components";
 import useHomeEvent from "./effects/useHomeEvent";
 import { store } from "@/store";
 
@@ -21,7 +22,6 @@ import {
   TITLE_LIST,
   navList,
 } from "./effects/const";
-import Head from "next/head";
 
 const Page = () => {
   const state = store();
@@ -36,13 +36,14 @@ const Page = () => {
     leaveHideShadow,
     onArrowClick,
     handleIBAEvent,
+    isHovered,
+    setIsHovered,
   } = useHomeEvent();
+
+  const router = useRouter();
 
   return (
     <div>
-      <Head>
-        <title>EIMOS</title>
-      </Head>
       {/* swiper */}
       <LayoutComp
         slideList={state.isMobile ? homeSlideList.mb : homeSlideList.pc}
@@ -64,7 +65,7 @@ const Page = () => {
                 <span
                   className={homeStyle["hover-style"]}
                   key={item.id}
-                  onClick={() => anchorClick(item.id)}
+                  onClick={(e) => anchorClick(item.id, e)}
                 >
                   {item.title}
                 </span>
@@ -225,7 +226,11 @@ const Page = () => {
 
             <a
               className={homeStyle["link"]}
-              onClick={() => state.handleOpenChange(true)}
+              onClick={() => {
+                state.isMobile
+                  ? router.push("/contact-me")
+                  : state.handleOpenChange(true);
+              }}
             >
               获取演示
             </a>
