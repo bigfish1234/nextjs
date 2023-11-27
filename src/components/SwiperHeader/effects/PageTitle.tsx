@@ -1,14 +1,24 @@
-"use client";
 import styles from "../index.module.css";
 import { store } from "@/store";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const PageTitle = ({ page }: any) => {
   const state = store();
   const path = usePathname() as string;
   const router = useRouter();
 
-  const firstTitleStyle = state.isMobile
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
+
+  const firstTitleStyle = isMobile
     ? `${styles["first-title"]} ${styles["first-title_mb"]}`
     : styles["first-title"];
   return (
@@ -23,7 +33,7 @@ const PageTitle = ({ page }: any) => {
       ) : page == "about" ? (
         <>
           <p className={firstTitleStyle}>硕磐智能</p>
-          {!state.isMobile && (
+          {!isMobile && (
             <div className={styles["spzn-introduce"]}>
               致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
               <span className={styles["background-word"]}>数字化</span>
@@ -54,15 +64,15 @@ const PageTitle = ({ page }: any) => {
       <div
         className="guide-btn"
         style={{
-          width: state.isMobile ? 120 : 190,
+          width: isMobile ? 120 : 190,
           marginTop: 15,
-          display: path == "/home-page" ? "block" : "none",
+          display: path == "/index" ? "block" : "none",
         }}
         onClick={() => {
-          if (!state.isMobile) {
+          if (!isMobile) {
             state.handleOpenChange(true);
           } else {
-            router.push("/contact-me");
+            router.push("/contact-us");
           }
         }}
       >

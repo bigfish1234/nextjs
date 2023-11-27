@@ -1,5 +1,5 @@
 import { NextApiResponse, NextApiRequest } from "next";
-import db from "../db";
+import db from "../../server/db";
 
 export default async function handler(
   req: NextApiRequest,
@@ -7,7 +7,7 @@ export default async function handler(
 ) {
   try {
     const typelist = await new Promise((resolve, reject) => {
-      const sql = `SELECT * FROM spzn.JOB_TYPE`;
+      const sql = `SELECT * FROM JOB_TYPE`;
       db.query(sql, (err: any, results: any) => {
         if (err) {
           reject(err);

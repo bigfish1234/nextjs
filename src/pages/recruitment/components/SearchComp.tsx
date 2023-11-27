@@ -1,8 +1,8 @@
-"use client";
 import { Form, Row, Col, Select, Input } from "antd";
 import styles from "../index.module.css";
 import { store } from "@/store";
-import { useDebounceFn } from "ahooks";
+
+const { useDebounceFn } = require("ahooks");
 
 const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
   const [form] = Form.useForm();

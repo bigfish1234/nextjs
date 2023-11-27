@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import styles from "./index.module.css";
 import { store } from "@/store";
@@ -16,31 +15,33 @@ const PageNavigator = () => {
     <div className={styles["mobile-sidebar"]}>
       <div className={styles["mobile-sidebar-content"]}>
         <Link
-          href="/home-page"
+          href="/index"
           onClick={handleClick}
-          style={{ color: path == "/home-page" ? "#F96F25" : "black" }}
+          style={{ color: path == "/index" ? "#F96F25" : "black" }}
         >
           EIMOS
         </Link>
         <Link
-          href="/info-center"
+          href="/information-center"
           onClick={handleClick}
-          style={{ color: path == "/info-center" ? "#F96F25" : "black" }}
+          style={{ color: path == "/information-center" ? "#F96F25" : "black" }}
         >
           信息中心
         </Link>
         <Link
-          href="/about-us"
+          href="/corporate-information"
           onClick={handleClick}
-          style={{ color: path == "/about-us" ? "#F96F25" : "black" }}
+          style={{
+            color: path == "/corporate-information" ? "#F96F25" : "black",
+          }}
         >
           关于我们
         </Link>
         <Link
-          href="/join-us"
+          href="/recruitment"
           onClick={handleClick}
           style={{
-            color: ["/join-us", "/job-detail"].includes(path)
+            color: ["/recruitment", "/job-detail"].includes(path)
               ? "#F96F25"
               : "black",
           }}

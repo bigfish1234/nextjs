@@ -18,12 +18,12 @@ const NavComp = ({ page }: any) => {
     >
       <Link
         prefetch
-        href="/home-page"
+        href="/index"
         style={{
           color:
-            path == "/home-page"
+            path == "/index"
               ? "#F96F25"
-              : path == "/join-us"
+              : path == "/recruitment"
               ? "white"
               : "black",
         }}
@@ -33,12 +33,12 @@ const NavComp = ({ page }: any) => {
       </Link>
       <Link
         prefetch
-        href="/info-center"
+        href="/information-center"
         style={{
           color:
-            path == "/info-center"
+            path == "/information-center"
               ? "#F96F25"
-              : path == "/join-us"
+              : path == "/recruitment"
               ? "white"
               : "black",
         }}
@@ -48,12 +48,12 @@ const NavComp = ({ page }: any) => {
       </Link>
       <Link
         prefetch
-        href="/about-us"
+        href="/corporate-information"
         style={{
           color:
-            path == "/about-us"
+            path == "/corporate-information"
               ? "#F96F25"
-              : path == "/join-us"
+              : path == "/recruitment"
               ? "white"
               : "black",
         }}
@@ -63,9 +63,9 @@ const NavComp = ({ page }: any) => {
       </Link>
       <Link
         prefetch
-        href="/join-us"
+        href="/recruitment"
         style={{
-          color: ["/join-us", "/job-detail"].includes(path)
+          color: ["/recruitment", "/job-detail"].includes(path)
             ? "#F96F25"
             : "black",
         }}

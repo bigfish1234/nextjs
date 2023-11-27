@@ -6,11 +6,19 @@ import { developList } from "../effects/const";
 import backgroundImg from "/public/pc/about/kap.png";
 import leftIcon from "/public/left-icon.png";
 import rightIcon from "/public/right-click.png";
-import { store } from "@/store";
+import { useEffect, useState } from "react";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const KapComp = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const { sliding, btnOverEvent } = useAboutEvent();
-  const state = store();
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
 
   return (
     <div className={styles["develop-history-wrapper"]}>
@@ -39,7 +47,7 @@ const KapComp = () => {
           );
         })}
       </div>
-      {!state.isMobile && (
+      {!isMobile && (
         <>
           <div
             className={styles["arrow-icon"]}

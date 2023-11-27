@@ -1,6 +1,6 @@
 import axios from "axios";
-import { IStatus } from "@/app/join-us/type";
 import { message } from "antd";
+import { IStatus } from "@/pages/recruitment/type";
 
 // 获取所有职位信息
 export const getJobs = async (params: IStatus) => {

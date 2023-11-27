@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import styles from "../index.module.css";
 import { store } from "@/store";
@@ -7,18 +5,30 @@ import { ServiceForm } from "@/components";
 
 import guidenceImg from "/public/advice-icon.png";
 import closeIcon from "/public/close-icon.png";
+import { useEffect, useState } from "react";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const ServiceBtn = () => {
   const state = store();
   const clickToGuidence = () => {
     state.handleOpenChange(!state.isOpen);
   };
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
+
   return (
     <>
       <Image
         src={guidenceImg}
         alt="立即咨询"
-        style={{ display: state.isMobile ? "none" : "block" }}
+        style={{ display: isMobile ? "none" : "block" }}
         className={styles["guide-service"]}
         onClick={clickToGuidence}
       />

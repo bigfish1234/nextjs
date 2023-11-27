@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import Metadata from "next/head";
 import { useRouter } from "next/navigation";
 import homeStyle from "./index.module.css";
 import { LayoutComp, SwiperComp, TabHeader } from "@/components";
@@ -22,8 +21,11 @@ import {
   TITLE_LIST,
   navList,
 } from "./effects/const";
+import { useEffect, useState } from "react";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const Page = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const state = store();
   const {
     isShow,
@@ -36,17 +38,25 @@ const Page = () => {
     leaveHideShadow,
     onArrowClick,
     handleIBAEvent,
-    isHovered,
-    setIsHovered,
-  } = useHomeEvent();
+  } = useHomeEvent({ isMobile });
 
   const router = useRouter();
 
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
+
   return (
     <div>
+      <Metadata>
+        <title>硕磐智能</title>
+      </Metadata>
       {/* swiper */}
       <LayoutComp
-        slideList={state.isMobile ? homeSlideList.mb : homeSlideList.pc}
+        slideList={isMobile ? homeSlideList.mb : homeSlideList.pc}
         page="home"
         pageScroll={anchorClick}
       >
@@ -55,7 +65,7 @@ const Page = () => {
           <div
             id="link-item"
             className={
-              state.isMobile
+              isMobile
                 ? `${homeStyle["link-item"]} ${homeStyle["link-item-box"]}`
                 : homeStyle["link-item"]
             }
@@ -80,7 +90,7 @@ const Page = () => {
                 width: 28,
                 height: 28,
                 margin: "0 auto",
-                display: state.isMobile ? "block" : "none",
+                display: isMobile ? "block" : "none",
               }}
               onClick={onArrowClick}
             />
@@ -92,7 +102,7 @@ const Page = () => {
           <TabHeader
             h1="EIMOS 应用功能全视图"
             h2={
-              !state.isMobile &&
+              !isMobile &&
               "构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
             }
           />
@@ -112,7 +122,7 @@ const Page = () => {
         <div className={homeStyle["analytics-wrapper"]} id="IBA">
           <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
           <SwiperComp
-            slideList={state.isMobile ? slideListOfIBA.mb : slideListOfIBA.pc}
+            slideList={isMobile ? slideListOfIBA.mb : slideListOfIBA.pc}
             description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
             disable={true}
             item="IBA"
@@ -124,9 +134,9 @@ const Page = () => {
         {/* 线索到回款 */}
         <div className="wrapper-center" id="LTC">
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
-          <LtcImgWrapper isMobile={state.isMobile} anchorClick={anchorClick} />
+          <LtcImgWrapper isMobile={isMobile} anchorClick={anchorClick} />
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
-            {(state.isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
+            {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
                 const description = TITLE_LIST[index];
                 const id = ["order", "ISMP", "ICM", "NPI"][index];
@@ -137,7 +147,7 @@ const Page = () => {
                     index={index}
                     key={index}
                     id={id}
-                    isMobile={state.isMobile}
+                    isMobile={isMobile}
                   />
                 );
               }
@@ -150,7 +160,7 @@ const Page = () => {
           <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
             <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
-              {(state.isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
+              {(isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
                 (list: any[], index: number) => {
                   const des = DESCRIPTION_LIST[index];
                   return (
@@ -218,7 +228,7 @@ const Page = () => {
                     item={item}
                     index={index}
                     count={APPLICATION_LIST[state.plan].length}
-                    isMobile={state.isMobile}
+                    isMobile={isMobile}
                   />
                 );
               })}
@@ -227,8 +237,8 @@ const Page = () => {
             <a
               className={homeStyle["link"]}
               onClick={() => {
-                state.isMobile
-                  ? router.push("/contact-me")
+                isMobile
+                  ? router.push("/contact-us")
                   : state.handleOpenChange(true);
               }}
             >
@@ -245,7 +255,7 @@ const Page = () => {
           <TabHeader h1="EIMOS平台" h2="EIMOS Platform as a Service" />
           <div className="img-wrapper">
             <Image
-              src={state.isMobile ? eimos_platform_mb : eimos_platform}
+              src={isMobile ? eimos_platform_mb : eimos_platform}
               alt="EIMOS平台"
               quality={100}
               className={homeStyle["eimos-platform-img"]}

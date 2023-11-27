@@ -1,5 +1,5 @@
 import { NextApiResponse, NextApiRequest } from "next";
-import db from "../db";
+import db from "../../server/db";
 
 export default async function handler(
   req: NextApiRequest,
@@ -13,7 +13,7 @@ export default async function handler(
       // 插入数据
       db.query(
         {
-          sql: `INSERT INTO spzn.CONSULTATION_INFO (name,email,company,phone,detail,createtime) VALUES (?,?,?,?,?,?);`,
+          sql: `INSERT INTO CONSULTATION_INFO (name,email,company,phone,detail,createtime) VALUES (?,?,?,?,?,?);`,
           values: [name, email, company, phone, detail, createtime],
         },
         (err: any, result: any) => {

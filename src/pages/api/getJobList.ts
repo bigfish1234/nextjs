@@ -1,5 +1,5 @@
 import { NextApiResponse, NextApiRequest } from "next";
-import db from "../db";
+import db from "../../server/db";
 
 export default async function handler(
   req: NextApiRequest,
@@ -10,19 +10,19 @@ export default async function handler(
     const { type = -1, pos = -1, keyword = "" } = req?.body;
     if (type !== -1 && pos !== -1) {
       sql =
-        `SELECT * FROM spzn.JOB_LIST WHERE type = ${type} AND jobid = ${pos}` +
+        `SELECT * FROM JOB_LIST WHERE type = ${type} AND jobid = ${pos}` +
         (keyword ? ` AND jobName LIKE '%${keyword}%'` : "");
     } else if (type == -1 && pos !== -1) {
       sql =
-        `SELECT * FROM spzn.JOB_LIST WHERE jobid = ${pos}` +
+        `SELECT * FROM JOB_LIST WHERE jobid = ${pos}` +
         (keyword ? ` AND jobName LIKE '%${keyword}%'` : "");
     } else if (type !== -1 && pos == -1) {
       sql =
-        `SELECT * FROM spzn.JOB_LIST WHERE type = ${type}` +
+        `SELECT * FROM JOB_LIST WHERE type = ${type}` +
         (keyword ? ` AND jobName LIKE '%${keyword}%'` : "");
     } else {
       sql =
-        "SELECT * FROM spzn.JOB_LIST" +
+        "SELECT * FROM JOB_LIST" +
         (keyword ? ` WHERE jobName LIKE '%${keyword}%'` : "");
     }
 

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import styles from "./index.module.css";
 import ltcImg from "/public/pc/home/ltc.png";

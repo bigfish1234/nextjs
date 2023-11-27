@@ -1,14 +1,25 @@
 import styles from "./index.module.css";
 import { Form, Input, Select, message } from "antd";
-import { contactUs, handleSendEmail } from "@/utils/api";
+import { contactUs, handleSendEmail } from "@/server/api";
 import { store } from "@/store";
 import { useRouter } from "next/navigation";
 import moment from "moment";
+import { useEffect, useState } from "react";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const ServiceForm = () => {
   const [form] = Form.useForm();
   const state = store();
   const router = useRouter();
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
 
   const submit = async () => {
     try {
@@ -21,7 +32,7 @@ const ServiceForm = () => {
       await handleSendEmail(data);
 
       state.handleOpenChange(false);
-      router.push("/home-page");
+      router.push("/index");
     } catch (error) {
       message.info("请填写完整");
     }
@@ -31,14 +42,14 @@ const ServiceForm = () => {
     <div>
       <div
         style={{
-          paddingTop: state.isMobile ? 50 : 0,
+          paddingTop: isMobile ? 50 : 0,
           marginBottom: 30,
         }}
       >
         <div className={styles["form-content-wrapper"]}>
           <div
             className={styles["form-title"]}
-            style={{ display: state.isMobile ? "block" : "none" }}
+            style={{ display: isMobile ? "block" : "none" }}
           >
             咨询服务
           </div>
@@ -105,13 +116,13 @@ const ServiceForm = () => {
         </div>
         <div
           className={`${styles["submit-btn"]} ${styles["submit-btn-pc"]}`}
-          style={{ visibility: state.isMobile ? "hidden" : "visible" }}
+          style={{ visibility: isMobile ? "hidden" : "visible" }}
           onClick={submit}
         >
           提 交
         </div>
       </div>
-      {state.isMobile ? (
+      {isMobile ? (
         <div className={styles["submit-btn-wrapper"]}>
           <div className={styles["submit-btn"]} onClick={submit}>
             提 交

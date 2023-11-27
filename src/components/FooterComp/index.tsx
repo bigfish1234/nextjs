@@ -9,6 +9,8 @@ import contactLogo from "/public/phone.png";
 import sourceLogo from "/public/about.png";
 import productLogo from "/public/product.png";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const FooterComp = ({ pageScroll }: any) => {
   const state = store();
@@ -16,15 +18,25 @@ const FooterComp = ({ pageScroll }: any) => {
   const router = useRouter();
 
   const onLinkClick = (id: string) => {
-    if (path !== "/home-page") {
-      router.push("/home-page");
+    if (path !== "/index") {
+      router.push("/index");
     } else {
       pageScroll(id);
     }
   };
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
+
   return (
     <div>
-      {!state.isMobile ? (
+      {!isMobile ? (
         <div className={styles["footer-wrapper"]}>
           <div className="wrapper-center" style={{ flexDirection: "row" }}>
             <div className={styles["shuopan-main-service"]}>
@@ -61,7 +73,7 @@ const FooterComp = ({ pageScroll }: any) => {
                 </div>
                 <span>资源中心</span>
               </div>
-              <Link href="/info-center">信息发布</Link>
+              <Link href="/information-center">信息发布</Link>
             </div>
             <div className={styles["shuopan-main-service"]}>
               <div>
@@ -100,8 +112,8 @@ const FooterComp = ({ pageScroll }: any) => {
                 </div>
                 <span>关于我们</span>
               </div>
-              <Link href="/about-us">公司介绍</Link>
-              <Link href="/join-us">加入我们</Link>
+              <Link href="/corporate-information">公司介绍</Link>
+              <Link href="/recruitment">加入我们</Link>
             </div>
           </div>
           <div className={styles["copyright-info"]}>
@@ -133,7 +145,7 @@ const FooterComp = ({ pageScroll }: any) => {
           <div
             className={styles["contact-us"]}
             onClick={() => {
-              router.push("/contact-me");
+              router.push("/contact-us");
             }}
           >
             联系我们

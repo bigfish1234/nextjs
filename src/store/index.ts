@@ -3,9 +3,9 @@ import {
   getJobType,
   getJobs,
   getPositionList,
-} from "@/utils/api";
-import { isMobileDevice } from "@/utils/isMobileDevice";
+} from "@/server/api";
 import Store from "zustand-store";
+import { IJobType } from "../server/type";
 
 class globalStore extends Store.BaseStore<globalStore> {
   public plan = "IBA";
@@ -13,11 +13,10 @@ class globalStore extends Store.BaseStore<globalStore> {
   public isExpand = false;
   public isOpen = false;
   public nav = "eimos";
-  public isMobile = isMobileDevice();
   public typeList = [];
   public posList = [];
-  public jobList: any = [];
-  public jobListAll: any = [];
+  public jobList: IJobType[] = [];
+  public jobListAll: IJobType[] = [];
   public total = 0;
   public jobDetail: any = {};
 

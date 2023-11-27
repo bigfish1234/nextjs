@@ -1,6 +1,6 @@
-"use client";
 import { LayoutWrapper, ServiceForm } from "@/components";
 import Image from "next/image";
+import Metadata from "next/head";
 import { store } from "@/store";
 import styles from "./index.module.css";
 import expand_icon from "/public/expand-icon.png";
@@ -10,6 +10,9 @@ const ContactMe = () => {
   const state = store();
   return (
     <LayoutWrapper>
+      <Metadata>
+        <title>联系我们</title>
+      </Metadata>
       <div className={styles["wrapper"]}>
         <div className={styles["wrapper-header"]}>
           <Image

@@ -1,11 +1,12 @@
-"use client";
-
-import { useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react";
 import joinStyle from "./index.module.css";
 import { LayoutComp, PaginationComp, TabHeader } from "@/components";
 import { PositionDetail, SearchComp } from "./components";
 import useJoinEvent from "./effects/useJoinEvent";
 import { store } from "@/store";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
+import Metadata from "next/head";
 
 const JoinUs = () => {
   const {
@@ -17,6 +18,7 @@ const JoinUs = () => {
     setStatus,
     handleChange,
   } = useJoinEvent();
+  const [isMobile, setIsMobile] = useState(false);
   const state = store();
 
   useEffect(() => {
@@ -28,25 +30,35 @@ const JoinUs = () => {
     state.initData(status);
   }, [status]);
 
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
+
   return (
-    <main>
+    <div>
+      <Metadata>
+        <title>加入我们</title>
+      </Metadata>
       <LayoutComp
-        slideList={state.isMobile ? joinSlideList.mb : joinSlideList.pc}
+        slideList={isMobile ? joinSlideList.mb : joinSlideList.pc}
         page="join"
       >
         <div
           className={`${joinStyle["wrapper"]} ${joinStyle["job-wrapper"]}`}
           id="pos"
         >
-          {!state.isMobile && <TabHeader h1="招聘职位" />}
+          {!isMobile && <TabHeader h1="招聘职位" />}
           <div className="wrapper-center">
             <SearchComp
-              isMobile={state.isMobile}
+              isMobile={isMobile}
               handleChange={handleChange}
               status={status}
               setStatus={setStatus}
             />
-            {!state.isMobile && (
+            {!isMobile && (
               <p>
                 共{" "}
                 <span
@@ -68,7 +80,7 @@ const JoinUs = () => {
                   count={state.jobList.length}
                   key={index}
                   index={index}
-                  isMobile={state.isMobile}
+                  isMobile={isMobile}
                   jobDetail={item}
                 />
               );
@@ -141,7 +153,7 @@ const JoinUs = () => {
           </div>
         </div>
       </LayoutComp>
-    </main>
+    </div>
   );
 };
 

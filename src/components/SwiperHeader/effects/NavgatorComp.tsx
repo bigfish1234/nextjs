@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import styles from "../index.module.css";
 import expand_icon from "/public/expand-icon.png";
@@ -7,16 +6,27 @@ import { store } from "@/store";
 import NavComp from "./NavComp";
 import { LayoutWrapper, PageNavigator } from "@/components";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const NavgatorComp = ({ page }: any) => {
   const state = store();
   const router = useRouter();
 
-  const goHomePage = () => router.push("/home-page");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
+
+  const goHomePage = () => router.push("/index");
 
   return (
     <div className={page == "detail" ? styles["detail-navigator"] : ""}>
-      {state.isMobile ? (
+      {isMobile ? (
         <div className={page === "detail" ? styles["detail-header_mb"] : ""}>
           <div className={styles["header"]}>
             <Image

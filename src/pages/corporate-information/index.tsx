@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import styles from "./index.module.css";
 import { LayoutComp, TabHeader } from "@/components";
@@ -8,19 +6,31 @@ import useAboutEvent from "./effects/useAboutEvent";
 
 import founderImg from "/public/pc/about/like.png";
 import ttWisdom from "/public/ttwisdom.png";
-import { store } from "@/store";
+import { useEffect, useState } from "react";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
+import Metadata from "next/head";
 
 const AboutUs = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const { aboutSlideList } = useAboutEvent();
-  const state = store();
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
 
   return (
-    <main>
+    <div>
+      <Metadata>
+        <title>关于我们</title>
+      </Metadata>
       <LayoutComp
-        slideList={state.isMobile ? aboutSlideList.mb : aboutSlideList.pc}
+        slideList={isMobile ? aboutSlideList.mb : aboutSlideList.pc}
         page="about"
       >
-        {state.isMobile && (
+        {isMobile && (
           <div className={styles["spzn-introduce"]}>
             致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
             <span className={styles["background-word"]}>数字化</span>
@@ -48,10 +58,10 @@ const AboutUs = () => {
         </div>
         <div className={styles["partner-wrapper"]}>
           <TabHeader h1="合作伙伴" />
-          <PartnerComp imgUrl={ttWisdom} isMobile={state.isMobile} />
+          <PartnerComp imgUrl={ttWisdom} isMobile={isMobile} />
         </div>
       </LayoutComp>
-    </main>
+    </div>
   );
 };
 

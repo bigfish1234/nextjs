@@ -1,15 +1,17 @@
-"use client";
-
+/* eslint-disable react-hooks/exhaustive-deps */
 import styles from "./index.module.css";
 import { FooterComp, LayoutWrapper } from "@/components";
 import NavgatorComp from "@/components/SwiperHeader/effects/NavgatorComp";
 import { useEffect, useState } from "react";
 import { store } from "@/store";
 import Upload from "./components/fileUpload";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
+import Metadata from "next/head";
 
 const JobDetail = () => {
   const [isApply, setIsApply] = useState(false);
   const [fileList, setfileList] = useState<any>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const state = store();
 
   const applyJob = () => {
@@ -20,19 +22,27 @@ const JobDetail = () => {
     const url = new URL(location.href);
     const id = Number(url.searchParams.get("id"));
     state.queryJobDetail(id);
+
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
   }, []);
 
   return (
     <LayoutWrapper>
+      <Metadata>
+        <title>{state.jobDetail.jobName}</title>
+      </Metadata>
       <NavgatorComp page="detail" />
       <div
         className={
-          state.isMobile ? styles["job-detail-wrapper_mb"] : "wrapper-center"
+          isMobile ? styles["job-detail-wrapper_mb"] : "wrapper-center"
         }
       >
         <div className={styles["job"]}>
           <p className={styles["job-position"]}>{state.jobDetail.jobName}</p>
-          {state.isMobile ? (
+          {isMobile ? (
             <div className={styles["job-position_mobile"]}>
               <p>
                 薪资: {state.jobDetail.salary}/月*{state.jobDetail.all}薪
@@ -49,7 +59,7 @@ const JobDetail = () => {
               </span>
             </div>
           )}
-          {!state.isMobile && (
+          {!isMobile && (
             <div className={styles["apply-btn"]} onClick={applyJob}>
               申请职位
             </div>

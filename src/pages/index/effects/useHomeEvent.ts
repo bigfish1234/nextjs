@@ -25,11 +25,11 @@ import { store } from "@/store";
 import info_banner from "/public/pc/info/info-banner.png";
 import IBA_mb from "/public/mobile/home/IBA.png";
 import IBA from "/public/pc/home/IBA.png";
-import { useDebounceFn } from "ahooks";
 
-const useHomeEvent = () => {
+const { useDebounceFn } = require("ahooks");
+
+const useHomeEvent = ({ isMobile }: any) => {
   const [isShow, setIsShow] = useState(false);
-  const [isHovered, setIsHovered] = useState("");
   const state = store();
 
   // banner
@@ -89,7 +89,7 @@ const useHomeEvent = () => {
   const handleIBAEvent = useDebounceFn(
     (type: number) => {
       const dom = document.getElementById("analytics-wrapper");
-      if (!state.isMobile) {
+      if (!isMobile) {
         if (!type) {
           setIsShow(true);
           if (dom) {
@@ -121,8 +121,6 @@ const useHomeEvent = () => {
     leaveHideShadow,
     onArrowClick,
     handleIBAEvent,
-    isHovered,
-    setIsHovered,
   };
 };
 
