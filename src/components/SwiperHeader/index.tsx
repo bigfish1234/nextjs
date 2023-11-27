@@ -29,7 +29,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
               <Image
                 priority={true}
                 src={imgUrl}
-                alt="img"
+                alt="数据驱动+AI使能，助力企业增收、增利、少增人"
                 className={styles["swiper-content"]}
               />
             );

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 
-import img from "/public/pc/home/manage.png";
+import img from "/public/pc/home/ICM.png";
 import timeIcon from "/public/time-icon.png";
 import arrow from "/public/arrow.png";
 
@@ -20,14 +20,14 @@ const InfomationBar = ({ content, isMobile }: any) => {
             <span style={{ fontSize: 20, marginLeft: 23 }}>{year}</span>
           </div>
           <div className={styles["info-content"]}>
-            <div>{title}</div>
+            <h2>{title}</h2>
             <p>{description}</p>
             <a>查看详情</a>
           </div>
           <div className={styles["info-img"]}>
             <Image
               src={img}
-              alt="img"
+              alt="硕磐企业智能管理操作系统EIMOS"
               style={{ width: "100%", height: "100%" }}
             />
           </div>
@@ -37,7 +37,7 @@ const InfomationBar = ({ content, isMobile }: any) => {
           <div className={styles["img-mobile"]}>
             <Image
               src={img}
-              alt="img"
+              alt="硕磐企业智能管理操作系统EIMOS"
               style={{ width: "100%", height: "100%" }}
             />
           </div>

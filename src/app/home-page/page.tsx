@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import homeStyle from "./index.module.css";
 import { LayoutComp, SwiperComp, TabHeader } from "@/components";
-import { ApplicationItem, DetailComp, LtcImgWrapper } from "./components";
+import { ApplicationItem, LtcImgWrapper } from "./components";
 import useHomeEvent from "./effects/useHomeEvent";
 import { store } from "@/store";
 
@@ -35,10 +36,14 @@ const Page = () => {
     leaveHideShadow,
     onArrowClick,
     handleIBAEvent,
+    isHovered,
+    setIsHovered,
   } = useHomeEvent();
 
+  const router = useRouter();
+
   return (
-    <main>
+    <div>
       {/* swiper */}
       <LayoutComp
         slideList={state.isMobile ? homeSlideList.mb : homeSlideList.pc}
@@ -60,7 +65,7 @@ const Page = () => {
                 <span
                   className={homeStyle["hover-style"]}
                   key={item.id}
-                  onClick={() => anchorClick(item.id)}
+                  onClick={(e) => anchorClick(item.id, e)}
                 >
                   {item.title}
                 </span>
@@ -71,7 +76,6 @@ const Page = () => {
             <Image
               src={arrow}
               alt="arrow"
-              loading="lazy"
               style={{
                 width: 28,
                 height: 28,
@@ -95,7 +99,7 @@ const Page = () => {
           <div className="img-wrapper">
             <Image
               src={eimos_img}
-              alt="eimos_img"
+              alt="EIMOS应用功能全视图-构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
               id="eimos_img"
               className={homeStyle["structure-img"]}
               onMouseEnter={hoverShowShadow}
@@ -222,7 +226,11 @@ const Page = () => {
 
             <a
               className={homeStyle["link"]}
-              onClick={() => state.handleOpenChange(true)}
+              onClick={() => {
+                state.isMobile
+                  ? router.push("/contact-me")
+                  : state.handleOpenChange(true);
+              }}
             >
               获取演示
             </a>
@@ -238,7 +246,8 @@ const Page = () => {
           <div className="img-wrapper">
             <Image
               src={state.isMobile ? eimos_platform_mb : eimos_platform}
-              alt="eimos_platform"
+              alt="EIMOS平台"
+              quality={100}
               className={homeStyle["eimos-platform-img"]}
             />
           </div>
@@ -275,7 +284,7 @@ const Page = () => {
           </div>
         </div>
       </LayoutComp>
-    </main>
+    </div>
   );
 };
 

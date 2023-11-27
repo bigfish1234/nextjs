@@ -17,7 +17,7 @@ const ServiceBtn = () => {
     <>
       <Image
         src={guidenceImg}
-        alt="gudience"
+        alt="立即咨询"
         style={{ display: state.isMobile ? "none" : "block" }}
         className={styles["guide-service"]}
         onClick={clickToGuidence}

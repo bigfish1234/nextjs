@@ -6,7 +6,7 @@ const PartnerComp = ({ imgUrl, isMobile }: any) => {
     <div className={styles["partner-item"]}>
       <Image
         src={imgUrl}
-        alt="ttWisdom"
+        alt="合作伙伴"
         loading="lazy"
         className={styles["partner-img"]}
       />

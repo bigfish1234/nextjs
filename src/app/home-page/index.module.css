@@ -187,6 +187,7 @@
   border-bottom: 4px solid var(--active-font-color);
 }
 
+
 @media screen and (max-width: 1440px) {
   .structure-img {
     width: 1000px;
@@ -311,6 +312,10 @@
     box-shadow: none !important;
     border: 0 !important;
     border-bottom: 3px solid var(--active-font-color) !important;
+  }
+
+  .eimos-platform-section {
+    padding-top: var(--header-margin-bottom);
   }
 }
 

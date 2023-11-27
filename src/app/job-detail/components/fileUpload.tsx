@@ -39,7 +39,7 @@ const fileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
         <p>（上传文件最大不超过5M，建议压缩后上传）</p>
         <Image
           src={upload_icon}
-          alt="upload"
+          alt="文件上传"
           width={213}
           height={170}
           style={{ margin: "10px 0" }}

@@ -19,7 +19,7 @@ const LtcImgWrapper = ({ isMobile, anchorClick }: any) => {
     <div className="img-wrapper">
       <Image
         src={isMobile ? ltcImg_mb : ltcImg}
-        alt="ltcImg"
+        alt="线索到回款(Lead to Cash)"
         loading="lazy"
         className={styles["ltc-img"]}
       />

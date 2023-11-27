@@ -1,5 +1,5 @@
 .mobile-sidebar {
-  width: 120px;
+  width: 0;
   height: 100vh;
   box-shadow: 8px 4px 10px 0px rgba(213, 213, 213, 0.5);
   background-color: #FFFFFF;
@@ -8,6 +8,9 @@
   top: 0;
   left: 0;
   z-index: 99;
+  visibility: 0;
+  opacity: 0;
+  transition: width 0.2s ease-out, opacity 0.2s ease-in, visibility 0.2s ease-in;
 }
 
 .mobile-sidebar-content {
@@ -19,4 +22,10 @@
   justify-content: space-between;
   font-size: 16px;
   font-family: 'PingFangSC-Semibold, PingFang SC';
+}
+
+.show-sidebar {
+  opacity: 1;
+  visibility: 1;
+  width: 120px;
 }
