@@ -45,14 +45,14 @@ const JobDetail = () => {
           {isMobile ? (
             <div className={styles["job-position_mobile"]}>
               <p>
-                薪资: {state.jobDetail.salary}/月*{state.jobDetail.all}薪
+                薪资: {state.jobDetail.salary}/月*{state.jobDetail.totalmonth}薪
               </p>
               <p>(其它福利：{state.jobDetail.welfare})</p>
             </div>
           ) : (
             <div className={styles["job-position_pc"]}>
               <span>
-                薪资: {state.jobDetail.salary}/月*{state.jobDetail.all}薪
+                薪资: {state.jobDetail.salary}/月*{state.jobDetail.totalmonth}薪
               </span>
               <span style={{ fontSize: 22, paddingLeft: 20 }}>
                 (其它福利：{state.jobDetail.welfare})
@@ -74,7 +74,7 @@ const JobDetail = () => {
         <div className={styles["title"]}>岗位要求</div>
         <div
           className={styles["job-detail"]}
-          dangerouslySetInnerHTML={{ __html: state.jobDetail.require }}
+          dangerouslySetInnerHTML={{ __html: state.jobDetail.requireability }}
         ></div>
 
         <div className={styles["job-detail"]} style={{ border: 0 }}>

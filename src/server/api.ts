@@ -13,6 +13,7 @@ export const getJobs = async (params: IStatus) => {
   return Promise.resolve(res.data);
 };
 
+// 获取职位详情
 export const getJobDetail = async (id: number) => {
   const res = await axios.post("/api/getJobDetail", { id });
   if (res.status !== 200) {
@@ -60,5 +61,27 @@ export const handleSendEmail = async (data: any) => {
 export const onUpload = async (data: any) => {
   await axios.post("/api/upload", {
     file: data,
+  });
+};
+
+// 新增职位
+export const postJobInfo = async (data: any) => {
+  await axios.post("/api/postJob", {
+    ...data,
+  });
+};
+
+// 更新职位
+export const updateJob = async (id: number, data: any) => {
+  await axios.post("/api/updateJob", {
+    ...data,
+    id,
+  });
+};
+
+// 删除记录
+export const deleteJob = async (data: any) => {
+  await axios.post("/api/deleteJob", {
+    ...data,
   });
 };

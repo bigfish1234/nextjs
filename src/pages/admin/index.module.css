@@ -1,0 +1,31 @@
+.wrapper {
+  padding: 16px;
+  margin-bottom: 40px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header div {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.wrapper :global .ant-pro-query-filter {
+  padding: 24px 0;
+}
+
+.footer {
+  width: 100%;
+  height: 64px;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  background-color: #fff;
+}

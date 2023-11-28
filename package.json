@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/pro-components": "^2.6.43",
     "ahooks": "^3.4.0",
     "antd": "^5.11.1",
     "axios": "^1.6.2",
