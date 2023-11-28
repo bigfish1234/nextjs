@@ -24,11 +24,13 @@ const ServiceBtn = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <Image
         src={guidenceImg}
         alt="立即咨询"
-        style={{ display: isMobile ? "none" : "block" }}
+        style={{
+          visibility: !isMobile && !state.isOpen ? "visible" : "hidden",
+        }}
         className={styles["guide-service"]}
         onClick={clickToGuidence}
       />
@@ -60,7 +62,7 @@ const ServiceBtn = () => {
           <ServiceForm />
         </div>
       ) : null}
-    </>
+    </div>
   );
 };
 export default ServiceBtn;

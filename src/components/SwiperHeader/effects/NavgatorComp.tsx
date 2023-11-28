@@ -4,7 +4,6 @@ import expand_icon from "/public/expand-icon.png";
 import logo from "/public/logo.png";
 import { store } from "@/store";
 import NavComp from "./NavComp";
-import { LayoutWrapper, PageNavigator } from "@/components";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";

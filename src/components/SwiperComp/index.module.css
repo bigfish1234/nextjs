@@ -11,10 +11,10 @@
 }
 
 .wrapper-IBA:hover {
-  background: linear-gradient(to right, #5aa7f6, #fff,#5aa7f6);
-  .swiper-content {
+  /* background: linear-gradient(to right, #5aa7f6, #fff,#5aa7f6); */
+  /* .swiper-content {
     opacity: 0;
-  }
+  } */
 }
 
 .img-wrapper-LTC {

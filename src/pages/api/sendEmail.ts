@@ -7,7 +7,7 @@ export default async function handler(
 ) {
   try {
     const data = req?.body;
-    const { name, email, company, phone, detail = "" } = data;
+    const { name, email, company, phone, detail = "", createtime } = data;
     // 创建transporter
     const transporter = nodemailer.createTransport({
       host: "smtp.mxhichina.com",
@@ -32,6 +32,7 @@ export default async function handler(
           <b>单位名称：</b>${company}<br/>
           <b>联系电话：</b>${phone}<br/>
           <b>需求描述：</b>${detail}<br/>
+          <b>日期：</b>${createtime}<br/>
          </p>
       `,
     };

@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import { Form, Input, Select, message } from "antd";
+import { Form, Input, Select } from "antd";
 import { contactUs, handleSendEmail } from "@/server/api";
 import { store } from "@/store";
 import { useRouter } from "next/navigation";
@@ -34,7 +34,7 @@ const ServiceForm = () => {
       state.handleOpenChange(false);
       router.push("/index");
     } catch (error) {
-      message.info("请填写完整");
+      // message.info("请填写完整");
     }
   };
 

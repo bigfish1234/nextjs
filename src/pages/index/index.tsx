@@ -26,6 +26,7 @@ import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const Page = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
   const state = store();
   const {
     isShow,
@@ -39,8 +40,6 @@ const Page = () => {
     onArrowClick,
     handleIBAEvent,
   } = useHomeEvent({ isMobile });
-
-  const router = useRouter();
 
   useEffect(() => {
     const isMobile =
@@ -73,7 +72,9 @@ const Page = () => {
             {(navList || []).map((item: { id: string; title: string }) => {
               return (
                 <span
-                  className={homeStyle["hover-style"]}
+                  className={
+                    state.nav == item.id ? homeStyle["hover-style"] : ""
+                  }
                   key={item.id}
                   onClick={(e) => anchorClick(item.id, e)}
                 >
@@ -98,7 +99,10 @@ const Page = () => {
         </div>
 
         {/* 架构图 */}
-        <div className="wrapper-center" id="eimos">
+        <div
+          className={`${"wrapper-center"} ${homeStyle["eimos-wrapper"]}`}
+          id="eimos"
+        >
           <TabHeader
             h1="EIMOS 应用功能全视图"
             h2={
@@ -132,7 +136,10 @@ const Page = () => {
         </div>
 
         {/* 线索到回款 */}
-        <div className="wrapper-center" id="LTC">
+        <div
+          className={`${"wrapper-center"} ${homeStyle["ltc-wrapper"]}`}
+          id="LTC"
+        >
           <TabHeader h1="线索到回款" h2="Lead to Cash" />
           <LtcImgWrapper isMobile={isMobile} anchorClick={anchorClick} />
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
@@ -179,7 +186,11 @@ const Page = () => {
         </div>
 
         {/* 应用及解决方案 */}
-        <div className="wrapper-center" id="plan" style={{ padding: "0 15px" }}>
+        <div
+          className="wrapper-center"
+          id="plan"
+          style={{ padding: "0 15px", paddingTop: isMobile ? 30 : 60 }}
+        >
           <TabHeader h1="应用及解决方案" />
           <div className={homeStyle["tab-button"]}>
             <div

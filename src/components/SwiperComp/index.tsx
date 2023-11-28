@@ -30,7 +30,7 @@ const SwiperComp = ({
       setActiveIndex(index);
     },
     {
-      wait: 300,
+      wait: 500,
     }
   );
   const onMouseLeave = useDebounceFn(
@@ -39,7 +39,7 @@ const SwiperComp = ({
       setActiveIndex("");
     },
     {
-      wait: 300,
+      wait: 500,
     }
   );
 
