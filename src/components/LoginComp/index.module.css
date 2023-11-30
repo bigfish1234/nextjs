@@ -1,0 +1,44 @@
+.login {
+  width: 400px;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 25px 36px; 
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);;
+  transform: translateY(40%);
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.cancelbtn {
+  width: 47%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.loginbtn {
+  width: 47%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--active-font-color);
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}

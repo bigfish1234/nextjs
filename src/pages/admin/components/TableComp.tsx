@@ -1,25 +1,29 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { ProTable } from "@ant-design/pro-components";
-import { Button } from "antd";
+import { Button, Space } from "antd";
 import styles from "../index.module.css";
 import { useEffect } from "react";
 import { store } from "@/store";
 import useAdmin from "../effects/useAdmin";
-import { useRouter } from "next/navigation";
+import { signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const TableComp = () => {
   const { columns, current, setCurrent, params, setParams } = useAdmin();
   const state = store();
   const router = useRouter();
-
+  const { data: session, status } = useSession();
   useEffect(() => {
+    if (!session) {
+      signOut({ callbackUrl: "/auth/signin" });
+    }
     state.initData({});
     state.getTypeList();
     state.getPosList();
   }, []);
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <div className={styles["header"]}>
         <div>职位管理</div>
         <Button type="primary" onClick={() => router.push("./admin/create")}>
@@ -69,7 +73,7 @@ const TableComp = () => {
           },
         }}
       />
-    </>
+    </div>
   );
 };
 

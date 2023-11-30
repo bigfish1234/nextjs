@@ -9,6 +9,8 @@ import { useState } from "react";
 const useAdmin = () => {
   const [current, setCurrent] = useState(1);
   const [params, setParams] = useState<IStatus>({});
+  const [isModalVisible, setModalVisible] = useState(false);
+  const [user, setUser] = useState({});
   const state = store();
   const router = useRouter();
 
@@ -230,6 +232,11 @@ const useAdmin = () => {
     });
   };
 
+  // 退出登录
+  const handleOk = () => {
+    //
+  };
+
   return {
     columns,
     current,
@@ -239,6 +246,11 @@ const useAdmin = () => {
     handleCancel,
     handleSubmit,
     handleEdit,
+    isModalVisible,
+    setModalVisible,
+    handleOk,
+    user,
+    setUser,
   };
 };
 export default useAdmin;

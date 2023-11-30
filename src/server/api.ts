@@ -85,3 +85,10 @@ export const deleteJob = async (data: any) => {
     ...data,
   });
 };
+
+// 登录
+export const login = async (data: any) => {
+  await axios.post("/api/login", {
+    ...data,
+  });
+};
