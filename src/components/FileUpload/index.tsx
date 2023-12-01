@@ -1,7 +1,7 @@
 import { Modal, Upload, UploadProps, message } from "antd";
-import styles from "../index.module.css";
+import styles from "./index.module.css";
 import Image from "next/image";
-import upload_icon from "/public/icon-upload.png";
+import upload_icon from "/public/images/icon-upload.png";
 
 const fileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
   // 将文件上传至磁盘存储中

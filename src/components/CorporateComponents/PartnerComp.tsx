@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../index.module.css";
+import styles from "./index.module.css";
 
 const PartnerComp = ({ imgUrl, isMobile }: any) => {
   return (

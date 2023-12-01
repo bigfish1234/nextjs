@@ -1,5 +1,5 @@
 import { Form, Row, Col, Select, Input } from "antd";
-import styles from "../index.module.css";
+import styles from "./index.module.css";
 import { store } from "@/store";
 
 const { useDebounceFn } = require("ahooks");

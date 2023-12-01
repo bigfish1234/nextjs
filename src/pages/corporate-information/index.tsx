@@ -1,18 +1,22 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import { LayoutComp, TabHeader } from "@/components";
-import { KapComp, PartnerComp } from "./components";
-import useAboutEvent from "./effects/useAboutEvent";
-
-import founderImg from "/public/pc/about/like.png";
-import ttWisdom from "/public/ttwisdom.png";
+import { KapComp, PartnerComp } from "../../components/CorporateComponents";
+import founderImg from "/public/images/pc/about/like.png";
+import ttWisdom from "/public/images/ttwisdom.png";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 import Metadata from "next/head";
+import spzn_banner from "/public/images/pc/about/about-banner.png";
+import spzn_banner_mb from "/public/images/mobile/about/sp.png";
 
 const AboutUs = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const { aboutSlideList } = useAboutEvent();
+
+  const aboutSlideList = {
+    pc: [spzn_banner],
+    mb: [spzn_banner_mb],
+  };
 
   useEffect(() => {
     const isMobile =

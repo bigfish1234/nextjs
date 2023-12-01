@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../index.module.css";
-import expand_icon from "/public/expand-icon.png";
-import logo from "/public/logo.png";
+import expand_icon from "/public/images/expand-icon.png";
+import logo from "/public/images/logo.png";
 import { store } from "@/store";
 import NavComp from "./NavComp";
 import { useRouter } from "next/navigation";
@@ -21,7 +21,7 @@ const NavgatorComp = ({ page }: any) => {
     setIsMobile(isMobile);
   }, []);
 
-  const goHomePage = () => router.push("/index");
+  const goHomePage = () => router.push("/");
 
   return (
     <div className={page == "detail" ? styles["detail-navigator"] : ""}>

@@ -12,6 +12,7 @@ import TabHeader from "./TabHearder";
 import PageNavigator from "./PageNavigator";
 import Mask from "./Mask";
 import LayoutWrapper from "./LayoutWrapper";
+import fileUpload from "./FileUpload";
 
 export {
   CapabilityComp,
@@ -28,4 +29,5 @@ export {
   PageNavigator,
   Mask,
   LayoutWrapper,
+  fileUpload,
 };

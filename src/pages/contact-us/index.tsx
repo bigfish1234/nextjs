@@ -3,8 +3,8 @@ import Image from "next/image";
 import Metadata from "next/head";
 import { store } from "@/store";
 import styles from "./index.module.css";
-import expand_icon from "/public/expand-icon.png";
-import logo from "/public/logo.png";
+import expand_icon from "/public/images/expand-icon.png";
+import logo from "/public/images/logo.png";
 
 const ContactMe = () => {
   const state = store();

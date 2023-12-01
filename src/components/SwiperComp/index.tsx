@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import { HoverComp } from "..";
-import { DetailComp } from "@/pages/index/components";
-import { capabilityList_LTC } from "@/pages/index/effects/const";
+import { DetailComp } from "@/components/IndexComponents";
+import { capabilityList_LTC } from "@/lib/const";
 
 const { useDebounceFn } = require("ahooks");
 

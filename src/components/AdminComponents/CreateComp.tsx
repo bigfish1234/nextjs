@@ -1,15 +1,104 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Button, Col, Form, Input, Row, Select, Space } from "antd";
-import styles from "../index.module.css";
+import { Button, Col, Form, Input, Row, Select, Space, message } from "antd";
+import styles from "./index.module.css";
 import { store } from "@/store";
 import { useEffect } from "react";
-import useAdmin from "../effects/useAdmin";
 import { MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
+import moment from "moment";
+import { getJobDetail, postJobInfo, updateJob } from "@/server/api";
+import { useRouter } from "next/navigation";
 
 const CreateComp = () => {
   const state = store();
   const [form] = Form.useForm();
-  const { handleCancel, handleSubmit, handleEdit } = useAdmin();
+  const router = useRouter();
+
+  const handleCancel = () => {
+    router.push(`/admin`);
+  };
+
+  const handleEdit = async (id: number, form: any) => {
+    getJobDetail(id).then((res) => {
+      const data = formatData(res.data);
+      form?.setFieldsValue(data);
+    });
+  };
+
+  const formatData = (detail: any) => {
+    const {
+      intro = "",
+      requireability = "",
+      salary = "",
+      totalmonth,
+      type,
+      jobName,
+      category,
+      welfare,
+      createtime,
+    } = detail;
+    const introList = intro.split("<br/>").map((item: string) => ({
+      intro: item?.split(".")[1],
+    }));
+    const requireList = requireability.split("<br/>").map((item: string) => ({
+      requireability: item?.split(".")[1],
+    }));
+    const data = { type, jobName, category, welfare };
+    Object.assign(data, {
+      introList,
+      requireList,
+      salary: salary.split("k")[0],
+      totalmonth: totalmonth + "",
+      createtime: moment(createtime, "YYYY-MM-DD HH:mm:ss"),
+    });
+    return data;
+  };
+
+  const handleSubmit = (form: any) => {
+    form.validateFields().then(async () => {
+      const formData = form.getFieldsValue();
+      const {
+        introList,
+        requireList,
+        totalmonth,
+        jobName,
+        salary,
+        type,
+        welfare,
+      } = formData;
+      const data = { jobName, type, welfare };
+      Object.assign(data, {
+        salary: salary + "k",
+        category: type == 0 ? "社会招聘" : "校园招聘",
+        location: "杭州",
+        totalmonth: Number(totalmonth),
+        intro: introList
+          .map(
+            (item: { intro: string }, index: number) =>
+              index + 1 + "." + item.intro
+          )
+          .join("<br/>"),
+        requireability: requireList
+          .map(
+            (item: { requireability: string }, index: number) =>
+              index + 1 + "." + item.requireability
+          )
+          .join("<br/>"),
+        createtime: moment().format("YYYY-MM-DD HH:mm:ss") + "",
+      });
+
+      const url = new URL(location.href);
+      const id = Number(url.searchParams.get("id"));
+
+      if (id) {
+        await updateJob(id, data);
+        message.success("修改成功");
+      } else {
+        await postJobInfo(data);
+        message.success("提交成功");
+      }
+      router.push(`/admin`);
+    });
+  };
 
   useEffect(() => {
     state.getTypeList();

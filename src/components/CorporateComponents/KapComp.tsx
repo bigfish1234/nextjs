@@ -1,17 +1,45 @@
 import Image from "next/image";
-import styles from "../index.module.css";
-import useAboutEvent from "../effects/useAboutEvent";
-import { developList } from "../effects/const";
+import styles from "./index.module.css";
 
-import backgroundImg from "/public/pc/about/kap.png";
-import leftIcon from "/public/left-icon.png";
-import rightIcon from "/public/right-click.png";
+import backgroundImg from "/public/images/pc/about/kap.png";
+import leftIcon from "/public/images/left-icon.png";
+import rightIcon from "/public/images/right-click.png";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
+import { developList } from "@/lib/const";
 
 const KapComp = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const { sliding, btnOverEvent } = useAboutEvent();
+  const sliding = (type: string) => {
+    const dom = document.getElementById("slide");
+    const flag = window.matchMedia(
+      "only screen and (max-width: 1440px)"
+    ).matches;
+
+    const len = flag ? 350 : 500;
+    if (dom) {
+      if (type == "left") {
+        dom.scrollBy({
+          left: -len,
+          behavior: "smooth",
+        });
+      } else {
+        dom.scrollBy({
+          left: len,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
+  const btnOverEvent = (type: string, value: number) => {
+    const btnDom = document.getElementById(type);
+    if (btnDom) {
+      !value
+        ? (btnDom.style.boxShadow = "0px 3px 8px 0px rgba(0, 0, 0, 0.12)")
+        : (btnDom.style.boxShadow = "");
+    }
+  };
 
   useEffect(() => {
     const isMobile =

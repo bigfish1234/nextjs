@@ -1,12 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Modal } from "antd";
-import useAdmin from "../effects/useAdmin";
 import { signIn, useSession } from "next-auth/react";
-import { useEffect } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
 
 const SignOut = () => {
-  const { isModalVisible, setModalVisible, user, setUser } = useAdmin();
+  const [isModalVisible, setModalVisible] = useState(false);
   const { data: session } = useSession();
 
   useEffect(() => {
@@ -15,15 +13,6 @@ const SignOut = () => {
       setModalVisible(true);
     }
   }, [session]);
-
-  // useEffect(() => {
-  //   getUserInfo();
-  // }, []);
-
-  // const getUserInfo = async () => {
-  //   const user = await axios.get("/admin");
-  //   setUser(user);
-  // };
 
   return (
     <Modal

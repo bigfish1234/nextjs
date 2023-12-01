@@ -4,9 +4,9 @@ import { FooterComp, LayoutWrapper } from "@/components";
 import NavgatorComp from "@/components/SwiperHeader/effects/NavgatorComp";
 import { useEffect, useState } from "react";
 import { store } from "@/store";
-import Upload from "./components/fileUpload";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 import Metadata from "next/head";
+import FileUpload from "@/components/FileUpload";
 
 const JobDetail = () => {
   const [isApply, setIsApply] = useState(false);
@@ -91,7 +91,7 @@ const JobDetail = () => {
         </div>
       </div>
       {isApply && (
-        <Upload
+        <FileUpload
           open={isApply}
           setIsApply={setIsApply}
           fileList={fileList}

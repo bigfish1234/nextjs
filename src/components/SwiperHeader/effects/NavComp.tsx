@@ -18,10 +18,10 @@ const NavComp = ({ page }: any) => {
     >
       <Link
         prefetch
-        href="/index"
+        href="/"
         style={{
           color:
-            path == "/index"
+            path == "/"
               ? "#F96F25"
               : path == "/recruitment"
               ? "white"

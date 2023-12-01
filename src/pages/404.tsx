@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const ErrorPage = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push("/index");
+    router.push("/");
   }, []);
 
   return <div></div>;

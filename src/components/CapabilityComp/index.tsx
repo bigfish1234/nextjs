@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./index.module.css";
-import getIcon from "/public/get-icon.png";
+import getIcon from "/public/images/get-icon.png";
 import { store } from "@/store";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";

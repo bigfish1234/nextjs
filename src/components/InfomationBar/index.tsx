@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 
-import img from "/public/pc/home/ICM.png";
-import timeIcon from "/public/time-icon.png";
-import arrow from "/public/arrow.png";
+import img from "/public/images/pc/home/ICM.png";
+import timeIcon from "/public/images/time-icon.png";
+import arrow from "/public/images/arrow.png";
 
 const InfomationBar = ({ content, isMobile }: any) => {
   const { time, title, description, imgUrl = img } = content;

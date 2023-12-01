@@ -3,8 +3,8 @@ import styles from "../index.module.css";
 import { store } from "@/store";
 import { ServiceForm } from "@/components";
 
-import guidenceImg from "/public/advice-icon.png";
-import closeIcon from "/public/close-icon.png";
+import guidenceImg from "/public/images/advice-icon.png";
+import closeIcon from "/public/images/close-icon.png";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 

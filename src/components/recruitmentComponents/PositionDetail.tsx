@@ -1,4 +1,4 @@
-import styles from "../index.module.css";
+import styles from "./index.module.css";
 import { useRouter } from "next/navigation";
 
 const PositionDetail = ({ isMobile, jobDetail, count, index }: any) => {

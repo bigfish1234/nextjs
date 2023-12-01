@@ -3,11 +3,11 @@ import Link from "next/link";
 import styles from "./index.module.css";
 import { store } from "@/store";
 
-import emblemLogo from "/public/national-emblem.png";
-import aboutLogo from "/public/about.png";
-import contactLogo from "/public/phone.png";
-import sourceLogo from "/public/about.png";
-import productLogo from "/public/product.png";
+import emblemLogo from "/public/images/national-emblem.png";
+import aboutLogo from "/public/images/about.png";
+import contactLogo from "/public/images/phone.png";
+import sourceLogo from "/public/images/about.png";
+import productLogo from "/public/images/product.png";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
@@ -18,8 +18,8 @@ const FooterComp = ({ pageScroll }: any) => {
   const router = useRouter();
 
   const onLinkClick = (id: string) => {
-    if (path !== "/index") {
-      router.push("/index");
+    if (path !== "/") {
+      router.push("/");
     } else {
       pageScroll(id);
     }

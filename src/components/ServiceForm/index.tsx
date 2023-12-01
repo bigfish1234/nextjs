@@ -32,7 +32,7 @@ const ServiceForm = () => {
       await handleSendEmail(data);
 
       state.handleOpenChange(false);
-      router.push("/index");
+      router.push("/");
     } catch (error) {
       // message.info("请填写完整");
     }

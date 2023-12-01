@@ -66,7 +66,7 @@ const PageTitle = ({ page }: any) => {
         style={{
           width: isMobile ? 120 : 190,
           marginTop: 15,
-          display: path == "/index" ? "block" : "none",
+          display: path == "/" ? "block" : "none",
         }}
         onClick={() => {
           if (!isMobile) {

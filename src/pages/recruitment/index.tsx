@@ -2,22 +2,35 @@
 import { useEffect, useState } from "react";
 import joinStyle from "./index.module.css";
 import { LayoutComp, PaginationComp, TabHeader } from "@/components";
-import { PositionDetail, SearchComp } from "./components";
-import useJoinEvent from "./effects/useJoinEvent";
+import {
+  PositionDetail,
+  SearchComp,
+} from "../../components/recruitmentComponents";
 import { store } from "@/store";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 import Metadata from "next/head";
 
+import join_banner from "/public/images/pc/join/join-banner.png";
+import join_banner_mb from "/public/images/mobile/join/join-banner.png";
+import { IStatus } from "@/lib/type";
+
 const JoinUs = () => {
-  const {
-    pageSize,
-    joinSlideList,
-    pageCurrent,
-    setPageCurrent,
-    status,
-    setStatus,
-    handleChange,
-  } = useJoinEvent();
+  const pageSize = 5;
+  const joinSlideList = {
+    pc: [join_banner],
+    mb: [join_banner_mb],
+  };
+  const [pageCurrent, setPageCurrent] = useState<number>(1);
+  const [status, setStatus] = useState<IStatus>({
+    keyword: "",
+    type: -1,
+    pos: -1,
+  });
+
+  const handleChange = async (value: IStatus) => {
+    setStatus(value);
+  };
+
   const [isMobile, setIsMobile] = useState(false);
   const state = store();
 

@@ -21,9 +21,9 @@ const SideBar = () => {
     >
       <div className={styles["mobile-sidebar-content"]}>
         <Link
-          href="/index"
+          href="/"
           onClick={handleClick}
-          style={{ color: path == "/index" ? "#F96F25" : "black" }}
+          style={{ color: path == "/" ? "#F96F25" : "black" }}
         >
           EIMOS
         </Link>
