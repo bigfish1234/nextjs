@@ -13,23 +13,28 @@ export default NextAuth({
         password: { label: "密码", type: "password" },
       },
       authorize: async (credentials) => {
-        const res = await axios.post(
-          `${process.env.API_URL}/api/login`,
-          {
-            userName: credentials.userName,
-            password: credentials.password,
-          },
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-              accept: "application/json",
+        const user = await axios
+          .post(
+            `${process.env.API_URL}/api/login`,
+            {
+              userName: credentials.userName,
+              password: credentials.password,
             },
-          }
-        ).then((res) => res.data)
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                accept: "application/json",
+              },
+            }
+          )
+          .then((res) => res.data)
+          .catch(() => {
+            return null;
+          });
 
-        if (res) {
-          return res;
+        if (user) {
+          return user;
         } else {
           return null;
         }
@@ -47,11 +52,6 @@ export default NextAuth({
   // callbacks 在验证登录成功后，无论是在服务端或是在客户端都可以获取登录成功后的用户信息，分别定义两个函数： session 和 jwt，是先 jwt 执行， 然后才是 session。
   callbacks: {
     jwt: async ({ token, user }) => {
-      // if (!isTokenValid(token)) {
-      //   // 执行登出操作
-      //   return null;
-      // }
-      // token有效，返回token对象
       return token;
     },
     session: ({ session, token }) => {

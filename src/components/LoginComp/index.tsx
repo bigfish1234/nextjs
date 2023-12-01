@@ -1,22 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Checkbox, Form, Input } from "antd";
+import { Form, Input } from "antd";
 import styles from "./index.module.css";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 const LoginComp = ({ handleCancel, handleLogin, loading }: any) => {
   const [form] = Form.useForm();
-  const { data: session } = useSession();
-  const router = useRouter();
-
-  useEffect(() => {
-    // if (session) {
-    //   console.log("🚀 ~ file: index.tsx:16 ~ useEffect ~ session:", session);
-    //   router.push("/admin");
-    // }
-  }, []);
 
   return (
     <div className={styles.login}>
@@ -40,9 +28,6 @@ const LoginComp = ({ handleCancel, handleLogin, loading }: any) => {
               visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
             }
           />
-        </Form.Item>
-        <Form.Item name="remember" valuePropName="checked">
-          <Checkbox style={{ fontSize: 14 }}>记住密码</Checkbox>
         </Form.Item>
       </Form>
       <div className={styles.btn}>

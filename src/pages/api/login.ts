@@ -7,22 +7,10 @@ export default async function handler(
 ) {
   try {
     const { userName, password } = req.body;
-    console.log(
-      "🚀 ~ file: login.ts:10 ~ userName, password:",
-      userName,
-      password
-    );
     if (userName == "admin" && password == "123456") {
-      res.statusCode = 200;
       res.json({ name: "yyy", id: "1" });
     } else {
-      res.statusCode = 200;
-      res.json({
-        code: 200,
-        data: null,
-        message: "",
-        success: false,
-      });
+      res.json(null);
     }
   } catch (err) {
     res.statusCode = 500;
