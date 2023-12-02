@@ -136,9 +136,10 @@ const TableComp = () => {
               okText="是"
               cancelText="否"
             >
-              <a>删除</a>
+              <a key="delete">删除</a>
             </Popconfirm>
             <a
+              key="edit"
               onClick={() => {
                 router.push(`/admin/create?id=${record.jobid}`);
               }}
@@ -153,12 +154,6 @@ const TableComp = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles["header"]}>
-        <div>职位管理</div>
-        <Button type="primary" onClick={() => router.push("./admin/create")}>
-          + 新增
-        </Button>
-      </div>
       <ProTable
         dataSource={state.jobListAll}
         columns={columns}
@@ -197,6 +192,16 @@ const TableComp = () => {
                 }}
               >
                 {searchConfig.searchText}
+              </Button>,
+              <Button
+                key="add"
+                type="primary"
+                ghost
+                onClick={() => {
+                  router.push("./admin/create");
+                }}
+              >
+                + 新增
               </Button>,
             ];
           },

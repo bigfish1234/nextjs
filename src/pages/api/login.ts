@@ -8,9 +8,9 @@ export default async function handler(
   try {
     const { userName, password } = req.body;
     if (userName == "admin" && password == "123456") {
-      res.json({ name: "yyy", id: "1" });
+      res.status(200).json({ name: "admin", id: "1" });
     } else {
-      res.json(null);
+      res.status(200).json(null);
     }
   } catch (err) {
     res.statusCode = 500;

@@ -35,10 +35,6 @@ const DetailComp = ({ position }: any) => {
         slidesPerView={1}
         loop={content.length > 1}
         navigation
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: true, // hover停止自动轮播
-        }}
         pagination={{ clickable: true }}
       >
         {(content || []).map((item: any, index: number) => {

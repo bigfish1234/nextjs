@@ -74,6 +74,16 @@
   cursor: pointer;
 }
 
+.apply-btn-mb {
+  margin-top: 10px;
+  width: 100px;
+  height: 32px;
+  background-color: var(--active-font-color);
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+}
+
 .title {
   height: 46px;
   color: var(--active-font-color);
@@ -131,5 +141,5 @@
   .job-detail {
     border-bottom: 1px solid #e6e6e6;
     line-height: 24px;
-  } 
+  }
 }

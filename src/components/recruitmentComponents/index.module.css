@@ -74,11 +74,7 @@
 }
 
 .check-detail-btn-mb {
-  position: absolute;
-  left: 0;
-  bottom: 25px;
-  color: var(--active-font-color);
-  font-weight: 500;
+  display: none;
 }
 
 .deatil-content {
@@ -105,7 +101,7 @@
   }
 
   .position-detail-wrapper {
-    height: 250px;
+    /* height: 250px; */
     padding: 20px 0;
     box-shadow: none;
     margin-bottom: 0;

@@ -8,7 +8,11 @@ const LayoutWrapper = ({ children }: any) => {
   return (
     <div className={styles["layout-wrapper"]}>
       <Metadata>
-        <link rel="shortcut icon" href="/logo2.png" type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="/images/logo2.png"
+          type="image/x-icon"
+        />
         <meta
           name="description"
           content="硕磐智能EIMOS数智平台，助力和加速企业全方位的数字化转型，提升企业经营的效率和效益。"

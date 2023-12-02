@@ -2,8 +2,19 @@ import { Modal, Upload, UploadProps, message } from "antd";
 import styles from "./index.module.css";
 import Image from "next/image";
 import upload_icon from "/public/images/icon-upload.png";
+import { useEffect, useState } from "react";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 
-const fileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
+const FileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+  }, []);
+
   // 将文件上传至磁盘存储中
   const handleChange: UploadProps["onChange"] = async (info: any) => {
     if (info.file.status === "done") {
@@ -29,20 +40,25 @@ const fileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
   return (
     <Modal
       open={open}
-      width="40%"
+      width={isMobile ? "100%" : "40%"}
+      style={{ marginTop: 120 }}
       footer={null}
       onCancel={() => setIsApply(false)}
     >
       <div className={styles["upload-modal"]}>
-        <div style={{ fontSize: 36, marginBottom: 20 }}>上传简历</div>
+        <div
+          className={
+            isMobile ? styles["modal-title-mb"] : styles["modal-title-pc"]
+          }
+        >
+          上传简历
+        </div>
         <p>支持上传格式：pdf、doc、docx、zip、rar</p>
         <p>（上传文件最大不超过5M，建议压缩后上传）</p>
         <Image
           src={upload_icon}
           alt="文件上传"
-          width={213}
-          height={170}
-          style={{ margin: "10px 0" }}
+          className={isMobile ? styles["img-mb"] : styles["img-pc"]}
         />
         <p style={{ color: "#F96F25" }}>请上传您的简历</p>
         <div className={styles["upload-btn-wrapper"]}>
@@ -74,4 +90,4 @@ const fileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
   );
 };
 
-export default fileUpload;
+export default FileUpload;

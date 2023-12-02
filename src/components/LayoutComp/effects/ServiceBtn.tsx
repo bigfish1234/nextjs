@@ -7,14 +7,36 @@ import guidenceImg from "/public/images/advice-icon.png";
 import closeIcon from "/public/images/close-icon.png";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
+import { Form } from "antd";
+import moment from "moment";
+import { contactUs, handleSendEmail } from "@/server/api";
+import { useRouter } from "next/navigation";
 
 const ServiceBtn = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [form] = Form.useForm();
   const state = store();
+  const router = useRouter();
   const clickToGuidence = () => {
     state.handleOpenChange(!state.isOpen);
   };
 
-  const [isMobile, setIsMobile] = useState(false);
+  const submit = async () => {
+    try {
+      await form.validateFields();
+      const data = form.getFieldsValue();
+      Object.assign(data, {
+        createtime: moment().format("YYYY-MM-DD HH:mm:ss"),
+      });
+      await contactUs(data);
+      await handleSendEmail(data);
+
+      state.handleOpenChange(false);
+      router.push("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     const isMobile =
@@ -45,7 +67,7 @@ const ServiceBtn = () => {
               top: 0,
               backgroundColor: "#fff",
               zIndex: 99,
-              padding: 15,
+              padding: "10px 15px",
               borderBottom: "1px solid #f5f5f5",
             }}
           >
@@ -59,7 +81,16 @@ const ServiceBtn = () => {
               onClick={() => state.handleOpenChange(false)}
             />
           </div>
-          <ServiceForm />
+          <ServiceForm submit={submit} form={form} />
+          <div className={styles["submit-btn-wrapper"]}>
+            <div
+              className={styles["submit-btn-pc"]}
+              style={{ visibility: isMobile ? "hidden" : "visible" }}
+              onClick={submit}
+            >
+              提 交
+            </div>
+          </div>
         </div>
       ) : null}
     </div>

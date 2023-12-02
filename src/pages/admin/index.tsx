@@ -1,4 +1,7 @@
+import { message } from "antd";
+import { useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 const MyTable = dynamic(
   () => import("../../components/AdminComponents/TableComp"),
@@ -15,6 +18,18 @@ const MyHeader = dynamic(
 );
 
 const Admin = () => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  if (status === "loading") {
+    return null;
+  }
+
+  if (!session) {
+    router.push("/auth/signin");
+    message.error("请先登录");
+    return null;
+  }
   return (
     <div>
       <MyHeader />

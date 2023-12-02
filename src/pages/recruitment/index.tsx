@@ -1,11 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import joinStyle from "./index.module.css";
-import { LayoutComp, PaginationComp, TabHeader } from "@/components";
-import {
-  PositionDetail,
-  SearchComp,
-} from "../../components/recruitmentComponents";
+import { LayoutComp, TabHeader } from "@/components";
+import { PositionDetail } from "@/components/recruitmentComponents";
 import { store } from "@/store";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 import Metadata from "next/head";
@@ -13,6 +10,20 @@ import Metadata from "next/head";
 import join_banner from "/public/images/pc/join/join-banner.png";
 import join_banner_mb from "/public/images/mobile/join/join-banner.png";
 import { IStatus } from "@/lib/type";
+import dynamic from "next/dynamic";
+
+const MySearchComp = dynamic(
+  () => import("@/components/recruitmentComponents/SearchComp"),
+  {
+    ssr: false,
+  }
+);
+const MyPaginationComp: any = dynamic(
+  () => import("@/components/PaginationComp"),
+  {
+    ssr: false,
+  }
+);
 
 const JoinUs = () => {
   const pageSize = 5;
@@ -65,7 +76,7 @@ const JoinUs = () => {
         >
           {!isMobile && <TabHeader h1="招聘职位" />}
           <div className="wrapper-center">
-            <SearchComp
+            <MySearchComp
               isMobile={isMobile}
               handleChange={handleChange}
               status={status}
@@ -101,7 +112,7 @@ const JoinUs = () => {
           </div>
         </div>
 
-        <PaginationComp
+        <MyPaginationComp
           current={pageCurrent}
           size={pageSize}
           total={state.total}

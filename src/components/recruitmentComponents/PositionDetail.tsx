@@ -16,6 +16,7 @@ const PositionDetail = ({ isMobile, jobDetail, count, index }: any) => {
             }
           : {}
       }
+      onClick={() => checkDetail(jobDetail.jobid)}
     >
       <span className={styles["detail-title"]}>{`${jobDetail.jobName}`}</span>
       <div

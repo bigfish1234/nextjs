@@ -1,8 +1,9 @@
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { message } from "antd";
+import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const LoginComp = dynamic(() => import("@/components/LoginComp"), {
   ssr: false,
@@ -11,10 +12,21 @@ const LoginComp = dynamic(() => import("@/components/LoginComp"), {
 const Login = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleCancel = () => {
     //
   };
+
+  useEffect(() => {
+    const isMobile =
+      !!navigator.userAgent.match(MOBILE_REG) ||
+      window.matchMedia("only screen and (max-width: 500px)").matches;
+    setIsMobile(isMobile);
+    if (isMobile) {
+      router.push("/");
+    }
+  }, []);
 
   const handleLogin = (form: any) => {
     form.validateFields().then(async () => {
@@ -39,11 +51,15 @@ const Login = () => {
     });
   };
   return (
-    <LoginComp
-      handleCancel={handleCancel}
-      handleLogin={handleLogin}
-      loading={loading}
-    />
+    <div>
+      {isMobile ? null : (
+        <LoginComp
+          handleCancel={handleCancel}
+          handleLogin={handleLogin}
+          loading={loading}
+        />
+      )}
+    </div>
   );
 };
 

@@ -59,11 +59,12 @@ const JobDetail = () => {
               </span>
             </div>
           )}
-          {!isMobile && (
-            <div className={styles["apply-btn"]} onClick={applyJob}>
-              申请职位
-            </div>
-          )}
+          <div
+            className={isMobile ? styles["apply-btn-mb"] : styles["apply-btn"]}
+            onClick={applyJob}
+          >
+            申请职位
+          </div>
         </div>
         <div className={styles["title"]}>岗位职责</div>
         <div

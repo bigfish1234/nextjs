@@ -45,6 +45,7 @@ const CapabilityComp = ({ list, title }: any) => {
                 paddingLeft: 5,
                 lineHeight: "22px",
                 visibility: detail ? "visible" : "hidden",
+                // display: detail ? "inline-block" : "none",
               }}
             >
               {detail}

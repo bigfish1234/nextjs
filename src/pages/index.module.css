@@ -5,6 +5,13 @@
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);
 }
 
+.header-link-sticky {
+  position: sticky;
+  z-index: 99;
+  background-color: #fff;
+  top: 0;
+}
+
 .eimos-wrapper {
   padding-top: var(--header-margin-bottom-pc);
 }

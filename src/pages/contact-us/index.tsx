@@ -5,6 +5,11 @@ import { store } from "@/store";
 import styles from "./index.module.css";
 import expand_icon from "/public/images/expand-icon.png";
 import logo from "/public/images/logo.png";
+import dynamic from "next/dynamic";
+
+const MyServiceForm = dynamic(() => import("@/components/ServiceForm"), {
+  ssr: false,
+});
 
 const ContactMe = () => {
   const state = store();
@@ -32,7 +37,7 @@ const ContactMe = () => {
           />
           <Image src={logo} alt="logo" className={styles["logo"]} />
         </div>
-        <ServiceForm />
+        <MyServiceForm />
       </div>
     </LayoutWrapper>
   );

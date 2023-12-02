@@ -69,7 +69,7 @@ const SwiperComp = ({
               loop={slideList.length > 1}
               autoplay={{
                 delay: 3000,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
               }}
             >
               {(slideList || []).map((imgUrl: any, ind: number) => {
