@@ -70,9 +70,6 @@
 .img-wrapper-IBA {
   width: 1480px;
   height: 420px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .swiper-wrapper-LTC {
@@ -91,12 +88,14 @@
   color: #6E708A;
   background-color: #fff;
   padding: 15px 20px;
-  line-height: 22px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .description-IBA {
   height: 80px;
-  text-align: center;
 }
 
 .description-LTC {

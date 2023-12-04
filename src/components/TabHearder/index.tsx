@@ -1,10 +1,10 @@
 import styles from "./index.module.css";
 
-const TabHeader = ({ h1, h2 }: any) => {
+const TabHeader = ({ h1, h2, id }: any) => {
   return (
-    <div className={styles.tabWrapper}>
+    <div className={styles.tabWrapper} id={id}>
       <h2 style={{ paddingBottom: 10, textAlign: "center" }}>{h1}</h2>
-      {h2 && <h3 style={{ fontWeight: 400 }}>{h2}</h3>}
+      <h3 style={{ fontWeight: 400, textAlign: "center" }}>{h2}</h3>
       <div className={styles.divider}></div>
     </div>
   );

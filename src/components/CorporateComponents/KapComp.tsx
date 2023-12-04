@@ -67,7 +67,7 @@ const KapComp = () => {
               </div>
               <Image
                 src={backgroundImg}
-                alt="硕磐智能发展历程"
+                alt={`${top.time}-${top.title} ${bottom.time}-${bottom.title}`}
                 loading="lazy"
                 className={styles["kap-img"]}
               />

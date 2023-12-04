@@ -41,7 +41,7 @@ const AboutUs = () => {
             转型 ，并通过打造
             <span className={styles["background-word"]}>智能化</span>
             产业互联网，为产业数字化运营和企业数字化管理提供
-            <span className={styles["background-word"]}>数据平台</span> 和
+            <span className={styles["background-word"]}>数据平台</span>和
             <span className={styles["background-word"]}>解决方案</span>
             的新型高科技企业。
           </div>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1480px" height="943px" viewBox="0 0 1480 943" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pc</title>
+    <defs>
+        <linearGradient x1="43.815924%" y1="0%" x2="71.0678295%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FDA84C" offset="0%"></stop>
+            <stop stop-color="#F96F25" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-13.8%" y="-8.9%" width="127.7%" height="117.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="4.88489843 1.06666175" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="25.6058603%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="25.6058603%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-5" points="0 0 6.32524935e-15 11.5216849 16.9480552 21.2676788 23.3472207 23.0433699 23.3472207 5.25409339 16.9480552 6.32773477 9.21673954 1.01370649"></polygon>
+        <linearGradient x1="42.665188%" y1="20.7500872%" x2="61.0034678%" y2="59.0231992%" id="linearGradient-7">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#DDDDE4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="25.6058603%" x2="50%" y2="100%" id="linearGradient-8">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="40.0276037%" y1="20.7500872%" x2="64.9602937%" y2="59.0231992%" id="linearGradient-9">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#DDDDE4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.5727041%" y1="20.7500872%" x2="77.6440836%" y2="59.0231992%" id="linearGradient-10">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#DDDDE4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.0518915%" y1="20.7500872%" x2="78.4253913%" y2="59.0231992%" id="linearGradient-11">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#DDDDE4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="18.295585%" y1="86.0068493%" x2="50%" y2="31.3277636%" id="linearGradient-12">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="25.6058603%" x2="50%" y2="100%" id="linearGradient-13">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-27.3008342%" y1="20.7500872%" x2="165.964422%" y2="59.0231992%" id="linearGradient-14">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#DDDDE4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-7.91241387%" y1="29.141266%" x2="100%" y2="29.141266%" id="linearGradient-15">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="43.0541992%" y1="52.4260361%" x2="47.4420721%" y2="34.2605575%" id="linearGradient-16">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EEEEF0" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-54.8%" y="-40.2%" width="209.5%" height="180.5%" filterUnits="objectBoundingBox" id="filter-17">
+            <feGaussianBlur stdDeviation="-13.1411274 -4.82812285" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="55.4958767%" y1="52.7248806%" x2="20.4861111%" y2="60.0748698%" id="linearGradient-18">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="34.2230903%" y1="62.5%" x2="69.5122613%" y2="18.0731879%" id="linearGradient-19">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FCFCFC" offset="22.6539783%"></stop>
+            <stop stop-color="#EEEEF0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M9.62963556,13.2723051 C22.7476905,6.524332 19.6939602,0.782748679 35.1072836,0.0475230712 C50.5206069,-0.687702536 63.5834132,7.22545257 69.3323722,15.6407317 C75.0813312,24.0560109 72.5745964,31.8290808 51.4947885,35.0850809 C30.4149806,38.341081 7.18403937,32.343569 2.18742954,25.9569671 C-2.80918029,19.5703653 1.20931616,17.6037466 9.62963556,13.2723051 Z" id="path-20"></path>
+        <filter x="-19.6%" y="-18.0%" width="139.3%" height="135.9%" filterUnits="objectBoundingBox" id="filter-22">
+            <feGaussianBlur stdDeviation="6.61787006 2.28118301" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="40.9997954%" y1="50%" x2="73.8055082%" y2="34.3501415%" id="linearGradient-23">
+            <stop stop-color="#E8E8EB" offset="0%"></stop>
+            <stop stop-color="#CCCCD3" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,19.9764732 L0,3.04889161 C2.38681454,1.28898734 6.53833069,0.279981918 12.4545485,0.021875346 C18.2300782,-0.230093437 25.515864,1.73479569 30.1494477,3.84505492 L30.1494477,20.3637436 C27.6985153,19.488862 22.5831258,17.8224754 18.9884395,17.2104619 C10.4514757,15.7570007 4.12199583,16.6790045 0,19.9764732 Z" id="path-24"></path>
+        <linearGradient x1="30.595861%" y1="107.75978%" x2="56.0608722%" y2="11.5670042%" id="linearGradient-26">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#E9E9E9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="26.6606251%" x2="50%" y2="71.1589539%" id="linearGradient-27">
+            <stop stop-color="#E8E8EB" offset="0%"></stop>
+            <stop stop-color="#CCCCD3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="25.6058603%" x2="50%" y2="100%" id="linearGradient-28">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-29">
+            <stop stop-color="#E8E8EB" offset="0%"></stop>
+            <stop stop-color="#CCCCD3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="19.7353982%" x2="-21.615329%" y2="134.983746%" id="linearGradient-30">
+            <stop stop-color="#E8E8EB" offset="0%"></stop>
+            <stop stop-color="#BBBBC8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="29.5015784%" y1="62.5199667%" x2="72.1116883%" y2="16.0774444%" id="linearGradient-31">
+            <stop stop-color="#E8E8EB" offset="0%"></stop>
+            <stop stop-color="#CCCCD3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="33.4392269%" y1="20.7500872%" x2="74.8439813%" y2="59.0231992%" id="linearGradient-32">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#DDDDE4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="32.1380269%" y1="20.7500872%" x2="76.796003%" y2="59.0231992%" id="linearGradient-33">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#DDDDE4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="65.0481273%" x2="78.7607469%" y2="37.3977343%" id="linearGradient-34">
+            <stop stop-color="#F6F6F6" offset="0%"></stop>
+            <stop stop-color="#CDCDD1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="43.0541992%" y1="52.5375887%" x2="47.4420721%" y2="33.5368356%" id="linearGradient-35">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EEEEF0" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-21.2%" y="-17.9%" width="142.4%" height="135.8%" filterUnits="objectBoundingBox" id="filter-36">
+            <feGaussianBlur stdDeviation="-3.88450242 -0.954275075" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="25.6058603%" x2="50%" y2="100%" id="linearGradient-37">
+            <stop stop-color="#EAEAEA" offset="0%"></stop>
+            <stop stop-color="#D7D7DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="61.9527143%" x2="64.7338867%" y2="2.70916341%" id="linearGradient-38">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EEEEF0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="119.927192%" y1="50.4236065%" x2="-5.68121938e-15%" y2="50.4245857%" id="linearGradient-39">
+            <stop stop-color="#1252ED" offset="0%"></stop>
+            <stop stop-color="#5289FF" offset="11.7888943%"></stop>
+            <stop stop-color="#8AB5FF" offset="32.888673%"></stop>
+            <stop stop-color="#AED1FF" offset="53.7815123%"></stop>
+            <stop stop-color="#ECF8FF" offset="92.3836117%"></stop>
+            <stop stop-color="#EFFAFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="122.942911%" y1="19.7717535%" x2="3.39924364e-13%" y2="19.7717535%" id="linearGradient-40">
+            <stop stop-color="#1252ED" offset="0%"></stop>
+            <stop stop-color="#5289FF" offset="11.7888943%"></stop>
+            <stop stop-color="#8AB5FF" offset="32.888673%"></stop>
+            <stop stop-color="#AED1FF" offset="70.4557203%"></stop>
+            <stop stop-color="#EFFAFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="122.942911%" y1="19.7717535%" x2="3.39924364e-13%" y2="19.7717535%" id="linearGradient-41">
+            <stop stop-color="#1252ED" offset="0%"></stop>
+            <stop stop-color="#5289FF" offset="11.7888943%"></stop>
+            <stop stop-color="#8AB5FF" offset="32.888673%"></stop>
+            <stop stop-color="#AED1FF" offset="70.4557203%"></stop>
+            <stop stop-color="#EFFAFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="PC调整" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="9PC端切图" transform="translate(-2678, -4352)">
+            <g id="pc" transform="translate(2678, 4352)">
+                <polygon id="矩形备份-78" fill="#FFFFFF" transform="translate(740, 450) scale(-1, 1) translate(-740, -450)" points="1.25285498e-11 256 1480 256 1480 644 1.25285498e-11 644"></polygon>
+                <g id="编组-99" transform="translate(0, 843)">
+                    <path d="M1479.5,0.5 L1479.5,99.5 L0.5,99.5 L0.5,0.5 L1479.5,0.5 Z" id="矩形备份-82" stroke="#E3E3E3" transform="translate(740, 50) scale(-1, 1) translate(-740, -50)"></path>
+                    <text id="·-集成业务架构、数据架构和应用架构，打" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="32">
+                        <tspan x="46" y="31" fill="#000323">· 集成业务架构、数据架构和应用架构，</tspan>
+                        <tspan x="295.662" y="31" font-family="PingFangSC-Medium, PingFang SC" font-weight="400" fill="#F96F25">打通业务、数据及应用</tspan>
+                    </text>
+                    <text id="·-数据资产管理平台统一数据标准，沉淀数" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="32">
+                        <tspan x="776" y="31" fill="#000323">· 数据资产管理平台统一数据标准，</tspan>
+                        <tspan x="997.662" y="31" font-family="PingFangSC-Medium, PingFang SC" font-weight="400" fill="#F96F25">沉淀数据资产</tspan>
+                    </text>
+                    <text id="·-应用组装平台实现业务应用灵活组装，I" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="32">
+                        <tspan x="46" y="67" fill="#000323">· 应用组装平台实现业务应用灵活组装，</tspan>
+                        <tspan x="295.662" y="67" font-family="PingFangSC-Medium, PingFang SC" font-weight="400" fill="#F96F25">IT快速响应业务变化</tspan>
+                    </text>
+                    <text id="·-内置科学管理模型及分析模型，支撑持续" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="32">
+                        <tspan x="776" y="67" fill="#000323">· 内置科学管理模型及分析模型，</tspan>
+                        <tspan x="983.662" y="67" font-family="PingFangSC-Medium, PingFang SC" font-weight="400" fill="#F96F25">支撑持续数字化变革</tspan>
+                    </text>
+                </g>
+                <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(726.5, 379) scale(-1, 1) translate(-726.5, -379)" points="170 332 1283 332 1283 426 170 426"></polygon>
+                <text id="应用组装平台" opacity="0.900000036" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="22" font-weight="bold" fill="#0F0F19">
+                    <tspan x="660" y="371">应用组装平台</tspan>
+                </text>
+                <g id="编组-60" transform="translate(631, 389)" fill="#303258" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal">
+                    <text id="业务组件">
+                        <tspan x="0" y="17">业务组件</tspan>
+                    </text>
+                </g>
+                <g id="编组-96" transform="translate(768.5, 389)" fill="#303258" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal">
+                    <text id="BI组件">
+                        <tspan x="0.188" y="17">BI组件</tspan>
+                    </text>
+                </g>
+                <g id="编组-27备份-14" transform="translate(170, 438)">
+                    <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(556.5, 95.5) scale(-1, 1) translate(-556.5, -95.5)" points="9.42180805e-12 0 1113 -8.07103995e-11 1113 191 9.42180805e-12 191"></polygon>
+                    <text id="数据资产平台" opacity="0.900000036" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="22" font-weight="bold" fill="#0F0F19">
+                        <tspan x="491" y="42">数据资产平台</tspan>
+                    </text>
+                </g>
+                <g id="编组-97" transform="translate(0, 713)">
+                    <g id="编组-27备份-17">
+                        <polygon id="矩形备份-84" fill="#FFFFFF" transform="translate(364.5, 53) scale(-1, 1) translate(-364.5, -53)" points="6.1711573e-12 0 729 -4.47921589e-11 729 106 6.1711573e-12 106"></polygon>
+                        <text id="业务系统" opacity="0.900000036" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="22" font-weight="bold" fill="#0F0F19">
+                            <tspan x="316.236842" y="35.7479675">业务系统</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-27备份-19" transform="translate(32, 54)">
+                        <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(103, 19) scale(-1, 1) translate(-103, -19)" points="1.74383869e-12 0 206 -1.60575664e-11 206 38 1.74383869e-12 38"></polygon>
+                        <text id="BPM" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#303258">
+                            <tspan x="84.8583212" y="25.5">BPM</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-27备份-20" transform="translate(264, 54)">
+                        <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(103, 19) scale(-1, 1) translate(-103, -19)" points="1.74383869e-12 0 206 -1.60575664e-11 206 38 1.74383869e-12 38"></polygon>
+                        <text id="ERP" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#303258">
+                            <tspan x="86.8263212" y="25.5">ERP</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-27备份-21" transform="translate(498, 54)">
+                        <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(103, 19) scale(-1, 1) translate(-103, -19)" points="1.74383869e-12 0 206 -1.60575664e-11 206 38 1.74383869e-12 38"></polygon>
+                        <text id="…" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" fill="#303258">
+                            <tspan x="93.4663212" y="22.4189189">…</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="编组-98" transform="translate(751, 713)">
+                    <g id="编组-27备份-18">
+                        <polygon id="矩形备份-84" fill="#FFFFFF" transform="translate(364.5, 53) scale(-1, 1) translate(-364.5, -53)" points="6.1711573e-12 0 729 -4.47921589e-11 729 106 6.1711573e-12 106"></polygon>
+                        <text id="大数据平台" opacity="0.900000036" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="22" font-weight="bold" fill="#0F0F19">
+                            <tspan x="305.236842" y="35.7479675">大数据平台</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-27备份-22" transform="translate(262, 54)">
+                        <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(103, 19) scale(-1, 1) translate(-103, -19)" points="1.74383869e-12 0 206 -1.60575664e-11 206 38 1.74383869e-12 38"></polygon>
+                        <g id="编组-78" transform="translate(58.7047, 0)">
+                            <text id="数据" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" fill="#303258">
+                                <tspan x="50.1761658" y="25.5">数据</tspan>
+                            </text>
+                            <g id="编组">
+                                <rect id="矩形备份" x="0" y="0" width="38" height="38"></rect>
+                                <path d="M30,23.6329787 L30,28.7304965 C29.206832,30.2434988 27.1115939,31 23.7142857,31 C20.3169776,31 18.2217395,30.2434988 17.4285714,28.7304965 L17.4285714,23.6329787 L17.4385218,23.7850945 C17.6234364,25.2769626 20.3624886,26.4609929 23.7142857,26.4609929 C27.0660828,26.4609929 29.805135,25.2769626 29.9900496,23.7850945 L30,23.6329787 Z M8,18.0567376 C8,20.0149569 11.5169106,21.6024523 15.8555714,21.6028368 L15.8555714,27.2760638 L15.3553591,27.2720567 C11.403588,27.1994326 8.95180166,26.2553191 8,24.4397163 L8,18.0567376 Z M30,17.9503546 L30,23.0567376 C29.206832,24.56974 27.1115939,25.3262411 23.7142857,25.3262411 C20.3169776,25.3262411 18.2217395,24.56974 17.4285714,23.0567376 L17.4285714,17.9503546 C17.4285714,19.5171199 20.2427816,20.787234 23.7142857,20.787234 C27.1857899,20.787234 30,19.5171199 30,17.9503546 Z M8,10.964539 C8,12.9229956 11.5177627,14.5106383 15.8571429,14.5106383 C16.216769,14.5106383 16.570752,14.4997339 16.9175573,14.4786179 C16.3440883,14.9369006 15.982181,15.4506664 15.8840182,15.995635 L15.8571429,15.994736 L15.8555714,20.1829787 L15.3553591,20.1798582 C11.403588,20.107234 8.95180166,19.1631206 8,17.3475177 L8,10.964539 Z M23.7142857,13.9787234 C27.1857899,13.9787234 30,15.2488376 30,16.8156028 C30,18.3823681 27.1857899,19.6524823 23.7142857,19.6524823 C20.2427816,19.6524823 17.4285714,18.3823681 17.4285714,16.8156028 C17.4285714,15.2488376 20.2427816,13.9787234 23.7142857,13.9787234 Z M15.8571429,6 C20.196523,6 23.7142857,7.58764273 23.7142857,9.54609929 C23.7142857,11.5045559 20.196523,13.0921986 15.8571429,13.0921986 C11.5177627,13.0921986 8,11.5045559 8,9.54609929 C8,7.58764273 11.5177627,6 15.8571429,6 Z M23.7142857,10.964539 L23.7141741,12.4271234 C23.4554652,12.4436664 23.20027,12.4647428 22.9490549,12.490155 C23.4402943,12.0288055 23.7142857,11.5111132 23.7142857,10.964539 Z" id="形状" fill="#C1C6CB"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="编组-105" transform="translate(181, 502)">
+                    <g id="编组-27备份-12">
+                        <polygon id="矩形备份-84" fill="#FFFFFF" opacity="0.889999986" transform="translate(270, 54) scale(-1, 1) translate(-270, -54)" points="4.57122763e-12 0 540 -4.56372939e-11 540 108 4.57122763e-12 108"></polygon>
+                        <text id="科学管理模型（管理抓手）" font-family="PingFangSC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#0F0F19">
+                            <tspan x="162" y="44">科学管理模型（管理抓手）</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-75" transform="translate(127, 66)" fill="#303258" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal">
+                        <g id="编组-60备份-3">
+                            <text id="数据模型">
+                                <tspan x="0" y="17">数据模型</tspan>
+                            </text>
+                        </g>
+                        <text id="业务模型">
+                            <tspan x="111" y="17">业务模型</tspan>
+                        </text>
+                        <g id="编组-60备份-6" transform="translate(223, 0)">
+                            <text id="管理规则">
+                                <tspan x="0" y="17">管理规则</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <g id="编组-102" transform="translate(20, 332)">
+                    <g id="编组-27备份-15">
+                        <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(65, 148.5) scale(-1, 1) translate(-65, -148.5)" points="1.10048073e-12 0 130 -1.25502558e-10 130 297 1.10048073e-12 297"></polygon>
+                        <text id="通用平台" opacity="0.900000036" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="22" font-weight="bold" fill="#0F0F19">
+                            <tspan x="21" y="121.557453">通用平台</tspan>
+                        </text>
+                    </g>
+                    <text id="·-任务管理" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
+                        <tspan x="31.169" y="219">· 任务管理</tspan>
+                    </text>
+                    <text id="·-用户管理" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
+                        <tspan x="31.169" y="163">· 用户管理</tspan>
+                    </text>
+                    <text id="·-权限中心" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
+                        <tspan x="31.169" y="191">· 权限中心</tspan>
+                    </text>
+                </g>
+                <g id="编组-101" transform="translate(1303, 332)">
+                    <g id="编组-27备份-16">
+                        <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(78.5, 148.5) scale(-1, 1) translate(-78.5, -148.5)" points="1.32904211e-12 0 157 -1.25502558e-10 157 297 1.32904211e-12 297"></polygon>
+                        <text id="数据服务平台" opacity="0.900000036" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="22" font-weight="bold" fill="#0F0F19">
+                            <tspan x="13" y="121.557453">数据服务平台</tspan>
+                        </text>
+                    </g>
+                    <text id="·-集成转换" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
+                        <tspan x="44.169" y="163">· 集成转换</tspan>
+                    </text>
+                    <text id="·-指标解析器" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
+                        <tspan x="37.169" y="191">· 指标解析器</tspan>
+                    </text>
+                </g>
+                <g id="编组-104" transform="translate(732, 502)">
+                    <g id="编组-27备份-13">
+                        <polygon id="矩形备份-84" fill="#FFFFFF" opacity="0.889999986" transform="translate(270, 54) scale(-1, 1) translate(-270, -54)" points="4.57122763e-12 0 540 -4.56372939e-11 540 108 4.57122763e-12 108"></polygon>
+                        <text id="科学分析模型（决策抓手）" font-family="PingFangSC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#0F0F19">
+                            <tspan x="162" y="44">科学分析模型（决策抓手）</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-103" transform="translate(176, 66)" fill="#303258" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal">
+                        <text id="指标数据">
+                            <tspan x="125" y="17">指标数据</tspan>
+                        </text>
+                        <text id="分析主题">
+                            <tspan x="0" y="17">分析主题</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="编组-75备份-2" transform="translate(671, 276)" fill-rule="nonzero">
+                    <g id="编组备份-6">
+                        <path d="M20.324418,31.4497631 L20.324418,30.3922357 C20.324418,29.2876662 19.4289875,28.3922357 18.324418,28.3922357 L7.61810351,28.3922357 C7.06581876,28.3922357 6.61810351,27.9445204 6.61810351,27.3922357 L6.61810351,21.350121 C6.61810351,20.7978362 7.06581876,20.350121 7.61810351,20.350121 L14.9749351,20.350121 C16.0795046,20.350121 16.9749351,19.4546905 16.9749351,18.350121 L16.9749351,17.2925936 C16.9749351,16.1880241 16.0795046,15.2925936 14.9749351,15.2925936 L7.61810351,15.2925936 C7.06581876,15.2925936 6.61810351,14.8448783 6.61810351,14.2925936 L6.61810351,9.32411154 C6.61810351,8.77182679 7.06581876,8.32411154 7.61810351,8.32411154 L18.324418,8.32411154 C19.4289875,8.32411154 20.324418,7.42868104 20.324418,6.32411154 L20.324418,5.29833138 C20.324418,4.19376188 19.4289875,3.29833138 18.324418,3.29833138 L2,3.29833138 C0.8954305,3.29833138 3.0881846e-16,4.19376188 0,5.29833138 L0,31.4497631 C5.7935996e-16,32.5543326 0.8954305,33.4497631 2,33.4497631 L18.324418,33.4497631 C19.4289875,33.4497631 20.324418,32.5543326 20.324418,31.4497631 Z M34.1647804,31.4497631 L34.1647804,5.29833138 C34.1647804,4.19376188 33.2693499,3.29833138 32.1647804,3.29833138 L29.5466768,3.29833138 C28.4421073,3.29833138 27.5466768,4.19376188 27.5466768,5.29833138 L27.5466768,31.4497631 C27.5466768,32.5543326 28.4421073,33.4497631 29.5466768,33.4497631 L32.1647804,33.4497631 C33.2693499,33.4497631 34.1647804,32.5543326 34.1647804,31.4497631 Z M48.2409427,31.4497631 L48.2409427,20.859905 L48.2409427,20.859905 C48.2409427,18.0002994 47.732132,13.8138484 47.3881501,10.9680844 L47.5673033,10.9680844 L50.2250441,18.0515421 L54.8628446,29.4767497 C55.1690409,30.2310632 55.9018949,30.7245094 56.7159864,30.7245094 L57.8262594,30.7245094 C58.6425655,30.7245094 59.3769479,30.2284113 59.6816779,29.4711165 L64.2768331,18.0515421 L64.2768331,18.0515421 L66.9945942,10.9680844 L67.2086835,10.9680844 C66.8396176,13.8138484 66.3308069,18.0002994 66.3308069,20.859905 L66.3308069,31.4497631 C66.3308069,32.5543326 67.2262374,33.4497631 68.3308069,33.4497631 L70.3899316,33.4497631 C71.4945011,33.4497631 72.3899316,32.5543326 72.3899316,31.4497631 L72.3899316,5.29833138 C72.3899316,4.19376188 71.4945011,3.29833138 70.3899316,3.29833138 L66.397441,3.29833138 C65.5734759,3.29833138 64.8338381,3.80365266 64.5342887,4.57123885 L59.5113857,17.4422735 L59.5113857,17.4422735 C59.0663969,18.658602 58.413157,20.5428336 57.5516661,23.0949684 C57.5312238,23.1555978 57.4743705,23.1964116 57.4103875,23.1964116 C57.3464766,23.1964116 57.2897303,23.1555305 57.2694775,23.0949134 C56.417503,20.5428066 55.7542882,18.6585933 55.279833,17.4422735 L50.1328239,4.55645925 C49.8293365,3.79666226 49.0936734,3.29833138 48.2755071,3.29833138 L44.3063307,3.29833138 C43.2017612,3.29833138 42.3063307,4.19376188 42.3063307,5.29833138 L42.3063307,31.4497631 C42.3063307,32.5543326 43.2017612,33.4497631 44.3063307,33.4497631 L46.2409427,33.4497631 C47.3455122,33.4497631 48.2409427,32.5543326 48.2409427,31.4497631 Z M124.91862,34.0106109 C132.556871,34.0106109 137.076923,29.8249847 137.076923,24.8945654 C137.076923,20.5583907 134.446081,18.2050914 130.42408,16.6991896 L126.081432,15.0769012 C123.273186,14.0455584 120.917362,13.2421598 120.917362,11.0940697 C120.917362,9.1217967 122.730347,7.93990548 125.6469,7.93990548 C127.186921,7.93990548 129.092121,8.52329667 131.362501,9.69007905 C132.177351,10.1071426 133.171505,9.91861746 133.775017,9.23036016 L134.413533,8.5069383 C135.14633,7.68044984 135.069087,6.4164779 134.241851,5.68452578 C134.122998,5.5793627 133.99205,5.48871957 133.852217,5.41366764 C130.512463,3.65070972 127.777357,2.76923077 125.6469,2.76923077 C118.964435,2.76923077 114.184598,6.57065096 114.184598,11.4791005 C114.184598,15.8657528 117.572368,18.3142939 120.918073,19.5491369 L125.330594,21.266667 C128.285713,22.4192851 130.319075,23.1323309 130.319075,25.3658851 C130.319075,27.4504807 128.506997,28.808189 125.058365,28.808189 C123.360258,28.808189 121.004558,27.965903 117.991264,26.2813311 C117.186167,25.8293016 116.176659,25.9895873 115.549279,26.6670102 L114.552185,27.7499193 C113.803315,28.5618758 113.85746,29.8270477 114.67119,30.5739863 C114.801262,30.6933819 114.946572,30.7950279 115.10404,30.8749036 C119.141406,32.9653752 122.412933,34.0106109 124.91862,34.0106109 Z" id="EIMOS" fill="#333333"></path>
+                        <g id="循环" transform="translate(76.1538, 0)">
+                            <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="36.3904826" height="36"></rect>
+                            <polygon id="路径" fill="#202425" opacity="0.01" points="0 0 36.3904826 0 36.3904826 36 0 36"></polygon>
+                            <path d="M12.3584771,19.5519573 C13.6658251,21.0500374 16.6142947,22.851047 17.1307001,23.0768374 C17.6471056,23.3026279 17.9584,23.1773347 18.1952413,22.9431056 L20.4652813,20.6252374 C20.6387599,20.4531852 20.9000135,20.4016413 21.1269371,20.4946963 C21.3538607,20.5877513 21.5016366,20.8070268 21.5012067,21.0500374 L21.5012067,33.2984374 C21.5012067,33.4575673 21.4372973,33.6101797 21.323555,33.7227015 C21.2098127,33.8352233 21.055545,33.8984374 20.894689,33.8984374 L8.51222079,33.8984374 C8.26732789,33.8979022 8.0467885,33.7517235 7.95314522,33.5278691 C7.85950195,33.3040147 7.91113074,33.0464123 8.08402614,32.8748375 L10.2953544,30.7167976 C10.4145961,30.5862682 10.8335478,30.2080756 10.6003406,29.9654441 C10.3411147,29.6957424 8.84976923,29.0985543 6.84499252,26.4114401 C3.77555081,22.2972959 3.8604995,17.2016089 4.8231716,14.1902695 C5.58876423,11.7954154 7.26603936,9.0647589 9.55486146,7.39324716 C9.98172235,7.08151346 10.8060342,7.54043743 10.7235491,8.07443745 C10.5142215,9.44247589 10.3774104,10.8204835 10.2953544,12.2012374 C10.0725881,15.9497224 11.0511291,18.0538772 12.3584771,19.5519573 Z" id="路径" fill="url(#linearGradient-1)"></path>
+                            <path d="M23.5555487,14.8719573 C24.8628966,16.3700374 27.8113663,18.171047 28.3277717,18.3968374 C28.8441771,18.6226279 29.1554716,18.4973347 29.3923129,18.2631056 L31.6623529,15.9452374 C31.8358314,15.7731852 32.0970851,15.7216413 32.3240087,15.8146963 C32.5509322,15.9077513 32.6987082,16.1270268 32.6982782,16.3700374 L32.6982782,28.6184374 C32.6982782,28.7775673 32.6343689,28.9301797 32.5206266,29.0427015 C32.4068842,29.1552233 32.2526165,29.2184374 32.0917606,29.2184374 L19.7092924,29.2184374 C19.4643995,29.2179022 19.2438601,29.0717235 19.1502168,28.8478691 C19.0565735,28.6240147 19.1082023,28.3664123 19.2810977,28.1948375 L21.492426,26.0367976 C21.6116677,25.9062682 22.0306194,25.5280756 21.7974122,25.2854441 C21.5381863,25.0157424 20.0468408,24.4185543 18.0420641,21.7314401 C14.9726224,17.6172959 15.0575711,12.5216089 16.0202432,9.51026947 C16.7858358,7.11541536 18.4631109,4.3847589 20.751933,2.71324716 C21.1787939,2.40151346 22.0031058,2.86043743 21.9206207,3.39443745 C21.7112931,4.76247589 21.574482,6.14048349 21.492426,7.52123744 C21.2696597,11.2697224 22.2482007,13.3738772 23.5555487,14.8719573 Z" id="路径" fill="url(#linearGradient-1)" transform="translate(24.0629, 15.9152) scale(-1, -1) translate(-24.0629, -15.9152)"></path>
+                        </g>
+                    </g>
+                </g>
+                <text id="数据集成" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
+                    <tspan x="1147" y="687">数据集成</tspan>
+                </text>
+                <g id="编组-95" transform="translate(293, 122)">
+                    <text id="LTC" font-family="PingFangSC-Semibold, PingFang SC" font-size="16" font-weight="500" fill="#0F0F19">
+                        <tspan x="41.488" y="82">LTC</tspan>
+                    </text>
+                    <g id="编组-83">
+                        <path d="M6.49729339,30.8786348 L34.223746,50.5759687 L49.6231751,47.9532204 L55.70052,52.2706675 L33.8037974,56 L0,31.985219 L6.49729339,30.8786348 Z M48.9828417,23.6427237 L54.9684531,27.8950018 L45.6655103,29.4794291 L73.4836964,49.2419321 L66.9442128,50.355702 L39.1260267,30.593199 L29.7808936,32.184812 L23.7952823,27.9325339 L48.9828417,23.6427237 Z M81.8874698,22.4013826 C85.3180751,23.661864 88.137535,25.0331651 90.3458495,26.515286 L83.8485561,27.6218702 C81.8060286,26.5424071 80.0414741,25.7657023 78.5548924,25.2917557 C75.9058303,24.4502487 73.4210682,24.2270995 71.1006063,24.6223081 C68.7379541,25.0247024 67.9103771,26.0779336 68.6178751,27.782002 C69.3253731,29.4860703 71.574948,31.6849307 75.3665996,34.3785832 C79.1582512,37.0722357 82.7189173,38.9670055 86.0485977,40.0628926 C89.3782781,41.1587797 92.1541274,41.5175021 94.3761455,41.1390599 C96.6544172,40.7510369 97.5809351,39.8795696 97.1556993,38.524658 C96.9452111,37.7929778 96.1864814,36.7709065 94.8795103,35.4584439 L101.313518,34.3626381 C104.435611,37.0760683 105.997772,39.4492335 106,41.4821337 C105.988165,43.5174292 104.175099,44.8428606 100.560804,45.458428 C96.0886412,46.2201029 91.0133201,45.7110306 85.3348411,43.9312113 C79.6410731,42.1405305 74.0651172,39.306412 68.6069736,35.4288558 C62.7054513,31.236316 59.6125607,27.7571155 59.3283018,24.9912544 C59.0771318,22.5833243 60.9063601,21.0464259 64.8159869,20.3805592 C70.0475738,19.4895434 75.7380681,20.1631511 81.8874698,22.4013826 Z" id="形状结合" fill="#949DAD" fill-rule="nonzero" opacity="0.900000036" filter="url(#filter-2)"></path>
+                        <g id="编组-79" transform="translate(4, 0)">
+                            <path d="M106,40.226146 C105.988165,42.2857162 104.175099,43.6269559 100.560804,44.2498651 C96.0886412,45.0206243 91.0133201,44.5054805 85.3348411,42.7044334 C79.6410731,40.8923954 74.0651172,38.0244747 68.6069736,34.1006713 C62.7054513,29.8581275 59.6125607,26.3374311 59.3283018,23.5385818 C59.3075308,23.3370787 59.3009872,23.1416033 59.308671,22.9521558 L59.3055587,4.64759304 L78.986535,19.5775939 L96.5053372,23.7188754 L106,22.4368695 L106,40.226146 Z" id="形状结合" fill="url(#linearGradient-3)" fill-rule="nonzero"></path>
+                            <g id="矩形" transform="translate(66.9005, 1.385)">
+                                <mask id="mask-6" fill="white">
+                                    <use xlink:href="#path-5"></use>
+                                </mask>
+                                <use id="蒙版" fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
+                                <rect fill="url(#linearGradient-7)" mask="url(#mask-6)" x="17.0400174" y="4.90869711" width="6.50995046" height="21.7503498"></rect>
+                            </g>
+                            <polygon id="矩形备份-18" fill="url(#linearGradient-8)" points="94.7904357 15.6921615 101.300386 16.0813951 101.300386 24.5420475 94.7904357 24.5420475"></polygon>
+                            <polygon id="矩形" fill="url(#linearGradient-9)" points="66.5806504 30.8027073 73.4836964 29.5010419 73.4836964 47.979275 66.5806504 49.2809404"></polygon>
+                            <polygon id="矩形备份-19" fill="url(#linearGradient-10)" points="29.5102757 12.2395178 39.1260267 10.729107 39.1260267 29.2073402 29.5102757 30.9982533"></polygon>
+                            <polygon id="矩形备份-27" fill="url(#linearGradient-11)" points="45.3527022 9.50913948 54.9684531 7.99872873 54.9684531 26.4769619 45.3527022 27.9873726"></polygon>
+                            <polygon id="路径-13备份" fill="url(#linearGradient-12)" points="39.1260267 9.74092814 39.1260267 29.4961803 66.9005009 49.2809404 66.9005009 30.7177509"></polygon>
+                            <polygon id="路径-13备份-2" fill="url(#linearGradient-13)" points="23.7952823 7.99872873 23.7952823 26.5149417 29.5102757 30.7177509 29.5102757 12.2395178"></polygon>
+                            <polygon id="矩形备份-28" fill="url(#linearGradient-14)" points="34.0308981 36.3572506 55.70052 32.6651202 55.70052 51.1433533 34.0308981 54.9670426"></polygon>
+                            <polygon id="路径-13备份-3" fill="url(#linearGradient-15)" points="0.0663239273 12.2418955 0.0663239273 31.6712153 34.0308981 55 34.0308981 36.4293679"></polygon>
+                            <path d="M6.49729339,11.008383 L34.223746,30.9406448 L49.6231751,28.2866153 L55.70052,32.655556 L33.8037974,36.4293679 L0,12.1281653 L6.49729339,11.008383 Z M48.9828417,3.68617005 L54.9684531,7.98916453 L45.6655103,9.59248921 L73.4836964,29.5906973 L66.9442128,30.7177509 L39.1260267,10.7195428 L29.7808936,12.3301388 L23.7952823,8.02714435 L48.9828417,3.68617005 Z M81.8874698,2.43002358 C85.3180751,3.7055386 88.137535,5.09319508 90.3458495,6.59299302 L83.8485561,7.71277534 C81.8060286,6.62043761 80.0414741,5.83446913 78.5548924,5.35486989 C75.9058303,4.50332627 73.4210682,4.27751558 71.1006063,4.67743784 C68.7379541,5.08463141 67.9103771,6.15042446 68.6178751,7.874817 C69.3253731,9.59920953 71.574948,11.8242955 75.3665996,14.5500749 C79.1582512,17.2758543 82.7189173,19.1932228 86.0485977,20.3021804 C89.3782781,21.411138 92.1541274,21.7741389 94.3761455,21.391183 C96.6544172,20.9985321 97.5809351,20.1166709 97.1556993,18.7455995 C96.9452111,18.0051926 96.1864814,16.9709311 94.8795103,15.642815 L101.313518,14.5339396 C104.435611,17.2797326 105.997772,19.6812022 106,21.7383486 C105.988165,23.7979188 104.175099,25.1391585 100.560804,25.7620677 C96.0886412,26.532827 91.0133201,26.0176831 85.3348411,24.2166361 C79.6410731,22.4045981 74.0651172,19.5366774 68.6069736,15.612874 C62.7054513,11.3703302 59.6125607,7.84963374 59.3283018,5.05078449 C59.0771318,2.6141353 60.9063601,1.05890651 64.8159869,0.385098102 C70.0475738,-0.516544801 75.7380681,0.165097024 81.8874698,2.43002358 Z" id="形状结合" fill="url(#linearGradient-16)" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="编组-92" transform="translate(549, 123)">
+                    <text id="IBA" font-family="PingFangSC-Semibold, PingFang SC" font-size="16" font-weight="500" fill="#0F0F19">
+                        <tspan x="28.992" y="81">IBA</tspan>
+                    </text>
+                    <g id="编组-91">
+                        <path d="M9.62963556,29.2723051 C22.7476905,22.524332 19.6939602,16.7827487 35.1072836,16.0475231 C50.5206069,15.3122975 63.5834132,23.2254526 69.3323722,31.6407317 C75.0813312,40.0560109 72.5745964,47.8290808 51.4947885,51.0850809 C30.4149806,54.341081 7.18403937,48.343569 2.18742954,41.9569671 C-2.80918029,35.5703653 1.20931616,33.6037466 9.62963556,29.2723051 Z" id="路径备份-2" fill="#949DAD" fill-rule="nonzero" opacity="0.800000012" filter="url(#filter-17)"></path>
+                        <path d="M65.823889,22.814973 L75,23.0576172 L75,36.784668 C75.0112261,42.2286596 69.389361,46.784456 54.4947885,49.0850809 C33.4149806,52.341081 10.1840394,46.343569 5.18742954,39.9569671 C3.97837686,38.4115717 3.29717405,37.1249738 3.07846,36.0010462 L3,36 L3,21.1523438 L20.9501245,21.6271547 C25.5638027,17.5535705 27.2750991,14.5642254 38.1072836,14.0475231 C49.1679314,13.5199229 59.0181708,17.4458422 65.823889,22.814973 Z" id="形状结合" fill="url(#linearGradient-18)" fill-rule="nonzero"></path>
+                        <g id="形状结合备份-3" transform="translate(3, 0)">
+                            <mask id="mask-21" fill="white">
+                                <use xlink:href="#path-20"></use>
+                            </mask>
+                            <use id="蒙版" fill="url(#linearGradient-19)" fill-rule="nonzero" xlink:href="#path-20"></use>
+                            <path d="M17,15.3686501 L22.1740784,13.9152197 L34.0134859,30.5465696 L28.8394075,32 L17,15.3686501 Z M56.0043322,4 L78,18.1904878 L72.701245,19.6789406 L66.8213507,15.8851143 L58.6082805,18.1922161 L59.0647432,23.5095177 L55.5426296,24.498901 L53.7601537,4.63040354 L56.0043322,4 Z M34.9312324,10.3316568 C36.1468292,9.99018826 37.3338856,9.77938379 38.4924016,9.69924343 C39.6509177,9.61910306 40.7262378,9.66290344 41.7183621,9.83064455 C42.7104863,9.99838566 43.595412,10.2869983 44.3731389,10.6964824 C45.1508659,11.1059665 45.7667387,11.6295988 46.2207573,12.2673791 C46.5001533,12.6598594 46.7046307,13.0390436 46.8341895,13.4049317 C46.9637483,13.7708199 47.0086246,14.1359664 46.9688184,14.5003715 C46.9290123,14.8647765 46.7999547,15.2395351 46.5816458,15.6246474 C46.3633368,16.0097597 46.0518333,16.4259568 45.6471353,16.8732386 C46.3811125,16.8534833 47.0995208,16.8994248 47.8023603,17.0110632 C48.5051997,17.1227016 49.1699227,17.2990119 49.7965292,17.5399939 C50.4231358,17.7809759 50.992818,18.0821012 51.5055758,18.4433698 C52.0183337,18.8046384 52.4435144,19.2223962 52.7811179,19.6966432 C53.246778,20.3507769 53.4908116,21.0132022 53.5132188,21.683919 C53.535626,22.3546359 53.3446059,22.997 52.9401584,23.6110114 C52.5357109,24.2250227 51.9284291,24.7905351 51.1183132,25.3075484 C50.3081972,25.8245618 49.3057305,26.2508842 48.1109132,26.5865157 L37.7004182,29.5108877 L25.8610107,12.8795378 L34.9312324,10.3316568 Z M40.0020468,19.5039307 L37.3370847,20.2525349 L41.6764545,26.3482435 L44.5440161,25.5427279 C45.385583,25.3063266 46.0619316,25.0304832 46.5730616,24.7151979 C47.0841917,24.3999126 47.4509923,24.0613939 47.6734635,23.6996418 C47.8959346,23.3378898 47.9795841,22.956263 47.9244119,22.5547616 C47.8692398,22.1532601 47.6961349,21.7480926 47.4050974,21.3392591 C47.0733145,20.8731888 46.6779573,20.4666769 46.2190258,20.1197234 C45.7600942,19.77277 45.2258528,19.5082949 44.6163017,19.3262983 C44.0067507,19.1443018 43.319089,19.062741 42.5533167,19.081616 C41.7875445,19.100491 40.9371595,19.2413164 40.0020468,19.5039307 Z M57.89176,10.0927454 L58.4899867,16.3710237 L64.8484927,14.5848803 L57.89176,10.0927454 Z M34.0920138,12.4365381 L32.1595267,12.9793856 L36.184576,18.6335539 L39.5975976,17.6748152 C40.1482525,17.5201329 40.5911454,17.3147745 40.9262762,17.0587403 C41.261407,16.802706 41.4911698,16.5124938 41.6155645,16.1881038 C41.7399593,15.8637137 41.7607541,15.5120079 41.6779491,15.1329863 C41.595144,14.7539648 41.4140434,14.3682139 41.1346474,13.9757337 C40.8261476,13.5423701 40.4451389,13.1735276 39.9916212,12.8692062 C39.5381036,12.5648848 39.0170685,12.340853 38.4285159,12.1971107 C37.8399634,12.0533684 37.183064,11.9975074 36.457818,12.0295278 C35.7325719,12.0615481 34.9439705,12.1972182 34.0920138,12.4365381 Z" fill="#D4D8DF" mask="url(#mask-21)"></path>
+                        </g>
+                    </g>
+                </g>
+                <text id="应用整合：作业-|-分析" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#0F0F19">
+                    <tspan x="413.834" y="232">应用整合：作业 | 分析</tspan>
+                </text>
+                <text id="界面整合：统一操作界面" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#0F0F19">
+                    <tspan x="923" y="232">界面整合：统一操作界面</tspan>
+                </text>
+                <g id="编组-93" transform="translate(831, 124)">
+                    <text id="IPS" font-family="PingFangSC-Semibold, PingFang SC" font-size="16" font-weight="500" fill="#0F0F19">
+                        <tspan x="45.496" y="80">IPS</tspan>
+                    </text>
+                    <g id="编组-82">
+                        <path d="M0,27.094015 L7.76890844,25.6288205 L38.5868748,50.6406387 L30.8179663,52.1058332 L0,27.094015 Z M48.7299743,36.0168991 L40.7833458,37.5156111 L51.6741943,46.9528336 L43.9052859,48.4180281 L15.2331538,24.2210846 L31.5326284,21.1470491 C35.2901396,20.4383929 39.0017652,20.4675246 42.6675051,21.2344441 C46.333245,22.0013636 49.6667247,23.6304354 52.6679442,26.1216595 C55.9454265,28.8422013 57.1451696,30.9760245 56.2671733,32.523129 C55.389177,34.0702336 52.8767773,35.2348236 48.7299743,36.0168991 Z M46.6032469,30.5273594 C46.9532481,29.7833836 46.406198,28.8120425 44.9620965,27.6133364 C43.5179951,26.4146302 41.9762848,25.656463 40.3369656,25.3388347 C38.6976464,25.0212064 36.9555346,25.0363642 35.1106305,25.384308 L27.8241052,26.7585263 L35.998975,33.5442455 L43.2855002,32.1700271 C45.1304044,31.8220834 46.23632,31.2745274 46.6032469,30.5273594 Z M87.0714716,34.8683114 C88.9163758,34.5203676 90.2636137,34.1127804 91.1131854,33.6455498 C92.7189636,32.7542807 92.7370149,31.6571754 91.1673395,30.3542339 C90.250649,29.5933161 88.9995325,29.1065352 87.4139898,28.8938912 C85.8410046,28.6916707 83.7067386,28.6528694 81.011192,28.7774873 L76.3913083,28.9772138 C71.8454063,29.1693834 68.4447225,29.0880049 66.1892569,28.7330782 C62.3864685,28.1455076 59.122596,26.720769 56.3976394,24.4588627 C53.9112735,22.3950034 53.0642329,20.450498 53.8565176,18.6253464 C54.6488024,16.8001949 57.4060836,15.4423149 62.1283612,14.5517065 C66.0720555,13.8079368 70.2114633,13.8171511 74.5465847,14.5793494 C78.881706,15.3415478 82.5924645,16.9346433 85.6788602,19.3586362 L78.1638376,20.7759485 C76.3582971,19.4151559 74.1899304,18.6152765 71.6587373,18.3763104 C69.9754611,18.2204742 68.2282966,18.3133358 66.4172439,18.6548953 C64.4030824,19.0347605 63.0965161,19.5881791 62.4975449,20.3151509 C61.8985737,21.0421227 62.1390564,21.8538204 63.2189931,22.7502442 C64.211028,23.5737032 65.5443153,24.0769665 67.2188549,24.2600341 C68.3070051,24.3873994 70.3148756,24.3988712 73.2424665,24.2944495 L80.8401707,24.0319955 C84.1690632,23.9158486 86.9735258,24.0712973 89.2535586,24.4983416 C92.7937245,25.1610258 95.8007117,26.5190858 98.2745202,28.5725215 C100.811116,30.6780749 101.610108,32.6732156 100.671496,34.5579434 C99.7328851,36.4426713 96.877052,37.8351277 92.1039971,38.7353125 C87.2293879,39.6546502 82.5700616,39.6923238 78.1260182,38.8483333 C73.6819747,38.0043428 70.0158516,36.3836414 67.1276487,33.9862291 L74.5918941,32.5784932 C76.097152,33.5865799 77.5106935,34.2857725 78.8325185,34.6760712 C81.2446717,35.3852017 83.9909894,35.4492818 87.0714716,34.8683114 Z" id="形状结合备份" fill="#949DAD" fill-rule="nonzero" filter="url(#filter-22)"></path>
+                        <g id="编组-80" transform="translate(3, 0)">
+                            <path d="M46.9812714,30.4089275 C47.3218464,29.6826826 46.7895293,28.7756425 45.3843202,27.6878072 C43.979111,26.599972 42.4789217,25.9376825 40.8837523,25.700939 C39.2885829,25.4641954 37.5933894,25.550103 35.7981718,25.9586617 L28.7078857,27.5722813 L36.6625916,33.7303749 L43.7528776,32.1167553 C45.5480952,31.7081965 46.6242265,31.1389206 46.9812714,30.4089275 Z" id="路径" fill="#000323" fill-rule="nonzero" opacity="0.200000003"></path>
+                            <g id="矩形备份-31" transform="translate(55.1191, 1.1897)">
+                                <mask id="mask-25" fill="white">
+                                    <use xlink:href="#path-24"></use>
+                                </mask>
+                                <use id="蒙版" fill="url(#linearGradient-23)" xlink:href="#path-24"></use>
+                                <polygon fill="url(#linearGradient-26)" mask="url(#mask-25)" points="23.2255489 2.28085078 31.6771474 0.142122591 31.6771474 16.7712857 23.2255489 18.9100139"></polygon>
+                            </g>
+                            <polygon id="矩形" fill="#E9E9E9" points="27.5595703 34.3966786 35.5977783 32.6405083 35.5977783 49.150856 27.5595703 50.9070262"></polygon>
+                            <path d="M53.5693347,5.53723671 C56.7327646,9.27168755 62.4955332,10.8356834 70.8576404,10.2292244 C79.2197476,9.62276529 89.2844534,12.4472536 101.051758,18.7026892 L101.051758,30.4722224 C101.043641,30.4707499 101.035525,30.4692777 101.027411,30.4678057 C100.980964,30.8483289 100.863157,31.2272119 100.674712,31.6046424 C99.7440369,33.4686602 96.9123515,34.9348077 92.1796555,36.0030849 C87.3462638,37.0940914 82.7263347,37.322332 78.3198682,36.6878067 C73.9134016,36.0532813 70.2782776,34.6344838 67.4144961,32.4314142 L74.8156271,30.7608105 C76.3081572,31.6752104 77.7097464,32.294216 79.0203946,32.6178272 C81.4121517,33.2053603 84.1352478,33.154399 87.1896828,32.4649435 C89.0189872,32.0520279 90.3548335,31.6018279 91.1972216,31.1143436 C92.3560769,30.4379733 92.6809612,29.6906108 92.1718748,28.872256 C87.898796,28.108006 84.0809826,27.4350418 80.717849,26.8531046 L76.5998263,27.1988586 C72.0923624,27.5720632 68.7204332,27.6332008 66.4840389,27.3822715 C62.7134052,26.9697023 59.4771306,25.7241436 56.775215,23.6455952 C55.3918412,22.5813838 54.5202693,21.5323268 54.1604995,20.4984245 C53.95691,20.3589786 53.7596335,20.2168575 53.5693347,20.0717314 L53.5693347,5.53723671 Z" id="形状结合" fill="url(#linearGradient-27)" fill-rule="nonzero"></path>
+                            <path d="M67.4147505,19.7962194 L67.4147505,32.8985873 C69.5148756,35.2834825 73.4422582,36.899692 79.1968983,37.7472157 C87.8288584,39.0185014 96.6185725,37.1189796 101.051758,32.6616017 L101.051758,18.3122149 C99.0226252,21.5086264 93.8561534,23.4245237 85.5523424,24.0599067 C77.2485314,24.6952898 71.2026674,23.2740607 67.4147505,19.7962194 Z" id="路径-13备份-6" fill="url(#linearGradient-28)"></path>
+                            <path d="M56.2674561,15.0013098 L56.2674561,30.1826114 L56.2512332,30.1910947 C56.3068551,30.664359 56.2194476,31.104106 55.9890106,31.5103354 C55.110439,33.0591392 52.5963929,34.3019242 48.4468724,35.2386904 L43.17733,36.4272121 L41.0352433,37.4488292 L50.4847143,44.7195554 L42.7107147,46.4745582 L14.9281006,25.0995694 L31.2382566,21.4175048 C34.5084376,20.679252 37.7438861,20.4879882 40.9446022,20.8437134 L56.2674561,15.0013098 Z" id="形状结合" fill="url(#linearGradient-29)" fill-rule="nonzero"></path>
+                            <polygon id="路径-13备份" fill="url(#linearGradient-30)" points="0 12.8248674 0 31.9095929 27.5595703 51.9440108 27.5595703 34.3966786"></polygon>
+                            <polygon id="路径-13备份-4" fill="url(#linearGradient-31)" points="16.076416 9.89434018 16.076416 25.3685046 42.9118411 47.5215313 42.9118411 30.8287415"></polygon>
+                            <polygon id="矩形" fill="url(#linearGradient-32)" points="27.5595703 35.4336631 35.5977783 34.070824 35.5977783 50.1878405 27.5595703 51.9440108"></polygon>
+                            <polygon id="矩形备份-29" fill="url(#linearGradient-33)" points="42.9118411 32.700204 50.5258789 31.2198135 50.5258789 45.8676309 42.9118411 47.5215313"></polygon>
+                            <path d="M26.6030146,11.1505652 L47.0809326,10.3090363 L47.0809326,19.6380042 C43.0423772,21.2225283 39.8214258,21.8187 37.4180783,21.4265195 C35.0147308,21.0343389 31.4097096,19.3242983 26.6030146,16.2963977 L26.6030146,11.1505652 Z" id="矩形备份-34" fill="url(#linearGradient-34)"></path>
+                            <path d="M0,12.8248674 L7.76890844,11.3898325 L35.5333279,34.0832207 L27.7644194,35.5182555 L0,12.8248674 Z M48.7299743,21.6417981 L40.7833458,23.1096605 L50.7664817,31.269427 L42.9975732,32.7044618 L15.2331538,10.0110736 L31.5326284,7.00031426 C35.2901396,6.30624513 39.0017652,6.33790555 42.6675051,7.09529552 C46.333245,7.85268548 49.6667247,9.45791139 52.6679442,11.9109733 C55.9454265,14.58984 57.1451696,16.6898665 56.2671733,18.2110528 C55.389177,19.7322391 52.8767773,20.8758209 48.7299743,21.6417981 Z M46.6032469,16.2399814 C46.9532481,15.5084107 46.406198,14.5524536 44.9620965,13.37211 C43.5179951,12.1917664 41.9762848,11.4447049 40.3369656,11.1309253 C38.6976464,10.8171458 36.9555346,10.8306469 35.1106305,11.1714286 L27.8241052,12.5173599 L35.998975,19.1991309 L43.2855002,17.8531996 C45.1304044,17.5124179 46.23632,16.9746785 46.6032469,16.2399814 Z M87.0714716,20.5429504 C88.9163758,20.2021687 90.2636137,19.8023127 91.1131854,19.3433824 C92.7189636,18.4679345 92.7370149,17.3887195 91.1673395,16.1057374 C90.250649,15.3564758 88.9995325,14.8766139 87.4139898,14.6661516 C85.8410046,14.4659532 83.7067386,14.4260571 81.011192,14.5464633 L76.3913083,14.7391972 C71.8454063,14.9245572 68.4447225,14.8417529 66.1892569,14.4907841 C62.3864685,13.9097098 59.122596,12.5055442 56.3976394,10.2782872 C53.9112735,8.24604349 53.0642329,6.33253549 53.8565176,4.5377632 C54.6488024,2.74299091 57.4060836,1.40946673 62.1283612,0.537190663 C66.0720555,-0.191269279 70.2114633,-0.178855556 74.5465847,0.574431832 C78.881706,1.32771922 82.5924645,2.89786038 85.6788602,5.28485531 L78.1638376,6.67299357 C76.3582971,5.33291207 74.1899304,4.54431094 71.6587373,4.30719019 C69.9754611,4.15253098 68.2282966,4.24246578 66.4172439,4.57699459 C64.4030824,4.94904066 63.0965161,5.49238479 62.4975449,6.207027 C61.8985737,6.92166921 62.1390564,7.72033617 63.2189931,8.60302789 C64.211028,9.4138726 65.5443153,9.91001486 67.2188549,10.0914547 C68.3070051,10.2176253 70.3148756,10.2305349 73.2424665,10.1301836 L80.8401707,9.87815383 C84.1690632,9.76659305 86.9735258,9.92177828 89.2535586,10.3437095 C92.7937245,10.9984609 95.8007117,12.3368265 98.2745202,14.3588064 C100.811116,16.4321055 101.610108,18.3953849 100.671496,20.2486444 C99.7328851,22.1019039 96.877052,23.4693614 92.1039971,24.3510168 C87.2293879,25.2514308 82.5700616,25.2847203 78.1260182,24.4508852 C73.6819747,23.6170502 70.0158516,22.0197891 67.1276487,19.659102 L74.5918941,18.280343 C76.097152,19.2732225 77.5106935,19.9621667 78.8325185,20.3471756 C81.2446717,21.0467038 83.9909894,21.1119621 87.0714716,20.5429504 Z" id="形状结合备份" fill="url(#linearGradient-35)" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="编组-94" transform="translate(1073, 137)">
+                    <text id="…" font-family="PingFangSC-Semibold, PingFang SC" font-size="16" font-weight="500" fill="#0F0F19">
+                        <tspan x="21" y="67">…</tspan>
+                    </text>
+                    <g id="编组-90">
+                        <path d="M47,20 C51.418278,20 55,17.7614237 55,15 C55,12.2385763 51.418278,10 47,10 C42.581722,10 39,12.2385763 39,15 C39,17.7614237 42.581722,20 47,20 Z M27,23 C31.418278,23 35,20.7614237 35,18 C35,15.2385763 31.418278,13 27,13 C22.581722,13 19,15.2385763 19,18 C19,20.7614237 22.581722,23 27,23 Z M8,26 C12.418278,26 16,23.7614237 16,21 C16,18.2385763 12.418278,16 8,16 C3.581722,16 0,18.2385763 0,21 C0,23.7614237 3.581722,26 8,26 Z" id="形状结合" fill="#949DAD" opacity="0.800000012" filter="url(#filter-36)"></path>
+                        <g id="编组-88">
+                            <g id="编组-87" transform="translate(40.8148, 0)">
+                                <path d="M17.1851852,5.19047619 L17.1851852,12.7738095 L17.1713899,12.7737923 C17.1805456,12.8762376 17.1851852,12.9794439 17.1851852,13.0833333 C17.1851852,16.0748757 13.3381504,18.5 8.59259259,18.5 C3.84703474,18.5 0,16.0748757 0,13.0833333 C0,12.9794439 0.00463957534,12.8762376 0.0137952362,12.7737923 L0,12.7738095 L0,5.19047619 L17.1851852,5.19047619 Z" id="形状结合" fill="url(#linearGradient-37)"></path>
+                                <ellipse id="椭圆形备份-2" fill="url(#linearGradient-38)" cx="8.59259259" cy="5.41666667" rx="8.59259259" ry="5.41666667"></ellipse>
+                            </g>
+                            <g id="编组-87备份-2" transform="translate(20.4074, 3.25)">
+                                <path d="M17.1851852,5.19047619 L17.1851852,12.7738095 L17.1713899,12.7737923 C17.1805456,12.8762376 17.1851852,12.9794439 17.1851852,13.0833333 C17.1851852,16.0748757 13.3381504,18.5 8.59259259,18.5 C3.84703474,18.5 0,16.0748757 0,13.0833333 C0,12.9794439 0.00463957534,12.8762376 0.0137952362,12.7737923 L0,12.7738095 L0,5.19047619 L17.1851852,5.19047619 Z" id="形状结合" fill="url(#linearGradient-37)"></path>
+                                <ellipse id="椭圆形备份-2" fill="url(#linearGradient-38)" cx="8.59259259" cy="5.41666667" rx="8.59259259" ry="5.41666667"></ellipse>
+                            </g>
+                            <g id="编组-87备份-3" transform="translate(0, 6.5)">
+                                <path d="M17.1851852,5.19047619 L17.1851852,12.7738095 L17.1713899,12.7737923 C17.1805456,12.8762376 17.1851852,12.9794439 17.1851852,13.0833333 C17.1851852,16.0748757 13.3381504,18.5 8.59259259,18.5 C3.84703474,18.5 0,16.0748757 0,13.0833333 C0,12.9794439 0.00463957534,12.8762376 0.0137952362,12.7737923 L0,12.7738095 L0,5.19047619 L17.1851852,5.19047619 Z" id="形状结合" fill="url(#linearGradient-37)"></path>
+                                <ellipse id="椭圆形备份-2" fill="url(#linearGradient-38)" cx="8.59259259" cy="5.41666667" rx="8.59259259" ry="5.41666667"></ellipse>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <text id="流程整合" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
+                    <tspan x="261" y="687">流程整合</tspan>
+                </text>
+                <text id="执行整合" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
+                    <tspan x="412" y="687">执行整合</tspan>
+                </text>
+                <g id="编组-77" transform="translate(262, 0)">
+                    <g id="编组-3" fill="url(#linearGradient-39)">
+                        <path d="M0,0 C86.6610739,30.9968297 389.000954,46.5102301 907.019641,46.5402013 L907.025118,32.7034596 L955,61.4876442 L907.025118,90.2718287 L907.025,77.114 L893.136515,77.1182508 C387.439374,77.3814966 89.7272021,90.675413 0,117 L0,0 Z" id="形状结合"></path>
+                    </g>
+                    <text id="IT快速响应-|-业务持续优化-|-系统" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" letter-spacing="4" fill="#000323">
+                        <tspan x="170.504" y="68">IT快速响应  |  业务持续优化  |  系统持续适配  |  数字化持续变革</tspan>
+                    </text>
+                </g>
+                <g id="编组-3" opacity="0.5" transform="translate(364.5, 682) rotate(-90) translate(-364.5, -682)translate(340, 656)" fill="url(#linearGradient-40)">
+                    <path d="M0,9.23705556e-14 L0.132819975,0.26474832 C6.29172708,11.931987 18.0528177,18.9459033 36.1452242,20.6620692 L36.1455322,13.5 L49,26.5 L36.1455322,39.5 L36.1448632,31.3372573 C18.1566702,33.0342976 6.4813785,39.9075766 0.3328083,51.3444224 L0.132819975,51.735805 L0,52 L0,9.23705556e-14 Z" id="形状结合"></path>
+                </g>
+                <g id="编组-3备份-2" opacity="0.5" transform="translate(1115.5, 682) rotate(-90) translate(-1115.5, -682)translate(1091, 656)" fill="url(#linearGradient-40)">
+                    <path d="M0,9.23705556e-14 L0.132819975,0.26474832 C6.29172708,11.931987 18.0528177,18.9459033 36.1452242,20.6620692 L36.1455322,13.5 L49,26.5 L36.1455322,39.5 L36.1448632,31.3372573 C18.1566702,33.0342976 6.4813785,39.9075766 0.3328083,51.3444224 L0.132819975,51.735805 L0,52 L0,9.23705556e-14 Z" id="形状结合"></path>
+                </g>
+                <g id="编组-3备份-3" opacity="0.5" transform="translate(740.5, 215) rotate(-90) translate(-740.5, -215)translate(708, 171)" fill="url(#linearGradient-41)">
+                    <path d="M0,-3.52895304e-15 L0.176189763,0.448035619 C8.34620026,20.19267 23.9477363,32.06239 47.9480255,34.9666124 L47.9481549,22.8461538 L65,44.8461538 L47.9481549,66.8461538 L47.9477662,53.0322216 C24.0855947,55.9040339 8.59780381,67.535764 0.441480399,86.8905611 L0.176189763,87.5529007 L0,88 L0,-3.52895304e-15 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

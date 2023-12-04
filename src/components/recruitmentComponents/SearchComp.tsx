@@ -39,7 +39,7 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
               <Form.Item noStyle name="searchContent">
                 <Input.Search
                   style={{ width: "100%" }}
-                  placeholder="请输入关键词"
+                  placeholder="请输入职位名称"
                   onChange={(e) => handleSearch.run(e.target.value)}
                 />
               </Form.Item>
@@ -118,7 +118,7 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
               <Form.Item noStyle name="searchContent">
                 <Input.Search
                   style={{ width: "100%" }}
-                  placeholder="请输入关键词"
+                  placeholder="请输入职位名称"
                   onChange={(e) => handleSearch.run(e.target.value)}
                 />
               </Form.Item>

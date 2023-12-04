@@ -50,7 +50,12 @@ const SwiperHeader = ({ slideList, page }: any) => {
                   <div>
                     {index == 0 ? (
                       <>
-                        <p className={styles["first-title"]}>数据驱动+AI使能</p>
+                        <p
+                          className={styles["first-title"]}
+                          style={{ fontWeight: 400 }}
+                        >
+                          数据驱动+AI使能
+                        </p>
                         <p className={styles["second-title"]}>
                           助力企业{" "}
                           <span className={styles["active-title"]}>

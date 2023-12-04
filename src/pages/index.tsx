@@ -11,7 +11,7 @@ import sanfun_logo from "/public/images/pc/home/sf.png";
 import supcon_logo from "/public/images/pc/home/zk.png";
 import qre_logo from "/public/images/pc/home/qre.png";
 import arrow from "/public/images/arrow.png";
-import eimos_platform from "/public/images/pc/home/eimos-platform.png";
+import eimos_platform from "/public/images/pc/home/eimos-platform.svg";
 import eimos_platform_mb from "/public/images/mobile/home/eimos-platform.png";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
@@ -52,7 +52,7 @@ import { isElementInViewport } from "@/utils/isElementInViewport";
 const { useDebounceFn } = require("ahooks");
 
 const Page = () => {
-  const [isMobile, setIsMobile] = useState<any>(true);
+  const [isMobile, setIsMobile] = useState<any>(false);
   const router = useRouter();
   const state = store();
 
@@ -83,7 +83,6 @@ const Page = () => {
 
   // 锚点页面滑动
   const anchorClick = (type: string, e: any) => {
-    // state.handleNavChange(type);
     const dom = document.getElementById(type);
 
     if (dom) {
@@ -179,15 +178,20 @@ const Page = () => {
           >
             {(navList || []).map((item: { id: string; title: string }) => {
               return (
-                <span
-                  className={
-                    state.nav == item.id ? homeStyle["hover-style"] : ""
-                  }
+                <div
                   key={item.id}
+                  style={
+                    state.nav == item.id
+                      ? {
+                          borderBottom: "4px solid #F96F25",
+                          color: "#F96F25",
+                        }
+                      : {}
+                  }
                   onClick={(e) => anchorClick(item.id, e)}
                 >
                   {item.title}
-                </span>
+                </div>
               );
             })}
           </div>
@@ -213,15 +217,16 @@ const Page = () => {
         >
           <TabHeader
             h1="EIMOS 应用功能全视图"
-            h2={
-              !isMobile &&
-              "构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
-            }
+            h2="构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
+            id="eimos"
           />
           <div className="img-wrapper">
             <Image
               src={eimos_img}
-              alt="EIMOS应用功能全视图-构建全方位、全要素、全过程，高效、立体的，察打一体作战指挥系统"
+              alt="1.经营决策层(多主题、多维度):智能经营解析IBA(多主题:收入、利润、回款、存货, 多维度:产业、产品、市场、客户); 
+              2.流程运营层(多战线)：合同/订单360(LTC)、物的360(ISC)、研发项目360(IPD)、供应链360(ITR)、财务360(FIN)...;
+              3.业务作业层(多模块):智能销售管理(ISMP)、产品配置报价(CPQ)、智能合同管理(ICM)、开票与回款管理、新产品导入(NPI)、产品配置生命周期管理(CLM)、集成计划(IPS);
+              4.平台支撑层(可组装构件):数据资产平台、应用组装平台、技术服务平台、通用平台(权限、任务令等);"
               id="eimos_img"
               className={homeStyle["structure-img"]}
               onMouseEnter={hoverShowShadow}
@@ -231,8 +236,12 @@ const Page = () => {
         </div>
 
         {/* 智能业务解析 */}
-        <div className={homeStyle["analytics-wrapper"]} id="IBA">
-          <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
+        <div className={homeStyle["analytics-wrapper"]}>
+          <TabHeader
+            h1="智能业务解析"
+            h2="Intelligent Business Analytics"
+            id="IBA"
+          />
           <SwiperComp
             slideList={isMobile ? slideListOfIBA.mb : slideListOfIBA.pc}
             description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
@@ -244,17 +253,21 @@ const Page = () => {
         </div>
 
         {/* 线索到回款 */}
-        <div
-          className={`${"wrapper-center"} ${homeStyle["ltc-wrapper"]}`}
-          id="LTC"
-        >
-          <TabHeader h1="线索到回款" h2="Lead to Cash" />
+        <div className={`${"wrapper-center"} ${homeStyle["ltc-wrapper"]}`}>
+          <TabHeader h1="线索到回款" h2="Lead to Cash" id="LTC" />
           <LtcImgWrapper isMobile={isMobile} anchorClick={anchorClick} />
           <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
             {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
                 const description = TITLE_LIST[index];
                 const id = ["order", "ISMP", "ICM", "NPI"][index];
+                const alt = [
+                  "订单360(Full Visibility and Control of Contract Execution)",
+                  "智能销售管理平台(ISM)",
+                  "智能合同管理(ICM)",
+                  "新产品导入(NPI)",
+                  "产品配置报价(CPQ)",
+                ][index];
                 return (
                   <SwiperComp
                     description={description}
@@ -263,6 +276,7 @@ const Page = () => {
                     key={index}
                     id={id}
                     isMobile={isMobile}
+                    alt={alt}
                   />
                 );
               }
@@ -271,13 +285,14 @@ const Page = () => {
         </div>
 
         {/* 集成供应链 */}
-        <div className={homeStyle["supply-chian"]} id="ISC">
+        <div className={homeStyle["supply-chian"]}>
           <div className="wrapper-center">
-            <TabHeader h1="集成供应链" h2="Integrated Supply Chain" />
+            <TabHeader h1="集成供应链" h2="Integrated Supply Chain" id="ISC" />
             <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
               {(isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
                 (list: any[], index: number) => {
                   const des = DESCRIPTION_LIST[index];
+                  const alt = ["IPS-销售预测", "IPS-销售与运作计划"][index];
                   return (
                     <SwiperComp
                       description={des}
@@ -285,6 +300,7 @@ const Page = () => {
                       key={index}
                       index={index}
                       disable={true}
+                      alt={alt}
                     />
                   );
                 }
@@ -294,12 +310,8 @@ const Page = () => {
         </div>
 
         {/* 应用及解决方案 */}
-        <div
-          className="wrapper-center"
-          id="plan"
-          style={{ padding: "0 15px", paddingTop: isMobile ? 30 : 80 }}
-        >
-          <TabHeader h1="应用及解决方案" />
+        <div className="wrapper-center" style={{ padding: "0 15px" }}>
+          <TabHeader h1="应用及解决方案" id="plan" />
           <div className={homeStyle["tab-button"]}>
             <div
               className={
@@ -333,26 +345,10 @@ const Page = () => {
             </div>
           </div>
           <div className={homeStyle["item-content"]}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-              }}
-            >
-              {APPLICATION_LIST[state.plan].map((item: any, index: number) => {
-                return (
-                  <ApplicationItem
-                    key={item.name}
-                    item={item}
-                    index={index}
-                    count={APPLICATION_LIST[state.plan].length}
-                    isMobile={isMobile}
-                  />
-                );
-              })}
-            </div>
-
+            <ApplicationItem
+              item={APPLICATION_LIST[state.plan]}
+              isMobile={isMobile}
+            />
             <a
               className={homeStyle["link"]}
               onClick={() => {
@@ -367,15 +363,16 @@ const Page = () => {
         </div>
 
         {/* EIMOS平台 */}
-        <div
-          className={homeStyle["eimos-platform-section"]}
-          id="eimos-platform"
-        >
-          <TabHeader h1="EIMOS平台" h2="EIMOS Platform as a Service" />
+        <div className={homeStyle["eimos-platform-section"]}>
+          <TabHeader
+            h1="EIMOS平台"
+            h2="EIMOS Platform as a Service"
+            id="eimos-platform"
+          />
           <div className="img-wrapper">
             <Image
               src={isMobile ? eimos_platform_mb : eimos_platform}
-              alt="EIMOS平台"
+              alt="EIMOS平台:应用组装平台(业务组件、BI组件)、数据资产平台(科学管理模型、分析模型)、通用平台(用户管理、权限中心、任务管理)、数据服务平台(集成转换、指标解析器)、业务系统、大数据平台；IT快速相应、业务持续优化、系统持续适配、数字化持续变革"
               quality={100}
               className={homeStyle["eimos-platform-img"]}
             />
@@ -383,8 +380,8 @@ const Page = () => {
         </div>
 
         {/* 我们的客户 */}
-        <div className={homeStyle["customer-section"]} id="cus">
-          <TabHeader h1="我们的客户" />
+        <div className={homeStyle["customer-section"]}>
+          <TabHeader h1="我们的客户" id="cus" />
           <div className={homeStyle["cusomer-logo"]}>
             <div className={homeStyle["logo-box"]}>
               <Image
