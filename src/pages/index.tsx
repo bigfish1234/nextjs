@@ -52,7 +52,7 @@ import { isElementInViewport } from "@/utils/isElementInViewport";
 const { useDebounceFn } = require("ahooks");
 
 const Page = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<any>(true);
   const router = useRouter();
   const state = store();
 
