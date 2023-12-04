@@ -6,6 +6,11 @@ import Metadata from "next/head";
 import info_banner_mb from "/public/images/mobile/info/info-banner.png";
 import info_banner from "/public/images/pc/info/info-banner.png";
 import { infoListAll } from "@/lib/const";
+import dynamic from "next/dynamic";
+
+const MyPaginationComp = dynamic(() => import("@/components/PaginationComp"), {
+  ssr: false,
+});
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -13,16 +18,16 @@ const Home = () => {
   const [pageCurrent, setPageCurrent] = useState<number>(1);
   const [infoList, setInfoList] = useState([...infoListAll].slice(0, pageSize));
   const [total, setTotal] = useState<number>(infoListAll.length);
-  const infoSlideList = {
-    pc: [info_banner],
-    mb: [info_banner_mb],
-  };
+  const [infoSlideList, setInfoSlideList] = useState<any>([]);
 
   useEffect(() => {
     const isMobile =
       !!navigator.userAgent.match(MOBILE_REG) ||
       window.matchMedia("only screen and (max-width: 500px)").matches;
     setIsMobile(isMobile);
+    isMobile
+      ? setInfoSlideList([info_banner_mb])
+      : setInfoSlideList([info_banner]);
   }, []);
 
   return (
@@ -30,10 +35,7 @@ const Home = () => {
       <Metadata>
         <title>信息中心</title>
       </Metadata>
-      <LayoutComp
-        slideList={isMobile ? infoSlideList.mb : infoSlideList.pc}
-        page="info"
-      >
+      <LayoutComp slideList={infoSlideList} page="info">
         <div className={isMobile ? "" : "wrapper-center"} id="top">
           {infoList.map((item: any) => {
             return (
@@ -46,7 +48,7 @@ const Home = () => {
           })}
         </div>
         {!isMobile && (
-          <PaginationComp
+          <MyPaginationComp
             page="info"
             current={pageCurrent}
             size={pageSize}

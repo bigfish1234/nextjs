@@ -53,19 +53,14 @@ const { useDebounceFn } = require("ahooks");
 
 const Page = () => {
   const [isMobile, setIsMobile] = useState<any>(false);
+  const [homeSlideList, setHomeSlideList] = useState<any>([]);
   const router = useRouter();
   const state = store();
 
   const [isShow, setIsShow] = useState(false);
 
-  // banner
-  const homeSlideList = {
-    pc: [home_banner],
-    mb: [home_banner_m],
-  };
-
   const slideListOfIBA = {
-    pc: [IBA, IBA],
+    pc: [IBA],
     mb: [IBA_mb],
   };
 
@@ -140,6 +135,10 @@ const Page = () => {
       !!navigator.userAgent.match(MOBILE_REG) ||
       window.matchMedia("only screen and (max-width: 500px)").matches;
     setIsMobile(isMobile);
+    isMobile
+      ? setHomeSlideList([home_banner_m])
+      : setHomeSlideList([home_banner]);
+
     window.addEventListener("scroll", function () {
       navList.forEach((item: any) => {
         if (isElementInViewport(item.id)) {
@@ -156,7 +155,7 @@ const Page = () => {
       </Metadata>
       {/* swiper */}
       <LayoutComp
-        slideList={isMobile ? homeSlideList.mb : homeSlideList.pc}
+        slideList={homeSlideList}
         page="home"
         pageScroll={anchorClick}
       >
@@ -249,6 +248,7 @@ const Page = () => {
             item="IBA"
             handleIBAEvent={handleIBAEvent}
             isShow={isShow}
+            alt="智能业务解析（IBA）"
           />
         </div>
 

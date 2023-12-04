@@ -61,6 +61,7 @@
   font-size: 20px;
   line-height: 64px;
   box-sizing: content-box;
+  cursor: pointer;
 }
 
 .tab-button-item:first-child {
@@ -69,13 +70,6 @@
 
 .tab-button-item:last-child {
   border-left: none;
-}
-
-.tab-button-item:hover {
-  /* border-top: 4px solid var(--active-font-color);
-  color: var(--active-font-color);
-  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12); */
-  cursor: pointer;
 }
 
 .item-content {
@@ -287,7 +281,7 @@
   }
 
   .link {
-    bottom: 20px;
+    bottom: 0;
     color: var(--active-font-color);
   }
 

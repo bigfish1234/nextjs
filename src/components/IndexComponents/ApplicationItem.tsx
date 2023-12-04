@@ -10,7 +10,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
       <>
         {state.plan == "IBA" ? (
           <div className={styles["content-wrapper"]}>
-            <div>
+            <div className={styles["content-wrapper-3"]}>
               <Image
                 src="/images/icon/fengxmx.png"
                 alt="分析模型"
@@ -19,7 +19,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
               />
               <span> 分析模型</span>
             </div>
-            <div>
+            <div className={styles["content-wrapper-3"]}>
               <Image
                 src="/images/icon/cit.png"
                 alt="指标集"
@@ -28,7 +28,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
               />
               <span>指标集</span>
             </div>
-            <div>
+            <div className={styles["content-wrapper-3"]}>
               <Image
                 src="/images/icon/renwl.png"
                 alt="任务令"
@@ -41,7 +41,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
         ) : state.plan == "LTC" ? (
           <>
             <div className={styles["content-wrapper"]}>
-              <div>
+              <div className={styles["content-wrapper-4"]}>
                 <Image
                   src="/images/icon/hetjgh.png"
                   alt="合同结构化"
@@ -50,7 +50,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
                 />
                 <span>合同结构化</span>
               </div>
-              <div>
+              <div className={styles["content-wrapper-4"]}>
                 <Image
                   src="/images/icon/4ult.png"
                   alt="4U拉通*"
@@ -59,7 +59,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
                 />
                 <span>4U拉通*</span>
               </div>
-              <div>
+              <div className={styles["content-wrapper-4"]}>
                 <Image
                   src="/images/icon/shijjx.png"
                   alt="时间基线"
@@ -68,7 +68,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
                 />
                 <span>时间基线</span>
               </div>
-              <div>
+              <div className={styles["content-wrapper-4"]}>
                 <Image
                   src="/images/icon/xingcpkf.png"
                   alt="新产品开发"
@@ -78,20 +78,13 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
                 <span>新产品开发</span>
               </div>
             </div>
-            <p
-              style={{
-                paddingLeft: 28,
-                color: "#939398",
-                fontSize: 12,
-                paddingTop: 20,
-              }}
-            >
+            <p className={styles.note}>
               *4U: 销售单元，交付单元，收入单元，回款单元
             </p>
           </>
         ) : (
           <div className={styles["content-wrapper"]}>
-            <div>
+            <div className={styles["content-wrapper-2"]}>
               <Image
                 src="/images/icon/moxyc.png"
                 alt="预测模型"
@@ -100,7 +93,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
               />
               <span>预测模型</span>
             </div>
-            <div>
+            <div className={styles["content-wrapper-2"]}>
               <Image
                 src="/images/icon/sopmxgl.png"
                 alt="OP管理模型"

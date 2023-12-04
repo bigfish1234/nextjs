@@ -99,6 +99,13 @@
 
 }
 
+.note {
+  padding-left: 28px;
+  color: #939398;
+  font-size: 12px;
+  padding-top: 20px;
+}
+
 @keyframes scaleUp {
   0% {
     transform: scale(0.7);
@@ -168,5 +175,36 @@
     width: 585px;
     height: 226px;
     margin-bottom: 0;
+  }
+
+  .content-wrapper {
+    margin-left: 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .content-wrapper div {
+    background-color: #fff;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 7px;
+  }
+
+  .content-wrapper-3 {
+    width: 32%;
+  }
+
+  .content-wrapper-4 {
+    width: 49%;
+  }
+
+  .content-wrapper-2 {
+    width: 49%;
+  }
+
+  .note {
+    padding-top: 45px;
+    padding-left: 0;
   }
 }

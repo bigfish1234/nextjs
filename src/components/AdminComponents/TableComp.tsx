@@ -18,10 +18,11 @@ const TableComp = () => {
   useEffect(() => {
     if (!session) {
       signOut({ callbackUrl: "/auth/signin" });
+    } else {
+      state.initData({});
+      state.getTypeList();
+      state.getPosList();
     }
-    state.initData({});
-    state.getTypeList();
-    state.getPosList();
   }, []);
 
   const handleDelete = async (id: number) => {
