@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: var(--header-margin-bottom-pc);
+  scroll-behavior: smooth;
 }
 
 .divider {

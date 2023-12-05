@@ -79,8 +79,20 @@ const Page = () => {
   // 锚点页面滑动
   const anchorClick = (type: string, e: any) => {
     const dom = document.getElementById(type);
-
     if (dom) {
+      // 判断是否为ios
+      const isIos = !!navigator.userAgent.match(
+        /\(i[^;]+;( U;)? CPU.+Mac OS X/
+      );
+      // if (isIos) {
+      //   dom.scrollTop = 1000;
+      //   dom.style.scrollBehavior = "smooth";
+      //   console.log(dom.offsetTop);
+      // } else {
+      //   dom.scrollIntoView({ behavior: "smooth", block: "start" });
+      // }
+
+      dom.style.scrollBehavior = "smooth";
       dom.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
