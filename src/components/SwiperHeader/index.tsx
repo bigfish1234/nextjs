@@ -91,27 +91,21 @@ const SwiperHeader = ({ slideList, page }: any) => {
                 ) : path == "/corporate-information" ? (
                   <div style={{ width: 720 }}>
                     <p className={firstTitleStyle}>硕磐智能</p>
-                    {!isMobile && (
-                      <div className={styles["spzn-introduce"]}>
-                        致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
-                        <span className={styles["background-word"]}>
-                          数字化
-                        </span>
-                        转型 ，并通过打造
-                        <span className={styles["background-word"]}>
-                          智能化
-                        </span>
-                        产业互联网，为产业数字化运营和企业数字化管理提供
-                        <span className={styles["background-word"]}>
-                          数据平台
-                        </span>{" "}
-                        和
-                        <span className={styles["background-word"]}>
-                          解决方案
-                        </span>
-                        的新型高科技企业。
-                      </div>
-                    )}
+                    <div className={styles["spzn-introduce"]}>
+                      致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
+                      <span className={styles["background-word"]}>数字化</span>
+                      转型 ，并通过打造
+                      <span className={styles["background-word"]}>智能化</span>
+                      产业互联网，为产业数字化运营和企业数字化管理提供
+                      <span className={styles["background-word"]}>
+                        数据平台
+                      </span>{" "}
+                      和
+                      <span className={styles["background-word"]}>
+                        解决方案
+                      </span>
+                      的新型高科技企业。
+                    </div>
                   </div>
                 ) : (
                   <div style={{ color: "#fff" }}>

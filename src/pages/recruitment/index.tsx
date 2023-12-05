@@ -67,10 +67,11 @@ const JoinUs = () => {
           className={`${joinStyle["wrapper"]} ${joinStyle["job-wrapper"]}`}
           id="pos"
         >
-          {!isMobile && <TabHeader h1="招聘职位" />}
+          {!isMobile && (
+            <TabHeader h1="招聘职位" showStyle={joinStyle["header-isshow"]} />
+          )}
           <div className="wrapper-center">
             <MySearchComp
-              isMobile={isMobile}
               handleChange={handleChange}
               status={status}
               setStatus={setStatus}

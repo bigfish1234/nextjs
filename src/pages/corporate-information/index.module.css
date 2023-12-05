@@ -5,6 +5,7 @@
   padding: 20px 15px;
   line-height: 30px;
   border-bottom: 5px solid #f5f5f7;
+  opacity: 0;
 }
 
 .background-word {
@@ -18,7 +19,6 @@
 }
 
 .about-us-wrapper {
-  padding-top: var(--header-margin-bottom-pc);
   padding-bottom: 38px;
 }
 
@@ -34,7 +34,8 @@
 .history {
   width: 100%;
   background-color: #f5f5f7;
-  padding: var(--header-margin-bottom-pc) 0;
+  /* padding: var(--header-margin-bottom-pc) 0; */
+  padding-bottom: var(--header-margin-bottom-pc);
 }
 
 .develop-history-wrapper {
@@ -101,7 +102,7 @@
 }
 
 .partner-wrapper {
-  padding: 50px;
+  padding-bottom: 50px;
 }
 
 .partner-item {
@@ -168,6 +169,9 @@
     padding:15px 20px;
     background-color: #fff;
     width: 100%;
+  }
+  .spzn-introduce {
+    opacity: 1;
   }
 
   .founder {

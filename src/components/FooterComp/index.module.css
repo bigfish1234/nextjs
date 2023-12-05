@@ -55,6 +55,7 @@
 
 .mobile-footer {
   padding: 30px 15px;
+  opacity: 0;
 }
 
 .contact-us {
@@ -74,6 +75,16 @@
   height: 44px;
   line-height: 20px;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    opacity: 0;
+  }
+
+  .mobile-footer {
+    opacity: 1;
+  }
 }
 
 

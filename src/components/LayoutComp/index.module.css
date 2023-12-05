@@ -15,6 +15,7 @@
   bottom: 230px;
   right: 20px;
   z-index: 999;
+  opacity: 0;
 }
 
 .service-form {

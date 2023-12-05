@@ -43,6 +43,10 @@ const ServiceBtn = () => {
       !!navigator.userAgent.match(MOBILE_REG) ||
       window.matchMedia("only screen and (max-width: 500px)").matches;
     setIsMobile(isMobile);
+    if (!isMobile && !state.isOpen) {
+      const dom = document.getElementById("guide");
+      dom && (dom.style.opacity = "1");
+    }
   }, []);
 
   return (
@@ -50,9 +54,7 @@ const ServiceBtn = () => {
       <Image
         src={guidenceImg}
         alt="立即咨询"
-        style={{
-          visibility: !isMobile && !state.isOpen ? "visible" : "hidden",
-        }}
+        id="guide"
         className={styles["guide-service"]}
         onClick={clickToGuidence}
       />

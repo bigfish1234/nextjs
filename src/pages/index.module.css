@@ -240,16 +240,13 @@
   
   .link-item div {
     line-height: 48px;
+    display: inline-block;
+    margin-right: 50px;
+    white-space: nowrap;
   }
 
   .link-item-box {
-    white-space: nowrap;
     overflow-x: scroll;
-  }
-
-  .link-item-box div{
-    display: inline-block;
-    margin-right: 50px;
   }
 
   .flex-content {

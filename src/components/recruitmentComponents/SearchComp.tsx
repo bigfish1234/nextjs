@@ -33,55 +33,19 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
   return (
     <div className={styles["search-wrapper"]}>
       <Form form={form} size="large">
-        {isMobile ? (
-          <div>
-            <Row>
-              <Form.Item noStyle name="searchContent">
-                <Input.Search
-                  style={{ width: "100%" }}
-                  placeholder="请输入职位名称"
-                  onChange={(e) => handleSearch.run(e.target.value)}
-                />
-              </Form.Item>
-            </Row>
-            <Row style={{ marginTop: 18 }}>
-              <Col span={11}>
-                <Form.Item noStyle name="type">
-                  <Select
-                    allowClear
-                    options={state.typeList}
-                    style={{ width: "100%" }}
-                    placeholder="请选择"
-                    onClear={handleClearType}
-                    onChange={(value: number) => {
-                      setStatus({ ...status, type: value });
-                    }}
-                  />
-                </Form.Item>
-              </Col>
-              <Col span={11} offset={2}>
-                <Form.Item noStyle name="position">
-                  <Select
-                    allowClear
-                    options={state.posList}
-                    style={{ width: "100%" }}
-                    placeholder="请选择"
-                    onClear={handleClearPos}
-                    onChange={(value: number) => {
-                      setStatus({
-                        ...status,
-                        pos: value,
-                      });
-                    }}
-                  />
-                </Form.Item>
-              </Col>
-            </Row>
-          </div>
-        ) : (
+        <div className={styles["search-wrapper-mb"]}>
           <Row>
-            <Col span={7}>
-              <Form.Item label="招聘类型" name="type">
+            <Form.Item noStyle name="searchContent">
+              <Input.Search
+                style={{ width: "100%" }}
+                placeholder="请输入职位名称"
+                onChange={(e) => handleSearch.run(e.target.value)}
+              />
+            </Form.Item>
+          </Row>
+          <Row style={{ marginTop: 18 }}>
+            <Col span={11}>
+              <Form.Item noStyle name="type">
                 <Select
                   allowClear
                   options={state.typeList}
@@ -89,16 +53,13 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                   placeholder="请选择"
                   onClear={handleClearType}
                   onChange={(value: number) => {
-                    setStatus({
-                      ...status,
-                      type: value,
-                    });
+                    setStatus({ ...status, type: value });
                   }}
                 />
               </Form.Item>
             </Col>
-            <Col span={7} offset={1}>
-              <Form.Item label="招聘职位" name="position">
+            <Col span={11} offset={2}>
+              <Form.Item noStyle name="position">
                 <Select
                   allowClear
                   options={state.posList}
@@ -114,17 +75,53 @@ const SearchComp = ({ isMobile, handleChange, status, setStatus }: any) => {
                 />
               </Form.Item>
             </Col>
-            <Col span={8} offset={1}>
-              <Form.Item noStyle name="searchContent">
-                <Input.Search
-                  style={{ width: "100%" }}
-                  placeholder="请输入职位名称"
-                  onChange={(e) => handleSearch.run(e.target.value)}
-                />
-              </Form.Item>
-            </Col>
           </Row>
-        )}
+        </div>
+        <Row className={styles["search-wrapper-pc"]}>
+          <Col span={7}>
+            <Form.Item label="招聘类型" name="type">
+              <Select
+                allowClear
+                options={state.typeList}
+                style={{ width: "100%" }}
+                placeholder="请选择"
+                onClear={handleClearType}
+                onChange={(value: number) => {
+                  setStatus({
+                    ...status,
+                    type: value,
+                  });
+                }}
+              />
+            </Form.Item>
+          </Col>
+          <Col span={7} offset={1}>
+            <Form.Item label="招聘职位" name="position">
+              <Select
+                allowClear
+                options={state.posList}
+                style={{ width: "100%" }}
+                placeholder="请选择"
+                onClear={handleClearPos}
+                onChange={(value: number) => {
+                  setStatus({
+                    ...status,
+                    pos: value,
+                  });
+                }}
+              />
+            </Form.Item>
+          </Col>
+          <Col span={8} offset={1}>
+            <Form.Item noStyle name="searchContent">
+              <Input.Search
+                style={{ width: "100%" }}
+                placeholder="请输入职位名称"
+                onChange={(e) => handleSearch.run(e.target.value)}
+              />
+            </Form.Item>
+          </Col>
+        </Row>
       </Form>
     </div>
   );
