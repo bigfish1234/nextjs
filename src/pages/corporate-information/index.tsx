@@ -12,17 +12,16 @@ import spzn_banner_mb from "/public/images/mobile/about/sp.png";
 
 const AboutUs = () => {
   const [isMobile, setIsMobile] = useState(false);
-
-  const aboutSlideList = {
-    pc: [spzn_banner],
-    mb: [spzn_banner_mb],
-  };
+  const [aboutSlideList, setAboutSlideList] = useState<any>([]);
 
   useEffect(() => {
     const isMobile =
       !!navigator.userAgent.match(MOBILE_REG) ||
       window.matchMedia("only screen and (max-width: 500px)").matches;
     setIsMobile(isMobile);
+    isMobile
+      ? setAboutSlideList([spzn_banner_mb])
+      : setAboutSlideList([spzn_banner]);
   }, []);
 
   return (
@@ -30,10 +29,7 @@ const AboutUs = () => {
       <Metadata>
         <title>关于我们</title>
       </Metadata>
-      <LayoutComp
-        slideList={isMobile ? aboutSlideList.mb : aboutSlideList.pc}
-        page="about"
-      >
+      <LayoutComp slideList={aboutSlideList} page="about">
         {isMobile && (
           <div className={styles["spzn-introduce"]}>
             致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
@@ -41,7 +37,7 @@ const AboutUs = () => {
             转型 ，并通过打造
             <span className={styles["background-word"]}>智能化</span>
             产业互联网，为产业数字化运营和企业数字化管理提供
-            <span className={styles["background-word"]}>数据平台</span> 和
+            <span className={styles["background-word"]}>数据平台</span>和
             <span className={styles["background-word"]}>解决方案</span>
             的新型高科技企业。
           </div>

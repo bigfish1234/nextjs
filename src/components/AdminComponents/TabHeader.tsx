@@ -21,7 +21,12 @@ const TabHeader = () => {
       <span style={{ fontSize: 24 }}>职位管理</span>
       <Space size={20}>
         <span>账号：{session?.user?.name}</span>
-        <Button onClick={() => signOut({ callbackUrl: "/auth/signin" })}>
+        <Button
+          onClick={() => {
+            const root = window.location.origin;
+            signOut({ callbackUrl: `${root}/auth/signin` });
+          }}
+        >
           退出登录
         </Button>
       </Space>

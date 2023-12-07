@@ -43,6 +43,8 @@ export default NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
+    // 设置会话的最大有效期为 2小时
+    maxAge: 2 * 60 * 60, 
   },
   pages: {
     logIn: "auth/signin",

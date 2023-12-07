@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { message } from "antd";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
+import Metadata from "next/head";
 
 const LoginComp = dynamic(() => import("@/components/LoginComp"), {
   ssr: false,
@@ -52,6 +53,9 @@ const Login = () => {
   };
   return (
     <div>
+      <Metadata>
+        <title>用户登录</title>
+      </Metadata>
       {isMobile ? null : (
         <LoginComp
           handleCancel={handleCancel}

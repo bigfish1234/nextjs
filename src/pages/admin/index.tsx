@@ -1,4 +1,5 @@
 import { message } from "antd";
+import Metadata from "next/head";
 import { useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
@@ -32,6 +33,9 @@ const Admin = () => {
   }
   return (
     <div>
+      <Metadata>
+        <title>职位管理</title>
+      </Metadata>
       <MyHeader />
       <MyTable />
     </div>

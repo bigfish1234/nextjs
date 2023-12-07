@@ -3,6 +3,14 @@
   width: 100%;
 }
 
+.search-wrapper-mb {
+  display: none;
+}
+
+.search-wrapper-pc {
+  visibility: visible;
+}
+
 .job-wrapper {
   background-color: #f5f5f7;
 }
@@ -94,6 +102,15 @@
     width: 100%;
     background-color: #fff;
     padding: 20px 15px;
+  }
+
+  .search-wrapper-mb {
+    display: block;
+  }
+
+  .search-wrapper-pc {
+    visibility: hidden;
+    display: none;
   }
 
   .detail {

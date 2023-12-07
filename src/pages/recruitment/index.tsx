@@ -27,38 +27,34 @@ const MyPaginationComp: any = dynamic(
 
 const JoinUs = () => {
   const pageSize = 5;
-  const joinSlideList = {
-    pc: [join_banner],
-    mb: [join_banner_mb],
-  };
   const [pageCurrent, setPageCurrent] = useState<number>(1);
   const [status, setStatus] = useState<IStatus>({
     keyword: "",
     type: -1,
     pos: -1,
   });
+  const [isMobile, setIsMobile] = useState(false);
+  const [joinSlideList, setJoinSlideList] = useState<any>([]);
+  const state = store();
 
   const handleChange = async (value: IStatus) => {
     setStatus(value);
   };
-
-  const [isMobile, setIsMobile] = useState(false);
-  const state = store();
-
-  useEffect(() => {
-    state.getPosList();
-    state.getTypeList();
-  }, []);
 
   useEffect(() => {
     state.initData(status);
   }, [status]);
 
   useEffect(() => {
+    state.getPosList();
+    state.getTypeList();
     const isMobile =
       !!navigator.userAgent.match(MOBILE_REG) ||
       window.matchMedia("only screen and (max-width: 500px)").matches;
     setIsMobile(isMobile);
+    isMobile
+      ? setJoinSlideList([join_banner_mb])
+      : setJoinSlideList([join_banner]);
   }, []);
 
   return (
@@ -66,18 +62,16 @@ const JoinUs = () => {
       <Metadata>
         <title>加入我们</title>
       </Metadata>
-      <LayoutComp
-        slideList={isMobile ? joinSlideList.mb : joinSlideList.pc}
-        page="join"
-      >
+      <LayoutComp slideList={joinSlideList} page="join">
         <div
           className={`${joinStyle["wrapper"]} ${joinStyle["job-wrapper"]}`}
           id="pos"
         >
-          {!isMobile && <TabHeader h1="招聘职位" />}
+          {!isMobile && (
+            <TabHeader h1="招聘职位" showStyle={joinStyle["header-isshow"]} />
+          )}
           <div className="wrapper-center">
             <MySearchComp
-              isMobile={isMobile}
               handleChange={handleChange}
               status={status}
               setStatus={setStatus}

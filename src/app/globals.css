@@ -96,5 +96,6 @@ div {
   .img-wrapper {
     width: 100%;
     overflow-x: scroll;
+    margin-bottom: 0;
   }
 }

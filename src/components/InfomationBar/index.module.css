@@ -52,6 +52,10 @@
   height: 100%;
 }
 
+.img-mobile {
+  opacity: 0;
+}
+
 .source-time {
   font-size: 14px;
   color: #707070;
@@ -83,5 +87,17 @@
     padding: 20px 15px;
     margin: 0;
     background-color: #fff;
+  }
+
+  .img-mobile {
+    opacity: 1;
+    }
+
+  .time-line {
+    opacity: 0;
+  }
+
+  .info-img {
+    opacity: 0;
   }
 }

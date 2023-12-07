@@ -12,6 +12,7 @@ const { useDebounceFn } = require("ahooks");
 
 const SwiperComp = ({
   description,
+  alt,
   slideList,
   id,
   index,
@@ -80,7 +81,7 @@ const SwiperComp = ({
                   >
                     <Image
                       src={imgUrl}
-                      alt={description}
+                      alt={alt}
                       key={ind}
                       quality={100}
                       className={styles[`img-wrapper-${item}`]}
@@ -108,7 +109,7 @@ const SwiperComp = ({
       <div
         className={`${styles["description"]} ${styles[`description-${item}`]}`}
       >
-        {description}
+        <span>{description}</span>
       </div>
     </div>
   );

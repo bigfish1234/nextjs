@@ -68,7 +68,6 @@ div {
 
 .guide-btn {
   position: absolute;
-  width: 248px;
   height: 36px;
   background-color: var(--active-font-color);
   color: #fff;
