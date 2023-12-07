@@ -1,4 +1,6 @@
-import detail_img from "/public/images/pc/home/IBA_data01.png";
+import detail_img1 from "/public/images/pc/home/IBA_data01.png";
+import detail_img2 from "/public/images/pc/home/IBA_data02.png";
+import detail_img3 from "/public/images/pc/home/IBA_data03.png";
 
 export const TITLE_LIST = [
   "订单履行全流程可视，履行进度可预测，异常可管理，一张视图实现三流合一，信息高效互通与共享",
@@ -165,7 +167,7 @@ export const navList = [
 export const IMG_DETAIL_LIST: any = {
   IBA: [
     {
-      imgUrl: detail_img,
+      imgUrl: detail_img1,
       title: "核心能力",
       des: [
         {
@@ -189,7 +191,7 @@ export const IMG_DETAIL_LIST: any = {
       other: "",
     },
     {
-      imgUrl: detail_img,
+      imgUrl: detail_img2,
       title: "制造毛利率影响动因及改进策略",
       des: [
         {
@@ -208,6 +210,30 @@ export const IMG_DETAIL_LIST: any = {
       ],
       other:
         "基于影响制造毛利率的业务动因进行量化解析，识别盈利能力下降主要因素，针对性制定业务改进策略，提升盈利能力",
+    },
+    {
+      imgUrl: detail_img3,
+      title: "核心能力",
+      des: [
+        {
+          title: "",
+          detail:
+            "聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理",
+        },
+        {
+          title: "",
+          detail: "多场景应用：日报、周报、月度经营分析",
+        },
+        {
+          title: "",
+          detail: "基于规则数据业务异常主动预警",
+        },
+        {
+          title: "",
+          detail: "搜索式指标自动计算功能",
+        },
+      ],
+      other: "",
     },
   ],
   LTC: [[], [], []],

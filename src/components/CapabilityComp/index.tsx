@@ -53,13 +53,13 @@ const CapabilityComp = ({ list, title }: any) => {
           </div>
         );
       })}
-      <div
+      {/* <div
         className="guide-btn"
         style={{ position: "absolute", bottom: 20, fontSize: 14, width: 190 }}
         onClick={() => !isMobile && state.handleOpenChange(true)}
       >
         立即咨询
-      </div>
+      </div> */}
     </div>
   );
 };

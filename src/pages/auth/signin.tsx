@@ -54,7 +54,7 @@ const Login = () => {
   return (
     <div>
       <Metadata>
-        <title>用户登录</title>
+        <title>硕磐智能 - 用户登录</title>
       </Metadata>
       {isMobile ? null : (
         <LoginComp

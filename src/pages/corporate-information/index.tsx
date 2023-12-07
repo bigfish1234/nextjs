@@ -27,7 +27,7 @@ const AboutUs = () => {
   return (
     <div>
       <Metadata>
-        <title>关于我们</title>
+        <title>硕磐智能 - 关于我们</title>
       </Metadata>
       <LayoutComp slideList={aboutSlideList} page="about">
         {isMobile && (

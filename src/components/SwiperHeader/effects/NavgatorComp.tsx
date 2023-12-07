@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../index.module.css";
 import expand_icon from "/public/images/expand-icon.png";
-import logo from "/public/images/logo.png";
+import logo from "/public/images/logo.svg";
 import { store } from "@/store";
 import NavComp from "./NavComp";
 import { useRouter } from "next/navigation";

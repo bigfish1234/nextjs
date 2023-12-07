@@ -6,7 +6,7 @@
 
 .wrapper-IBA {
   width: 100%;
-  background-color: #EBF2FA;
+  
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.06);
  
 }
@@ -62,7 +62,7 @@
 }
 
 .img-wrapper-IBA {
-  width: 1480px;
+  width: 100%;
   height: 420px;
 }
 
@@ -74,7 +74,7 @@
 .swiper-wrapper-IBA {
   width: 100%;
   height: 420px;
-  text-align: center;
+  background-color: #ebf2fa;
 }
 
 .description {

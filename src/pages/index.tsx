@@ -6,13 +6,13 @@ import homeStyle from "./index.module.css";
 import { LayoutComp, SwiperComp, TabHeader } from "@/components";
 import { store } from "@/store";
 
-import eimos_img from "/public/images/pc/home/eimos.png";
+import eimos_img from "/public/images/pc/home/eimos.svg";
 import sanfun_logo from "/public/images/pc/home/sf.png";
 import supcon_logo from "/public/images/pc/home/zk.png";
 import qre_logo from "/public/images/pc/home/qre.png";
 import arrow from "/public/images/arrow.png";
 import eimos_platform from "/public/images/pc/home/eimos-platform.svg";
-import eimos_platform_mb from "/public/images/mobile/home/eimos-platform.png";
+import eimos_platform_mb from "/public/images/mobile/home/eimos-platform.svg";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 
@@ -49,6 +49,22 @@ import {
 } from "@/lib/const";
 import { isElementInViewport } from "@/utils/isElementInViewport";
 
+import order_01 from "/public/images/pc/home/order_01.png";
+import order_02 from "/public/images/pc/home/order_02.png";
+import ISM_01 from "/public/images/pc/home/ISM_01.png";
+import ICM_01 from "/public/images/pc/home/ICM_01.png";
+import NPI_01 from "/public/images/pc/home/NPI_01.png";
+import CPQ_01 from "/public/images/pc/home/CPQ_01.png";
+
+import IPS_D1 from "/public/images/pc/home/IPS_D1.png";
+import IPS_D2 from "/public/images/pc/home/IPS_D2.png";
+import IPS_D3 from "/public/images/pc/home/IPS_D3.png";
+import IPS_D4 from "/public/images/pc/home/IPS_D4.png";
+
+import IPS_DA1 from "/public/images/pc/home/IPS_DA01.png";
+import IPS_DA2 from "/public/images/pc/home/IPS_DA02.png";
+import IPS_DA3 from "/public/images/pc/home/IPS_DA03.png";
+
 const { useDebounceFn } = require("ahooks");
 
 const Page = () => {
@@ -69,6 +85,19 @@ const Page = () => {
     pc: [[order], [platform], [manage], [npi], [cpq]],
     mb: [[order_m], [platform_m], [manage_m], [npi_m], [cpq_m]],
   };
+
+  const slideOfLTCDetailImg = [
+    [order_01, order_02],
+    [ISM_01],
+    [ICM_01],
+    [NPI_01],
+    [CPQ_01],
+  ];
+
+  const slideOfISCDetailImg = [
+    [IPS_D1, IPS_D2, IPS_D3, IPS_D4],
+    [IPS_DA1, IPS_DA2, IPS_DA3],
+  ];
 
   // ISC
   const slideListOfChain = {
@@ -163,7 +192,7 @@ const Page = () => {
   return (
     <div>
       <Metadata>
-        <title>硕磐智能</title>
+        <title>硕磐智能 - EIMOS</title>
       </Metadata>
       {/* swiper */}
       <LayoutComp
@@ -237,7 +266,7 @@ const Page = () => {
               alt="1.经营决策层(多主题、多维度):智能经营解析IBA(多主题:收入、利润、回款、存货, 多维度:产业、产品、市场、客户); 
               2.流程运营层(多战线)：合同/订单360(LTC)、物的360(ISC)、研发项目360(IPD)、供应链360(ITR)、财务360(FIN)...;
               3.业务作业层(多模块):智能销售管理(ISMP)、产品配置报价(CPQ)、智能合同管理(ICM)、开票与回款管理、新产品导入(NPI)、产品配置生命周期管理(CLM)、集成计划(IPS);
-              4.平台支撑层(可组装构件):数据资产平台、应用组装平台、技术服务平台、通用平台(权限、任务令等);"
+              4.平台支撑层(可组装构件):数据资产平台、应用组装平台、数据服务平台;"
               id="eimos_img"
               className={homeStyle["structure-img"]}
               onMouseEnter={hoverShowShadow}
@@ -262,6 +291,22 @@ const Page = () => {
             isShow={isShow}
             alt="智能业务解析（IBA）"
           />
+          <div
+            className={homeStyle["analytics-wrapper-title"]}
+            style={isShow ? { opacity: 0 } : { opacity: 1 }}
+          >
+            <span
+              style={{
+                fontSize: 32,
+                marginBottom: 20,
+                fontWeight: 600,
+                lineHeight: "32px",
+              }}
+            >
+              智能业务解析
+            </span>
+            <span style={{ fontSize: 16 }}>Intelligent Business Analytics</span>
+          </div>
         </div>
 
         {/* 线索到回款 */}
@@ -280,14 +325,15 @@ const Page = () => {
                   "新产品导入(NPI)",
                   "产品配置报价(CPQ)",
                 ][index];
+                const detailImgs = slideOfLTCDetailImg[index];
                 return (
                   <SwiperComp
                     description={description}
                     slideList={list}
+                    detailImgs={detailImgs}
                     index={index}
                     key={index}
                     id={id}
-                    isMobile={isMobile}
                     alt={alt}
                   />
                 );
@@ -304,15 +350,20 @@ const Page = () => {
               {(isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
                 (list: any[], index: number) => {
                   const des = DESCRIPTION_LIST[index];
-                  const alt = ["IPS-销售预测", "IPS-销售与运作计划"][index];
+                  const alt = [
+                    "IPS-销售预测(Sales Forecast)",
+                    "IPS-销售与运作计划(Sales & Operation Planning)",
+                  ][index];
+                  const detailImgs = slideOfISCDetailImg[index];
                   return (
                     <SwiperComp
                       description={des}
                       slideList={list}
                       key={index}
                       index={index}
-                      disable={true}
                       alt={alt}
+                      desVisible={false}
+                      detailImgs={detailImgs}
                     />
                   );
                 }
@@ -322,7 +373,10 @@ const Page = () => {
         </div>
 
         {/* 应用及解决方案 */}
-        <div className="wrapper-center" style={{ padding: "0 15px" }}>
+        <div
+          className="wrapper-center"
+          style={isMobile ? { padding: "0 15px" } : {}}
+        >
           <TabHeader h1="应用及解决方案" id="plan" />
           <div className={homeStyle["tab-button"]}>
             <div
@@ -362,7 +416,11 @@ const Page = () => {
               isMobile={isMobile}
             />
             <a
-              className={homeStyle["link"]}
+              className={
+                !isMobile
+                  ? `${homeStyle["link"]} ${homeStyle["link-pc"]}`
+                  : `${homeStyle["link"]} `
+              }
               onClick={() => {
                 isMobile
                   ? router.push("/contact-us")

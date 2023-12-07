@@ -1,13 +1,53 @@
 .common-wrapper {
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(to top right,#51a0f5 60%,#fff 100%);; */
-  /* background-color: rgba(224, 182, 182, 0.8); */
-  
   color: #fff;
   position: relative;
-  margin-bottom: 35px;
-  /* animation: slide-right 1s forwards; */
+  /* margin-bottom: 35px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.swiper-content {
+  width: 100%;
+  height: 100%;
+}
+
+.LTC-content-img {
+  width: 303px;
+  height: 250px;
+}
+
+.LTC-imgsize {
+  width: 303px;
+  height: 250px;
+}
+
+.ISC-content-img {
+  width: 520px;
+  height: 260px;
+}
+
+.LTC-imgsize {
+  width: 520px;
+  height: 260px;
+}
+
+.LTC-content-des {
+  width: calc(100% - 323px);
+  flex: none;
+}
+
+.ISC-content-des {
+  width: 0;
+  display: none;
+}
+
+.content-des-hidden {
+  width: 100%;
 }
 
 @keyframes slide-right {
@@ -22,10 +62,6 @@
 
 .IBA-guide-slide-wrapper {
   padding: 80px 220px;
-}
-
-.LTC-guide-slide-wrapper {
-  padding: 40px;
 }
 
 .guide-slide-title {
@@ -58,10 +94,6 @@
 @media screen and (max-width:1440px) {
   .IBA-guide-slide-wrapper {
     padding: 60px 150px;
-  }
-
-  .LTC-guide-slide-wrapper {
-    padding: 10px 30px;
   }
 
   .guide-slide-title {

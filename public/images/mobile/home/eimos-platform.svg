@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1480px" height="943px" viewBox="0 0 1480 943" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>eimospt</title>
+    <title>eimospt_b</title>
     <defs>
         <rect id="path-1" x="0" y="0" width="1480" height="943"></rect>
         <linearGradient x1="43.815924%" y1="0%" x2="71.0678295%" y2="100%" id="linearGradient-3">
@@ -152,13 +152,13 @@
             <stop stop-color="#EFFAFF" stop-opacity="0" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="PC调整" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="9PC端切图" transform="translate(-2678, -4338)">
-            <g id="eimospt" transform="translate(2678, 4338)">
+    <g id="移动端" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="手机端切图" transform="translate(-81, -1128)">
+            <g id="eimospt_b" transform="translate(81, 1128)">
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
-                <g id="蒙版"></g>
+                <use id="蒙版" fill="#FFFFFF" xlink:href="#path-1"></use>
                 <g id="编组-77" mask="url(#mask-2)">
                     <g transform="translate(0, 40)">
                         <polygon id="矩形备份-78" stroke="none" fill="#FFFFFF" fill-rule="evenodd" transform="translate(740, 410) scale(-1, 1) translate(-740, -410)" points="1.25285498e-11 216 1480 216 1480 604 1.25285498e-11 604"></polygon>

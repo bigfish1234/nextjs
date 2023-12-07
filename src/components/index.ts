@@ -13,6 +13,7 @@ import PageNavigator from "./PageNavigator";
 import Mask from "./Mask";
 import LayoutWrapper from "./LayoutWrapper";
 import fileUpload from "./FileUpload";
+import ComputerSwiper from "./ComputerSwiper";
 
 export {
   CapabilityComp,
@@ -30,4 +31,5 @@ export {
   Mask,
   LayoutWrapper,
   fileUpload,
+  ComputerSwiper,
 };

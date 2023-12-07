@@ -32,7 +32,7 @@ const JobDetail = () => {
   return (
     <LayoutWrapper>
       <Metadata>
-        <title>{state.jobDetail.jobName}</title>
+        <title>硕磐智能 - {state.jobDetail.jobName}</title>
       </Metadata>
       <NavgatorComp page="detail" />
       <div

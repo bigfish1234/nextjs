@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import joinStyle from "./index.module.css";
 import { LayoutComp, TabHeader } from "@/components";
 import { PositionDetail } from "@/components/recruitmentComponents";
@@ -9,6 +10,7 @@ import Metadata from "next/head";
 
 import join_banner from "/public/images/pc/join/join-banner.png";
 import join_banner_mb from "/public/images/mobile/join/join-banner.png";
+import picImg from "/public/images/pic.png";
 import { IStatus } from "@/lib/type";
 import dynamic from "next/dynamic";
 
@@ -60,7 +62,7 @@ const JoinUs = () => {
   return (
     <div>
       <Metadata>
-        <title>加入我们</title>
+        <title>硕磐智能 - 加入我们</title>
       </Metadata>
       <LayoutComp slideList={joinSlideList} page="join">
         <div
@@ -70,7 +72,7 @@ const JoinUs = () => {
           {!isMobile && (
             <TabHeader h1="招聘职位" showStyle={joinStyle["header-isshow"]} />
           )}
-          <div className="wrapper-center">
+          <div className="wrapper-center" style={{ paddingBottom: 20 }}>
             <MySearchComp
               handleChange={handleChange}
               status={status}
@@ -92,17 +94,33 @@ const JoinUs = () => {
                 条记录
               </p>
             )}
-            {state.jobList.map((item: any, index: number) => {
-              return (
-                <PositionDetail
-                  count={state.jobList.length}
-                  key={index}
-                  index={index}
-                  isMobile={isMobile}
-                  jobDetail={item}
-                />
-              );
-            })}
+            {state.total > 0 ? (
+              <>
+                {state.jobList.map((item: any, index: number) => {
+                  return (
+                    <PositionDetail
+                      count={state.jobList.length}
+                      key={index}
+                      index={index}
+                      isMobile={isMobile}
+                      jobDetail={item}
+                    />
+                  );
+                })}
+              </>
+            ) : (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Image src={picImg} alt="" width={200} height={200} />
+                <span style={{ color: "gray" }}>暂无数据</span>
+              </div>
+            )}
           </div>
         </div>
 

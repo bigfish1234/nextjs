@@ -14,10 +14,17 @@ const InfomationBar = ({ content, isMobile }: any) => {
       {!isMobile ? (
         <>
           <div className={styles["time-line"]}>
-            <span style={{ fontSize: 32, fontWeight: 700 }}>{day} </span>
-            <span style={{ fontSize: 32 }}>/</span>
-            <span style={{ fontSize: 20 }}> {month}</span>
-            <span style={{ fontSize: 20, marginLeft: 23 }}>{year}</span>
+            <span
+              style={{
+                fontSize: 24,
+                lineHeight: "45px",
+                marginBottom: 20,
+                fontWeight: 600,
+              }}
+            >
+              {month}月{day}日
+            </span>
+            <span style={{ fontSize: 18, lineHeight: "28px" }}>{year}年</span>
           </div>
           <div className={styles["info-content"]}>
             <h2>{title}</h2>
