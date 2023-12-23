@@ -33,7 +33,7 @@ const InfomationBar = ({ content, isMobile }: any) => {
           </div>
           <div className={styles["info-img"]}>
             <Image
-              src={img}
+              src={imgUrl}
               alt="硕磐企业智能管理操作系统EIMOS"
               style={{ width: "100%", height: "100%" }}
             />

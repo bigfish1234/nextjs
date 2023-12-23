@@ -14,15 +14,15 @@ export default async function handler(
       port: 25,
       service: "smtp.mxhichina.com ",
       auth: {
-        user: "yuyunyun@boulderaitech.com", //你的邮箱帐号
-        pass: "yyy101400!@#", //你的邮箱密码
+        user: "webmaster@boulderaitech.com", //你的邮箱帐号
+        pass: "SPzn123456", //你的邮箱密码
       },
     });
     // 配置邮件信息
     const mailInfo = {
-      from: `"硕磐智能"<yuyunyun@boulderaitech.com>`,
-      to: "yuyunyun@boulderaitech.com",
-      subject: "来源：官网咨询表单", // Subject line
+      from: `"硕磐智能"<webmaster@boulderaitech.com>`,
+      to: "sales@boulderaitech.com",
+      subject: "来源：官网咨询", // Subject line
       html: `
         <h1>你好，您的邮件已收到！</h1>
         <hr/>
