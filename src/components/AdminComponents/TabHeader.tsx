@@ -21,21 +21,23 @@ const TabHeader = () => {
       }}
     >
       <span style={{ fontSize: 24 }}>职位管理</span>
-      <Space size={20}>
-        <span>账号：{session?.user?.name}</span>
-        <Button
-          onClick={async () => {
-            try {
-              await signOut({ callbackUrl: `${location.origin}/auth/signin` });
-              message.success("退出成功");
-            } catch (error) {
-              console.log(error);
-            }
-          }}
-        >
-          退出登录
-        </Button>
-      </Space>
+      {session && (
+        <Space size={20}>
+          <span>账号：{session?.user?.name}</span>
+          <Button
+            onClick={async () => {
+              try {
+                signOut({ callbackUrl: `/auth/signin` });
+                message.success("登出成功");
+              } catch (error) {
+                console.log(error);
+              }
+            }}
+          >
+            退出登录
+          </Button>
+        </Space>
+      )}
     </div>
   );
 };

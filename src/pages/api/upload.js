@@ -16,10 +16,8 @@ if (!fs.existsSync("./public/uploads")) {
 }
 
 export default function handler(req, res) {
-  // 使用 upload.single() 方法处理单个文件上传
   upload.single("resume")(req, res, (err) => {
     if (err) {
-      // 处理错误情况
       console.error(err);
       return res.status(500).json({
         code: 500,
@@ -39,8 +37,6 @@ export default function handler(req, res) {
     });
   });
 }
-
-// export default apiRoute;
 
 export const config = {
   api: {

@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { message } from "antd";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 import Metadata from "next/head";
@@ -14,10 +14,7 @@ const Login = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
-
-  const handleCancel = () => {
-    //
-  };
+  const { data: session } = useSession();
 
   useEffect(() => {
     const isMobile =
@@ -29,11 +26,21 @@ const Login = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (session) {
+      router.push("/admin");
+    }
+  }, [session]);
+
+  const handleCancel = () => {
+    router.push("/");
+  };
+
   const handleLogin = (form: any) => {
     form.validateFields().then(async () => {
       setLoading(true);
       const info = form.getFieldsValue();
-      const { user, password, remember = false } = info;
+      const { user, password } = info;
       try {
         const result: any = await signIn("credentials", {
           userName: user,

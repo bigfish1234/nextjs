@@ -15,7 +15,7 @@ export default NextAuth({
       authorize: async (credentials) => {
         try {
           const result = await axios.post(
-            `${process.env.API_URL}/api/login`,
+            `${process.env.NEXT_PUBLIC_API_URL}/api/login`,
             {
               userName: credentials.userName,
               password: credentials.password,
@@ -66,6 +66,7 @@ export default NextAuth({
 
       return session;
     },
+    
   },
   events: {},
   debug: false,
