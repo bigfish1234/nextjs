@@ -12,17 +12,17 @@ export default async function handler(
     const transporter = nodemailer.createTransport({
       host: "smtp.mxhichina.com",
       port: 25,
-      service: "smtp.mxhichina.com ",
+      service: "smtp.mxhichina.com",
       auth: {
-        user: "webmaster@boulderaitech.com", //你的邮箱帐号
-        pass: "SPzn123456", //你的邮箱密码
+        user: process.env.EMAIL_FROM, //你的邮箱帐号
+        pass: process.env.EMAIL_PASSWORD, //你的邮箱密码
       },
     });
     // 配置邮件信息
     const mailInfo = {
-      from: `"硕磐智能"<webmaster@boulderaitech.com>`,
-      to: "sales@boulderaitech.com",
-      subject: "来源：官网咨询", // Subject line
+      from: `"硕磐智能"<${process.env.EMAIL_FROM}>`,
+      to: process.env.EMAIL_FORM,
+      subject: "来源：官网咨询",
       html: `
         <h1>你好，您的邮件已收到！</h1>
         <hr/>
