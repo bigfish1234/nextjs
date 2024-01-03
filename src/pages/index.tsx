@@ -230,7 +230,7 @@ const Page = () => {
                   }
                   onClick={(e) => anchorClick(item.id, e)}
                 >
-                  {item.title}
+                  <span className={homeStyle["nav-hover"]}>{item.title}</span>
                 </div>
               );
             })}
@@ -299,7 +299,7 @@ const Page = () => {
               style={{
                 fontSize: 32,
                 marginBottom: 20,
-                fontWeight: 600,
+                fontWeight: 500,
                 lineHeight: "32px",
               }}
             >
@@ -317,13 +317,13 @@ const Page = () => {
             {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
                 const description = TITLE_LIST[index];
-                const id = ["order", "ISMP", "ICM", "NPI"][index];
+                const id = ["order", "ISMP", "ICM", "NPI", "CPQ"][index];
                 const alt = [
                   "订单360(Full Visibility and Control of Contract Execution)",
-                  "智能销售管理平台(ISM)",
-                  "智能合同管理(ICM)",
-                  "新产品导入(NPI)",
-                  "产品配置报价(CPQ)",
+                  "智能销售管理平台(ISM-Intelligent Sales Management)",
+                  "智能合同管理(ICM-Intelligent Contract Management)",
+                  "新产品导入(NPI-New Product Insertion)",
+                  "产品配置报价(CPQ-Product configuration quotation)",
                 ][index];
                 const detailImgs = slideOfLTCDetailImg[index];
                 return (

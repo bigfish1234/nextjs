@@ -29,7 +29,7 @@ const NavComp = ({ page }: any) => {
         }}
         onClick={handleClick}
       >
-        EIMOS
+        <span className={styles["hover-link"]}>EIMOS</span>
       </Link>
       <Link
         prefetch
@@ -44,7 +44,7 @@ const NavComp = ({ page }: any) => {
         }}
         onClick={handleClick}
       >
-        信息中心
+        <span className={styles["hover-link"]}>信息中心</span>
       </Link>
       <Link
         prefetch
@@ -59,7 +59,7 @@ const NavComp = ({ page }: any) => {
         }}
         onClick={handleClick}
       >
-        关于我们
+        <span className={styles["hover-link"]}>关于我们</span>
       </Link>
       <Link
         prefetch
@@ -71,7 +71,7 @@ const NavComp = ({ page }: any) => {
         }}
         onClick={handleClick}
       >
-        加入我们
+        <span className={styles["hover-link"]}>加入我们</span>
       </Link>
     </div>
   );

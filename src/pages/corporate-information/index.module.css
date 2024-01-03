@@ -33,8 +33,11 @@
 
 .history {
   width: 100%;
-  background-color: #f5f5f7;
-  /* padding: var(--header-margin-bottom-pc) 0; */
+  /* background-color: #f5f5f7; */
+  background-image: url("../../../public/images/support-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-bottom: var(--header-margin-bottom-pc);
 }
 
@@ -42,7 +45,6 @@
   position: relative;
   width: 1250px;
   margin: 0 auto;
-  
 }
 
 .develop-history {
@@ -109,7 +111,7 @@
   width: 870px;
   height: 280px;
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.06);
-  border: 1px solid #D9D9DD;
+  border: 1px solid #d9d9dd;
   margin: 0 auto;
   padding: var(--header-margin-bottom-pc);
 }
@@ -130,7 +132,7 @@
   .develop-history-wrapper {
     width: 875px;
   }
-  
+
   .history-content {
     width: 175px;
     height: 350px;
@@ -166,7 +168,7 @@
 
 @media screen and (max-width: 768px) {
   .about-us-wrapper {
-    padding:15px 20px;
+    padding: 15px 20px;
     background-color: #fff;
     width: 100%;
   }

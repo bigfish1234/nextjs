@@ -134,7 +134,6 @@ const FooterComp = ({ pageScroll }: any) => {
                 color: "#656565",
                 paddingLeft: 8,
               }}
-              className=""
             >
               版权所有 2021-2023 杭州硕磐智能科技有限公司 浙ICP备23400000203号-1
             </div>
