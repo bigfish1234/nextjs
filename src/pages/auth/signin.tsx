@@ -5,6 +5,7 @@ import { signIn, useSession } from "next-auth/react";
 import { message } from "antd";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 import Metadata from "next/head";
+import axios from "axios";
 
 const LoginComp = dynamic(() => import("@/components/LoginComp"), {
   ssr: false,
@@ -36,6 +37,7 @@ const Login = () => {
     router.push("/");
   };
 
+  // 登录
   const handleLogin = (form: any) => {
     form.validateFields().then(async () => {
       setLoading(true);
@@ -58,6 +60,28 @@ const Login = () => {
       }
     });
   };
+
+  // 修改密码
+  const handleConfirm = (form: any, setIsModify: any) => {
+    form.validateFields().then(async () => {
+      const info = form.getFieldsValue();
+      const { user, password, modifyPassword } = info;
+      if (password !== modifyPassword) {
+        message.error("密码不一致");
+      } else {
+        // 发送修改密码的请求
+        try {
+          await axios.post("/api/modify", { account: user, password });
+          message.success("修改成功");
+          setIsModify(false);
+          form.resetFields();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    });
+  };
+
   return (
     <div>
       <Metadata>
@@ -68,6 +92,7 @@ const Login = () => {
           handleCancel={handleCancel}
           handleLogin={handleLogin}
           loading={loading}
+          handleConfirm={handleConfirm}
         />
       )}
     </div>

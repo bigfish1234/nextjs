@@ -5,9 +5,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  try {
-    const { userName, password } = req.body;
+  const body = req?.body;
+  const { account, password } = body;
 
+  try {
     const userInfoList: any[] = await new Promise((resolve, reject) => {
       const sql = `SELECT * FROM USER`;
       db.query(sql, (err: any, results: any) => {
@@ -20,7 +21,7 @@ export default async function handler(
     });
 
     const loginUser = userInfoList.filter(
-      (item: any) => item.account == userName
+      (item: any) => item.account == account
     );
     if (!loginUser.length) {
       res.statusCode = 500;
@@ -31,19 +32,37 @@ export default async function handler(
         success: false,
       });
     } else {
-      const { account, name, id } = loginUser[0];
-      if (userName == account && password == loginUser[0].password) {
-        res.status(200).json({ name, id });
-      } else {
-        res.status(500).json({
+      try {
+        await new Promise((resolved, reject) => {
+          // 插入数据
+          const sql = `UPDATE USER SET password='${password}' where account='${account}';`;
+          db.query(sql, (err: any, result: any) => {
+            if (err) {
+              reject(err);
+            } else {
+              resolved(result);
+            }
+          });
+        });
+
+        res.statusCode = 200;
+        res.json({
+          code: 200,
+          data: null,
+          success: true,
+          message: "修改成功",
+        });
+      } catch (error) {
+        res.statusCode = 500;
+        res.json({
           code: 500,
           data: null,
-          message: "账号密码不正确",
+          message: "修改失败!",
           success: false,
         });
       }
     }
-  } catch (err) {
+  } catch (error) {
     res.statusCode = 500;
     res.json({
       code: 500,
