@@ -24,6 +24,29 @@ const AboutUs = () => {
       : setAboutSlideList([spzn_banner]);
   }, []);
 
+  const infoList = [
+    {
+      value: "90+",
+      title: "公司员工",
+    },
+    {
+      value: "200+",
+      title: "未来员工",
+    },
+    {
+      value: "95%",
+      title: "研发人员",
+    },
+    {
+      value: "10%",
+      title: "博士占比",
+    },
+    {
+      value: "30%",
+      title: "硕士占比",
+    },
+  ];
+
   return (
     <div>
       <Metadata>
@@ -42,6 +65,45 @@ const AboutUs = () => {
             的新型高科技企业。
           </div>
         )}
+        <div className={styles["about-shuopan"]}>
+          <TabHeader h1="关于硕磐" isShow={false} />
+          {isMobile ? (
+            <div className={styles["about-shuopan-content-mobile"]}>
+              {infoList.map((item: any) => {
+                const { title, value } = item;
+                return (
+                  <div className={styles["content-item-mobile"]} key={title}>
+                    <div>{value}</div>
+                    <div>{title}</div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <>
+              <div
+                style={{
+                  textAlign: "center",
+                  margin: "20px auto 50px",
+                  fontSize: 16,
+                }}
+              >
+                核心团队主要来自华为、阿里、微软、思科、SAP、ORACLE。
+              </div>
+              <div className={styles["about-shuopan-content"]}>
+                {infoList.map((item: any) => {
+                  const { title, value } = item;
+                  return (
+                    <div className={styles["content-item"]} key={title}>
+                      <div>{value}</div>
+                      <div>{title}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
+        </div>
         <div className={`${"wrapper-center"} ${styles["about-us-wrapper"]}`}>
           <TabHeader h1="将经营管理理念与模型抽象落地的架构团队" />
           <div className="img-wrapper">

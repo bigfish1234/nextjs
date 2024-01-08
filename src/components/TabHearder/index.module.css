@@ -7,9 +7,9 @@
 }
 
 .first-level-title {
-  padding-bottom: 10px;
   text-align: center;
   font-weight: 400;
+  padding: 0 15px;
 }
 
 .divider {
