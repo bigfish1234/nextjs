@@ -6,8 +6,8 @@ export default async function handler(req, res) {
     const { filePath,filename  } = req.body;
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.mxhichina.com",
-      port: 587,
+      host: process.env.EMAIL_SERVICE_HOST,
+      port: process.env.EMAIL_SERVICE_PORT,
       secure: false,
       auth: {
         user: process.env.EMAIL_FROM,
