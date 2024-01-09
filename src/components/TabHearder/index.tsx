@@ -14,20 +14,19 @@ const TabHeader = ({ h1, h2, id, showStyle, isShow = true }: any) => {
           paddingBottom: 10,
         }}
       >
-        <Image src={title_icon_left} alt="left" width={33} height={11} />
-        <h2 className={styles["first-level-title"]}>{h1}</h2>
-        <Image src={title_icon_right} alt="left" width={33} height={11} />
+        <Image
+          src={title_icon_left}
+          alt="left"
+          className={styles["icon-style"]}
+        />
+        <span className={styles["first-level-title"]}>{h1}</span>
+        <Image
+          src={title_icon_right}
+          alt="left"
+          className={styles["icon-style"]}
+        />
       </div>
-      <h3
-        style={{
-          fontWeight: 400,
-          textAlign: "center",
-          opacity: 0.6,
-          fontSize: 14,
-        }}
-      >
-        {h2}
-      </h3>
+      <h3 className={styles["second-level-title"]}>{h2}</h3>
       {isShow && <div className={styles.divider}></div>}
     </div>
   );

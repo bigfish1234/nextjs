@@ -38,7 +38,7 @@ const CapabilityComp = ({ list, title }: any) => {
                   fontSize: 12,
                 }}
               >
-                {title}：
+                {title}
               </span>
             )}
             <span

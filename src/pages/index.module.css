@@ -148,7 +148,6 @@
 .analytics-img-wrapper {
   width: 100%;
   height: 420px;
-  background-color: #ebf2fa;
 }
 
 .analytics-img {
@@ -221,6 +220,11 @@
 
   .tab-button {
     height: 43px;
+  }
+
+  .link-item {
+    font-size: 16px;
+    width: 800px;
   }
 
   .tab-button-item {

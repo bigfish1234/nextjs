@@ -14,14 +14,7 @@ const InfomationBar = ({ content, isMobile }: any) => {
       {!isMobile ? (
         <>
           <div className={styles["time-line"]}>
-            <span
-              style={{
-                fontSize: 24,
-                lineHeight: "45px",
-                marginBottom: 20,
-                fontWeight: 600,
-              }}
-            >
+            <span className={styles["datetime"]}>
               {month}月{day}日
             </span>
             <span style={{ fontSize: 18, lineHeight: "28px" }}>{year}年</span>

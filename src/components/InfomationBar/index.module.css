@@ -14,7 +14,12 @@
   display: flex;
   flex-direction: column;
 }
-
+.datetime {
+  font-size: 24px;
+  line-height: 45px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
 .time-line span {
   margin-bottom: 15px;
 }
@@ -83,6 +88,22 @@
 .info-centent-mobile a {
   font-size: 14px;
   color: var(--active-font-color);
+}
+
+@media screen and (max-width: 1440px) {
+  .info-content h2 {
+    font-size: 20px;
+    line-height: 46px;
+  }
+
+  .info-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .datetime {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {

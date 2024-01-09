@@ -1,6 +1,6 @@
-import detail_img1 from "/public/images/pc/home/IBA_data01.png";
-import detail_img2 from "/public/images/pc/home/IBA_data02.png";
-import detail_img3 from "/public/images/pc/home/IBA_data03.png";
+import detail_img1 from "/public/images/pc/home/IBA_detail_01.png";
+import detail_img2 from "/public/images/pc/home/IBA_detail_02.png";
+import detail_img3 from "/public/images/pc/home/IBA_detail_03.png";
 import info from "/public/images/info/mmexport1703332481073.png";
 import info2 from "/public/images/info/mmexport7a6ebfd6c34e7dc92456bbae6a58e4e3_1703332717296.png";
 

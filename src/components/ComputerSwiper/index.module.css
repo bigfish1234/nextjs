@@ -3,7 +3,6 @@
   height: 367px;
   position: relative;
   margin: 0 auto;
-  transform: translateY(25px);
 }
 
 .IBA-content {
@@ -17,12 +16,6 @@
 
 @media screen and (max-width: 1440px) {
   .computer-wrapper {
-    transform: scale(0.8,0.8);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .computer-wrapper {
-    /* visibility: hidden; */
+    transform: scale(0.8) translateY(-30px);
   }
 }

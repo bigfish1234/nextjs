@@ -132,7 +132,8 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
         );
       })}
       <div style={{ paddingLeft: 28, fontWeight: 600 }}>
-        核心功能： <span style={{ color: "#F96F25" }}>{ability}</span>
+        核心功能：{" "}
+        <span style={{ color: "#F96F25", lineHeight: "24px" }}>{ability}</span>
       </div>
       {renderContent()}
     </div>

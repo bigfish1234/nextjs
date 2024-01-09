@@ -1,16 +1,18 @@
 import Image from "next/image";
 import styles from "../index.module.css";
-import expand_icon from "/public/images/expand-icon.png";
+import expand_icon from "/public/images/menu.svg";
+import expand_icon2 from "/public/images/menu_black.svg";
 import logo from "/public/images/logo.svg";
 import { store } from "@/store";
 import NavComp from "./NavComp";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 
 const NavgatorComp = ({ page }: any) => {
   const state = store();
   const router = useRouter();
+  const path = usePathname() as string;
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -36,7 +38,9 @@ const NavgatorComp = ({ page }: any) => {
             />
           </div>
           <Image
-            src={expand_icon}
+            src={
+              ["/", "/recruitment"].includes(path) ? expand_icon : expand_icon2
+            }
             alt="expand"
             id="expand"
             className={styles["expand-icon"]}

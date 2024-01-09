@@ -37,7 +37,6 @@ import ips_02 from "/public/images/pc/home/ips_02.png";
 import ips_m_01 from "/public/images/mobile/home/sales-forecast.png";
 import ips_m_02 from "/public/images/mobile/home/ips_02.png";
 
-import info_banner from "/public/images/pc/info/info-banner.png";
 import IBA_mb from "/public/images/mobile/home/IBA.png";
 import IBA from "/public/images/pc/home/IBA.png";
 import { ApplicationItem, LtcImgWrapper } from "@/components/IndexComponents";
@@ -51,9 +50,21 @@ import { isElementInViewport } from "@/utils/isElementInViewport";
 
 import order_01 from "/public/images/pc/home/order_01.png";
 import order_02 from "/public/images/pc/home/order_02.png";
+import order_03 from "/public/images/pc/home/order_03.png";
 import ISM_01 from "/public/images/pc/home/ISM_01.png";
+import ISM_02 from "/public/images/pc/home/ISM_02.png";
+import ISM_03 from "/public/images/pc/home/ISM_03.png";
+import ISM_04 from "/public/images/pc/home/ISM_04.png";
+import ISM_05 from "/public/images/pc/home/ISM_05.png";
+import ISM_06 from "/public/images/pc/home/ISM_06.png";
+import ISM_07 from "/public/images/pc/home/ISM_07.png";
 import ICM_01 from "/public/images/pc/home/ICM_01.png";
 import NPI_01 from "/public/images/pc/home/NPI_01.png";
+import NPI_02 from "/public/images/pc/home/NPI_02.png";
+import NPI_03 from "/public/images/pc/home/NPI_03.png";
+import NPI_04 from "/public/images/pc/home/NPI_04.png";
+import NPI_05 from "/public/images/pc/home/NPI_05.png";
+import NPI_06 from "/public/images/pc/home/NPI_06.png";
 import CPQ_01 from "/public/images/pc/home/CPQ_01.png";
 
 import IPS_D1 from "/public/images/pc/home/IPS_D1.png";
@@ -87,10 +98,10 @@ const Page = () => {
   };
 
   const slideOfLTCDetailImg = [
-    [order_01, order_02],
-    [ISM_01],
+    [order_01, order_02, order_03],
+    [ISM_01, ISM_02, ISM_03, ISM_04, ISM_05, ISM_06, ISM_07],
     [ICM_01],
-    [NPI_01],
+    [NPI_01, NPI_02, NPI_03, NPI_04, NPI_05, NPI_06],
     [CPQ_01],
   ];
 
@@ -289,24 +300,8 @@ const Page = () => {
             item="IBA"
             handleIBAEvent={handleIBAEvent}
             isShow={isShow}
-            alt="智能业务解析（IBA）"
+            alt="智能业务解析（IBA-Intelligence Business Analytics）"
           />
-          <div
-            className={homeStyle["analytics-wrapper-title"]}
-            style={isShow ? { opacity: 0 } : { opacity: 1 }}
-          >
-            <span
-              style={{
-                fontSize: 32,
-                marginBottom: 20,
-                fontWeight: 500,
-                lineHeight: "32px",
-              }}
-            >
-              智能业务解析
-            </span>
-            <span style={{ fontSize: 16 }}>Intelligent Business Analytics</span>
-          </div>
         </div>
 
         {/* 线索到回款 */}

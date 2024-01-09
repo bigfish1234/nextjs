@@ -86,9 +86,11 @@ const KapComp = () => {
             onClick={() => sliding("left")}
           >
             <Image
+              id="left-arrow"
               src={leftIcon}
               alt="left-icon"
               className={styles["arrow-icon-img"]}
+              style={{ opacity: 0.3 }}
             />
           </div>
           <div
@@ -103,6 +105,10 @@ const KapComp = () => {
               src={rightIcon}
               alt="right-icon"
               className={styles["arrow-icon-img"]}
+              onClick={() => {
+                const ele = document.getElementById("left-arrow");
+                ele && (ele.style.opacity = "1");
+              }}
             />
           </div>
         </>

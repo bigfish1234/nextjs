@@ -66,20 +66,20 @@
 .page-title {
   position: absolute;
   left: 220px;
-  top: 100px;
+  top: 80px;
   z-index: 99;
   /* width: 50%; */
   /* max-width: 600px; */
 }
 
 .page-title .first-title{
-  font-size: 46px;
+  font-size: 44px;
   padding: 20px 0;
   font-weight: 600;
 }
 
 .page-title .second-title {
-  font-size: 46px;
+  font-size: 44px;
 }
 
 .active-title {
@@ -146,7 +146,7 @@
 
   .page-title {
     left: 130px;
-    top: 80px;
+    top: 70px;
   }
 
   .page-title .first-title {
@@ -189,11 +189,11 @@
 
   .page-title .first-title {
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .page-title .second-title {
-    font-size: 16px;
+    font-size: 20px;
   }
   .active-title {
     font-size: 24px;

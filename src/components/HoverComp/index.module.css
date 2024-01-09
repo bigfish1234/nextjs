@@ -17,13 +17,8 @@
 }
 
 .LTC-content-img {
-  width: 303px;
-  height: 250px;
-}
-
-.LTC-imgsize {
-  width: 303px;
-  height: 250px;
+  width: 434px;
+  height: 300px;
 }
 
 .ISC-content-img {
@@ -31,13 +26,8 @@
   height: 260px;
 }
 
-.LTC-imgsize {
-  width: 520px;
-  height: 260px;
-}
-
 .LTC-content-des {
-  width: calc(100% - 323px);
+  width: calc(100% - 454px);
   flex: none;
 }
 
@@ -91,7 +81,11 @@
   bottom: 30px;
 }
 
-@media screen and (max-width:1440px) {
+@media screen and (max-width: 1440px) {
+  .common-wrapper {
+    padding: 0 10px;
+  }
+
   .IBA-guide-slide-wrapper {
     padding: 60px 150px;
   }
@@ -108,5 +102,15 @@
   .LTC-guide-btn {
     left: 55px;
     bottom: 15px;
+  }
+
+  .LTC-content-img {
+    width: 362px;
+    height: 250px;
+  }
+
+  .LTC-content-des {
+    width: calc(100% - 377px);
+    flex: none;
   }
 }

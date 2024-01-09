@@ -21,11 +21,9 @@ export default async function handler(
     // 配置邮件信息
     const mailInfo = {
       from: `"硕磐智能"<${process.env.EMAIL_FROM}>`,
-      to: process.env.EMAIL_FORM,
+      to: process.env.EMAIL_SALES,
       subject: "来源：官网咨询",
       html: `
-        <h1>你好，您的邮件已收到！</h1>
-        <hr/>
         <p>
           <b>姓名：</b>${name}<br/>
           <b>邮箱：</b>${email}<br/>

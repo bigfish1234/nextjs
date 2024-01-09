@@ -23,7 +23,7 @@ const NavComp = ({ page }: any) => {
           color:
             path == "/"
               ? "#F96F25"
-              : path == "/recruitment"
+              : ["/recruitment", "/"].includes(path)
               ? "white"
               : "black",
         }}
@@ -38,7 +38,7 @@ const NavComp = ({ page }: any) => {
           color:
             path == "/information-center"
               ? "#F96F25"
-              : path == "/recruitment"
+              : ["/recruitment", "/"].includes(path)
               ? "white"
               : "black",
         }}
@@ -53,7 +53,7 @@ const NavComp = ({ page }: any) => {
           color:
             path == "/corporate-information"
               ? "#F96F25"
-              : path == "/recruitment"
+              : ["/recruitment", "/"].includes(path)
               ? "white"
               : "black",
         }}
@@ -67,6 +67,8 @@ const NavComp = ({ page }: any) => {
         style={{
           color: ["/recruitment", "/job-detail"].includes(path)
             ? "#F96F25"
+            : ["/recruitment", "/"].includes(path)
+            ? "white"
             : "black",
         }}
         onClick={handleClick}

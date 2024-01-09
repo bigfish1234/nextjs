@@ -6,9 +6,7 @@
 
 .wrapper-IBA {
   width: 100%;
-  
-  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.06);
- 
+  /* box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.06); */
 }
 
 .img-wrapper-LTC {
@@ -73,14 +71,12 @@
 
 .swiper-wrapper-IBA {
   width: 100%;
-  height: 420px;
-  background-color: #ebf2fa;
+  height: 380px;
 }
 
 .description {
   width: 100%;
   font-size: 16px;
-  color: #6E708A;
   background-color: #fff;
   padding: 15px 20px;
   line-height: 28px;
@@ -96,6 +92,7 @@
 
 .description-LTC {
   height:100px;
+  color: #6E708A;
 }
 
 .swiper-content {
@@ -119,7 +116,12 @@
   }
 
   .swiper-wrapper-IBA {
-    height: 340px;
+    height: 320px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 
