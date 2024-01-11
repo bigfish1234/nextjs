@@ -13,6 +13,25 @@ const ServiceForm = ({ submit, form }: any) => {
     setIsMobile(isMobile);
   }, []);
 
+  const phoneRules = [
+    {
+      required: true,
+      message: "请输入您的电话号码",
+    },
+    () => ({
+      validator(_: any, value: any) {
+        const mobileRegex = /^1[3-9]\d{9}$/; // 简化的中国大陆手机正则表达式
+        const landlineRegex = /^\d{3}-\d{7,8}|\d{4}-\d{7,8}$/; // 简化的中国大陆座机正则表达式，格式为区号-号码
+        if (!value || mobileRegex.test(value) || landlineRegex.test(value)) {
+          return Promise.resolve();
+        }
+        return Promise.reject(
+          new Error("请输入有效的手机号码或座机号码(带区号)!")
+        );
+      },
+    }),
+  ];
+
   return (
     <div>
       <div
@@ -60,21 +79,8 @@ const ServiceForm = ({ submit, form }: any) => {
             >
               <Input placeholder="请输入单位名称" />
             </Form.Item>
-            <Form.Item
-              label="联系电话"
-              name="phone"
-              rules={[{ required: true, message: "请输入正确联系电话" }]}
-            >
-              <Input
-                placeholder="请输入电话号码"
-                addonBefore={
-                  <Select
-                    placeholder=""
-                    defaultValue="+86"
-                    style={{ width: 80 }}
-                  />
-                }
-              />
+            <Form.Item label="联系电话" name="phone" rules={phoneRules}>
+              <Input placeholder="请输入手机号或座机号码" />
             </Form.Item>
             <Form.Item label="需求描述" name="detail">
               <Input.TextArea rows={4} placeholder="请输入需求描述" />
@@ -86,10 +92,12 @@ const ServiceForm = ({ submit, form }: any) => {
             >
               联系我们
             </span>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <span>电话：0571-83580606</span>
-              <span>邮箱：info@boulderaitech.com</span>
-            </div>
+            <a href="tel:057183580606">
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <span>电话：0571-83580606</span>
+                <span>邮箱：info@boulderaitech.com</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>

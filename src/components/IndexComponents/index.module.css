@@ -177,6 +177,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .app-item {
+    font-size: 13px;
+  }
+  
   .ltc-img {
     width: 585px;
     height: 226px;

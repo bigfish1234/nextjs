@@ -74,6 +74,7 @@
 
   .second-level-title {
     font-size: 14px;
+    max-width: 325px;
   }
 
   .icon-style {
