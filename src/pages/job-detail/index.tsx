@@ -78,18 +78,22 @@ const JobDetail = () => {
           dangerouslySetInnerHTML={{ __html: state.jobDetail.requireability }}
         ></div>
 
-        <div className={styles["job-detail"]} style={{ border: 0 }}>
-          <p>
-            简历可以投递至邮箱：
-            <span style={{ color: "#F96F25" }}>zhaopin@boulderaitech.com</span>
-            或者
-            <span style={{ color: "#F96F25" }}>
-              zhoucancan@boulderaitech.com
-            </span>
-          </p>
-          <p>联系电话：0571-83580606、18906719756</p>
-          <p>公司地址：杭州市萧山区永辉路548号17楼</p>
-        </div>
+        <a href="tel:057183580606">
+          <div className={styles["job-detail"]} style={{ border: 0 }}>
+            <p>
+              简历可以投递至邮箱：
+              <span style={{ color: "#F96F25" }}>
+                zhaopin@boulderaitech.com
+              </span>
+              或者
+              <span style={{ color: "#F96F25" }}>
+                zhoucancan@boulderaitech.com
+              </span>
+            </p>
+            <p>联系电话：0571-83580606、18906719756</p>
+            <p>公司地址：杭州市萧山区永辉路548号17楼</p>
+          </div>
+        </a>
       </div>
       {isApply && (
         <FileUpload

@@ -1,9 +1,9 @@
 import { LayoutWrapper, ServiceForm } from "@/components";
 import Image from "next/image";
+import expand_icon from "/public/images/expand-icon.png";
 import Metadata from "next/head";
 import { store } from "@/store";
 import styles from "./index.module.css";
-import expand_icon from "/public/images/expand-icon.png";
 import logo from "/public/images/logo.svg";
 import dynamic from "next/dynamic";
 
@@ -25,15 +25,7 @@ const ContactMe = () => {
             alt="expand"
             id="expand"
             className={styles["expand"]}
-            onClick={() => {
-              state.handleExpandChange(!state.isExpand);
-              const dom = document.getElementById("expand");
-              if (dom) {
-                state.isExpand
-                  ? (dom.style.rotate = "0deg")
-                  : (dom.style.rotate = "90deg");
-              }
-            }}
+            onClick={() => state.handleExpandChange(!state.isExpand)}
           />
           <Image src={logo} alt="logo" className={styles["logo"]} />
         </div>

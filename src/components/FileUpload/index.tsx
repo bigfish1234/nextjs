@@ -71,7 +71,6 @@ const FileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
     <Modal
       open={open}
       width={isMobile ? "100%" : "40%"}
-      style={{ marginTop: 120 }}
       footer={null}
       onCancel={() => setIsApply(false)}
     >

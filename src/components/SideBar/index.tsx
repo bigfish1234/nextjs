@@ -2,6 +2,8 @@ import Link from "next/link";
 import styles from "./index.module.css";
 import { store } from "@/store";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import expand_icon from "/public/images/expand-icon.png";
 
 const SideBar = () => {
   const state = store();
@@ -20,10 +22,30 @@ const SideBar = () => {
       }
     >
       <div className={styles["mobile-sidebar-content"]}>
+        {state.isExpand ? (
+          <Image
+            src={expand_icon}
+            alt=""
+            width={20}
+            height={20}
+            style={{
+              position: "absolute",
+              top: -63,
+              left: 14,
+              rotate: "90deg",
+            }}
+            onClick={() => {
+              state.handleExpandChange(false);
+            }}
+          />
+        ) : null}
+
         <Link
           href="/"
           onClick={handleClick}
-          style={{ color: path == "/" ? "#F96F25" : "black" }}
+          style={{
+            color: ["/", "/contact-us"].includes(path) ? "#F96F25" : "black",
+          }}
         >
           EIMOS
         </Link>

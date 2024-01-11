@@ -280,6 +280,11 @@
 
   .link-item-box {
     overflow-x: scroll;
+    font-size: 14px;
+  }
+
+  .nav-hover:hover {
+    color: #000;
   }
 
   .flex-content {

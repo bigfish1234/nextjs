@@ -6,7 +6,7 @@ import timeIcon from "/public/images/time-icon.png";
 import arrow from "/public/images/arrow.png";
 
 const InfomationBar = ({ content, isMobile }: any) => {
-  const { time, title, description, imgUrl = img } = content;
+  const { time, title, description, imgUrl = img, href = "" } = content;
   const [year, month, day] = time.split("-");
 
   return (
@@ -22,7 +22,7 @@ const InfomationBar = ({ content, isMobile }: any) => {
           <div className={styles["info-content"]}>
             <h2>{title}</h2>
             <p>{description}</p>
-            {/* <a>查看详情</a> */}
+            <a href={href}>查看详情</a>
           </div>
           <div className={styles["info-img"]}>
             <Image
@@ -56,7 +56,7 @@ const InfomationBar = ({ content, isMobile }: any) => {
               </span>
             </div>
             <p>{description}</p>
-            {/* <a>
+            <a href={href}>
               查看详情
               <Image
                 src={arrow}
@@ -65,7 +65,7 @@ const InfomationBar = ({ content, isMobile }: any) => {
                 height={18}
                 style={{ verticalAlign: "bottom" }}
               />
-            </a> */}
+            </a>
           </div>
         </>
       )}

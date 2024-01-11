@@ -125,10 +125,13 @@
   }
 
   .position-detail-wrapper {
-    /* height: 250px; */
     padding: 20px 0;
     box-shadow: none;
     margin-bottom: 0;
+  }
+
+  .position-detail-wrapper:hover {
+    border: 1px solid #fff;
   }
 
   .detail-title {

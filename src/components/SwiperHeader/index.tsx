@@ -56,7 +56,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
                             fontWeight: 400,
                             color: "#fff",
                             letterSpacing: 2,
-                            padding: "20px 0 0",
+                            padding: isMobile ? 0 : "20px 0 0",
                           }}
                         >
                           硕磐EIMOS

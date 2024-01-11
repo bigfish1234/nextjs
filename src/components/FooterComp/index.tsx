@@ -54,7 +54,7 @@ const FooterComp = ({ pageScroll }: any) => {
                 </div>
                 <span>产品</span>
               </div>
-              <a onClick={() => onLinkClick("IBA")}>智能业务解析(IBA)</a>
+              <a onClick={() => onLinkClick("IBA_ele")}>智能业务解析(IBA)</a>
               <a onClick={() => onLinkClick("LTC")}>线索到回款(LTC)</a>
               <a onClick={() => onLinkClick("ISC")}>集成供应链(ISC)</a>
             </div>
