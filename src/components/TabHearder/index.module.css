@@ -6,6 +6,20 @@
   scroll-behavior: smooth;
 }
 
+.first-level-title {
+  text-align: center;
+  font-weight: 400;
+  padding: 0 20px;
+  font-size: 30px;
+}
+
+.second-level-title {
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
 .divider {
   width: 40px;
   height: 4px;
@@ -14,13 +28,31 @@
   margin: 26px 0;
 }
 
+.icon-style {
+  width: 45px;
+  height: 13px;
+}
+
 @media screen and (max-width: 1440px) {
-    .divider {
-      width: 26px;
-      height: 3px;
-      background-color: var(--active-font-color);
-      margin: 26px 0;
-    }
+  .divider {
+    width: 26px;
+    height: 3px;
+    background-color: var(--active-font-color);
+    margin: 26px 0;
+  }
+
+  .first-level-title {
+    font-size: 26px;
+  }
+
+  .second-level-title {
+    font-size: 16px;
+  }
+
+  .icon-style {
+    width: 33px;
+    height: 11px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -33,5 +65,19 @@
     height: 4px;
     background-color: var(--active-font-color);
     margin: 10px 0;
+  }
+
+  .first-level-title {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .second-level-title {
+    font-size: 14px;
+  }
+
+  .icon-style {
+    width: 30px;
+    height: 9px;
   }
 }

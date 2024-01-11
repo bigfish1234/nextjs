@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <div>
       <Metadata>
-        <title>信息中心</title>
+        <title>硕磐智能 - 信息中心</title>
       </Metadata>
       <LayoutComp slideList={infoSlideList} page="info">
         <div className={isMobile ? "" : "wrapper-center"} id="top">

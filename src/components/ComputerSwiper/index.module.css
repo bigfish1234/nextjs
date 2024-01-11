@@ -1,0 +1,21 @@
+.computer-wrapper {
+  width: 437px;
+  height: 367px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.IBA-content {
+  width: 400px;
+  height: 225px;
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  z-index: 9;
+}
+
+@media screen and (max-width: 1440px) {
+  .computer-wrapper {
+    transform: scale(0.8) translateY(-30px);
+  }
+}

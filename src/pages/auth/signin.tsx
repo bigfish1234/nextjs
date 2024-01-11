@@ -1,10 +1,11 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { message } from "antd";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 import Metadata from "next/head";
+import axios from "axios";
 
 const LoginComp = dynamic(() => import("@/components/LoginComp"), {
   ssr: false,
@@ -14,10 +15,7 @@ const Login = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
-
-  const handleCancel = () => {
-    //
-  };
+  const { data: session } = useSession();
 
   useEffect(() => {
     const isMobile =
@@ -29,11 +27,22 @@ const Login = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (session) {
+      router.push("/admin");
+    }
+  }, [session]);
+
+  const handleCancel = () => {
+    router.push("/");
+  };
+
+  // 登录
   const handleLogin = (form: any) => {
     form.validateFields().then(async () => {
       setLoading(true);
       const info = form.getFieldsValue();
-      const { user, password, remember = false } = info;
+      const { user, password } = info;
       try {
         const result: any = await signIn("credentials", {
           userName: user,
@@ -51,16 +60,39 @@ const Login = () => {
       }
     });
   };
+
+  // 修改密码
+  const handleConfirm = (form: any, setIsModify: any) => {
+    form.validateFields().then(async () => {
+      const info = form.getFieldsValue();
+      const { user, password, modifyPassword } = info;
+      if (password !== modifyPassword) {
+        message.error("密码不一致");
+      } else {
+        // 发送修改密码的请求
+        try {
+          await axios.post("/api/modify", { account: user, password });
+          message.success("修改成功");
+          setIsModify(false);
+          form.resetFields();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    });
+  };
+
   return (
     <div>
       <Metadata>
-        <title>用户登录</title>
+        <title>硕磐智能 - 用户登录</title>
       </Metadata>
       {isMobile ? null : (
         <LoginComp
           handleCancel={handleCancel}
           handleLogin={handleLogin}
           loading={loading}
+          handleConfirm={handleConfirm}
         />
       )}
     </div>

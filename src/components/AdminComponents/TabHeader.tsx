@@ -1,8 +1,10 @@
-import { Button, Space } from "antd";
+import { Button, Space, message } from "antd";
 import { signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const TabHeader = () => {
   const { data: session } = useSession();
+  const router = useRouter();
   return (
     <div
       style={{
@@ -19,17 +21,23 @@ const TabHeader = () => {
       }}
     >
       <span style={{ fontSize: 24 }}>职位管理</span>
-      <Space size={20}>
-        <span>账号：{session?.user?.name}</span>
-        <Button
-          onClick={() => {
-            const root = window.location.origin;
-            signOut({ callbackUrl: `${root}/auth/signin` });
-          }}
-        >
-          退出登录
-        </Button>
-      </Space>
+      {session && (
+        <Space size={20}>
+          <span>账号：{session?.user?.name}</span>
+          <Button
+            onClick={async () => {
+              try {
+                signOut({ callbackUrl: `/auth/signin` });
+                message.success("登出成功");
+              } catch (error) {
+                console.log(error);
+              }
+            }}
+          >
+            退出登录
+          </Button>
+        </Space>
+      )}
     </div>
   );
 };

@@ -5,6 +5,14 @@
   scroll-behavior: smooth;
 }
 
+.layout-wrapper ::-webkit-scrollbar {
+  display: none;
+}
+
+.layout-wrapper div {
+  scrollbar-width: none;
+}
+
 @media screen and (max-width: 1440px) {
   .layout-wrapper {
     min-width: 1200px;

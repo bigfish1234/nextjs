@@ -35,13 +35,15 @@ const CapabilityComp = ({ list, title }: any) => {
                 style={{
                   paddingLeft: 5,
                   fontWeight: 600,
+                  fontSize: 12,
                 }}
               >
-                {title}：
+                {title}
               </span>
             )}
             <span
               style={{
+                fontSize: 12,
                 paddingLeft: 5,
                 lineHeight: "22px",
                 visibility: detail ? "visible" : "hidden",
@@ -53,13 +55,13 @@ const CapabilityComp = ({ list, title }: any) => {
           </div>
         );
       })}
-      <div
+      {/* <div
         className="guide-btn"
         style={{ position: "absolute", bottom: 20, fontSize: 14, width: 190 }}
         onClick={() => !isMobile && state.handleOpenChange(true)}
       >
         立即咨询
-      </div>
+      </div> */}
     </div>
   );
 };

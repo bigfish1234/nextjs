@@ -11,7 +11,17 @@
 .time-line {
   width: 15%;
   height: 100%;
-  vertical-align: bottom;
+  display: flex;
+  flex-direction: column;
+}
+.datetime {
+  font-size: 24px;
+  line-height: 45px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.time-line span {
+  margin-bottom: 15px;
 }
 
 .info-content {
@@ -24,20 +34,19 @@
 }
 
 .info-content h2 {
-  font-size: 24px;
+  font-size: 22px;
   height: auto;
   line-height: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .info-content p {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   font-size: 16px;
-  height: 60px;
   line-height: 28px;
 }
 
@@ -59,10 +68,12 @@
 .source-time {
   font-size: 14px;
   color: #707070;
+  display: flex;
+  align-items: center;
 }
 
 .info-centent-mobile p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28px;
   display: block;
   margin-bottom: 16px;
@@ -77,6 +88,22 @@
 .info-centent-mobile a {
   font-size: 14px;
   color: var(--active-font-color);
+}
+
+@media screen and (max-width: 1440px) {
+  .info-content h2 {
+    font-size: 20px;
+    line-height: 46px;
+  }
+
+  .info-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .datetime {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hetjgh</title>
+    <g id="PC调整" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="9PC端切图" transform="translate(-564, -2616)">
+            <g id="hetjgh" transform="translate(564, 2616)">
+                <rect id="矩形" x="0" y="0" width="28" height="28"></rect>
+                <g id="编组-6" transform="translate(5.8333, 4.6667)" fill-rule="nonzero">
+                    <path d="M16.3333333,1 L16.3333333,17.6666667 C16.3333333,18.2189514 15.8856181,18.6666667 15.3333333,18.6666667 L1,18.6666667 C0.44771525,18.6666667 -1.5440923e-16,18.2189514 0,17.6666667 L0,1 C-6.76353751e-17,0.44771525 0.44771525,-1.20591542e-16 1,0 L15.3333333,0 C15.8856181,-3.23497668e-16 16.3333333,0.44771525 16.3333333,1 Z" id="矩形" fill="#F96F25"></path>
+                    <rect id="矩形" fill="#FFFFFF" x="2.33333333" y="7" width="11.6666667" height="1.16666667"></rect>
+                    <rect id="矩形备份-28" fill="#FFFFFF" x="2.33333333" y="4.66666667" width="11.6666667" height="1.16666667"></rect>
+                    <rect id="矩形备份" fill="#FFFFFF" x="2.33333333" y="9.33333333" width="4.66666667" height="1.16666667"></rect>
+                    <rect id="矩形备份-2" fill="#FFFFFF" x="2.33333333" y="11.6666667" width="4.66666667" height="1.16666667"></rect>
+                    <polygon id="星形" fill="#FFFFFF" points="11.0833333 14.875 9.36895968 15.7762996 9.69637591 13.8673165 8.30941849 12.5153671 10.2261465 12.2368502 11.0833333 10.5 11.9405202 12.2368502 13.8572482 12.5153671 12.4702908 13.8673165 12.797707 15.7762996"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

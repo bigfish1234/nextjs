@@ -15,7 +15,7 @@ export default NextAuth({
       authorize: async (credentials) => {
         try {
           const result = await axios.post(
-            `${process.env.API_URL}/api/login`,
+            `${process.env.NEXTAUTH_URL}/api/login`,
             {
               userName: credentials.userName,
               password: credentials.password,
@@ -43,8 +43,10 @@ export default NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
-    // 设置会话的最大有效期为 2小时
-    maxAge: 2 * 60 * 60, 
+    // 设置会话的最大有效期为 12小时
+    maxAge: 12 * 60 * 60, 
+    // 每小时更新一次会话
+    updateAge: 60 * 60,
   },
   pages: {
     logIn: "auth/signin",
@@ -66,6 +68,7 @@ export default NextAuth({
 
       return session;
     },
+    
   },
   events: {},
   debug: false,

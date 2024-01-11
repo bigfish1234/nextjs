@@ -4,6 +4,7 @@ import Image from "next/image";
 import upload_icon from "/public/images/icon-upload.png";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
+import axios from "axios";
 
 const FileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -15,26 +16,55 @@ const FileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
     setIsMobile(isMobile);
   }, []);
 
-  // 将文件上传至磁盘存储中
-  const handleChange: UploadProps["onChange"] = async (info: any) => {
-    if (info.file.status === "done") {
-      message.success(`上传成功`);
-      setfileList(info.fileList[0]);
-    } else if (info.file.status === "error") {
-      message.error(`上传失败`);
+  // 上传简历
+  const handleUpload = async () => {
+    const formData = new FormData();
+    if (Array.isArray(fileList) && fileList.length) {
+      formData.append("resume", fileList[0]);
+      try {
+        const response = await axios.post("/api/upload", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
+        setfileList([]);
+        return response.data.filePath;
+      } catch (error) {
+        message.error("上传失败！");
+        console.error("Error uploading file:", error);
+      }
+    } else {
+      message.warning("请先上传简历");
     }
   };
 
-  const props: UploadProps = {
-    action: "/api/upload",
-    maxCount: 1,
-    accept: ".pdf, .doc, .docx, .zip, .rar, .xlsx",
-    onChange: handleChange,
+  // 发送邮件
+  const handleSendEmail = async () => {
+    const filePath = await handleUpload();
+    if (!filePath) return;
+
+    try {
+      await axios.post("/api/sendResume", {
+        filePath,
+        filename: encodeURIComponent(fileList[0].name),
+      });
+      message.success("简历投递成功！");
+      setIsApply(false);
+    } catch (error) {
+      message.error("投递失败，请重试！");
+      console.error(error);
+    }
   };
 
-  // 获取上传的文件发送到邮件
-  const submit = () => {
-    setIsApply(false);
+  const props = {
+    onRemove(file: any) {
+      setfileList([]);
+    },
+    beforeUpload(file: any) {
+      setfileList([file]);
+      return false;
+    },
+    fileList,
   };
 
   return (
@@ -62,7 +92,7 @@ const FileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
         />
         <p style={{ color: "#F96F25" }}>请上传您的简历</p>
         <div className={styles["upload-btn-wrapper"]}>
-          <Upload {...props}>
+          <Upload {...props} maxCount={1}>
             <div
               className={styles["upload-btn"]}
               style={{
@@ -70,7 +100,7 @@ const FileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
                 backgroundColor: "#F96F25",
               }}
             >
-              上传简历
+              上 传
             </div>
           </Upload>
 
@@ -80,9 +110,9 @@ const FileUpload = ({ open, setIsApply, fileList, setfileList }: any) => {
               border: "1px solid #F96F25",
             }}
             className={styles["upload-btn"]}
-            onClick={submit}
+            onClick={handleSendEmail}
           >
-            确定
+            确 定
           </div>
         </div>
       </div>

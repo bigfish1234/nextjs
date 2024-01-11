@@ -4,7 +4,7 @@ import Metadata from "next/head";
 import { store } from "@/store";
 import styles from "./index.module.css";
 import expand_icon from "/public/images/expand-icon.png";
-import logo from "/public/images/logo.png";
+import logo from "/public/images/logo.svg";
 import dynamic from "next/dynamic";
 
 const MyServiceForm = dynamic(() => import("@/components/ServiceForm"), {
@@ -16,7 +16,7 @@ const ContactMe = () => {
   return (
     <LayoutWrapper>
       <Metadata>
-        <title>联系我们</title>
+        <title>硕磐智能 - 联系我们</title>
       </Metadata>
       <div className={styles["wrapper"]}>
         <div className={styles["wrapper-header"]}>

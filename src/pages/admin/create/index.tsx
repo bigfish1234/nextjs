@@ -3,6 +3,7 @@ import { useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import Metadata from "next/head";
+import { useEffect } from "react";
 
 const CreateComp = dynamic(
   () => import("@/components/AdminComponents/CreateComp"),
@@ -20,13 +21,13 @@ const Create = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  if (status === "loading") {
-    return null;
-  }
+  useEffect(() => {
+    if (!session || status !== "authenticated") {
+      router.push("/auth/signin");
+    }
+  }, [session]);
 
-  if (!session) {
-    router.push("/auth/signin");
-    message.error("请先登录");
+  if (status === "loading") {
     return null;
   }
 

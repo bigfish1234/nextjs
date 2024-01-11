@@ -17,7 +17,7 @@ const TableComp = () => {
   const { data: session, status } = useSession();
   useEffect(() => {
     if (!session) {
-      signOut({ callbackUrl: "/auth/signin" });
+      signOut({ callbackUrl: `${location.origin}/auth/signin` });
     } else {
       state.initData({});
       state.getTypeList();

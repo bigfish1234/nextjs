@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import joinStyle from "./index.module.css";
 import { LayoutComp, TabHeader } from "@/components";
 import { PositionDetail } from "@/components/recruitmentComponents";
@@ -9,6 +10,7 @@ import Metadata from "next/head";
 
 import join_banner from "/public/images/pc/join/join-banner.png";
 import join_banner_mb from "/public/images/mobile/join/join-banner.png";
+import picImg from "/public/images/pic.png";
 import { IStatus } from "@/lib/type";
 import dynamic from "next/dynamic";
 
@@ -60,7 +62,7 @@ const JoinUs = () => {
   return (
     <div>
       <Metadata>
-        <title>加入我们</title>
+        <title>硕磐智能 - 加入我们</title>
       </Metadata>
       <LayoutComp slideList={joinSlideList} page="join">
         <div
@@ -70,7 +72,7 @@ const JoinUs = () => {
           {!isMobile && (
             <TabHeader h1="招聘职位" showStyle={joinStyle["header-isshow"]} />
           )}
-          <div className="wrapper-center">
+          <div className="wrapper-center" style={{ paddingBottom: 20 }}>
             <MySearchComp
               handleChange={handleChange}
               status={status}
@@ -92,17 +94,33 @@ const JoinUs = () => {
                 条记录
               </p>
             )}
-            {state.jobList.map((item: any, index: number) => {
-              return (
-                <PositionDetail
-                  count={state.jobList.length}
-                  key={index}
-                  index={index}
-                  isMobile={isMobile}
-                  jobDetail={item}
-                />
-              );
-            })}
+            {state.total > 0 ? (
+              <>
+                {state.jobList.map((item: any, index: number) => {
+                  return (
+                    <PositionDetail
+                      count={state.jobList.length}
+                      key={index}
+                      index={index}
+                      isMobile={isMobile}
+                      jobDetail={item}
+                    />
+                  );
+                })}
+              </>
+            ) : (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Image src={picImg} alt="" width={200} height={200} />
+                <span style={{ color: "gray" }}>暂无数据</span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -121,7 +139,7 @@ const JoinUs = () => {
         <div className={joinStyle["wrapper"]}>
           <TabHeader h1="招聘简章" />
           <div className="wrapper-center">
-            <h2 className={joinStyle["detail-title"]}>公司简介</h2>
+            <span className={joinStyle["detail-title"]}>公司简介</span>
             <div className={joinStyle["detail"]}>
               <p>
                 杭州硕磐智能科技致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业的数字化转型；并通过打造智能化产业互联网，为政府数字化运营和企业数字化管理提供数据平台和解决方案的新型高科技企业。
@@ -138,7 +156,7 @@ const JoinUs = () => {
                 并且，公司开始快速发展，已吸引了众多尖端人才的加入，包括多名留美和985名校博士，硕士以上学历占比超过50%，本科以上学历占100%。公司以人才为本，重视人才，并大力度激励人才和奖励贡献，现诚邀各方英才加入。
               </p>
             </div>
-            <h2 className={joinStyle["detail-title"]}>公司福利</h2>
+            <span className={joinStyle["detail-title"]}>公司福利</span>
             <div className={joinStyle["detail"]}>
               <p>
                 1)
@@ -150,7 +168,7 @@ const JoinUs = () => {
               </p>
               <p>3) 高于行业平均水平的薪资福利，股票期权等等。</p>
             </div>
-            <h2 className={joinStyle["detail-title"]}>期待这样的你</h2>
+            <span className={joinStyle["detail-title"]}>期待这样的你</span>
             <div className={joinStyle["detail"]}>
               <p>
                 1)

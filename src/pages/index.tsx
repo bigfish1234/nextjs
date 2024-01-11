@@ -6,13 +6,13 @@ import homeStyle from "./index.module.css";
 import { LayoutComp, SwiperComp, TabHeader } from "@/components";
 import { store } from "@/store";
 
-import eimos_img from "/public/images/pc/home/eimos.png";
+import eimos_img from "/public/images/pc/home/eimos.svg";
 import sanfun_logo from "/public/images/pc/home/sf.png";
 import supcon_logo from "/public/images/pc/home/zk.png";
 import qre_logo from "/public/images/pc/home/qre.png";
 import arrow from "/public/images/arrow.png";
 import eimos_platform from "/public/images/pc/home/eimos-platform.svg";
-import eimos_platform_mb from "/public/images/mobile/home/eimos-platform.png";
+import eimos_platform_mb from "/public/images/mobile/home/eimos-platform.svg";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 
@@ -37,7 +37,6 @@ import ips_02 from "/public/images/pc/home/ips_02.png";
 import ips_m_01 from "/public/images/mobile/home/sales-forecast.png";
 import ips_m_02 from "/public/images/mobile/home/ips_02.png";
 
-import info_banner from "/public/images/pc/info/info-banner.png";
 import IBA_mb from "/public/images/mobile/home/IBA.png";
 import IBA from "/public/images/pc/home/IBA.png";
 import { ApplicationItem, LtcImgWrapper } from "@/components/IndexComponents";
@@ -48,6 +47,34 @@ import {
   navList,
 } from "@/lib/const";
 import { isElementInViewport } from "@/utils/isElementInViewport";
+
+import order_01 from "/public/images/pc/home/order_01.png";
+import order_02 from "/public/images/pc/home/order_02.png";
+import order_03 from "/public/images/pc/home/order_03.png";
+import ISM_01 from "/public/images/pc/home/ISM_01.png";
+import ISM_02 from "/public/images/pc/home/ISM_02.png";
+import ISM_03 from "/public/images/pc/home/ISM_03.png";
+import ISM_04 from "/public/images/pc/home/ISM_04.png";
+import ISM_05 from "/public/images/pc/home/ISM_05.png";
+import ISM_06 from "/public/images/pc/home/ISM_06.png";
+import ISM_07 from "/public/images/pc/home/ISM_07.png";
+import ICM_01 from "/public/images/pc/home/ICM_01.png";
+import NPI_01 from "/public/images/pc/home/NPI_01.png";
+import NPI_02 from "/public/images/pc/home/NPI_02.png";
+import NPI_03 from "/public/images/pc/home/NPI_03.png";
+import NPI_04 from "/public/images/pc/home/NPI_04.png";
+import NPI_05 from "/public/images/pc/home/NPI_05.png";
+import NPI_06 from "/public/images/pc/home/NPI_06.png";
+import CPQ_01 from "/public/images/pc/home/CPQ_01.png";
+
+import IPS_D1 from "/public/images/pc/home/IPS_D1.png";
+import IPS_D2 from "/public/images/pc/home/IPS_D2.png";
+import IPS_D3 from "/public/images/pc/home/IPS_D3.png";
+import IPS_D4 from "/public/images/pc/home/IPS_D4.png";
+
+import IPS_DA1 from "/public/images/pc/home/IPS_DA01.png";
+import IPS_DA2 from "/public/images/pc/home/IPS_DA02.png";
+import IPS_DA3 from "/public/images/pc/home/IPS_DA03.png";
 
 const { useDebounceFn } = require("ahooks");
 
@@ -70,6 +97,19 @@ const Page = () => {
     mb: [[order_m], [platform_m], [manage_m], [npi_m], [cpq_m]],
   };
 
+  const slideOfLTCDetailImg = [
+    [order_01, order_02, order_03],
+    [ISM_01, ISM_02, ISM_03, ISM_04, ISM_05, ISM_06, ISM_07],
+    [ICM_01],
+    [NPI_01, NPI_02, NPI_03, NPI_04, NPI_05, NPI_06],
+    [CPQ_01],
+  ];
+
+  const slideOfISCDetailImg = [
+    [IPS_D1, IPS_D2, IPS_D3, IPS_D4],
+    [IPS_DA1, IPS_DA2, IPS_DA3],
+  ];
+
   // ISC
   const slideListOfChain = {
     pc: [[ips_01], [ips_02]],
@@ -79,6 +119,7 @@ const Page = () => {
   // 锚点页面滑动
   const anchorClick = (type: string, e: any) => {
     const dom = document.getElementById(type);
+    const navbarHeight = document.getElementById("nav_bar")?.offsetHeight || 0;
     if (dom) {
       // 判断是否为ios
       const isIos = !!navigator.userAgent.match(
@@ -93,7 +134,10 @@ const Page = () => {
       // }
 
       dom.style.scrollBehavior = "smooth";
-      dom.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scrollTo({
+        behavior: "smooth",
+        top: dom.offsetTop - navbarHeight,
+      });
     }
   };
 
@@ -163,7 +207,7 @@ const Page = () => {
   return (
     <div>
       <Metadata>
-        <title>硕磐智能</title>
+        <title>硕磐智能 - EIMOS</title>
       </Metadata>
       {/* swiper */}
       <LayoutComp
@@ -173,6 +217,7 @@ const Page = () => {
       >
         {/* navgator */}
         <div
+          id="nav_bar"
           className={
             isMobile
               ? homeStyle["header-link"]
@@ -201,7 +246,7 @@ const Page = () => {
                   }
                   onClick={(e) => anchorClick(item.id, e)}
                 >
-                  {item.title}
+                  <span className={homeStyle["nav-hover"]}>{item.title}</span>
                 </div>
               );
             })}
@@ -237,7 +282,7 @@ const Page = () => {
               alt="1.经营决策层(多主题、多维度):智能经营解析IBA(多主题:收入、利润、回款、存货, 多维度:产业、产品、市场、客户); 
               2.流程运营层(多战线)：合同/订单360(LTC)、物的360(ISC)、研发项目360(IPD)、供应链360(ITR)、财务360(FIN)...;
               3.业务作业层(多模块):智能销售管理(ISMP)、产品配置报价(CPQ)、智能合同管理(ICM)、开票与回款管理、新产品导入(NPI)、产品配置生命周期管理(CLM)、集成计划(IPS);
-              4.平台支撑层(可组装构件):数据资产平台、应用组装平台、技术服务平台、通用平台(权限、任务令等);"
+              4.平台支撑层(可组装构件):数据资产平台、应用组装平台、数据服务平台;"
               id="eimos_img"
               className={homeStyle["structure-img"]}
               onMouseEnter={hoverShowShadow}
@@ -247,12 +292,8 @@ const Page = () => {
         </div>
 
         {/* 智能业务解析 */}
-        <div className={homeStyle["analytics-wrapper"]}>
-          <TabHeader
-            h1="智能业务解析"
-            h2="Intelligent Business Analytics"
-            id="IBA"
-          />
+        <div className={homeStyle["analytics-wrapper"]} id="IBA_ele">
+          <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
           <SwiperComp
             slideList={isMobile ? slideListOfIBA.mb : slideListOfIBA.pc}
             description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"
@@ -260,7 +301,7 @@ const Page = () => {
             item="IBA"
             handleIBAEvent={handleIBAEvent}
             isShow={isShow}
-            alt="智能业务解析（IBA）"
+            alt="智能业务解析（IBA-Intelligence Business Analytics）"
           />
         </div>
 
@@ -272,22 +313,23 @@ const Page = () => {
             {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
                 const description = TITLE_LIST[index];
-                const id = ["order", "ISMP", "ICM", "NPI"][index];
+                const id = ["order", "ISMP", "ICM", "NPI", "CPQ"][index];
                 const alt = [
                   "订单360(Full Visibility and Control of Contract Execution)",
-                  "智能销售管理平台(ISM)",
-                  "智能合同管理(ICM)",
-                  "新产品导入(NPI)",
-                  "产品配置报价(CPQ)",
+                  "智能销售管理平台(ISM-Intelligent Sales Management)",
+                  "智能合同管理(ICM-Intelligent Contract Management)",
+                  "新产品导入(NPI-New Product Insertion)",
+                  "产品配置报价(CPQ-Product configuration quotation)",
                 ][index];
+                const detailImgs = slideOfLTCDetailImg[index];
                 return (
                   <SwiperComp
                     description={description}
                     slideList={list}
+                    detailImgs={detailImgs}
                     index={index}
                     key={index}
                     id={id}
-                    isMobile={isMobile}
                     alt={alt}
                   />
                 );
@@ -304,15 +346,20 @@ const Page = () => {
               {(isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
                 (list: any[], index: number) => {
                   const des = DESCRIPTION_LIST[index];
-                  const alt = ["IPS-销售预测", "IPS-销售与运作计划"][index];
+                  const alt = [
+                    "IPS-销售预测(Sales Forecast)",
+                    "IPS-销售与运作计划(Sales & Operation Planning)",
+                  ][index];
+                  const detailImgs = slideOfISCDetailImg[index];
                   return (
                     <SwiperComp
                       description={des}
                       slideList={list}
                       key={index}
                       index={index}
-                      disable={true}
                       alt={alt}
+                      desVisible={false}
+                      detailImgs={detailImgs}
                     />
                   );
                 }
@@ -322,7 +369,10 @@ const Page = () => {
         </div>
 
         {/* 应用及解决方案 */}
-        <div className="wrapper-center" style={{ padding: "0 15px" }}>
+        <div
+          className="wrapper-center"
+          style={isMobile ? { padding: "0 15px" } : {}}
+        >
           <TabHeader h1="应用及解决方案" id="plan" />
           <div className={homeStyle["tab-button"]}>
             <div
@@ -362,7 +412,11 @@ const Page = () => {
               isMobile={isMobile}
             />
             <a
-              className={homeStyle["link"]}
+              className={
+                !isMobile
+                  ? `${homeStyle["link"]} ${homeStyle["link-pc"]}`
+                  : `${homeStyle["link"]} `
+              }
               onClick={() => {
                 isMobile
                   ? router.push("/contact-us")

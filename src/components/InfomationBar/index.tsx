@@ -14,19 +14,19 @@ const InfomationBar = ({ content, isMobile }: any) => {
       {!isMobile ? (
         <>
           <div className={styles["time-line"]}>
-            <span style={{ fontSize: 32, fontWeight: 700 }}>{day} </span>
-            <span style={{ fontSize: 32 }}>/</span>
-            <span style={{ fontSize: 20 }}> {month}</span>
-            <span style={{ fontSize: 20, marginLeft: 23 }}>{year}</span>
+            <span className={styles["datetime"]}>
+              {month}月{day}日
+            </span>
+            <span style={{ fontSize: 18, lineHeight: "28px" }}>{year}年</span>
           </div>
           <div className={styles["info-content"]}>
             <h2>{title}</h2>
             <p>{description}</p>
-            <a>查看详情</a>
+            {/* <a>查看详情</a> */}
           </div>
           <div className={styles["info-img"]}>
             <Image
-              src={img}
+              src={imgUrl}
               alt="硕磐企业智能管理操作系统EIMOS"
               style={{ width: "100%", height: "100%" }}
             />
@@ -36,13 +36,13 @@ const InfomationBar = ({ content, isMobile }: any) => {
         <>
           <div className={styles["img-mobile"]}>
             <Image
-              src={img}
+              src={imgUrl}
               alt="硕磐企业智能管理操作系统EIMOS"
               style={{ width: "100%", height: "100%" }}
             />
           </div>
           <div className={styles["info-centent-mobile"]}>
-            <div style={{ fontSize: 24, margin: "16px 0" }}>{title}</div>
+            <div style={{ fontSize: 18, margin: "16px 0" }}>{title}</div>
             <div className={styles["source-time"]} style={{ marginBottom: 16 }}>
               <Image
                 src={timeIcon}
@@ -51,10 +51,12 @@ const InfomationBar = ({ content, isMobile }: any) => {
                 height={14}
                 style={{ marginRight: 5 }}
               />
-              {year}-{month}-{day}
+              <span>
+                {year}-{month}-{day}
+              </span>
             </div>
             <p>{description}</p>
-            <a>
+            {/* <a>
               查看详情
               <Image
                 src={arrow}
@@ -63,7 +65,7 @@ const InfomationBar = ({ content, isMobile }: any) => {
                 height={18}
                 style={{ verticalAlign: "bottom" }}
               />
-            </a>
+            </a> */}
           </div>
         </>
       )}

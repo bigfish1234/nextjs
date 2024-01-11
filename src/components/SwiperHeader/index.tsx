@@ -52,22 +52,23 @@ const SwiperHeader = ({ slideList, page }: any) => {
                       <>
                         <p
                           className={styles["first-title"]}
-                          style={{ fontWeight: 400 }}
+                          style={{
+                            fontWeight: 400,
+                            color: "#fff",
+                            letterSpacing: 2,
+                            padding: "20px 0 0",
+                          }}
                         >
-                          数据驱动+AI使能
+                          硕磐EIMOS
                         </p>
-                        <p className={styles["second-title"]}>
-                          助力企业{" "}
-                          <span className={styles["active-title"]}>
-                            增收、增利、少增人
-                          </span>
+                        <p
+                          className={styles["second-title"]}
+                          style={{ color: "#fff", letterSpacing: 2 }}
+                        >
+                          您的企业级智慧管家
                         </p>
                         <div
-                          className="guide-btn"
-                          style={{
-                            width: isMobile ? 120 : 190,
-                            marginTop: 15,
-                          }}
+                          className={styles["homepage-btn"]}
                           onClick={() => {
                             if (!isMobile) {
                               state.handleOpenChange(true);
@@ -84,13 +85,15 @@ const SwiperHeader = ({ slideList, page }: any) => {
                 ) : path == "/information-center" ? (
                   <p
                     className={firstTitleStyle}
-                    style={{ fontWeight: 600, top: 140 }}
+                    style={{ fontWeight: 600, top: 140, letterSpacing: 2 }}
                   >
                     信息中心
                   </p>
                 ) : path == "/corporate-information" ? (
                   <div style={{ width: 720 }}>
-                    <p className={firstTitleStyle}>硕磐智能</p>
+                    <p className={firstTitleStyle} style={{ letterSpacing: 2 }}>
+                      硕磐智能
+                    </p>
                     <div className={styles["spzn-introduce"]}>
                       致力于构建新一代云原生数据分析平台和企业管理系统，助力制造业企业
                       <span className={styles["background-word"]}>数字化</span>
@@ -108,10 +111,10 @@ const SwiperHeader = ({ slideList, page }: any) => {
                     </div>
                   </div>
                 ) : (
-                  <div style={{ color: "#fff" }}>
+                  <div style={{ color: "#fff", letterSpacing: 2 }}>
                     <p className={firstTitleStyle}>加入我们</p>
                     <p className={styles["second-title"]}>
-                      期待你的加入，我们在硕磐等你！
+                      期待您的加入，我们在硕磐等您！
                     </p>
                   </div>
                 )}
@@ -124,7 +127,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
                 <Image
                   priority={true}
                   src={imgUrl}
-                  alt="数据驱动+AI使能，助力企业增收、增利、少增人"
+                  alt="硕磐EIMOS，您的企业级智慧管家"
                   className={styles["swiper-content"]}
                 />
               </div>

@@ -23,13 +23,13 @@ const NavComp = ({ page }: any) => {
           color:
             path == "/"
               ? "#F96F25"
-              : path == "/recruitment"
+              : ["/recruitment", "/"].includes(path)
               ? "white"
               : "black",
         }}
         onClick={handleClick}
       >
-        EIMOS
+        <span className={styles["hover-link"]}>EIMOS</span>
       </Link>
       <Link
         prefetch
@@ -38,13 +38,13 @@ const NavComp = ({ page }: any) => {
           color:
             path == "/information-center"
               ? "#F96F25"
-              : path == "/recruitment"
+              : ["/recruitment", "/"].includes(path)
               ? "white"
               : "black",
         }}
         onClick={handleClick}
       >
-        信息中心
+        <span className={styles["hover-link"]}>信息中心</span>
       </Link>
       <Link
         prefetch
@@ -53,13 +53,13 @@ const NavComp = ({ page }: any) => {
           color:
             path == "/corporate-information"
               ? "#F96F25"
-              : path == "/recruitment"
+              : ["/recruitment", "/"].includes(path)
               ? "white"
               : "black",
         }}
         onClick={handleClick}
       >
-        关于我们
+        <span className={styles["hover-link"]}>关于我们</span>
       </Link>
       <Link
         prefetch
@@ -67,11 +67,13 @@ const NavComp = ({ page }: any) => {
         style={{
           color: ["/recruitment", "/job-detail"].includes(path)
             ? "#F96F25"
+            : ["/recruitment", "/"].includes(path)
+            ? "white"
             : "black",
         }}
         onClick={handleClick}
       >
-        加入我们
+        <span className={styles["hover-link"]}>加入我们</span>
       </Link>
     </div>
   );

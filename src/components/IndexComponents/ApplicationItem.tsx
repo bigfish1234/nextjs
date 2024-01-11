@@ -12,7 +12,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
           <div className={styles["content-wrapper"]}>
             <div className={styles["content-wrapper-3"]}>
               <Image
-                src="/images/icon/fengxmx.png"
+                src="/images/icon/fengxmx.svg"
                 alt="分析模型"
                 width={28}
                 height={28}
@@ -21,7 +21,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
             </div>
             <div className={styles["content-wrapper-3"]}>
               <Image
-                src="/images/icon/cit.png"
+                src="/images/icon/cit.svg"
                 alt="指标集"
                 width={28}
                 height={28}
@@ -30,7 +30,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
             </div>
             <div className={styles["content-wrapper-3"]}>
               <Image
-                src="/images/icon/renwl.png"
+                src="/images/icon/renwl.svg"
                 alt="任务令"
                 width={28}
                 height={28}
@@ -43,7 +43,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
             <div className={styles["content-wrapper"]}>
               <div className={styles["content-wrapper-4"]}>
                 <Image
-                  src="/images/icon/hetjgh.png"
+                  src="/images/icon/hetjgh.svg"
                   alt="合同结构化"
                   width={28}
                   height={28}
@@ -52,7 +52,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
               </div>
               <div className={styles["content-wrapper-4"]}>
                 <Image
-                  src="/images/icon/4ult.png"
+                  src="/images/icon/4ult.svg"
                   alt="4U拉通*"
                   width={28}
                   height={28}
@@ -61,7 +61,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
               </div>
               <div className={styles["content-wrapper-4"]}>
                 <Image
-                  src="/images/icon/shijjx.png"
+                  src="/images/icon/shijjx.svg"
                   alt="时间基线"
                   width={28}
                   height={28}
@@ -70,7 +70,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
               </div>
               <div className={styles["content-wrapper-4"]}>
                 <Image
-                  src="/images/icon/xingcpkf.png"
+                  src="/images/icon/xingcpkf.svg"
                   alt="新产品开发"
                   width={28}
                   height={28}
@@ -86,7 +86,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
           <div className={styles["content-wrapper"]}>
             <div className={styles["content-wrapper-2"]}>
               <Image
-                src="/images/icon/moxyc.png"
+                src="/images/icon/moxyc.svg"
                 alt="预测模型"
                 width={28}
                 height={28}
@@ -95,7 +95,7 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
             </div>
             <div className={styles["content-wrapper-2"]}>
               <Image
-                src="/images/icon/sopmxgl.png"
+                src="/images/icon/sopmxgl.svg"
                 alt="OP管理模型"
                 width={28}
                 height={28}
@@ -132,7 +132,8 @@ const ApplicationItem = ({ item, isMobile, plan }: any) => {
         );
       })}
       <div style={{ paddingLeft: 28, fontWeight: 600 }}>
-        核心功能： <span style={{ color: "#F96F25" }}>{ability}</span>
+        核心功能：{" "}
+        <span style={{ color: "#F96F25", lineHeight: "24px" }}>{ability}</span>
       </div>
       {renderContent()}
     </div>
