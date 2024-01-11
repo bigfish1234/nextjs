@@ -56,6 +56,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
                             fontWeight: 400,
                             color: "#fff",
                             letterSpacing: 2,
+                            padding: "20px 0 0",
                           }}
                         >
                           硕磐EIMOS
@@ -67,11 +68,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
                           您的企业级智慧管家
                         </p>
                         <div
-                          className="guide-btn"
-                          style={{
-                            width: isMobile ? 120 : 190,
-                            marginTop: 15,
-                          }}
+                          className={styles["homepage-btn"]}
                           onClick={() => {
                             if (!isMobile) {
                               state.handleOpenChange(true);
@@ -117,7 +114,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
                   <div style={{ color: "#fff", letterSpacing: 2 }}>
                     <p className={firstTitleStyle}>加入我们</p>
                     <p className={styles["second-title"]}>
-                      期待你的加入，我们在硕磐等你！
+                      期待您的加入，我们在硕磐等您！
                     </p>
                   </div>
                 )}

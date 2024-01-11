@@ -119,6 +119,7 @@ const Page = () => {
   // 锚点页面滑动
   const anchorClick = (type: string, e: any) => {
     const dom = document.getElementById(type);
+    const navbarHeight = document.getElementById("nav_bar")?.offsetHeight || 0;
     if (dom) {
       // 判断是否为ios
       const isIos = !!navigator.userAgent.match(
@@ -133,7 +134,10 @@ const Page = () => {
       // }
 
       dom.style.scrollBehavior = "smooth";
-      dom.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scrollTo({
+        behavior: "smooth",
+        top: dom.offsetTop - navbarHeight,
+      });
     }
   };
 
@@ -213,6 +217,7 @@ const Page = () => {
       >
         {/* navgator */}
         <div
+          id="nav_bar"
           className={
             isMobile
               ? homeStyle["header-link"]
@@ -287,12 +292,8 @@ const Page = () => {
         </div>
 
         {/* 智能业务解析 */}
-        <div className={homeStyle["analytics-wrapper"]}>
-          <TabHeader
-            h1="智能业务解析"
-            h2="Intelligent Business Analytics"
-            id="IBA"
-          />
+        <div className={homeStyle["analytics-wrapper"]} id="IBA_ele">
+          <TabHeader h1="智能业务解析" h2="Intelligent Business Analytics" />
           <SwiperComp
             slideList={isMobile ? slideListOfIBA.mb : slideListOfIBA.pc}
             description="聚焦企业核心业务线，实现线索到回款、收入到利润，关键经营指标可视，逐段逐层自动解析定位业务问题、生成任务令闭环管理"

@@ -20,7 +20,7 @@
 .shuopan-logo {
   position: absolute;
   top: 20px;
-  left: 80px;
+  left: 50px;
   width: 126px;
   height: 30px;
   cursor: pointer;
@@ -63,6 +63,19 @@
   z-index: 999;
 }
 
+.homepage-btn {
+  position: absolute;
+  width: 190px;
+  height: 36px;
+  background-color: var(--active-font-color);
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+  margin-top: 60px;
+}
+
 .page-title {
   position: absolute;
   left: 220px;
@@ -72,7 +85,7 @@
   /* max-width: 600px; */
 }
 
-.page-title .first-title{
+.page-title .first-title {
   font-size: 44px;
   padding: 20px 0;
   font-weight: 600;
@@ -139,13 +152,18 @@
 }
 
 /* 小屏情况下 */
-@media screen and (max-width:1440px) {
+@media screen and (max-width: 1440px) {
   .swiperHeader {
     height: 288px;
   }
 
+  .homepage-btn {
+    margin-top: 30px;
+    width: 150px;
+  }
+
   .page-title {
-    left: 130px;
+    left: 172px;
     top: 70px;
   }
 
@@ -167,7 +185,7 @@
   .navgator {
     opacity: 0;
   }
-  
+
   .swiperHeader {
     height: 55vw;
     width: 100vw;
@@ -179,6 +197,14 @@
     height: 24px;
     width: 100px;
     transform: translateX(-50px);
+  }
+
+  .homepage-btn {
+    width: 100px;
+    margin-top: 20px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
   }
 
   .page-title {

@@ -146,7 +146,7 @@ export const navList = [
     title: "EIMOS",
   },
   {
-    id: "IBA",
+    id: "IBA_ele",
     title: "智能业务解析",
   },
   {
