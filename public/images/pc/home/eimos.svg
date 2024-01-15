@@ -1,71 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1482px" height="555px" viewBox="0 0 1482 555" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>编组 46</title>
+<svg width="1482px" height="578px" viewBox="0 0 1482 578" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>eimos应用全视图</title>
     <defs>
-        <rect id="path-1" x="0" y="0" width="61.0830565" height="28" rx="2"></rect>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61.0830565" height="28" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-        <rect id="path-3" x="0" y="0" width="61.0830565" height="28" rx="2"></rect>
-        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61.0830565" height="28" fill="white">
-            <use xlink:href="#path-3"></use>
-        </mask>
-        <rect id="path-5" x="0" y="0" width="61.0830565" height="28" rx="2"></rect>
-        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61.0830565" height="28" fill="white">
-            <use xlink:href="#path-5"></use>
-        </mask>
-        <rect id="path-7" x="0" y="0" width="61.0830565" height="28" rx="2"></rect>
-        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61.0830565" height="28" fill="white">
-            <use xlink:href="#path-7"></use>
-        </mask>
-        <rect id="path-9" x="0" y="0" width="61.0830565" height="28" rx="2"></rect>
-        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61.0830565" height="28" fill="white">
-            <use xlink:href="#path-9"></use>
-        </mask>
-        <rect id="path-11" x="0" y="0" width="61.0830565" height="28" rx="2"></rect>
-        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61.0830565" height="28" fill="white">
-            <use xlink:href="#path-11"></use>
-        </mask>
-        <rect id="path-13" x="0" y="0" width="61.0830565" height="28" rx="2"></rect>
-        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61.0830565" height="28" fill="white">
-            <use xlink:href="#path-13"></use>
-        </mask>
-        <rect id="path-15" x="0" y="0" width="61.0830565" height="28" rx="2"></rect>
-        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61.0830565" height="28" fill="white">
-            <use xlink:href="#path-15"></use>
-        </mask>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-17">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
             <stop stop-color="#FDA84C" stop-opacity="0" offset="0%"></stop>
             <stop stop-color="#666773" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-18">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
             <stop stop-color="#FDA84C" stop-opacity="0" offset="0%"></stop>
             <stop stop-color="#666773" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="PC调整" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="9PC端切图" transform="translate(-237, -981)">
-            <g id="编组-46" transform="translate(238, 982)">
-                <rect id="矩形备份-52" stroke="#E3E3E3" fill="#FFFFFF" x="-0.5" y="-0.5" width="1481" height="554"></rect>
-                <path d="M1375.5,23.5 L1375.5,399.5 L149.5,399.5 L149.5,23.5 L1375.5,23.5 Z" id="矩形备份-59" stroke-opacity="0.4" stroke="#F96F25" fill="#FFFFFF" opacity="0.800000012" transform="translate(762.5, 211.5) scale(-1, 1) translate(-762.5, -211.5)"></path>
-                <polygon id="矩形备份-78" fill="#F5F5F7" transform="translate(741, 159.5) scale(-1, 1) translate(-741, -159.5)" points="170 110 1312 110 1312 209 170 209"></polygon>
-                <g id="编组-27" transform="translate(170, 222)">
+    <g id="240122" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图" transform="translate(-249, -2055)">
+            <g id="eimos应用全视图" transform="translate(250, 2056)">
+                <rect id="矩形备份-52" stroke="#E3E3E3" fill="#FFFFFF" x="-0.5" y="-0.5" width="1481" height="577"></rect>
+                <path d="M1375.5,30.7296564 L1375.5,429.729656 L149.5,429.729656 L149.5,30.7296564 L1375.5,30.7296564 Z" id="矩形备份-59" stroke-opacity="0.4" stroke="#F96F25" fill="#FFFFFF" opacity="0.800000012" transform="translate(762.5, 230.2297) scale(-1, 1) translate(-762.5, -230.2297)"></path>
+                <polygon id="矩形备份-78" fill="#F5F5F7" transform="translate(741, 165) scale(-1, 1) translate(-741, -165)" points="170 95 1312 95 1312 235 170 235"></polygon>
+                <g id="编组-27" transform="translate(170, 248)">
                     <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(108, 39.5) scale(-1, 1) translate(-108, -39.5)" points="1.82849105e-12 0 216 -3.33828354e-11 216 79 1.82849105e-12 79"></polygon>
-                    <text id="合同/订单360" font-family="PingFangSC-Semibold, PingFang SC" font-size="15" font-weight="500" fill="#F96F25">
-                        <tspan x="59.1695122" y="35">合同/订单360</tspan>
+                    <text id="合同/订单360" font-family="PingFangSC-Semibold, PingFang SC" font-size="14" font-weight="500" fill="#F96F25">
+                        <tspan x="64.4" y="35">合同/订单360</tspan>
                     </text>
-                    <text id="LTC" font-family="Helvetica" font-size="15" font-weight="normal" fill="#F96F25">
-                        <tspan x="92.250811" y="58">LTC</tspan>
+                    <text id="LTC" font-family="Helvetica" font-size="14" font-weight="normal" fill="#F96F25">
+                        <tspan x="95.2758789" y="58">LTC</tspan>
                     </text>
                 </g>
-                <g id="编组-27备份" transform="translate(170, 314)">
+                <g id="编组-27备份" transform="translate(170, 340)">
                     <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(77, 39.5) scale(-1, 1) translate(-77, -39.5)" points="1.3036464e-12 0 154 -3.33828354e-11 154 79 1.3036464e-12 79"></polygon>
-                    <text id="智能销售管理-ISMP" font-family="PingFangSC-Medium, PingFang SC" font-size="15" font-weight="400" fill="#303258">
-                        <tspan x="30.9452055" y="35">智能销售管理</tspan>
-                        <tspan x="57.5777055" y="56">ISMP</tspan>
+                    <text id="智能销售管理-ISMP" font-family="PingFangSC-Medium, PingFang SC" font-size="14" font-weight="400" fill="#303258">
+                        <tspan x="33.9452055" y="35">智能销售管理</tspan>
+                        <tspan x="58.8022055" y="55">ISMP</tspan>
                     </text>
                 </g>
-                <g id="编组-67" transform="translate(33, 437.0164)">
+                <g id="编组-67" transform="translate(33, 463.0164)">
                     <g id="编组-41" transform="translate(0, 32.9878)" fill="#666773">
                         <g id="编组-27备份-8" transform="translate(2, 0)" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="16" font-weight="bold">
                             <text id="平台支撑层">
@@ -76,11 +44,11 @@
                             <tspan x="0" y="32">（可组装构件）</tspan>
                         </text>
                     </g>
-                    <g id="编组-21备份" transform="translate(27, 0)" fill="#999BA6" fill-rule="nonzero">
+                    <g id="编组-21备份" transform="translate(27, -0)" fill="#999BA6" fill-rule="nonzero">
                         <path d="M29,23.8445783 L29,25.7227334 L17.8971117,25.7227334 L17.8971117,23.8445783 L29,23.8445783 Z M3.74190036,16.4757022 C5.81574573,16.4757022 7.48380073,18.1977254 7.48380073,20.3063138 C7.48380073,22.4149023 5.81574573,24.1369254 3.74190036,24.1369254 C3.264329,24.1369254 2.79769119,24.0448031 2.36193565,23.8677826 C1.85026019,23.6599204 1.60397084,23.07662 1.81183298,22.5649445 C2.01969513,22.053269 2.60299561,21.8069797 3.11467106,22.0148418 C3.31258118,22.0952405 3.52373274,22.1369254 3.74190036,22.1369254 C4.69667451,22.1369254 5.48380073,21.3243326 5.48380073,20.3063138 C5.48380073,19.2882951 4.69667451,18.4757022 3.74190036,18.4757022 C2.78712622,18.4757022 2,19.2882951 2,20.3063138 C2,20.4735155 2.02111335,20.6368328 2.06223403,20.7937798 C2.20220993,21.3280318 1.882586,21.8746015 1.348334,22.0145774 C0.814082009,22.1545533 0.267512311,21.8349294 0.127536414,21.3006774 C0.0431351849,20.9785396 0,20.6448776 0,20.3063138 C0,18.1977254 1.668055,16.4757022 3.74190036,16.4757022 Z M22.965237,2.34043806 L27.9773733,17.3510103 C28.5763421,19.1448291 27.6077248,21.0845667 25.813906,21.6835356 C25.748435,21.7053968 25.6823179,21.7252734 25.6156455,21.7431383 L23.3737947,22.3438404 C21.5470582,22.833313 19.6693997,21.7492463 19.1799272,19.9225099 C19.1620623,19.8558374 19.1462175,19.7886401 19.1324144,19.7210099 L15.9677657,4.21540485 C15.6056492,2.44116836 16.687498,0.691710184 18.436609,0.223037311 L18.8309722,0.117368007 C20.5800832,-0.351304867 22.3917208,0.622845949 22.965237,2.34043806 Z M15.1365849,3.58790433 L16.3600977,11.6751426 L10.6017667,17.5033638 C9.47930174,18.6394523 7.64838242,18.6504965 6.5122939,17.5280315 C6.49986706,17.5157537 6.48755173,17.5033635 6.47534944,17.4908625 C5.3199877,16.3072184 5.28641127,14.4284969 6.39874062,13.2043246 L15.1365849,3.58790433 Z M8.19748846,14.6450907 C7.6296223,14.6450907 7.16927582,15.1203312 7.16927582,15.70657 C7.16927582,16.2928089 7.6296223,16.7680494 8.19748846,16.7680494 C8.76535462,16.7680494 9.22570109,16.2928089 9.22570109,15.70657 C9.22570109,15.1203312 8.76535462,14.6450907 8.19748846,14.6450907 Z M19.1832527,2.22082328 C18.4518973,2.41678939 18.0230183,3.18771405 18.2253246,3.94273172 C18.427631,4.69774938 19.1845135,5.15095022 19.9158689,4.95498412 C20.6472244,4.75901801 21.0761034,3.98809335 20.873797,3.23307568 C20.6714906,2.47805802 19.9146082,2.02485718 19.1832527,2.22082328 Z" id="形状结合"></path>
                     </g>
                 </g>
-                <g id="编组-62" transform="translate(35, 333)">
+                <g id="编组-62" transform="translate(35, 359)">
                     <g id="编组-40" transform="translate(0, 31)" fill="#666773">
                         <g id="编组-27备份-9" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="16" font-weight="bold">
                             <text id="业务作业层">
@@ -95,7 +63,7 @@
                         <path d="M22.6090735,14.3756486 C23.1814639,15.1003956 23.1233953,15.9800504 22.4182767,16.6743691 L13.2268491,22.6161884 C12.2424483,23.1279372 10.7603168,23.1279372 9.77591603,22.6161884 L0.58172326,16.6743691 C-0.120630112,15.9800504 -0.181463869,15.1031618 0.390926478,14.3756486 C0.465586089,14.4420376 0.523654674,14.5028943 0.58172326,14.5665171 L9.77591603,20.5083363 C10.7603168,21.0228514 12.2424483,21.0200852 13.224084,20.5083363 L22.4182767,14.5665171 C22.4763453,14.5056605 22.5344139,14.4420376 22.6090735,14.3756486 Z M22.6090735,10.350813 C23.1814639,11.07556 23.1233953,11.9524486 22.4182767,12.6495335 L13.2268491,18.5885865 C12.2424483,19.1003354 10.7603168,19.1031016 9.77591603,18.5885865 L0.58172326,12.6495335 C-0.120630112,11.9552148 -0.181463869,11.07556 0.390926478,10.350813 C0.465586089,10.417202 0.523654674,10.4808248 0.58172326,10.5444477 L9.77591603,16.4835007 C10.7603168,16.9980157 12.2424483,16.9952495 13.224084,16.4835007 L22.4182767,10.5416815 C22.4763453,10.4808248 22.5344139,10.417202 22.6090735,10.350813 Z M13.224084,0.386924327 L22.4182767,6.32874353 C23.1925246,6.99540016 23.1952897,7.96080747 22.4182767,8.62746409 L13.224084,14.5665171 C12.2424483,15.0837984 10.7603168,15.0837984 9.77591603,14.5665171 L0.58172326,8.62746409 C-0.192524552,7.96357368 -0.195289723,6.99540016 0.58172326,6.32874353 L9.77315086,0.386924327 C10.7547865,-0.127590744 12.236918,-0.130356954 13.224084,0.386924327 Z" id="形状结合"></path>
                     </g>
                 </g>
-                <g id="编组-65" transform="translate(35, 222)">
+                <g id="编组-65" transform="translate(35, 248)">
                     <g id="编组-34" transform="translate(0, 40)" fill="#666773">
                         <g id="编组-27备份-10" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="16" font-weight="bold">
                             <text id="流程运营层">
@@ -111,7 +79,7 @@
                         <path d="M25.3375633,23.0656724 C31.8737795,23.0656724 34.8813449,26.6172699 34.8813449,28.9600854 L34.8813449,30.6599831 C34.8813449,30.9843199 34.5231009,31.2465496 34.0843526,31.2465496 L16.5867487,31.25 C16.1480004,31.25 15.7937816,30.9843199 15.7937816,30.6634335 L15.7937816,28.9600854 C15.7937816,26.6172699 18.8013471,23.0656724 25.3375633,23.0656724 Z M11.7765964,20.0096673 L13.9225488,26.5272577 C13.7614277,26.8981179 13.6364669,27.2792282 13.5500394,27.6682909 L7.04296709,27.6710819 C6.64078116,27.6710819 6.30962348,27.4478368 6.25722349,27.1634651 L6.25,27.0845154 L6.25,25.3811673 C6.25,23.5868455 8.0141665,21.0834809 11.7765964,20.0096673 Z M17.5004558,22.6791802 C16.3577968,23.3680035 15.4164029,24.2050328 14.7257944,25.1423209 L13.916977,22.6794708 L17.5004558,22.6791802 Z M25.4406003,12.3289181 C28.0768082,12.3852645 30.1696755,14.5626515 30.1133291,17.1988594 C30.0569826,19.8350673 27.8795957,21.9279346 25.2433878,21.8715882 C22.6876748,21.8192665 20.6270054,19.7585971 20.5666343,17.1988594 C20.5143126,14.5666762 22.6031552,12.3852645 25.239363,12.3289181 Z M17.0104651,19.7525228 L17.8660474,21.4864981 L14.5543541,21.4864981 L15.2973407,19.7525228 L17.0104651,19.7525228 Z M15.8968187,8.75 C17.9667273,8.79424232 19.7016588,10.1461361 20.3242467,12.0010389 C18.96339,13.3341178 18.1404601,15.1987538 18.1811601,17.2462771 L18.1923224,17.5132349 C18.1949689,17.5572568 18.1980091,17.6011707 18.2014397,17.644973 C17.4699045,18.0740971 16.6122505,18.312177 15.6996062,18.29267 C13.1438932,18.2403484 11.0832238,16.179679 11.0228526,13.6199413 C10.970531,10.9877581 13.0593735,8.80634643 15.6955814,8.75 L15.8968187,8.75 Z" id="形状结合" fill="#999BA6" fill-rule="nonzero"></path>
                     </g>
                 </g>
-                <g id="编组-66" transform="translate(21, 110)">
+                <g id="编组-66" transform="translate(21, 136)">
                     <g id="编组-35" transform="translate(0, 40)" fill="#666773">
                         <g id="编组-27备份-11" transform="translate(14, 0)" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="16" font-weight="bold">
                             <text id="经营决策层">
@@ -127,164 +95,174 @@
                         <path d="M15.0902719,22.0972685 L18.1723333,31.4602685 L9.30268522,31.4631538 C8.80760038,31.4631538 8.40056169,31.1864207 8.34086984,30.8353207 L8.33333333,30.7461135 L8.33333333,28.6638787 C8.33333333,26.4702713 10.4902354,23.4097752 15.0902719,22.0972685 Z M25.1670192,22.1732636 C29.5902387,23.5247404 31.6666667,26.5115821 31.6666667,28.6638787 L31.6666667,30.7418956 C31.6666667,31.1383767 31.2287361,31.4589359 30.6923942,31.4589359 L22.4823333,31.4602685 L25.1670192,22.1732636 Z M23.1732001,25.3612264 L21.4873182,31.1945597 L19.6257424,31.1945597 L17.7057256,25.3612264 L23.1732001,25.3612264 Z M21.4873182,21.7832184 L22.5332133,23.9028931 L18.4848785,23.9028931 L19.3931325,21.7832184 L21.4873182,21.7832184 Z M25.8380703,14.2865271 C25.9069502,11.0639305 23.3485529,8.40221326 20.1259562,8.33333333 L19.8799565,8.33333333 C16.6573598,8.40221326 14.1038825,11.0688505 14.1678424,14.2865271 C14.2416424,17.4156439 16.7606797,19.9346812 19.8848765,19.9986412 C23.1074731,20.0675211 25.7691903,17.5091238 25.8380703,14.2865271 Z" id="形状结合" fill="#999BA6" fill-rule="nonzero"></path>
                     </g>
                 </g>
-                <g id="编组-27备份-2" transform="translate(333, 314)">
+                <g id="编组-27备份-2" transform="translate(333, 340)">
                     <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(77, 39.5) scale(-1, 1) translate(-77, -39.5)" points="1.3036464e-12 0 154 -3.33828354e-11 154 79 1.3036464e-12 79"></polygon>
-                    <text id="产品配置报价-CPQ" font-family="PingFangSC-Medium, PingFang SC" font-size="15" font-weight="400" fill="#303258">
-                        <tspan x="32" y="35">产品配置报价</tspan>
-                        <tspan x="60.83" y="56">CPQ</tspan>
+                    <text id="产品配置报价-CPQ" font-family="PingFangSC-Medium, PingFang SC" font-size="14" font-weight="400" fill="#303258">
+                        <tspan x="35" y="35">产品配置报价</tspan>
+                        <tspan x="61.908" y="55">CPQ</tspan>
                     </text>
                 </g>
-                <g id="编组-27备份-3" transform="translate(498, 314)">
+                <g id="编组-27备份-3" transform="translate(498, 340)">
                     <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(77, 39.5) scale(-1, 1) translate(-77, -39.5)" points="1.3036464e-12 0 154 -3.33828354e-11 154 79 1.3036464e-12 79"></polygon>
-                    <text id="智能合同管理-ICM" font-family="PingFangSC-Medium, PingFang SC" font-size="15" font-weight="400" fill="#303258">
-                        <tspan x="30.9452055" y="35">智能合同管理</tspan>
-                        <tspan x="61.8377055" y="56">ICM</tspan>
+                    <text id="智能合同管理-ICM" font-family="PingFangSC-Medium, PingFang SC" font-size="14" font-weight="400" fill="#303258">
+                        <tspan x="35" y="35">智能合同管理</tspan>
+                        <tspan x="63.833" y="55">ICM</tspan>
                     </text>
                 </g>
-                <g id="编组-27备份-5" transform="translate(830, 314)">
+                <g id="编组-27备份-5" transform="translate(830, 340)">
                     <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(63, 39.5) scale(-1, 1) translate(-63, -39.5)" points="1.06661978e-12 0 126 -3.33828354e-11 126 79 1.06661978e-12 79"></polygon>
-                    <text id="新产品导入-NPI" font-family="PingFangSC-Medium, PingFang SC" font-size="15" font-weight="400" fill="#303258">
-                        <tspan x="24.5" y="35">新产品导入</tspan>
-                        <tspan x="49.7525" y="56">NPI</tspan>
+                    <text id="新产品导入-NPI" font-family="PingFangSC-Medium, PingFang SC" font-size="14" font-weight="400" fill="#303258">
+                        <tspan x="27" y="35">新产品导入</tspan>
+                        <tspan x="50.569" y="55">NPI</tspan>
                     </text>
                 </g>
-                <g id="编组-27备份-6" transform="translate(965, 314)">
+                <g id="编组-27备份-6" transform="translate(965, 340)">
                     <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(102.5, 39.5) scale(-1, 1) translate(-102.5, -39.5)" points="1.73537345e-12 0 205 -3.33828354e-11 205 79 1.73537345e-12 79"></polygon>
-                    <text id="产品配置生命周期管理-CLM" font-family="PingFangSC-Medium, PingFang SC" font-size="15" font-weight="400" fill="#303258">
-                        <tspan x="28.025641" y="35">产品配置生命周期管理</tspan>
-                        <tspan x="86.375641" y="56">CLM</tspan>
+                    <text id="产品配置生命周期管理-CLM" font-family="PingFangSC-Medium, PingFang SC" font-size="14" font-weight="400" fill="#303258">
+                        <tspan x="33.025641" y="35">产品配置生命周期管理</tspan>
+                        <tspan x="87.485641" y="55">CLM</tspan>
                     </text>
                 </g>
-                <g id="编组-27备份-7" transform="translate(1181, 314)">
+                <g id="编组-27备份-7" transform="translate(1181, 340)">
                     <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(65.5, 39.5) scale(-1, 1) translate(-65.5, -39.5)" points="1.10894596e-12 0 131 -3.33828354e-11 131 79 1.10894596e-12 79"></polygon>
-                    <text id="集成计划-IPS" font-family="PingFangSC-Medium, PingFang SC" font-size="15" font-weight="400" fill="#303258">
-                        <tspan x="35.5" y="35">集成计划</tspan>
-                        <tspan x="53.8675" y="56">IPS</tspan>
+                    <text id="集成计划-IPS" font-family="PingFangSC-Medium, PingFang SC" font-size="14" font-weight="400" fill="#303258">
+                        <tspan x="37.5" y="35">集成计划</tspan>
+                        <tspan x="54.643" y="55">IPS</tspan>
                     </text>
                 </g>
-                <g id="编组-27备份-4" transform="translate(665, 314)">
+                <g id="编组-27备份-4" transform="translate(665, 340)">
                     <polygon id="矩形备份-84" fill="#F5F5F7" transform="translate(77, 39.5) scale(-1, 1) translate(-77, -39.5)" points="1.3036464e-12 0 154 -3.33828354e-11 154 79 1.3036464e-12 79"></polygon>
-                    <text id="开票与回款管理" font-family="PingFangSC-Medium, PingFang SC" font-size="15" font-weight="400" fill="#303258">
-                        <tspan x="24.5" y="35">开票与回款管理</tspan>
+                    <text id="开票与回款管理" font-family="PingFangSC-Medium, PingFang SC" font-size="14" font-weight="400" fill="#303258">
+                        <tspan x="28" y="35">开票与回款管理</tspan>
                     </text>
                 </g>
-                <g id="编组-33" transform="translate(401, 222)">
+                <g id="编组-33" transform="translate(400, 248)">
                     <polygon id="矩形备份-85" fill="#F5F5F7" transform="translate(108, 39.5) scale(-1, 1) translate(-108, -39.5)" points="1.82849105e-12 0 216 -3.33828354e-11 216 79 1.82849105e-12 79"></polygon>
-                    <text id="物的360" font-family="PingFangSC-Semibold, PingFang SC" font-size="15" font-weight="500" fill="#F96F25">
-                        <tspan x="80.0268293" y="35">物的360</tspan>
+                    <text id="物的360" font-family="PingFangSC-Semibold, PingFang SC" font-size="14" font-weight="500" fill="#F96F25">
+                        <tspan x="81.4" y="35">物的360</tspan>
                     </text>
-                    <text id="ISC" font-family="Helvetica" font-size="15" font-weight="normal" fill="#F96F25">
-                        <tspan x="96.0243879" y="58">ISC</tspan>
+                    <text id="ISC" font-family="Helvetica" font-size="14" font-weight="normal" fill="#F96F25">
+                        <tspan x="96.3310547" y="58">ISC</tspan>
                     </text>
                 </g>
-                <g id="编组-25" transform="translate(631, 222)">
+                <g id="编组-25" transform="translate(630, 248)">
                     <polygon id="矩形备份-86" fill="#F5F5F7" transform="translate(108, 39.5) scale(-1, 1) translate(-108, -39.5)" points="1.82849105e-12 0 216 -3.33828354e-11 216 79 1.82849105e-12 79"></polygon>
-                    <text id="研发项目360" font-family="PingFangSC-Semibold, PingFang SC" font-size="15" font-weight="500" fill="#F96F25">
-                        <tspan x="62.9195122" y="35">研发项目360</tspan>
+                    <text id="研发项目360" font-family="PingFangSC-Semibold, PingFang SC" font-size="14" font-weight="500" fill="#F96F25">
+                        <tspan x="67.4" y="35">研发项目360</tspan>
                     </text>
-                    <text id="IPD" font-family="Helvetica" font-size="15" font-weight="normal" fill="#F96F25">
-                        <tspan x="93.9170708" y="58">IPD</tspan>
+                    <text id="IPD" font-family="Helvetica" font-size="14" font-weight="normal" fill="#F96F25">
+                        <tspan x="96.3310547" y="58">IPD</tspan>
                     </text>
                 </g>
-                <g id="编组-25备份" transform="translate(865, 222)">
+                <g id="编组-25备份" transform="translate(861, 248)">
                     <polygon id="矩形备份-86" fill="#F5F5F7" transform="translate(89.5, 39.5) scale(-1, 1) translate(-89.5, -39.5)" points="1.51527731e-12 0 179 -3.33828354e-11 179 79 1.51527731e-12 79"></polygon>
-                    <text id="供应链360" font-family="PingFangSC-Semibold, PingFang SC" font-size="15" font-weight="500" fill="#F96F25">
-                        <tspan x="54" y="35">供应链360</tspan>
+                    <text id="供应链360" font-family="PingFangSC-Semibold, PingFang SC" font-size="14" font-weight="500" fill="#F96F25">
+                        <tspan x="56.4" y="35">供应链360</tspan>
                     </text>
-                    <text id="ITR" opacity="0.800000012" font-family="Helvetica" font-size="15" font-weight="normal" fill="#F96F25">
-                        <tspan x="77.9187012" y="58">ITR</tspan>
+                    <text id="ITR" font-family="Helvetica" font-size="14" font-weight="normal" fill="#F96F25">
+                        <tspan x="78.2241211" y="58">ITR</tspan>
                     </text>
                 </g>
-                <g id="编组-25备份-2" transform="translate(1056, 222)">
+                <g id="编组-25备份-2" transform="translate(1054, 248)">
                     <polygon id="矩形备份-86" fill="#F5F5F7" transform="translate(89.5, 39.5) scale(-1, 1) translate(-89.5, -39.5)" points="1.51527731e-12 0 179 -3.33828354e-11 179 79 1.51527731e-12 79"></polygon>
-                    <text id="财务360" font-family="PingFangSC-Semibold, PingFang SC" font-size="15" font-weight="500" fill="#F96F25">
-                        <tspan x="59.5" y="35">财务360</tspan>
+                    <text id="财务360" font-family="PingFangSC-Semibold, PingFang SC" font-size="14" font-weight="500" fill="#F96F25">
+                        <tspan x="63.4" y="35">财务360</tspan>
                     </text>
-                    <text id="FIN" opacity="0.800000012" font-family="Helvetica" font-size="15" font-weight="normal" fill="#F96F25">
-                        <tspan x="75.9187012" y="58">FIN</tspan>
+                    <text id="FIN" font-family="Helvetica" font-size="14" font-weight="normal" fill="#F96F25">
+                        <tspan x="78.2241211" y="58">FIN</tspan>
                     </text>
                 </g>
-                <g id="编组-25备份-5" transform="translate(1247, 222)">
+                <g id="编组-25备份-5" transform="translate(1247, 248)">
                     <polygon id="矩形备份-86" fill="#F5F5F7" transform="translate(32.5, 39.5) scale(-1, 1) translate(-32.5, -39.5)" points="5.50240363e-13 0 65 -3.33828354e-11 65 79 5.50240363e-13 79"></polygon>
                     <text id="…" opacity="0.800000012" font-family="PingFangSC-Semibold, PingFang SC" font-size="16" font-weight="500" fill="#F96F25">
                         <tspan x="24" y="41">…</tspan>
                     </text>
                 </g>
-                <path d="M1375.5,410.5 L1375.5,519.5 L149.5,519.5 L149.5,410.5 L1375.5,410.5 Z" id="矩形备份-77" stroke="#E3E3E3" fill="#FFFFFF" transform="translate(762.5, 465) scale(-1, 1) translate(-762.5, -465)"></path>
-                <g id="编组-23" transform="translate(638, 53)" fill="#303258" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="24" font-weight="bold">
+                <path d="M1375.5,436.5 L1375.5,545.5 L149.5,545.5 L149.5,436.5 L1375.5,436.5 Z" id="矩形备份-77" stroke="#E3E3E3" fill="#FFFFFF" transform="translate(762.5, 491) scale(-1, 1) translate(-762.5, -491)"></path>
+                <g id="编组-23" transform="translate(638, 52)" fill="#303258" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="24" font-weight="bold">
                     <text id="EIMOS-企业级业务应用">
                         <tspan x="0" y="23">EIMOS 企业级业务应用</tspan>
                     </text>
                 </g>
-                <g id="编组-23备份" transform="translate(715.5, 424)" fill="#303258" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="18" font-weight="bold">
+                <g id="编组-23备份" transform="translate(715.5, 450)" fill="#303258" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="18" font-weight="bold">
                     <text id="EIMOS平台">
                         <tspan x="0.902" y="17">EIMOS平台</tspan>
                     </text>
                 </g>
                 <text id="智能经营解析IBA" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="18" font-weight="bold" fill="#F96F25">
-                    <tspan x="671.79" y="145">智能经营解析IBA</tspan>
+                    <tspan x="671.79" y="128">智能经营解析IBA</tspan>
                 </text>
-                <g id="编组-68" transform="translate(413, 168)">
-                    <g id="编组-29">
-                        <text id="多主题" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
-                            <tspan x="0" y="19">多主题</tspan>
-                        </text>
-                        <g id="编组-28" transform="translate(50.7542, 0)">
-                            <use id="矩形" stroke-opacity="0.5" stroke="#F96F25" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" stroke-dasharray="1" xlink:href="#path-1"></use>
-                            <text id="收入" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#F96F25">
-                                <tspan x="16.5415282" y="19">收入</tspan>
-                            </text>
-                        </g>
-                        <g id="编组-28备份-2" transform="translate(183.4518, 0)">
-                            <use id="矩形" stroke-opacity="0.5" stroke="#F96F25" mask="url(#mask-4)" stroke-width="2" fill="#FFFFFF" stroke-dasharray="1" xlink:href="#path-3"></use>
-                            <text id="回款" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#F96F25">
-                                <tspan x="16.5415282" y="19">回款</tspan>
-                            </text>
-                        </g>
-                        <g id="编组-28备份" transform="translate(117.103, 0)">
-                            <use id="矩形" stroke-opacity="0.5" stroke="#F96F25" mask="url(#mask-6)" stroke-width="2" fill="#FFFFFF" stroke-dasharray="1" xlink:href="#path-5"></use>
-                            <text id="利润" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#F96F25">
-                                <tspan x="16.5415282" y="19">利润</tspan>
-                            </text>
-                        </g>
-                        <g id="编组-28备份-3" transform="translate(249.8007, 0)">
-                            <use id="矩形" stroke-opacity="0.5" stroke="#F96F25" mask="url(#mask-8)" stroke-width="2" fill="#FFFFFF" stroke-dasharray="1" xlink:href="#path-7"></use>
-                            <text id="存货" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#F96F25">
-                                <tspan x="16.5415282" y="19">存货</tspan>
-                            </text>
-                        </g>
+                <g id="编组-68" transform="translate(332, 139)">
+                    <text id="多主题" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#666773">
+                        <tspan x="125" y="13">多主题</tspan>
+                    </text>
+                    <text id="收入" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#F96F25">
+                        <tspan x="4" y="77">收入</tspan>
+                    </text>
+                    <text id="回款" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#F96F25">
+                        <tspan x="176" y="77">回款</tspan>
+                    </text>
+                    <text id="利润" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#F96F25">
+                        <tspan x="90" y="77">利润</tspan>
+                    </text>
+                    <text id="存货" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#F96F25">
+                        <tspan x="262" y="77">存货</tspan>
+                    </text>
+                    <g id="编组" opacity="0.699999988" transform="translate(258, 28)">
+                        <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M6.66666667,11.7609369 L15.5087719,17.0254632 L15.5087719,27.5254632 L6.66666667,22.2609369 L6.66666667,11.7609369 Z M25.3333333,11.7609369 L25.3333333,22.2609369 L16.4912281,27.5254632 L16.4912281,17.0254632 L19.9986667,14.9367005 L20,20.2241211 L21.4791667,18.1378581 L22.6666667,18.6666667 L22.6653333,13.3487005 L25.3333333,11.7609369 Z M15.902687,5.31803385 L24.8714193,10.6590169 L21.504,12.6633672 L16.4912281,9.77777778 L13.9581706,11.2688802 L18.928,14.1980339 L15.902687,16 L7.03889974,10.6590169 L15.902687,5.31803385 Z" id="形状" fill="#F96F25"></path>
                     </g>
-                    <g id="编组-30" transform="translate(345, 0)">
-                        <text id="多维度" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#303258">
-                            <tspan x="0" y="19">多维度</tspan>
-                        </text>
-                        <g id="编组-28备份-4" transform="translate(50.7542, 0)">
-                            <use id="矩形" stroke-opacity="0.5" stroke="#F96F25" mask="url(#mask-10)" stroke-width="2" fill="#FFFFFF" stroke-dasharray="1" xlink:href="#path-9"></use>
-                            <text id="产业" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#F96F25">
-                                <tspan x="16.5415282" y="19">产业</tspan>
-                            </text>
-                        </g>
-                        <g id="编组-28备份-5" transform="translate(183.4518, 0)">
-                            <use id="矩形" stroke-opacity="0.5" stroke="#F96F25" mask="url(#mask-12)" stroke-width="2" fill="#FFFFFF" stroke-dasharray="1" xlink:href="#path-11"></use>
-                            <text id="市场" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#F96F25">
-                                <tspan x="16.5415282" y="19">市场</tspan>
-                            </text>
-                        </g>
-                        <g id="编组-28备份-6" transform="translate(117.103, 0)">
-                            <use id="矩形" stroke-opacity="0.5" stroke="#F96F25" mask="url(#mask-14)" stroke-width="2" fill="#FFFFFF" stroke-dasharray="1" xlink:href="#path-13"></use>
-                            <text id="产品" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#F96F25">
-                                <tspan x="16.5415282" y="19">产品</tspan>
-                            </text>
-                        </g>
-                        <g id="编组-28备份-7" transform="translate(249.8007, 0)">
-                            <use id="矩形" stroke-opacity="0.5" stroke="#F96F25" mask="url(#mask-16)" stroke-width="2" fill="#FFFFFF" stroke-dasharray="1" xlink:href="#path-15"></use>
-                            <text id="客户" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#F96F25">
-                                <tspan x="16.5415282" y="19">客户</tspan>
-                            </text>
-                        </g>
+                    <g id="编组" opacity="0.699999988" transform="translate(86, 28)">
+                        <rect id="矩形备份" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M20.6666667,14.6666667 C23.9803752,14.6666667 26.6666667,17.3529582 26.6666667,20.6666667 C26.6666667,23.9803752 23.9803752,26.6666667 20.6666667,26.6666667 C17.3529582,26.6666667 14.6666667,23.9803752 14.6666667,20.6666667 C14.6666667,17.3529582 17.3529582,14.6666667 20.6666667,14.6666667 Z M6.66666667,17.2541667 L6.67774775,17.420987 C6.87765831,19.0092633 9.75815445,20.2793848 13.3412659,20.3522536 C13.3355528,20.4565805 13.3333333,20.5613644 13.3333333,20.6666667 C13.3333333,22.4224719 13.9503928,24.0341552 14.9794827,25.2966874 C14.5642529,25.3210964 14.1261537,25.3333333 13.6666667,25.3333333 C9.88330078,25.3333333 7.54996745,24.5037037 6.66666667,22.8444444 L6.66666667,17.2541667 Z M19.0703364,17.3333333 L17.3333333,17.3333333 L19.5351682,20.0055112 L18.0061162,20.0055112 L18.0061162,20.9921615 L19.8654434,20.9921615 L19.8654434,21.5882627 L18.0061162,21.5882627 L18.0061162,22.574913 L19.8654434,22.574913 L19.8654434,24.5276584 L21.5412844,24.5276584 L21.5412844,22.574913 L23.4006116,22.574913 L23.4006116,21.5882627 L21.5412844,21.5882627 L21.5412844,20.9921615 L23.4006116,20.9921615 L23.4006116,20.0055112 L21.8593272,20.0055112 L24,17.3333333 L22.2140673,17.3333333 L20.7094801,19.3785772 L20.6238532,19.3785772 L19.0703364,17.3333333 Z M20.6666667,11.0222222 L20.6666667,13.3333333 C17.2364503,13.3333333 14.3563073,15.6884769 13.5550391,18.8699622 L13.4986667,19.1096667 L13.2931635,19.1083457 C9.72935637,19.0548807 7.52052409,18.2261728 6.66666667,16.6222222 L6.66666667,11.0222222 C6.66666667,12.7404414 9.80067342,14.1333333 13.6666667,14.1333333 C17.5326599,14.1333333 20.6666667,12.7404414 20.6666667,11.0222222 Z M13.6666667,6.66666667 C17.5326599,6.66666667 20.6666667,8.05955856 20.6666667,9.77777778 C20.6666667,11.495997 17.5326599,12.8888889 13.6666667,12.8888889 C9.80067342,12.8888889 6.66666667,11.495997 6.66666667,9.77777778 C6.66666667,8.05955856 9.80067342,6.66666667 13.6666667,6.66666667 Z" id="形状结合" fill="#F96F25"></path>
+                    </g>
+                    <g id="编组备份" opacity="0.699999988" transform="translate(0, 28)">
+                        <rect id="矩形备份" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M25.3333333,20.0666667 L25.3333333,24.3259259 C24.6603423,25.5901235 22.8825645,26.2222222 20,26.2222222 C17.1174355,26.2222222 15.3396577,25.5901235 14.6666667,24.3259259 L14.6666667,20.0666667 L14.6751094,20.1937679 C14.8320067,21.4403065 17.1560509,22.4296296 20,22.4296296 C22.8439491,22.4296296 25.1679933,21.4403065 25.3248906,20.1937679 L25.3333333,20.0666667 Z M6.66666667,15.4074074 C6.66666667,17.0436085 9.65071199,18.370049 13.332,18.3703703 L13.332,23.1106667 L12.9075774,23.1073185 C9.55455952,23.046637 7.47425595,22.2577778 6.66666667,20.7407407 L6.66666667,15.4074074 Z M25.3333333,15.3185185 L25.3333333,19.5851852 C24.6603423,20.8493827 22.8825645,21.4814815 20,21.4814815 C17.1174355,21.4814815 15.3396577,20.8493827 14.6666667,19.5851852 L14.6666667,15.3185185 C14.6666667,16.6276379 17.0544813,17.6888889 20,17.6888889 C22.9455187,17.6888889 25.3333333,16.6276379 25.3333333,15.3185185 Z M6.66666667,9.48148148 C6.66666667,11.1178807 9.651435,12.4444444 13.3333333,12.4444444 C13.6384707,12.4444444 13.9388199,12.4353333 14.2330789,12.4176896 C13.7464992,12.8006103 13.4394263,13.2298902 13.3561367,13.6852417 L13.3333333,13.6844905 L13.332,17.184 L12.9075774,17.1813926 C9.55455952,17.1207111 7.47425595,16.3318519 6.66666667,14.8148148 L6.66666667,9.48148148 Z M20,12 C22.9455187,12 25.3333333,13.061251 25.3333333,14.3703704 C25.3333333,15.6794898 22.9455187,16.7407407 20,16.7407407 C17.0544813,16.7407407 14.6666667,15.6794898 14.6666667,14.3703704 C14.6666667,13.061251 17.0544813,12 20,12 Z M13.3333333,5.33333333 C17.0152317,5.33333333 20,6.65989704 20,8.2962963 C20,9.93269555 17.0152317,11.2592593 13.3333333,11.2592593 C9.651435,11.2592593 6.66666667,9.93269555 6.66666667,8.2962963 C6.66666667,6.65989704 9.651435,5.33333333 13.3333333,5.33333333 Z M20,9.48148148 L19.9999053,10.703552 C19.7803947,10.7173746 19.5638654,10.7349851 19.3507133,10.7562184 C19.7675225,10.3707352 20,9.93817459 20,9.48148148 Z" id="形状" fill="#F96F25"></path>
+                    </g>
+                    <g id="编组" opacity="0.699999988" transform="translate(172, 28)">
+                        <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M11.3374692,5.91446853 C16.9075544,3.99653438 22.9777935,6.95718779 24.8957276,12.527273 C25.3420247,13.8234137 25.524157,15.1466366 25.4707161,16.4383206 L28.0029045,16.438151 L24.0029045,21.7714844 L20.0029045,16.438151 L22.8010735,16.4373347 C22.8574637,15.41691 22.7163943,14.3888386 22.3743448,13.3954548 C20.9358942,9.21789084 16.3832148,6.99740078 12.2056509,8.4358514 C8.02808701,9.87430201 5.80759695,14.4269813 7.24604756,18.6045452 C8.68449817,22.7821092 13.2371775,25.0025992 17.4147414,23.5641486 C17.5543304,23.5208715 17.7030367,23.4944661 17.8579102,23.4944661 C18.5942898,23.4944661 19.1912435,24.0914198 19.1912435,24.8277995 C19.1912435,25.4613094 18.749425,25.9916271 18.1571093,26.1274312 C12.6220083,27.9589043 6.62821281,25.0010321 4.72466469,19.472727 C2.80673054,13.9026418 5.76738396,7.83240268 11.3374692,5.91446853 Z M12.8504274,11.7641843 L14.865834,14.4175176 L14.9769194,14.4175176 L16.9288486,11.7641843 L19.2457727,11.7641843 L16.4686377,15.2308509 L18.4681749,15.2308509 L18.4681749,16.5108509 L16.0560347,16.5108509 L16.0560347,17.2841843 L18.4681749,17.2841843 L18.4681749,18.5641843 L16.0560347,18.5641843 L16.0560347,21.0975176 L13.8819347,21.0975176 L13.8819347,18.5641843 L11.4697945,18.5641843 L11.4697945,17.2841843 L13.8819347,17.2841843 L13.8819347,16.5108509 L11.4697945,16.5108509 L11.4697945,15.2308509 L13.4534624,15.2308509 L10.5969806,11.7641843 L12.8504274,11.7641843 Z" id="形状" fill="#F96F25"></path>
+                    </g>
+                    <line x1="102" y1="8.5" x2="116.959717" y2="8.5" id="路径-13" stroke="#BEC3CD"></line>
+                    <line x1="169" y1="8.5" x2="183.959717" y2="8.5" id="路径-13备份" stroke="#BEC3CD"></line>
+                </g>
+                <g id="编组-63" transform="translate(868, 139)">
+                    <text id="多维度" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#666773">
+                        <tspan x="132" y="13">多维度</tspan>
+                    </text>
+                    <line x1="109" y1="8.5" x2="123.959717" y2="8.5" id="路径-13备份-2" stroke="#BEC3CD"></line>
+                    <line x1="176" y1="8.5" x2="190.959717" y2="8.5" id="路径-13备份-3" stroke="#BEC3CD"></line>
+                    <text id="产业" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#F96F25">
+                        <tspan x="4" y="77">产业</tspan>
+                    </text>
+                    <text id="市场" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#F96F25">
+                        <tspan x="177" y="77">市场</tspan>
+                    </text>
+                    <text id="产品" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#F96F25">
+                        <tspan x="90" y="77">产品</tspan>
+                    </text>
+                    <text id="客户" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#F96F25">
+                        <tspan x="263" y="77">客户</tspan>
+                    </text>
+                    <g id="编组" opacity="0.699999988" transform="translate(173, 28)">
+                        <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M16.1721439,5.16048177 C17.5569789,5.16048177 18.6796094,6.28311233 18.6796094,7.66794731 C18.6796094,7.7136049 18.6783891,7.75897747 18.6759794,7.80403419 L24.0153198,7.80415607 C24.3615285,7.80415607 24.6421862,8.08481371 24.6421862,8.43102245 C24.6421862,8.7772312 24.3615285,9.05788884 24.0153198,9.05788884 L22.499344,9.05660604 C22.6093946,9.10629237 22.7073451,9.18923565 22.7770081,9.30537691 L26.0584845,14.7762108 C26.2365665,15.0731069 26.1402488,15.4581527 25.8433527,15.6362348 C25.5464566,15.8143169 25.1614108,15.7179991 24.9833287,15.421103 L22.2334403,10.8389289 L19.4387409,15.4250103 C19.2785275,15.6877579 18.955946,15.7908368 18.6786362,15.6839112 L18.5771726,15.6338717 C18.2815816,15.4536317 18.1880712,15.0678945 18.3683112,14.7723035 L21.7042154,9.3014696 C21.7738548,9.18726201 21.8708531,9.10564041 21.979613,9.05654799 L18.2587804,9.0588691 C17.9824233,9.47263086 17.5862708,9.79957322 17.1199088,9.99011016 L17.1188678,21.8164818 L25.2690526,24.6078788 L25.2690526,25.9832812 L7.7167938,25.9832812 L7.7167938,24.6078788 L15.2388678,21.9344818 L15.2384513,9.99580955 C14.7659862,9.80613145 14.3646399,9.47678629 14.0855074,9.0588691 L7.7167938,9.05788884 C7.37058505,9.05788884 7.08992741,8.7772312 7.08992741,8.43102245 C7.08992741,8.08481371 7.37058505,7.80415607 7.7167938,7.80415607 L13.6688678,7.80348177 L13.6646784,7.66794731 C13.6646784,6.33850573 14.6992947,5.25071174 16.0072773,5.16581533 L16.1721439,5.16048177 Z M6.46332547,16.0230165 C6.61070319,16.0517324 6.76300445,16.0673948 6.91896385,16.0673948 L13.7575062,16.0673948 C13.7575062,18.0817002 12.124589,19.7146174 10.1102836,19.7146174 C8.09597821,19.7146174 6.46306103,18.0817002 6.46306103,16.0673948 L6.46332547,16.0230165 Z M18.5920269,15.9660843 C18.7394046,15.9948002 18.8917059,16.0104626 19.0476653,16.0104626 L25.8862076,16.0104626 C25.8862076,18.024768 24.2532904,19.6576852 22.238985,19.6576852 C20.2246796,19.6576852 18.5917624,18.024768 18.5917624,16.0104626 C18.5917624,15.995649 18.5918507,15.9808561 18.5920269,15.9660843 Z M10.6483067,9.36230912 L13.9297831,14.833143 C14.1078651,15.1300391 14.0115474,15.5150849 13.7146513,15.693167 C13.4177552,15.8712491 13.0327094,15.7749313 12.8546273,15.4780352 L10.1047389,10.8958611 L7.31003948,15.4819425 C7.14982613,15.7446901 6.8272446,15.847769 6.54993476,15.7408434 L6.44847123,15.6908039 C6.15288025,15.5105639 6.05936981,15.1248267 6.23960983,14.8292357 L9.57551402,9.3584018 C9.820879,8.95600683 10.4058794,8.95813752 10.6483067,9.36230912 Z" id="形状结合" fill="#F96F25"></path>
+                    </g>
+                    <g id="编组" opacity="0.699999988" transform="translate(86, 28)">
+                        <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M14.4131412,16.0393848 C14.5332023,16.0393848 14.6510353,16.0718074 14.7541959,16.1332285 L19.4057805,18.9027488 C19.6076852,19.0229614 19.7313925,19.2405896 19.7313925,19.4755717 L19.7313925,25.0308928 C19.7313925,25.3990826 19.4329157,25.6975595 19.0647258,25.6975595 C18.9446647,25.6975595 18.8268318,25.6651369 18.7236711,25.6037157 L14.0720865,22.8341955 C13.8701818,22.7139828 13.7464746,22.4963546 13.7464746,22.2613725 L13.7464746,16.7060514 C13.7464746,16.3378616 14.0449514,16.0393848 14.4131412,16.0393848 Z M25.7146346,16.0393848 C26.0828245,16.0393848 26.3813013,16.3378616 26.3813013,16.7060514 L26.3813013,22.2613725 C26.3813013,22.4963546 26.2575941,22.7139828 26.0556893,22.8341955 L21.4041047,25.6037157 C21.3009441,25.6651369 21.1831112,25.6975595 21.06305,25.6975595 C20.6948602,25.6975595 20.3963834,25.3990826 20.3963834,25.0308928 L20.3963834,19.4755717 C20.3963834,19.2405896 20.5200906,19.0229614 20.7219953,18.9027488 L25.37358,16.1332285 C25.4767406,16.0718074 25.5945735,16.0393848 25.7146346,16.0393848 Z M6,11.0984772 C6.12006112,11.0984772 6.23789405,11.1308998 6.3410547,11.1923209 L12.1896229,14.6745166 C12.3915276,14.7947292 12.5152349,15.0123575 12.5152349,15.2473396 L12.5152349,22.2240787 C12.5152349,22.5922685 12.216758,22.8907453 11.8485682,22.8907453 C11.7285071,22.8907453 11.6106741,22.8583227 11.5075135,22.7969016 L5.6589453,19.3147059 C5.45704059,19.1944932 5.33333333,18.976865 5.33333333,18.7418829 L5.33333333,11.7651438 C5.33333333,11.396954 5.63181017,11.0984772 6,11.0984772 Z M20.7075562,11.7664668 L24.7315935,14.2957326 C25.043321,14.4916656 25.1371909,14.9032057 24.941258,15.2149332 C24.8853866,15.303824 24.8093103,15.3782621 24.7192245,15.4321855 L20.6828182,17.8482909 C20.2611691,18.1006809 19.7348712,18.1006809 19.3132221,17.8482909 L15.2768158,15.4321855 C14.9608976,15.2430838 14.8580926,14.8336842 15.0471944,14.5177661 C15.1011178,14.4276802 15.1755559,14.351604 15.2644468,14.2957326 L19.288484,11.7664668 C19.7222268,11.4938424 20.2738135,11.4938424 20.7075562,11.7664668 Z M13.5447241,5.98301056 L18.6994925,9.22298537 C19.0112199,9.41891836 19.1050899,9.83045847 18.9091569,10.1421859 C18.8532855,10.2310768 18.7772093,10.3055149 18.6871234,10.3594383 L13.5199861,13.4523748 C13.098337,13.7047649 12.572039,13.7047649 12.1503899,13.4523748 L6.98325256,10.3594383 C6.66733442,10.1703365 6.56452942,9.76093701 6.75363119,9.44501886 C6.80755462,9.35493302 6.88199269,9.27885676 6.97088354,9.22298537 L12.1256519,5.98301056 C12.5593946,5.71038617 13.1109814,5.71038617 13.5447241,5.98301056 Z" id="形状" fill="#F96F25"></path>
+                    </g>
+                    <g id="编组" opacity="0.699999988" transform="translate(259, 28)">
+                        <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M16.8286282,18.9389538 L18.98,24.9986667 L13.269399,25 C12.9184003,25 12.6350253,24.7874559 12.6350253,24.5307468 L12.6350253,23.1680683 C12.6350253,21.7693015 13.9751326,19.831927 16.8286282,18.9389538 Z M23.6942437,18.9335804 C26.5595745,19.8241346 27.9050759,21.7664892 27.9050759,23.1680683 L27.9050759,24.5279865 C27.9050759,24.7874559 27.6184807,24.9972397 27.2674821,24.9972397 L22.1786667,24.9973333 L23.6942437,18.9335804 Z M22.2455192,21.1108618 L21.1422262,24.9283745 L19.9239538,24.9283745 L18.6674358,21.1108618 L22.2455192,21.1108618 Z M9.42201887,16.0075221 L11.1383046,21.221195 C11.0092026,21.5182524 10.9091019,21.8235321 10.839908,22.135189 L5.63437368,22.1368655 C5.32237489,22.1368655 5.06380709,21.9689294 5.01019942,21.7513153 L5,21.6676123 L5,20.3049339 C5,18.8693585 6.41156508,16.8664557 9.42201887,16.0075221 Z M14.0023578,18.142143 C13.0876686,18.6932268 12.3340783,19.3629885 11.7812456,20.1130289 L11.1335816,18.1435767 L14.0023578,18.142143 Z M21.0794007,18.6171224 L21.7638666,20.0043027 L19.1145119,20.0043027 L19.7089012,18.6171224 L21.0794007,18.6171224 Z M20.3524802,9.86313449 C22.4614465,9.90821163 24.1357404,11.6501212 24.0906633,13.7590875 C24.0544196,15.4547708 22.9212202,16.8694501 21.3822649,17.335403 L19.1682781,17.335403 C17.624175,16.8687278 16.4931879,15.4500216 16.4533074,13.7590875 C16.4114501,11.653341 18.0825241,9.90821163 20.1914904,9.86313449 L20.3524802,9.86313449 Z M13.6083721,15.8020182 L14.292838,17.1891985 L11.6434832,17.1891985 L12.2378726,15.8020182 L13.6083721,15.8020182 Z M12.7174549,7 C14.3739977,7.03540702 15.7623595,8.11771358 16.2599527,9.60248712 C15.1709629,10.6667257 14.5123619,12.1586909 14.5449281,13.7970217 L14.5610829,14.1150983 C13.9769491,14.4589929 13.2903461,14.6497532 12.5596849,14.634136 C10.5151145,14.5922787 8.86657905,12.9437432 8.81828212,10.895953 C8.77642477,8.79020651 10.4474988,7.04507714 12.5564651,7 L12.7174549,7 Z" id="形状" fill="#F96F25" fill-rule="nonzero"></path>
+                    </g>
+                    <g id="编组" opacity="0.699999988" transform="translate(0, 28)">
+                        <rect id="矩形备份" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M13.50985,6.15437057 L19.6492195,8.84020946 C19.8312557,8.91984627 19.9488639,9.09971231 19.9488185,9.29840602 L19.948,12.8824818 L19.948,12.8824818 L22.6312421,12.0105272 C22.6469898,12.0054097 22.6597975,11.9938022 22.6664347,11.9786322 C22.6722516,11.965337 22.6875681,11.9590553 22.7010451,11.9644375 L26.9914295,13.6778538 C27.1813936,13.7537182 27.3059896,13.9376416 27.3059896,14.1421942 L27.3059896,25.3582357 L27.3059896,25.3582357 L25.3059896,25.3582357 L25.3059896,15.1567969 L22.6666667,14.1038151 L22.6666667,24.8333333 C22.6666667,25.1094757 22.442809,25.3333333 22.1666667,25.3333333 L16.5,25.3333333 C16.2238576,25.3333333 16,25.1094757 16,24.8333333 L16,14.5279887 C16,14.3113713 16.1394856,14.1193905 16.3455026,14.0524568 L17.948,13.5318151 L17.948,13.5318151 L17.9479453,10.291263 L13.3333333,8.3558151 L13.3333333,25.3333333 L4.5,25.3333333 C4.22385763,25.3333333 4,25.1094757 4,24.8333333 L4,9.56327424 C4,9.34832846 4.13737605,9.15743491 4.34119179,9.0891646 L13.1506408,6.1383433 C13.2682221,6.09895817 13.3962435,6.10467026 13.50985,6.15437057 Z M18.551195,21.2992588 L17.0651042,21.6633227 L17.0651042,23.0029297 L18.551195,22.7365029 L18.551195,21.2992588 Z M21.2742379,20.576525 L19.4603436,21.0404608 L19.4603436,22.5904193 L21.2742379,22.2585068 L21.2742379,20.576525 Z M7.52,18.6666667 L5.33333333,19.2023584 L5.33333333,21.1734855 L7.52,20.7814593 L7.52,18.6666667 Z M11.6033588,17.4994116 L8.86598552,18.1995436 L8.86598552,20.5386076 L11.6033588,20.0377138 L11.6033588,17.4994116 Z M18.551195,18.5853266 L17.0651042,19.0189828 L17.0651042,20.3992209 L18.551195,20.0714174 L18.551195,18.5853266 Z M21.2742379,17.8028743 L19.4603436,18.3196194 L19.4603436,19.9377761 L21.2742379,19.5376654 L21.2742379,17.8028743 Z M18.551195,15.8644852 L17.0651042,16.3526529 L17.0651042,17.8028743 L18.551195,17.3874855 L18.551195,15.8644852 Z M7.52,14.6666667 L5.33333333,15.304758 L5.33333333,17.3356706 L7.52,16.8533333 L7.52,14.6666667 Z M21.2742379,15.0029297 L19.4603436,15.598778 L19.4603436,17.2169347 L21.2742379,16.740675 L21.2742379,15.0029297 Z M11.5213216,13.5163574 L8.85465495,14.2760417 L8.85465495,16.6549479 L11.5213216,16.0667318 L11.5213216,13.5163574 Z M7.51808514,10.6666667 L5.33333333,11.3843384 L5.33333333,13.5163574 L7.51808514,12.9056803 L7.51808514,10.6666667 Z M11.5213216,9.4000651 L8.85465495,10.2760417 L8.85465495,12.6549479 L11.5213216,11.9547827 L11.5213216,9.4000651 Z" id="形状" fill="#F96F25"></path>
                     </g>
                 </g>
-                <g id="编组-25备份-3" transform="translate(170, 458)">
+                <g id="编组-25备份-3" transform="translate(170, 484)">
                     <polygon id="矩形备份-86" fill="#F5F5F7" transform="translate(182.5, 26.5) scale(-1, 1) translate(-182.5, -26.5)" points="3.08981127e-12 0 365 -2.23960794e-11 365 53 3.08981127e-12 53"></polygon>
                     <g id="编组-57" transform="translate(112, 11)">
                         <text id="数据资产平台" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="16" font-weight="bold" fill="#666773">
@@ -296,7 +274,7 @@
                         </g>
                     </g>
                 </g>
-                <g id="编组-25备份-4" transform="translate(542, 458)">
+                <g id="编组-25备份-4" transform="translate(559, 484)">
                     <polygon id="矩形备份-86" fill="#F5F5F7" transform="translate(182.2627, 26.5) scale(-1, 1) translate(-182.2627, -26.5)" points="3.08579302e-12 0 364.525324 -2.23960794e-11 364.525324 53 3.08579302e-12 53"></polygon>
                     <g id="编组-59" transform="translate(115, 16)">
                         <text id="应用组装平台" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="16" font-weight="bold" fill="#666773">
@@ -310,7 +288,7 @@
                         </g>
                     </g>
                 </g>
-                <g id="编组-71" transform="translate(947.4747, 458)">
+                <g id="编组-71" transform="translate(947, 484)">
                     <polygon id="矩形备份-86" fill="#F5F5F7" transform="translate(182.2627, 26.5) scale(-1, 1) translate(-182.2627, -26.5)" points="3.08579302e-12 0 364.525324 -2.23960794e-11 364.525324 53 3.08579302e-12 53"></polygon>
                     <g id="编组-32" transform="translate(117, 18)">
                         <text id="数据服务平台" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-size="16" font-weight="bold" fill="#666773">
@@ -321,7 +299,7 @@
                         </g>
                     </g>
                 </g>
-                <g id="编组-39" transform="translate(1389, 48)">
+                <g id="编组-39" transform="translate(1388, 51)">
                     <g id="编组-42">
                         <rect id="矩形备份-61" fill="#999BA6" opacity="0.100000001" x="0" y="0" width="40" height="40" rx="20"></rect>
                         <path d="M15.1094172,22.8468223 L15.0920695,26.8407446 C15.0930007,26.8925002 15.0651486,26.940488 15.0197873,26.9652832 C14.9750589,26.9911514 14.9199513,26.9911514 14.8752229,26.9652832 L11.4056773,24.9581852 C11.361182,24.9311084 11.3338377,24.8828999 11.3333633,24.8307504 L11.3333633,20.8397243 C11.3322492,20.7842593 11.3622255,20.7328281 11.4110073,20.706563 C11.4597891,20.6802978 11.5191494,20.6836282 11.5646981,20.7151858 L15.0342437,22.7222838 C15.0802742,22.748213 15.1089478,22.7968207 15.1094172,22.8497186 L15.1094172,22.8468223 Z M15.121005,17.6509582 L15.121005,21.6448805 C15.1219136,21.6966361 15.0940615,21.7446239 15.0487002,21.7694191 C15.0029229,21.7952215 14.9470217,21.7952215 14.9012445,21.7694191 L11.4201337,19.7623211 C11.3743117,19.7365575 11.3464888,19.6875052 11.3478515,19.6348863 L11.3478515,15.6438602 C11.3483128,15.5916207 11.3762869,15.5435108 11.4214208,15.5173359 C11.4665546,15.4911609 11.5221341,15.4908147 11.5675894,15.5164254 L15.037135,17.5235234 C15.0834418,17.5487956 15.1114494,17.5981736 15.1094172,17.6509582 L15.121005,17.6509582 Z M19.6198491,25.4563394 L19.6198491,29.4502617 C19.6207577,29.5020172 19.5929056,29.5500051 19.5475443,29.5748002 C19.5017671,29.6006026 19.4458658,29.6006026 19.4000886,29.5748002 L15.930543,27.5677022 C15.8851835,27.5414758 15.8575318,27.4927254 15.8582467,27.4402674 L15.8582467,23.4492414 C15.8587221,23.3970018 15.8866962,23.348892 15.9318301,23.322717 C15.9769639,23.2965421 16.0325434,23.2961959 16.0779987,23.3218066 L19.5475443,25.3289046 C19.5929038,25.355131 19.6205555,25.4038814 19.6198491,25.4563394 L19.6198491,25.4563394 Z M24.905101,22.8468223 L24.905101,26.8407446 C24.9065602,26.8924653 24.9349296,26.9396506 24.9798855,26.9651298 C25.0248415,26.9906091 25.0798293,26.9906672 25.1248389,26.9652832 L28.5943845,24.9581852 C28.6388797,24.9311084 28.666224,24.8828999 28.6666667,24.8307504 L28.6666667,20.8397243 C28.666224,20.7875748 28.6388797,20.7393663 28.5943845,20.7122895 C28.5486072,20.6864871 28.492706,20.6864871 28.4469288,20.7122895 L24.9773832,22.7193875 C24.9313527,22.7453168 24.9026791,22.7939245 24.9022097,22.8468223 L24.905101,22.8468223 Z M24.8935358,17.6509582 L24.8935358,21.6448805 C24.8938455,21.696461 24.9215217,21.7439828 24.9661936,21.7696385 C25.0108654,21.7952943 25.0657886,21.7952107 25.1103824,21.7694191 L28.579928,19.7623211 C28.62575,19.7365575 28.6535729,19.6875052 28.6522102,19.6348863 L28.6522102,15.6438602 C28.6517676,15.5917107 28.6244233,15.5435021 28.579928,15.5164254 C28.5341508,15.490623 28.4782496,15.490623 28.4324723,15.5164254 L24.965818,17.5293159 C24.9195112,17.5545881 24.8915036,17.603966 24.8935358,17.6567507 L24.8935358,17.6509582 Z M20.3946776,25.4563394 L20.3946776,29.4502617 C20.3950014,29.5018422 20.4226776,29.5493639 20.4673494,29.5750197 C20.5120213,29.6006755 20.5669445,29.6005919 20.6115383,29.5748002 L24.0810839,27.5677022 C24.1264434,27.5414758 24.154095,27.4927254 24.1533801,27.4402674 L24.1533801,23.4492414 C24.1535463,23.3976629 24.1273639,23.3495795 24.0839752,23.3218066 C24.0381979,23.2960042 23.9822967,23.2960042 23.9365195,23.3218066 L20.4669739,25.3289046 C20.4216144,25.355131 20.3939627,25.4038814 20.3946776,25.4563394 L20.3946776,25.4563394 Z M20.0997803,14.2855211 L23.5461956,12.2784231 C23.5915569,12.253628 23.6194091,12.2056402 23.6185005,12.1538846 C23.6192068,12.1014266 23.5915551,12.0526762 23.5461956,12.0264498 L20.07665,10.0193518 C20.0308728,9.9935494 19.9749715,9.9935494 19.9291943,10.0193518 L16.482779,12.0264498 C16.4376252,12.052959 16.4098827,12.1014575 16.4098827,12.1538846 C16.4098827,12.2063116 16.4376252,12.2548102 16.482779,12.2813194 L19.9523246,14.2884174 C19.997053,14.3142856 20.0521606,14.3142856 20.096889,14.2884174 L20.0997803,14.2855211 Z M15.6153926,16.8950382 L19.0618079,14.8908364 C19.1069617,14.8643273 19.1347042,14.8158287 19.1347042,14.7634016 C19.1347042,14.7109746 19.1069617,14.662476 19.0618079,14.6359668 L15.5922623,12.6288688 C15.5464851,12.6030664 15.4905838,12.6030664 15.4448066,12.6288688 L11.9983913,14.6330706 C11.9538961,14.6601473 11.9265518,14.7083558 11.9261091,14.7605054 C11.926419,14.8119298 11.9539313,14.8593322 11.9983913,14.8850439 L15.4679369,16.8921419 C15.5116911,16.9214266 15.5687471,16.9214266 15.6125013,16.8921419 L15.6153926,16.8950382 Z M24.6130809,16.8950382 L28.0594962,14.8908364 C28.1046499,14.8643273 28.1323925,14.8158287 28.1323925,14.7634016 C28.1323925,14.7109746 28.1046499,14.662476 28.0594962,14.6359668 L24.5899506,12.6288688 C24.5452222,12.6030006 24.4901146,12.6030006 24.4453862,12.6288688 L20.9960796,14.6330706 C20.9507201,14.659297 20.9230684,14.7080474 20.9237747,14.7605054 C20.9228662,14.812261 20.9507183,14.8602488 20.9960796,14.8850439 L24.4656252,16.8921419 C24.5105036,16.9211777 24.5682024,16.9211777 24.6130809,16.8921419 L24.6130809,16.8950382 Z M24.1678225,17.6509582 L24.1678225,21.6448805 C24.1663633,21.6966012 24.1379939,21.7437865 24.093038,21.7692657 C24.048082,21.794745 23.9930942,21.7948031 23.9480846,21.7694191 L20.478539,19.7623211 C20.4336213,19.7356576 20.4061288,19.6871878 20.4062564,19.6348863 L20.4062564,15.6438602 C20.4067181,15.5916207 20.4346923,15.5435108 20.4798261,15.5173359 C20.52496,15.4911609 20.5805394,15.4908147 20.6259947,15.5164254 L24.0955403,17.5235234 C24.1400356,17.5506002 24.1673799,17.5988087 24.1678225,17.6509582 L24.1678225,17.6509582 Z M15.8466932,17.6509582 L15.8466932,21.6448805 C15.8463894,21.69737 15.8744623,21.745916 15.9200691,21.7717641 C15.9656758,21.7976122 16.0216753,21.796715 16.0664335,21.7694191 L19.5359791,19.7623211 C19.5824538,19.736849 19.6112972,19.6879533 19.6111532,19.6348863 L19.6111532,15.6438602 C19.6106832,15.5909623 19.5820096,15.5423547 19.5359791,15.5164254 C19.4912508,15.4905572 19.4361431,15.4905572 19.3914147,15.5164254 L15.9189779,17.5293159 C15.8744826,17.5563926 15.8471383,17.6046012 15.8466932,17.6567507 L15.8466932,17.6509582 Z M20.0997803,24.6453907 L23.5461956,22.6382927 C23.5915551,22.6120662 23.6192068,22.5633158 23.6185005,22.5108579 C23.6194091,22.4591023 23.5915569,22.4111145 23.5461956,22.3863193 L20.07665,20.3792213 C20.0317715,20.3501855 19.9740727,20.3501855 19.9291943,20.3792213 L16.482779,22.3834231 C16.4376252,22.4099322 16.4098827,22.4584308 16.4098827,22.5108579 C16.4098827,22.5632849 16.4376252,22.6117835 16.482779,22.6382927 L19.9523246,24.6453907 C19.997053,24.6712589 20.0521606,24.6712589 20.096889,24.6453907 L20.0997803,24.6453907 Z" id="形状" fill="#666773" fill-rule="nonzero"></path>
@@ -330,7 +308,7 @@
                         <tspan x="49" y="25">体</tspan>
                     </text>
                 </g>
-                <g id="编组-26" transform="translate(1389, 235)">
+                <g id="编组-26" transform="translate(1388, 256)">
                     <g id="编组-44">
                         <rect id="矩形备份-66" fill="#999BA6" opacity="0.100000001" x="0" y="0" width="40" height="40" rx="20"></rect>
                         <path d="M16.1482984,12.1926382 L16.1482984,14.9006382 L24.5042984,24.8586382 L27.4816317,24.8593049 L27.4816317,28.8593049 L23.4816317,28.8593049 L23.4812984,25.7136382 L15.4912984,16.1926382 L12.1482984,16.1926382 L12.1482984,12.1926382 L16.1482984,12.1926382 Z" id="形状结合" fill="#FFFFFF"></path>
@@ -340,7 +318,7 @@
                         <tspan x="49" y="25">线</tspan>
                     </text>
                 </g>
-                <g id="编组-38" transform="translate(1389, 142)">
+                <g id="编组-38" transform="translate(1388, 154)">
                     <g id="编组-43">
                         <rect id="矩形备份-65" fill="#999BA6" opacity="0.100000001" x="0" y="0" width="40" height="40" rx="20"></rect>
                         <g id="编组" transform="translate(8, 8)">
@@ -352,7 +330,7 @@
                         <tspan x="49" y="25">面</tspan>
                     </text>
                 </g>
-                <g id="编组-22" transform="translate(1389, 329)">
+                <g id="编组-22" transform="translate(1388, 359)">
                     <g id="编组-45">
                         <rect id="矩形备份-70" fill="#999BA6" opacity="0.100000001" x="0" y="0" width="40" height="40" rx="20"></rect>
                         <path d="M18.1482984,18.1017795 L22.1482984,18.1017795 L22.1482984,22.1017795 L18.1482984,22.1017795 Z M12.8149651,12.7684462 L16.8149651,12.7684462 L16.8149651,16.7684462 L12.8149651,16.7684462 Z M12.8149651,23.4351128 L16.8149651,23.4351128 L16.8149651,27.4351128 L12.8149651,27.4351128 Z M23.4816317,12.7684462 L27.4816317,12.7684462 L27.4816317,16.7684462 L23.4816317,16.7684462 Z M23.4816317,23.4351128 L27.4816317,23.4351128 L27.4816317,27.4351128 L23.4816317,27.4351128 Z" id="形状结合" fill="#666773"></path>
@@ -361,9 +339,9 @@
                         <tspan x="49" y="25">点</tspan>
                     </text>
                 </g>
-                <g id="编组-70" transform="translate(1332, 110)">
-                    <path id="路径-5" d="M10,56 L10,56.5 L14,56.5 L9.5,65.5 L5,56.5 L9,56.5 L9,56 L10,56 Z M10,54 L10,55 L9,55 L9,54 L10,54 Z M10,52 L10,53 L9,53 L9,52 L10,52 Z M10,50 L10,51 L9,51 L9,50 L10,50 Z M10,48 L10,49 L9,49 L9,48 L10,48 Z M10,46 L10,47 L9,47 L9,46 L10,46 Z M10,44 L10,45 L9,45 L9,44 L10,44 Z M10,42 L10,43 L9,43 L9,42 L10,42 Z M10,40 L10,41 L9,41 L9,40 L10,40 Z M10,38 L10,39 L9,39 L9,38 L10,38 Z M10,36 L10,37 L9,37 L9,36 L10,36 Z M10,34 L10,35 L9,35 L9,34 L10,34 Z M10,32 L10,33 L9,33 L9,32 L10,32 Z M10,30 L10,31 L9,31 L9,30 L10,30 Z M10,28 L10,29 L9,29 L9,28 L10,28 Z M10,26 L10,27 L9,27 L9,26 L10,26 Z M10,24 L10,25 L9,25 L9,24 L10,24 Z M10,22 L10,23 L9,23 L9,22 L10,22 Z M10,20 L10,21 L9,21 L9,20 L10,20 Z M10,18 L10,19 L9,19 L9,18 L10,18 Z M10,16 L10,17 L9,17 L9,16 L10,16 Z M10,14 L10,15 L9,15 L9,14 L10,14 Z M10,12 L10,13 L9,13 L9,12 L10,12 Z M10,10 L10,11 L9,11 L9,10 L10,10 Z M10,8 L10,9 L9,9 L9,8 L10,8 Z M10,6 L10,7 L9,7 L9,6 L10,6 Z M10,4 L10,5 L9,5 L9,4 L10,4 Z M10,2 L10,3 L9,3 L9,2 L10,2 Z M10,0 L10,1 L9,1 L9,0 L10,0 Z" transform="translate(9.5, 32.5) scale(1, -1) translate(-9.5, -32.5)" fill="url(#linearGradient-17)" fill-rule="nonzero" opacity="0.600000024"></path>
-                    <path id="路径-5备份" d="M10.234375,273.826527 L10.234,274.278 L14.234375,274.278908 L9.734375,283.278908 L5.234375,274.278908 L9.234,274.278 L9.234375,273.826527 L10.234375,273.826527 Z M10.234375,271.826527 L10.234375,272.826527 L9.234375,272.826527 L9.234375,271.826527 L10.234375,271.826527 Z M10.234375,269.826527 L10.234375,270.826527 L9.234375,270.826527 L9.234375,269.826527 L10.234375,269.826527 Z M10.234375,267.826527 L10.234375,268.826527 L9.234375,268.826527 L9.234375,267.826527 L10.234375,267.826527 Z M10.234375,265.826527 L10.234375,266.826527 L9.234375,266.826527 L9.234375,265.826527 L10.234375,265.826527 Z M10.234375,263.826527 L10.234375,264.826527 L9.234375,264.826527 L9.234375,263.826527 L10.234375,263.826527 Z M10.234375,261.826527 L10.234375,262.826527 L9.234375,262.826527 L9.234375,261.826527 L10.234375,261.826527 Z M10.234375,259.826527 L10.234375,260.826527 L9.234375,260.826527 L9.234375,259.826527 L10.234375,259.826527 Z M10.234375,257.826527 L10.234375,258.826527 L9.234375,258.826527 L9.234375,257.826527 L10.234375,257.826527 Z M10.234375,255.826527 L10.234375,256.826527 L9.234375,256.826527 L9.234375,255.826527 L10.234375,255.826527 Z M10.234375,253.826527 L10.234375,254.826527 L9.234375,254.826527 L9.234375,253.826527 L10.234375,253.826527 Z M10.234375,251.826527 L10.234375,252.826527 L9.234375,252.826527 L9.234375,251.826527 L10.234375,251.826527 Z M10.234375,249.826527 L10.234375,250.826527 L9.234375,250.826527 L9.234375,249.826527 L10.234375,249.826527 Z M10.234375,247.826527 L10.234375,248.826527 L9.234375,248.826527 L9.234375,247.826527 L10.234375,247.826527 Z M10.234375,245.826527 L10.234375,246.826527 L9.234375,246.826527 L9.234375,245.826527 L10.234375,245.826527 Z M10.234375,243.826527 L10.234375,244.826527 L9.234375,244.826527 L9.234375,243.826527 L10.234375,243.826527 Z M10.234375,241.826527 L10.234375,242.826527 L9.234375,242.826527 L9.234375,241.826527 L10.234375,241.826527 Z M10.234375,239.826527 L10.234375,240.826527 L9.234375,240.826527 L9.234375,239.826527 L10.234375,239.826527 Z M10.234375,237.826527 L10.234375,238.826527 L9.234375,238.826527 L9.234375,237.826527 L10.234375,237.826527 Z M10.234375,235.826527 L10.234375,236.826527 L9.234375,236.826527 L9.234375,235.826527 L10.234375,235.826527 Z M10.234375,233.826527 L10.234375,234.826527 L9.234375,234.826527 L9.234375,233.826527 L10.234375,233.826527 Z M10.234375,231.826527 L10.234375,232.826527 L9.234375,232.826527 L9.234375,231.826527 L10.234375,231.826527 Z M10.234375,229.826527 L10.234375,230.826527 L9.234375,230.826527 L9.234375,229.826527 L10.234375,229.826527 Z M10.234375,227.826527 L10.234375,228.826527 L9.234375,228.826527 L9.234375,227.826527 L10.234375,227.826527 Z M10.234375,225.826527 L10.234375,226.826527 L9.234375,226.826527 L9.234375,225.826527 L10.234375,225.826527 Z M10.234375,223.826527 L10.234375,224.826527 L9.234375,224.826527 L9.234375,223.826527 L10.234375,223.826527 Z M10.234375,221.826527 L10.234375,222.826527 L9.234375,222.826527 L9.234375,221.826527 L10.234375,221.826527 Z M10.234375,219.826527 L10.234375,220.826527 L9.234375,220.826527 L9.234375,219.826527 L10.234375,219.826527 Z M10.234375,217.826527 L10.234375,218.826527 L9.234375,218.826527 L9.234375,217.826527 L10.234375,217.826527 Z" fill="url(#linearGradient-18)" fill-rule="nonzero" opacity="0.600000024"></path>
+                <g id="编组-70" transform="translate(1332, 136)">
+                    <path id="路径-5" d="M10,56 L10,56.5 L14,56.5 L9.5,65.5 L5,56.5 L9,56.5 L9,56 L10,56 Z M10,54 L10,55 L9,55 L9,54 L10,54 Z M10,52 L10,53 L9,53 L9,52 L10,52 Z M10,50 L10,51 L9,51 L9,50 L10,50 Z M10,48 L10,49 L9,49 L9,48 L10,48 Z M10,46 L10,47 L9,47 L9,46 L10,46 Z M10,44 L10,45 L9,45 L9,44 L10,44 Z M10,42 L10,43 L9,43 L9,42 L10,42 Z M10,40 L10,41 L9,41 L9,40 L10,40 Z M10,38 L10,39 L9,39 L9,38 L10,38 Z M10,36 L10,37 L9,37 L9,36 L10,36 Z M10,34 L10,35 L9,35 L9,34 L10,34 Z M10,32 L10,33 L9,33 L9,32 L10,32 Z M10,30 L10,31 L9,31 L9,30 L10,30 Z M10,28 L10,29 L9,29 L9,28 L10,28 Z M10,26 L10,27 L9,27 L9,26 L10,26 Z M10,24 L10,25 L9,25 L9,24 L10,24 Z M10,22 L10,23 L9,23 L9,22 L10,22 Z M10,20 L10,21 L9,21 L9,20 L10,20 Z M10,18 L10,19 L9,19 L9,18 L10,18 Z M10,16 L10,17 L9,17 L9,16 L10,16 Z M10,14 L10,15 L9,15 L9,14 L10,14 Z M10,12 L10,13 L9,13 L9,12 L10,12 Z M10,10 L10,11 L9,11 L9,10 L10,10 Z M10,8 L10,9 L9,9 L9,8 L10,8 Z M10,6 L10,7 L9,7 L9,6 L10,6 Z M10,4 L10,5 L9,5 L9,4 L10,4 Z M10,2 L10,3 L9,3 L9,2 L10,2 Z M10,0 L10,1 L9,1 L9,0 L10,0 Z" transform="translate(9.5, 32.5) scale(1, -1) translate(-9.5, -32.5)" fill="url(#linearGradient-1)" fill-rule="nonzero" opacity="0.600000024"></path>
+                    <path id="路径-5备份" d="M10.234375,273.826527 L10.234,274.278 L14.234375,274.278908 L9.734375,283.278908 L5.234375,274.278908 L9.234,274.278 L9.234375,273.826527 L10.234375,273.826527 Z M10.234375,271.826527 L10.234375,272.826527 L9.234375,272.826527 L9.234375,271.826527 L10.234375,271.826527 Z M10.234375,269.826527 L10.234375,270.826527 L9.234375,270.826527 L9.234375,269.826527 L10.234375,269.826527 Z M10.234375,267.826527 L10.234375,268.826527 L9.234375,268.826527 L9.234375,267.826527 L10.234375,267.826527 Z M10.234375,265.826527 L10.234375,266.826527 L9.234375,266.826527 L9.234375,265.826527 L10.234375,265.826527 Z M10.234375,263.826527 L10.234375,264.826527 L9.234375,264.826527 L9.234375,263.826527 L10.234375,263.826527 Z M10.234375,261.826527 L10.234375,262.826527 L9.234375,262.826527 L9.234375,261.826527 L10.234375,261.826527 Z M10.234375,259.826527 L10.234375,260.826527 L9.234375,260.826527 L9.234375,259.826527 L10.234375,259.826527 Z M10.234375,257.826527 L10.234375,258.826527 L9.234375,258.826527 L9.234375,257.826527 L10.234375,257.826527 Z M10.234375,255.826527 L10.234375,256.826527 L9.234375,256.826527 L9.234375,255.826527 L10.234375,255.826527 Z M10.234375,253.826527 L10.234375,254.826527 L9.234375,254.826527 L9.234375,253.826527 L10.234375,253.826527 Z M10.234375,251.826527 L10.234375,252.826527 L9.234375,252.826527 L9.234375,251.826527 L10.234375,251.826527 Z M10.234375,249.826527 L10.234375,250.826527 L9.234375,250.826527 L9.234375,249.826527 L10.234375,249.826527 Z M10.234375,247.826527 L10.234375,248.826527 L9.234375,248.826527 L9.234375,247.826527 L10.234375,247.826527 Z M10.234375,245.826527 L10.234375,246.826527 L9.234375,246.826527 L9.234375,245.826527 L10.234375,245.826527 Z M10.234375,243.826527 L10.234375,244.826527 L9.234375,244.826527 L9.234375,243.826527 L10.234375,243.826527 Z M10.234375,241.826527 L10.234375,242.826527 L9.234375,242.826527 L9.234375,241.826527 L10.234375,241.826527 Z M10.234375,239.826527 L10.234375,240.826527 L9.234375,240.826527 L9.234375,239.826527 L10.234375,239.826527 Z M10.234375,237.826527 L10.234375,238.826527 L9.234375,238.826527 L9.234375,237.826527 L10.234375,237.826527 Z M10.234375,235.826527 L10.234375,236.826527 L9.234375,236.826527 L9.234375,235.826527 L10.234375,235.826527 Z M10.234375,233.826527 L10.234375,234.826527 L9.234375,234.826527 L9.234375,233.826527 L10.234375,233.826527 Z M10.234375,231.826527 L10.234375,232.826527 L9.234375,232.826527 L9.234375,231.826527 L10.234375,231.826527 Z M10.234375,229.826527 L10.234375,230.826527 L9.234375,230.826527 L9.234375,229.826527 L10.234375,229.826527 Z M10.234375,227.826527 L10.234375,228.826527 L9.234375,228.826527 L9.234375,227.826527 L10.234375,227.826527 Z M10.234375,225.826527 L10.234375,226.826527 L9.234375,226.826527 L9.234375,225.826527 L10.234375,225.826527 Z M10.234375,223.826527 L10.234375,224.826527 L9.234375,224.826527 L9.234375,223.826527 L10.234375,223.826527 Z M10.234375,221.826527 L10.234375,222.826527 L9.234375,222.826527 L9.234375,221.826527 L10.234375,221.826527 Z M10.234375,219.826527 L10.234375,220.826527 L9.234375,220.826527 L9.234375,219.826527 L10.234375,219.826527 Z M10.234375,217.826527 L10.234375,218.826527 L9.234375,218.826527 L9.234375,217.826527 L10.234375,217.826527 Z" fill="url(#linearGradient-2)" fill-rule="nonzero" opacity="0.600000024"></path>
                     <text id="上下贯通-左右互联" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="15" fill="#666773">
                         <tspan x="2.396" y="87">上</tspan>
                         <tspan x="2.396" y="102">下</tspan>
@@ -376,6 +354,7 @@
                         <tspan x="2.396" y="207">联</tspan>
                     </text>
                 </g>
+                <line x1="741.5" y1="156" x2="741.5" y2="219.5" id="路径-12" stroke="#BEC3CD" stroke-dasharray="2"></line>
             </g>
         </g>
     </g>

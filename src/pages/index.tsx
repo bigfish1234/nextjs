@@ -59,6 +59,7 @@ import ISM_05 from "/public/images/pc/home/ISM_05.png";
 import ISM_06 from "/public/images/pc/home/ISM_06.png";
 import ISM_07 from "/public/images/pc/home/ISM_07.png";
 import ICM_01 from "/public/images/pc/home/ICM_01.png";
+import ICM_02 from "/public/images/pc/home/ICM_02.png";
 import NPI_01 from "/public/images/pc/home/NPI_01.png";
 import NPI_02 from "/public/images/pc/home/NPI_02.png";
 import NPI_03 from "/public/images/pc/home/NPI_03.png";
@@ -100,7 +101,7 @@ const Page = () => {
   const slideOfLTCDetailImg = [
     [order_01, order_02, order_03],
     [ISM_01, ISM_02, ISM_03, ISM_04, ISM_05, ISM_06, ISM_07],
-    [ICM_01],
+    [ICM_01, ICM_02],
     [NPI_01, NPI_02, NPI_03, NPI_04, NPI_05, NPI_06],
     [CPQ_01],
   ];
@@ -241,6 +242,7 @@ const Page = () => {
                       ? {
                           borderBottom: "4px solid #F96F25",
                           color: "#F96F25",
+                          transition: "all .3s ease-in-out",
                         }
                       : {}
                   }
@@ -309,7 +311,7 @@ const Page = () => {
         <div className={`${"wrapper-center"} ${homeStyle["ltc-wrapper"]}`}>
           <TabHeader h1="线索到回款" h2="Lead to Cash" id="LTC" />
           <LtcImgWrapper isMobile={isMobile} anchorClick={anchorClick} />
-          <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
+          <div className={`${homeStyle["flex-content"]}`}>
             {(isMobile ? slideListOfCash.mb : slideListOfCash.pc).map(
               (list: any[], index: number) => {
                 const description = TITLE_LIST[index];
@@ -342,7 +344,7 @@ const Page = () => {
         <div className={homeStyle["supply-chian"]}>
           <div className="wrapper-center">
             <TabHeader h1="集成供应链" h2="Integrated Supply Chain" id="ISC" />
-            <div className={`${"wrapper-center"} ${homeStyle["flex-content"]}`}>
+            <div className={`${homeStyle["flex-content"]}`}>
               {(isMobile ? slideListOfChain.mb : slideListOfChain.pc).map(
                 (list: any[], index: number) => {
                   const des = DESCRIPTION_LIST[index];

@@ -29,7 +29,11 @@ const SwiperHeader = ({ slideList, page }: any) => {
     : styles["first-title"];
 
   return (
-    <div className={styles.swiperHeader}>
+    <div
+      className={
+        path == "/" ? styles["swiperHeader-home"] : styles["swiperHeader"]
+      }
+    >
       <Swiper
         className={styles["swiper-content"]}
         modules={[A11y, Autoplay, Pagination]}
@@ -45,24 +49,25 @@ const SwiperHeader = ({ slideList, page }: any) => {
         {(slideList || []).map((imgUrl: any, index: number) => {
           const renderTitle = (index: number) => {
             return (
-              <div className={styles["page-title"]}>
+              <div
+                className={
+                  path == "/" ? styles["page-title-home"] : styles["page-title"]
+                }
+              >
                 {path == "/" ? (
                   <div>
                     {index == 0 ? (
                       <>
                         <p
-                          className={styles["first-title"]}
+                          className={styles["first-title-home"]}
                           style={{
-                            fontWeight: 400,
-                            color: "#fff",
-                            letterSpacing: 2,
                             padding: isMobile ? 0 : "20px 0 0",
                           }}
                         >
                           硕磐EIMOS
                         </p>
                         <p
-                          className={styles["second-title"]}
+                          className={styles["second-title-home"]}
                           style={{ color: "#fff", letterSpacing: 2 }}
                         >
                           您的企业级智慧管家
@@ -85,7 +90,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
                 ) : path == "/information-center" ? (
                   <p
                     className={firstTitleStyle}
-                    style={{ fontWeight: 600, top: 140, letterSpacing: 2 }}
+                    style={{ fontWeight: 600, letterSpacing: 2 }}
                   >
                     信息中心
                   </p>

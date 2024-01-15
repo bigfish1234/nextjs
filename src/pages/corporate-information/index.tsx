@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import { LayoutComp, TabHeader } from "@/components";
 import { KapComp, PartnerComp } from "../../components/CorporateComponents";
-import founderImg from "/public/images/pc/about/like.png";
+import founderImg from "/public/images/pc/about/like.svg";
 import ttWisdom from "/public/images/ttwisdom.png";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";

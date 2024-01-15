@@ -40,6 +40,11 @@
   padding-left: 34px;
 }
 
+.shuopan-main-service a:hover {
+  color: #fff;
+  transition: color .3s ease-in-out;
+}
+
 .copyright-info {
   width: 100%;
   height: 22px;

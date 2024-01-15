@@ -38,9 +38,7 @@ const NavgatorComp = ({ page }: any) => {
             />
           </div>
           <Image
-            src={
-              ["/", "/recruitment"].includes(path) ? expand_icon : expand_icon2
-            }
+            src={expand_icon}
             alt="expand"
             id="expand"
             className={styles["expand-icon"]}

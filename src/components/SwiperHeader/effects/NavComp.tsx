@@ -3,10 +3,9 @@ import Link from "next/link";
 import styles from "../index.module.css";
 import { usePathname } from "next/navigation";
 
-const NavComp = ({ page }: any) => {
+const NavComp = ({ page = "job-deatil" }: any) => {
   const state = store();
   const path = usePathname() as string;
-
   const handleClick = () => {
     state.handleOpenChange(false);
   };
@@ -21,11 +20,7 @@ const NavComp = ({ page }: any) => {
         href="/"
         style={{
           color:
-            path == "/"
-              ? "#F96F25"
-              : ["/recruitment", "/"].includes(path)
-              ? "white"
-              : "black",
+            path == "/" ? "#F96F25" : path == "/job-detail" ? "black" : "white",
         }}
         onClick={handleClick}
       >
@@ -38,9 +33,9 @@ const NavComp = ({ page }: any) => {
           color:
             path == "/information-center"
               ? "#F96F25"
-              : ["/recruitment", "/"].includes(path)
-              ? "white"
-              : "black",
+              : path == "/job-detail"
+              ? "black"
+              : "white",
         }}
         onClick={handleClick}
       >
@@ -53,9 +48,9 @@ const NavComp = ({ page }: any) => {
           color:
             path == "/corporate-information"
               ? "#F96F25"
-              : ["/recruitment", "/"].includes(path)
-              ? "white"
-              : "black",
+              : path == "/job-detail"
+              ? "black"
+              : "white",
         }}
         onClick={handleClick}
       >
@@ -67,9 +62,9 @@ const NavComp = ({ page }: any) => {
         style={{
           color: ["/recruitment", "/job-detail"].includes(path)
             ? "#F96F25"
-            : ["/recruitment", "/"].includes(path)
-            ? "white"
-            : "black",
+            : path == "/job-detail"
+            ? "black"
+            : "white",
         }}
         onClick={handleClick}
       >

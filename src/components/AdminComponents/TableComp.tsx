@@ -199,7 +199,7 @@ const TableComp = () => {
                 type="primary"
                 ghost
                 onClick={() => {
-                  router.push("./admin/create");
+                  router.push("/admin/create");
                 }}
               >
                 + 新增
