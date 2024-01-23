@@ -7,16 +7,14 @@ import rightIcon from "/public/images/right-click.png";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 import { developList } from "@/lib/const";
+import DevHistory from "./DevHistory";
 
 const KapComp = () => {
   const [isMobile, setIsMobile] = useState(false);
   const sliding = (type: string) => {
     const dom = document.getElementById("slide");
-    const flag = window.matchMedia(
-      "only screen and (max-width: 1440px)"
-    ).matches;
 
-    const len = flag ? 350 : 500;
+    const len = 500;
     if (dom) {
       if (type == "left") {
         dom.scrollBy({
@@ -51,10 +49,12 @@ const KapComp = () => {
   return (
     <div className={styles["develop-history-wrapper"]}>
       <div className={styles["develop-history"]} id="slide">
-        {developList.map((item: any, index: number) => {
+        <DevHistory />
+        {/* {developList.map((item: any, index: number) => {
           const [top, bottom] = item;
           return (
             <div key={index} className={styles["history-content-wrapper"]}>
+              
               <div className={styles["history-content"]}>
                 <div style={{ padding: 40 }}>
                   <p className={styles["time"]}>{top.time}</p>
@@ -73,7 +73,7 @@ const KapComp = () => {
               />
             </div>
           );
-        })}
+        })} */}
       </div>
       {!isMobile && (
         <>
@@ -91,6 +91,13 @@ const KapComp = () => {
               alt="left-icon"
               className={styles["arrow-icon-img"]}
               style={{ opacity: 0.3 }}
+              onClick={() => {
+                const left = document.getElementById("left-arrow");
+                left && (left.style.opacity = "0.3");
+
+                const right = document.getElementById("right-arrow");
+                right && (right.style.opacity = "1");
+              }}
             />
           </div>
           <div
@@ -102,12 +109,16 @@ const KapComp = () => {
             id="rightBtn"
           >
             <Image
+              id="right-arrow"
               src={rightIcon}
               alt="right-icon"
               className={styles["arrow-icon-img"]}
               onClick={() => {
-                const ele = document.getElementById("left-arrow");
-                ele && (ele.style.opacity = "1");
+                const left = document.getElementById("left-arrow");
+                left && (left.style.opacity = "1");
+
+                const right = document.getElementById("right-arrow");
+                right && (right.style.opacity = "0.3");
               }}
             />
           </div>
