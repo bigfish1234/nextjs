@@ -50,32 +50,8 @@ const KapComp = () => {
     <div className={styles["develop-history-wrapper"]}>
       <div className={styles["develop-history"]} id="slide">
         <DevHistory />
-        {/* {developList.map((item: any, index: number) => {
-          const [top, bottom] = item;
-          return (
-            <div key={index} className={styles["history-content-wrapper"]}>
-              
-              <div className={styles["history-content"]}>
-                <div style={{ padding: 40 }}>
-                  <p className={styles["time"]}>{top.time}</p>
-                  <p className={styles["title"]}>{top.title}</p>
-                </div>
-                <div style={{ padding: "60px 40px 40px" }}>
-                  <p className={styles["time"]}>{bottom.time}</p>
-                  <p className={styles["title"]}>{bottom.title}</p>
-                </div>
-              </div>
-              <Image
-                src={backgroundImg}
-                alt={`${top.time}-${top.title} ${bottom.time}-${bottom.title}`}
-                loading="lazy"
-                className={styles["kap-img"]}
-              />
-            </div>
-          );
-        })} */}
       </div>
-      {!isMobile && (
+      {/* {!isMobile && (
         <>
           <div
             className={styles["arrow-icon"]}
@@ -123,7 +99,7 @@ const KapComp = () => {
             />
           </div>
         </>
-      )}
+      )} */}
     </div>
   );
 };

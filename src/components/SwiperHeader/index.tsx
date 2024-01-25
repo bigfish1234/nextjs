@@ -39,7 +39,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
         modules={[A11y, Autoplay, Pagination]}
         spaceBetween={0}
         slidesPerView={1}
-        loop={slideList.length > 1}
+        loop={false}
         autoplay={{
           delay: 3000,
           disableOnInteraction: true,
@@ -139,7 +139,7 @@ const SwiperHeader = ({ slideList, page }: any) => {
                 priority={true}
                 src={imgUrl}
                 alt="硕磐EIMOS，您的企业级智慧管家"
-                style={{ width: "100%", height: "100%" }}
+                className={styles["banner-img"]}
               />
               {renderTitle(index)}
             </SwiperSlide>

@@ -20,7 +20,7 @@ const DetailComp = ({ position }: any) => {
         />
         <div className={styles["detail-wrapper"]}>
           {other && <div className={styles["other"]}>{other}</div>}
-          <CapabilityComp list={des} title={title} />
+          <CapabilityComp list={des} title={title} position={position} />
         </div>
       </div>
     );

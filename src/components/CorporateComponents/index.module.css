@@ -39,7 +39,7 @@
 
 .develop-history-wrapper {
   position: relative;
-  width: 1300px;
+  width: 1480px;
   margin: 0 auto;
   
 }
@@ -164,7 +164,7 @@
 
 .divider-bar {
   height: 6px;
-  width: 100px;
+  width: 60px;
   background-color: #e1e1e1;
 }
 
@@ -175,7 +175,7 @@
   }
 
   .develop-history-wrapper {
-    width: 875px;
+    width: 1180px;
   }
   
   .history-content {
@@ -247,7 +247,7 @@
   
   .divider-bar {
     height: 4px;
-    width: 50px;
+    width: 30px;
     background-color: #e1e1e1;
   }
 }

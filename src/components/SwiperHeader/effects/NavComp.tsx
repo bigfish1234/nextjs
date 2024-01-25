@@ -16,18 +16,17 @@ const NavComp = ({ page = "job-deatil" }: any) => {
       style={{ color: page == "join" ? "#fff" : "black" }}
     >
       <Link
-        prefetch
         href="/"
         style={{
           color:
             path == "/" ? "#F96F25" : path == "/job-detail" ? "black" : "white",
+          borderBottom: path == "/" ? "2px solid #F96F25" : "",
         }}
         onClick={handleClick}
       >
         <span className={styles["hover-link"]}>EIMOS</span>
       </Link>
       <Link
-        prefetch
         href="/information-center"
         style={{
           color:
@@ -36,13 +35,14 @@ const NavComp = ({ page = "job-deatil" }: any) => {
               : path == "/job-detail"
               ? "black"
               : "white",
+          borderBottom:
+            path == "/information-center" ? "2px solid #F96F25" : "",
         }}
         onClick={handleClick}
       >
         <span className={styles["hover-link"]}>信息中心</span>
       </Link>
       <Link
-        prefetch
         href="/corporate-information"
         style={{
           color:
@@ -51,13 +51,14 @@ const NavComp = ({ page = "job-deatil" }: any) => {
               : path == "/job-detail"
               ? "black"
               : "white",
+          borderBottom:
+            path == "/corporate-information" ? "2px solid #F96F25" : "",
         }}
         onClick={handleClick}
       >
         <span className={styles["hover-link"]}>关于我们</span>
       </Link>
       <Link
-        prefetch
         href="/recruitment"
         style={{
           color: ["/recruitment", "/job-detail"].includes(path)
@@ -65,6 +66,7 @@ const NavComp = ({ page = "job-deatil" }: any) => {
             : path == "/job-detail"
             ? "black"
             : "white",
+          borderBottom: path == "/recruitment" ? "2px solid #F96F25" : "",
         }}
         onClick={handleClick}
       >

@@ -1,22 +1,25 @@
 .swiperHeader {
+  position: relative;
   min-width: 100%;
   height: auto;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: -5px;
+  margin: 0 auto -5px; /* 处理缝隙留白 */
+  padding-bottom: 23%; /* 占位符 用于处理加载banner时没有高度，页面跳动闪烁的问题 */
 }
 
 .swiperHeader-home {
+  position: relative;
   min-width: 100%;
   height: auto;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: -5px;
+  margin: 0 auto -5px;
+  padding-bottom: 31%; /* 用于处理加载banner时没有高度，页面跳动闪烁的问题 */
 }
 
 .swiper-content {
   width: 100%;
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .header {
@@ -40,11 +43,16 @@
   top: 20px;
   right: 80px;
   width: 370px;
-  height: 28px;
+  height: 36px;
   line-height: 28px;
   display: flex;
   justify-content: space-between;
   z-index: 9;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
 }
 
 .hover-link:hover {

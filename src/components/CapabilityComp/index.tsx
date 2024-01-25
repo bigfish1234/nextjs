@@ -5,7 +5,7 @@ import { store } from "@/store";
 import { useEffect, useState } from "react";
 import { MOBILE_REG } from "@/utils/isMobileDevice";
 
-const CapabilityComp = ({ list, title }: any) => {
+const CapabilityComp = ({ list, title, position }: any) => {
   const state = store();
   const [isMobile, setIsMobile] = useState(false);
 
@@ -33,7 +33,7 @@ const CapabilityComp = ({ list, title }: any) => {
             {title && (
               <span
                 style={{
-                  paddingLeft: 5,
+                  paddingLeft: 0,
                   fontWeight: 600,
                   fontSize: 12,
                 }}
@@ -47,7 +47,6 @@ const CapabilityComp = ({ list, title }: any) => {
                 paddingLeft: 5,
                 lineHeight: "22px",
                 visibility: detail ? "visible" : "hidden",
-                // display: detail ? "inline-block" : "none",
               }}
             >
               {detail}
@@ -55,13 +54,20 @@ const CapabilityComp = ({ list, title }: any) => {
           </div>
         );
       })}
-      {/* <div
-        className="guide-btn"
-        style={{ position: "absolute", bottom: 20, fontSize: 14, width: 190 }}
-        onClick={() => !isMobile && state.handleOpenChange(true)}
-      >
-        立即咨询
-      </div> */}
+      {position == "IBA" && (
+        <div
+          className="guide-btn"
+          style={{
+            position: "absolute",
+            bottom: 15,
+            fontSize: 14,
+            width: 190,
+          }}
+          onClick={() => !isMobile && state.handleOpenChange(true)}
+        >
+          立即咨询
+        </div>
+      )}
     </div>
   );
 };
