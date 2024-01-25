@@ -3,6 +3,7 @@
   height: auto;
   position: relative;
   margin: 0 auto;
+  margin-bottom: -5px;
 }
 
 .swiperHeader-home {
@@ -100,7 +101,8 @@
 .page-title {
   position: absolute;
   left: 220px;
-  top: 120px;
+  /* top: 120px; */
+  top: 30%;
   z-index: 99;
   color: #fff;
 }
@@ -108,13 +110,13 @@
 .first-title {
   font-size: 52px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .first-title-home {
   font-size: 52px;
   font-weight: 400;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   color: #fff;
   letter-spacing: 2;
 }
@@ -205,6 +207,7 @@
   .first-title {
     padding: 15px 0;
     font-size: 44px;
+    margin-bottom: 0px;
   }
 
   .first-title-home,

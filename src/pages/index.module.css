@@ -8,7 +8,7 @@
 .header-link-sticky {
   position: -webkit-sticky; /* 针对Safari浏览器 */
   position: sticky;
-  z-index: 99;
+  z-index: 999;
   background-color: #fff;
   top: 0;
 }

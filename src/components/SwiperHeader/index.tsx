@@ -95,8 +95,14 @@ const SwiperHeader = ({ slideList, page }: any) => {
                     信息中心
                   </p>
                 ) : path == "/corporate-information" ? (
-                  <div style={{ width: 720 }}>
-                    <p className={firstTitleStyle} style={{ letterSpacing: 2 }}>
+                  <div style={{ width: 720, color: "black" }}>
+                    <p
+                      className={firstTitleStyle}
+                      style={{
+                        letterSpacing: 2,
+                        fontWeight: 500,
+                      }}
+                    >
                       硕磐智能
                     </p>
                     <div className={styles["spzn-introduce"]}>
@@ -126,21 +132,15 @@ const SwiperHeader = ({ slideList, page }: any) => {
               </div>
             );
           };
-          const renderSlide = () => {
-            return (
-              <div className={styles["swiper-content"]}>
-                <Image
-                  priority={true}
-                  src={imgUrl}
-                  alt="硕磐EIMOS，您的企业级智慧管家"
-                  className={styles["swiper-content"]}
-                />
-              </div>
-            );
-          };
+
           return (
             <SwiperSlide key={index} className={styles["swiper-content"]}>
-              {renderSlide()}
+              <Image
+                priority={true}
+                src={imgUrl}
+                alt="硕磐EIMOS，您的企业级智慧管家"
+                style={{ width: "100%", height: "100%" }}
+              />
               {renderTitle(index)}
             </SwiperSlide>
           );
