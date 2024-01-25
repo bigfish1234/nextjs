@@ -6,9 +6,9 @@
 }
 
 .header-link-sticky {
-  position: -webkit-sticky; /* 针对Safari浏览器 */
+  position: -webkit-sticky;
   position: sticky;
-  z-index: 999;
+  z-index: 99;
   background-color: #fff;
   top: 0;
 }
